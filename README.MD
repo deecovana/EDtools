@@ -8,6 +8,7 @@
 - Change Holo-Me 
 - Update EDHM-UI values
 - Resave
+- Replace large LFS with more compressed zips
 
 ## Fits Corsair and PyMKII
 - FC and PFC need 4xLARGE and 4xMEDIUM Plasma Fragment and Cannon
