@@ -51,7 +51,7 @@ edastro_send = 1
 edsm_out = 1
 inara_out = 1
 geometry = "+-3+1"
-querytime = 1781529278
+querytime = 1781530686
 inara_cmdrs = [
     "DEE.COVAN",
 ]
@@ -70,7 +70,7 @@ pioneer_overlay = true
 pioneer_overlay_color = "#cdd9e2"
 pioneer_overlay_anchor_x = 40
 pioneer_overlay_anchor_y = 320
-fleetcarrierquerytime = 1781525988
+fleetcarrierquerytime = 1781529642
 edraudiofeedbackvolume = "soft"
 hitsoverlayduration = "4"
 edremail = "dmitry.cheva@gmail.com"
