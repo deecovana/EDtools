@@ -1,5 +1,9 @@
 _AppData_Local_/Frontier Developments/Elite Dangerous/8447624/
 *.log
-*.bak
+*.log*
+*.log.*
 *.cache
+*.cache*
+*.cache.*
 *.exe
+*.bak
