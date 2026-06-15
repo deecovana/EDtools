@@ -79,7 +79,7 @@
 	<ShowControls Value="1" />
 	<ShowSystemConnectors Value="0" />
 	<PoliticsTerritoryActivityFilterMinActivity Value="0.10000000" />
-	<RouteStartSystem Value="5364950911848" />
+	<RouteStartSystem Value="22958210698096" />
 	<RouteDestinationSystem Value="0" />
 	<RouteDestinationBody Value="0" />
 	<RouteDestinationMarketID Value="18446744073709551615" />
@@ -131,7 +131,7 @@
 			<System Value="0" />
 			<AsteroidCluster Value="0" />
 			<PointOfInterest Value="0" />
-			<station Value="1" />
+			<station Value="0" />
 		</LocationPanelFilters>
 		<EncodedPanelFilters>
 			<grade_2 Value="0" />

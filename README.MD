@@ -5,7 +5,9 @@
   - !!!SORRY Restore UI WASD keys, lets change CoPilot keys
   - Update controlls using AI learned https://share.google/aimode/SJWhc7rgWdoYpL7Ca
 - Minimize graphics
-
+- Change Holo-Me 
+- Update EDHM-UI values
+- Resave
 
 ## Fits Corsair and PyMKII
 - FC and PFC need 4xLARGE and 4xMEDIUM Plasma Fragment and Cannon
