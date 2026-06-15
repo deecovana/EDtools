@@ -1,1 +1,1 @@
-CLEANING SAVEDATA FILE: C:\Programs\EDCoPilot\working\EDCoPilot.SaveData.DEE.COVAN.LIVE.txt.
+The virtual co-pilot service is terminating.

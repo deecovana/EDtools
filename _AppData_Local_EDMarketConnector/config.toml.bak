@@ -51,7 +51,7 @@ edastro_send = 1
 edsm_out = 1
 inara_out = 1
 geometry = "+-3+1"
-querytime = 1781526007
+querytime = 1781526417
 inara_cmdrs = [
     "DEE.COVAN",
 ]

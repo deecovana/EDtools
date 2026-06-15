@@ -2,7 +2,9 @@
 
 ## Fixing
 - Fix key binds for ED CoPilot and Minimize graphics
+  - !!!SORRY Restore UI WASD keys, lets change CoPilot keys
 - Minimize graphics
+
 
 ## Fits Corsair and PyMKII
 - FC and PFC need 4xLARGE and 4xMEDIUM Plasma Fragment and Cannon
