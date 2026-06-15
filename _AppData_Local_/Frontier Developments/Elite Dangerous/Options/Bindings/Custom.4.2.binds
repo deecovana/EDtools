@@ -580,24 +580,24 @@
 		<Secondary Device="{NoDevice}" Key="" />
 	</ExplorationFSSEnter>
 	<UI_Up>
-		<Primary Device="Keyboard" Key="Key_W" />
-		<Secondary Device="Keyboard" Key="Key_UpArrow" />
+		<Primary Device="Keyboard" Key="Key_UpArrow" />
+		<Secondary Device="{NoDevice}" Key="" />
 	</UI_Up>
 	<UI_Down>
-		<Primary Device="Keyboard" Key="Key_S" />
-		<Secondary Device="Keyboard" Key="Key_DownArrow" />
+		<Primary Device="Keyboard" Key="Key_DownArrow" />
+		<Secondary Device="{NoDevice}" Key="" />
 	</UI_Down>
 	<UI_Left>
-		<Primary Device="Keyboard" Key="Key_A" />
-		<Secondary Device="Keyboard" Key="Key_LeftArrow" />
+		<Primary Device="Keyboard" Key="Key_LeftArrow" />
+		<Secondary Device="{NoDevice}" Key="" />
 	</UI_Left>
 	<UI_Right>
-		<Primary Device="Keyboard" Key="Key_D" />
-		<Secondary Device="Keyboard" Key="Key_RightArrow" />
+		<Primary Device="Keyboard" Key="Key_RightArrow" />
+		<Secondary Device="{NoDevice}" Key="" />
 	</UI_Right>
 	<UI_Select>
 		<Primary Device="Keyboard" Key="Key_Space" />
-		<Secondary Device="Keyboard" Key="Key_Enter" />
+		<Secondary Device="{NoDevice}" Key="" />
 	</UI_Select>
 	<UI_Back>
 		<Primary Device="Keyboard" Key="Key_Backspace" />
@@ -1105,11 +1105,11 @@
 		<Secondary Device="{NoDevice}" Key="" />
 	</PhotoCameraToggle_Humanoid>
 	<VanityCameraScrollLeft>
-		<Primary Device="Keyboard" Key="Key_LeftArrow" />
+		<Primary Device="Keyboard" Key="Key_PageUp" />
 		<Secondary Device="{NoDevice}" Key="" />
 	</VanityCameraScrollLeft>
 	<VanityCameraScrollRight>
-		<Primary Device="Keyboard" Key="Key_RightArrow" />
+		<Primary Device="Keyboard" Key="Key_PageDown" />
 		<Secondary Device="{NoDevice}" Key="" />
 	</VanityCameraScrollRight>
 	<ToggleFreeCam>
@@ -1153,12 +1153,12 @@
 		<Secondary Device="{NoDevice}" Key="" />
 	</VanityCameraNine>
 	<VanityCameraTen>
-		<Primary Device="{NoDevice}" Key="" />
+		<Primary Device="Keyboard" Key="Key_Numpad_Decimal" />
 		<Secondary Device="{NoDevice}" Key="" />
 	</VanityCameraTen>
 	<FreeCamToggleHUD>
 		<Primary Device="Keyboard" Key="Key_LeftControl" />
-		<Secondary Device="Keyboard" Key="Key_Numpad_0" />
+		<Secondary Device="{NoDevice}" Key="" />
 	</FreeCamToggleHUD>
 	<FreeCamSpeedInc>
 		<Primary Device="Keyboard" Key="Key_Equals" />
@@ -1272,7 +1272,7 @@
 		<Secondary Device="{NoDevice}" Key="" />
 	</ToggleRotationLock>
 	<FixCameraRelativeToggle>
-		<Primary Device="Keyboard" Key="Key_Numpad_Decimal" />
+		<Primary Device="Keyboard" Key="Key_Numpad_0" />
 		<Secondary Device="{NoDevice}" Key="" />
 	</FixCameraRelativeToggle>
 	<FixCameraWorldToggle>

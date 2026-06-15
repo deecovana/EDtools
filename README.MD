@@ -1,5 +1,9 @@
 # EDtools GitHub @deecovana repo (CC4 2026)
 
+## Fixing
+- Fix key binds for ED CoPilot and Minimize graphics
+- Minimize graphics
+
 ## Fits Corsair and PyMKII
 - FC and PFC need 4xLARGE and 4xMEDIUM Plasma Fragment and Cannon
 - Add Mandalay ManGun CFC cannon+FC

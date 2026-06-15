@@ -1,12 +1,12 @@
 {
   "version": 1,
-  "updated": "2026-04-18T15:51:24.564162Z",
-  "last_scan_date": "",
+  "updated": "2026-06-15T12:20:28.103795Z",
+  "last_scan_date": "260615151133",
   "rows": [
     {
       "fid": "F5726016",
       "commander": "DEE.COVAN",
-      "start": "2026-04-18T15:37:57Z",
+      "start": "2026-04-11T13:43:07Z",
       "end": ""
     }
   ],

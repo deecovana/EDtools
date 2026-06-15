@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-16"?>
 <DxDiag>
 	<SystemInformation>
-		<Time>6/14/2026, 14:46:59</Time>
+		<Time>6/15/2026, 15:10:26</Time>
 		<MachineName>SLIM</MachineName>
 		<MachineId>{C7BD0E76-C9BA-4E23-B2E4-74F72C4BADDF}</MachineId>
 		<OperatingSystem>Windows 11 Home 64-bit (10.0, Build 26200) (26100.ge_release.240331-1435)</OperatingSystem>
@@ -13,7 +13,7 @@
 		<Processor>AMD Ryzen 7 7735HS with Radeon Graphics         (16 CPUs), ~3.2GHz</Processor>
 		<Memory>16384MB RAM</Memory>
 		<AvaliableOSMem>14020MB RAM</AvaliableOSMem>
-		<PageFile>8903MB used, 16893MB available</PageFile>
+		<PageFile>8803MB used, 16993MB available</PageFile>
 		<WindowsDir>C:\WINDOWS</WindowsDir>
 		<DirectXVersion>DirectX 12</DirectXVersion>
 		<DXSetupParameters>Not found</DXSetupParameters>
@@ -701,7 +701,7 @@
 	<LogicalDisks>
 		<LogicalDisk>
 			<DriveLetter>C:</DriveLetter>
-			<FreeSpace>111144845312</FreeSpace>
+			<FreeSpace>65248153600</FreeSpace>
 			<MaxSpace>511180795904</MaxSpace>
 			<FileSystem>NTFS</FileSystem>
 			<Model>WD PC SN5000S SDEPMSJ-512G-1101</Model>
