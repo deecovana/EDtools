@@ -1,0 +1,75 @@
+[
+{ "type": "title", "title": "Space Chatter - Crew Assignments (by ship type)" },
+{ "type": "bool", "title": "Set Crew Assignments by ship type", "desc": "If you set this to ON, then Crew Chatter will be limited to phrases or conversations involving the crew members you specify for your current ship type. Set the crew rosters for each ship type below.  If this option is OFF, all Crew members will be assumed on board.", "section": "Crew Chatter Roster", "key": "LimitCrewRolesByShipType" },
+
+{  "type": "title", "title": "Crew Assignments by ship type" },
+{
+    "type": "title",
+    "title": "For each of the ship types below, enter the crew roles that you want to hear, separated by commas. You can pick from the standard roles of Number1, Engineering, Comms, Helms, Science, Operations, or you can define your own custom roles starting with Crew: for which you can add strings in your Crew Chatter file."
+},
+{
+        "type": "title",
+        "title": "Small ships"
+},
+
+{ "type": "string", "title": "Adder", "desc": "", "section": "Crew Chatter Roster", "key": "CrewRoster_Adder" },
+{ "type": "string", "title": "Cobra Mark III", "desc": "", "section": "Crew Chatter Roster", "key": "CrewRoster_Cobra_Mark_III" },
+{ "type": "string", "title": "Cobra Mark IV", "desc": "", "section": "Crew Chatter Roster", "key": "CrewRoster_Cobra_Mark_IV" },
+{ "type": "string", "title": "Cobra Mark V", "desc": "", "section": "Crew Chatter Roster", "key": "CrewRoster_Cobra_Mark_V" },
+{ "type": "string", "title": "Diamondback Scout", "desc": "", "section": "Crew Chatter Roster", "key": "CrewRoster_Diamondback_Scout" },
+{ "type": "string", "title": "Diamondback Explorer", "desc": "", "section": "Crew Chatter Roster", "key": "CrewRoster_Diamondback_Explorer" },
+{ "type": "string", "title": "Dolphin", "desc": "", "section": "Crew Chatter Roster", "key": "CrewRoster_Dolphin" },
+{ "type": "string", "title": "Eagle Mark II", "desc": "", "section": "Crew Chatter Roster", "key": "CrewRoster_Eagle_Mark_II" },
+{ "type": "string", "title": "Hauler", "desc": "", "section": "Crew Chatter Roster", "key": "CrewRoster_Hauler" },
+{ "type": "string", "title": "Imperial Courier", "desc": "", "section": "Crew Chatter Roster", "key": "CrewRoster_Imperial_Courier" },
+{ "type": "string", "title": "Imperial Eagle", "desc": "", "section": "Crew Chatter Roster", "key": "CrewRoster_Imperial_Eagle" },
+{ "type": "string", "title": "Kestrel Mark II", "desc": "", "section": "Crew Chatter Roster", "key": "CrewRoster_Kestrel_Mark_II" },
+{ "type": "string", "title": "Sidewinder Mark 1", "desc": "", "section": "Crew Chatter Roster", "key": "CrewRoster_Sidewinder_Mark_1" },
+{ "type": "string", "title": "Viper Mark III", "desc": "", "section": "Crew Chatter Roster", "key": "CrewRoster_Viper_Mark_III" },
+{ "type": "string", "title": "Viper Mark IV", "desc": "", "section": "Crew Chatter Roster", "key": "CrewRoster_Viper_Mark_IV" },
+{ "type": "string", "title": "Vulture", "desc": "", "section": "Crew Chatter Roster", "key": "CrewRoster_Vulture" },
+
+{
+        "type": "title",
+        "title": "Medium ships"
+},
+
+{ "type": "string", "title": "Alliance Challenger", "desc": "", "section": "Crew Chatter Roster", "key": "CrewRoster_Alliance_Challenger" },
+{ "type": "string", "title": "Alliance Chieftain", "desc": "", "section": "Crew Chatter Roster", "key": "CrewRoster_Alliance_Chieftain" },
+{ "type": "string", "title": "Alliance Crusader", "desc": "", "section": "Crew Chatter Roster", "key": "CrewRoster_Alliance_Crusader" },
+{ "type": "string", "title": "Asp Explorer", "desc": "", "section": "Crew Chatter Roster", "key": "CrewRoster_Asp_Explorer" },
+{ "type": "string", "title": "Asp Scout", "desc": "", "section": "Crew Chatter Roster", "key": "CrewRoster_Asp_Scout" },
+{ "type": "string", "title": "Corsair", "desc": "", "section": "Crew Chatter Roster", "key": "CrewRoster_Corsair" },
+{ "type": "string", "title": "Federal Assault Ship", "desc": "", "section": "Crew Chatter Roster", "key": "CrewRoster_Federal_Assault_Ship" },
+{ "type": "string", "title": "Federal Dropship", "desc": "", "section": "Crew Chatter Roster", "key": "CrewRoster_Federal_Dropship" },
+{ "type": "string", "title": "Federal Gunship", "desc": "", "section": "Crew Chatter Roster", "key": "CrewRoster_Federal_Gunship" },
+{ "type": "string", "title": "Fer-de-Lance", "desc": "", "section": "Crew Chatter Roster", "key": "CrewRoster_Fer-de-Lance" },
+{ "type": "string", "title": "Keelback", "desc": "", "section": "Crew Chatter Roster", "key": "CrewRoster_Keelback" },
+{ "type": "string", "title": "Krait Mark II", "desc": "", "section": "Crew Chatter Roster", "key": "CrewRoster_Krait_Mark_II" },
+{ "type": "string", "title": "Krait Phantom", "desc": "", "section": "Crew Chatter Roster", "key": "CrewRoster_Krait_Phantom" },
+{ "type": "string", "title": "Lynx Highliner", "desc": "", "section": "Crew Chatter Roster", "key": "CrewRoster_Lynx_Highliner" },
+{ "type": "string", "title": "Mamba", "desc": "", "section": "Crew Chatter Roster", "key": "CrewRoster_Mamba" },
+{ "type": "string", "title": "Mandalay", "desc": "", "section": "Crew Chatter Roster", "key": "CrewRoster_Mandalay" },
+{ "type": "string", "title": "Python", "desc": "", "section": "Crew Chatter Roster", "key": "CrewRoster_Python" },
+{ "type": "string", "title": "Python Mark II", "desc": "", "section": "Crew Chatter Roster", "key": "CrewRoster_Python_Mark_II" },
+{ "type": "string", "title": "Type-6 Transporter", "desc": "", "section": "Crew Chatter Roster", "key": "CrewRoster_Type-6_Transporter" },
+{ "type": "string", "title": "Type-8 Transporter", "desc": "", "section": "Crew Chatter Roster", "key": "CrewRoster_Type-8_Transporter" },
+{ "type": "string", "title": "Type-11 Prospector", "desc": "", "section": "Crew Chatter Roster", "key": "CrewRoster_Type-11_Prospector" },
+
+{
+        "type": "title",
+        "title": "Large ships"
+},
+
+{ "type": "string", "title": "Anaconda", "desc": "", "section": "Crew Chatter Roster", "key": "CrewRoster_Anaconda" },
+{ "type": "string", "title": "Beluga Liner", "desc": "", "section": "Crew Chatter Roster", "key": "CrewRoster_Beluga_Liner" },
+{ "type": "string", "title": "Caspian Explorer", "desc": "", "section": "Crew Chatter Roster", "key": "CrewRoster_Caspian_Explorer" },
+{ "type": "string", "title": "Federal Corvette", "desc": "", "section": "Crew Chatter Roster", "key": "CrewRoster_Federal_Corvette" },
+{ "type": "string", "title": "Imperial Clipper", "desc": "", "section": "Crew Chatter Roster", "key": "CrewRoster_Imperial_Clipper" },
+{ "type": "string", "title": "Imperial Cutter", "desc": "", "section": "Crew Chatter Roster", "key": "CrewRoster_Imperial_Cutter" },
+{ "type": "string", "title": "Orca", "desc": "", "section": "Crew Chatter Roster", "key": "CrewRoster_Orca" },
+{ "type": "string", "title": "Panther Clipper", "desc": "", "section": "Crew Chatter Roster", "key": "CrewRoster_Panther_Clipper_Mark_II" },
+{ "type": "string", "title": "Type-7 Transporter", "desc": "", "section": "Crew Chatter Roster", "key": "CrewRoster_Type-7_Transporter" },
+{ "type": "string", "title": "Type-9 Heavy", "desc": "", "section": "Crew Chatter Roster", "key": "CrewRoster_Type-9_Heavy" },
+{ "type": "string", "title": "Type-10 Defender", "desc": "", "section": "Crew Chatter Roster", "key": "CrewRoster_Type-10_Defender" }
+]

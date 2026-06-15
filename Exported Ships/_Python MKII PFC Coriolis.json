@@ -1,0 +1,281 @@
+[
+  {
+    "header": {
+      "appName": "Coriolis",
+      "appVersion": "4.0",
+      "appURL": "https://coriolis.io/outfit/python_nx?code=A2pktkFJlidpskf42b2b1u1u1l1l040404040303p11J2H01C53x4F.Iw18RQ%3D%3D.Aw18RQ%3D%3D.H4sIAAAAAAAAA42SvUvDUBTFT79i26SNqU2NCn41OkodC4Iu4qQILh3FxUXEQaFDB92Kk4jg4uDg6ODo0NHRP8BBOjuok4hovdd7A30ICm2Gw%2BGdX95J3rugAQDfKZHOqYjdigO5QwfwauIKtzYQvsUAjtGiIRsi6bsM4C68M5cuXcnjVDL5vogbfjIXx7%2BYfc2DmyRQ3hsWMkGjhqx3yaip2PCFfJSEkzTfhdz6s%2BT3bWZOUdW8eiSScYg5e%2BYBU%2Bqm1c2om1XHFm118aA5BMxNrgEjlQ%2FZKU3bZqdjkVRtDLCuc%2FKRUX%2BmR56lDZM7mm%2FKcVg7r8zB0gtz%2BeRJSux%2BIOdXk%2F1PU65Hnqdlk5%2FrcelqoXIg%2F6xXNPGQF8jtBxqkFQNd6DBcWUKuyxV66iIyVMde32SRVg25KxIPOsyWDoNdTciUtUV8bQ9bMonM%2BPP8AAVfzdajAgAA&bn=Python%20MKII%20PFC"
+    },
+    "data": {
+      "Ship": "Python_nx",
+      "Modules": [
+        {
+          "Slot": "Armour",
+          "Item": "python_nx_armour_grade3",
+          "On": true,
+          "Engineering": {
+            "BlueprintName": "Armour_HeavyDuty",
+            "Level": 5,
+            "Quality": 1,
+            "ExperimentalEffect": "special_armour_chunky"
+          }
+        },
+        {
+          "Slot": "CargoHatch",
+          "Item": "modularcargobaydoor",
+          "On": true,
+          "Priority": 0
+        },
+        {
+          "Slot": "PowerPlant",
+          "Item": "Int_Powerplant_Size6_Class5",
+          "On": true,
+          "Priority": 0,
+          "Engineering": {
+            "BlueprintName": "PowerPlant_Boosted",
+            "Level": 5,
+            "Quality": 1,
+            "ExperimentalEffect": "special_powerplant_highcharge"
+          }
+        },
+        {
+          "Slot": "MainEngines",
+          "Item": "Int_Engine_Size6_Class5",
+          "On": true,
+          "Priority": 0,
+          "Engineering": {
+            "BlueprintName": "Engine_Dirty",
+            "Level": 5,
+            "Quality": 1,
+            "ExperimentalEffect": "special_engine_overloaded"
+          }
+        },
+        {
+          "Slot": "FrameShiftDrive",
+          "Item": "Int_Hyperdrive_Overcharge_Size5_Class5",
+          "On": true,
+          "Priority": 0,
+          "Engineering": {
+            "BlueprintName": "FSD_LongRange",
+            "Level": 5,
+            "Quality": 1,
+            "ExperimentalEffect": "special_fsd_heavy"
+          }
+        },
+        {
+          "Slot": "LifeSupport",
+          "Item": "Int_LifeSupport_Size4_Class2",
+          "On": true,
+          "Priority": 0,
+          "Engineering": {
+            "BlueprintName": "LifeSupport_LightWeight",
+            "Level": 5,
+            "Quality": 1
+          }
+        },
+        {
+          "Slot": "PowerDistributor",
+          "Item": "Int_PowerDistributor_Size6_Class5",
+          "On": true,
+          "Priority": 0,
+          "Engineering": {
+            "BlueprintName": "PowerDistributor_HighFrequency",
+            "Level": 5,
+            "Quality": 1,
+            "ExperimentalEffect": "special_powerdistributor_fast"
+          }
+        },
+        {
+          "Slot": "Radar",
+          "Item": "Int_Sensors_Size5_Class5",
+          "On": true,
+          "Priority": 0,
+          "Engineering": {
+            "BlueprintName": "Sensor_WideAngle",
+            "Level": 5,
+            "Quality": 1
+          }
+        },
+        {
+          "Slot": "FuelTank",
+          "Item": "Int_FuelTank_Size4_Class3",
+          "On": true,
+          "Priority": 0
+        },
+        {
+          "Slot": "LargeHardpoint1",
+          "Item": "Hpt_PlasmaAccelerator_Fixed_Large",
+          "On": true,
+          "Priority": 0,
+          "Engineering": {
+            "BlueprintName": "Weapon_Overcharged",
+            "Level": 5,
+            "Quality": 1,
+            "ExperimentalEffect": "special_weapon_damage"
+          }
+        },
+        {
+          "Slot": "LargeHardpoint2",
+          "Item": "Hpt_PlasmaAccelerator_Fixed_Large",
+          "On": true,
+          "Priority": 0,
+          "Engineering": {
+            "BlueprintName": "Weapon_Overcharged",
+            "Level": 5,
+            "Quality": 1,
+            "ExperimentalEffect": "special_weapon_damage"
+          }
+        },
+        {
+          "Slot": "LargeHardpoint3",
+          "Item": "Hpt_Slugshot_Gimbal_Large",
+          "On": true,
+          "Priority": 0,
+          "Engineering": {
+            "BlueprintName": "Weapon_Efficient",
+            "Level": 5,
+            "Quality": 1,
+            "ExperimentalEffect": "special_incendiary_rounds"
+          }
+        },
+        {
+          "Slot": "LargeHardpoint4",
+          "Item": "Hpt_Slugshot_Gimbal_Large",
+          "On": true,
+          "Priority": 0,
+          "Engineering": {
+            "BlueprintName": "Weapon_Efficient",
+            "Level": 5,
+            "Quality": 1,
+            "ExperimentalEffect": "special_incendiary_rounds"
+          }
+        },
+        {
+          "Slot": "MediumHardpoint1",
+          "Item": "Hpt_Cannon_Gimbal_Medium",
+          "On": true,
+          "Priority": 0,
+          "Engineering": {
+            "BlueprintName": "Weapon_Overcharged",
+            "Level": 5,
+            "Quality": 1,
+            "ExperimentalEffect": "special_high_yield_shell"
+          }
+        },
+        {
+          "Slot": "MediumHardpoint2",
+          "Item": "Hpt_Cannon_Gimbal_Medium",
+          "On": true,
+          "Priority": 0,
+          "Engineering": {
+            "BlueprintName": "Weapon_Overcharged",
+            "Level": 5,
+            "Quality": 1,
+            "ExperimentalEffect": "special_high_yield_shell"
+          }
+        },
+        {
+          "Slot": "TinyHardpoint1",
+          "Item": "Hpt_ShieldBooster_Size0_Class5",
+          "On": true,
+          "Priority": 0,
+          "Engineering": {
+            "BlueprintName": "ShieldBooster_HeavyDuty",
+            "Level": 5,
+            "Quality": 1,
+            "ExperimentalEffect": "special_shieldbooster_thermic"
+          }
+        },
+        {
+          "Slot": "TinyHardpoint2",
+          "Item": "Hpt_ShieldBooster_Size0_Class5",
+          "On": true,
+          "Priority": 0,
+          "Engineering": {
+            "BlueprintName": "ShieldBooster_HeavyDuty",
+            "Level": 5,
+            "Quality": 1,
+            "ExperimentalEffect": "special_shieldbooster_thermic"
+          }
+        },
+        {
+          "Slot": "TinyHardpoint3",
+          "Item": "Hpt_ShieldBooster_Size0_Class5",
+          "On": true,
+          "Priority": 0,
+          "Engineering": {
+            "BlueprintName": "ShieldBooster_Resistive",
+            "Level": 5,
+            "Quality": 1,
+            "ExperimentalEffect": "special_shieldbooster_chunky"
+          }
+        },
+        {
+          "Slot": "TinyHardpoint4",
+          "Item": "Hpt_ShieldBooster_Size0_Class5",
+          "On": true,
+          "Priority": 0,
+          "Engineering": {
+            "BlueprintName": "ShieldBooster_Resistive",
+            "Level": 5,
+            "Quality": 1,
+            "ExperimentalEffect": "special_shieldbooster_chunky"
+          }
+        },
+        {
+          "Slot": "TinyHardpoint5",
+          "Item": "Hpt_PlasmaPointDefence_Turret_Tiny",
+          "On": true,
+          "Priority": 0
+        },
+        {
+          "Slot": "TinyHardpoint6",
+          "Item": "Hpt_PlasmaPointDefence_Turret_Tiny",
+          "On": true,
+          "Priority": 0
+        },
+        {
+          "Slot": "Slot01_Size6",
+          "Item": "Int_ShieldGenerator_Size6_Class5_Strong",
+          "On": true,
+          "Priority": 0,
+          "Engineering": {
+            "BlueprintName": "ShieldGenerator_Reinforced",
+            "Level": 5,
+            "Quality": 1,
+            "ExperimentalEffect": "special_shield_thermic"
+          }
+        },
+        {
+          "Slot": "Slot02_Size4",
+          "Item": "Int_GuardianShieldReinforcement_Size4_Class2",
+          "On": true,
+          "Priority": 0
+        },
+        {
+          "Slot": "Slot03_Size3",
+          "Item": "Int_GuardianModuleReinforcement_Size3_Class2",
+          "On": true,
+          "Priority": 0
+        },
+        {
+          "Slot": "Slot04_Size2",
+          "Item": "Int_CargoRack_Size2_Class1",
+          "On": true,
+          "Priority": 0
+        },
+        {
+          "Slot": "Slot05_Size1",
+          "Item": "Int_DroneControl_Collection_Size1_Class5",
+          "On": true,
+          "Priority": 0
+        },
+        {
+          "Slot": "Slot06_Size1",
+          "Item": "Int_DockingComputer_Advanced",
+          "On": true,
+          "Priority": 0
+        }
+      ]
+    }
+  }
+]

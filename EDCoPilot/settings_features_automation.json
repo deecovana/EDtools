@@ -1,0 +1,182 @@
+[
+	{
+        "type": "title",
+        "title": "Course Plotting"
+    },
+	{
+        "type": "bool",
+        "title": "Use alternate plotting sequence",
+        "desc": "If ON, will select the Plot Route icon on the right hand side of the Galaxy Map, instead of pressing UI Select when focussed on the system on the map. This is a workaround for users who experience the bug in Galaxy Map where they cannot select the system",
+        "section": "FeatureSettings",
+        "key": "AlternatePlotApproach"
+    },
+	{
+        "type": "title",
+        "title": "Automatic Shutdown"
+    },
+	{
+        "type": "bool",
+        "title": "Close EDCoPilot on clean shutdown of Elite Dangerous",
+        "desc": "If on, will automatically shut down when you exit to desktop from Elite Dangerous menu.",
+        "section": "FeatureSettings",
+        "key": "CloseOnCleanEDClose"
+    },
+	{
+        "type": "numeric",
+        "title": "Close EDCoPilot if Elite Dangerous not detected for X minutes",
+        "desc": "Set this value to number of minutes Elite Dangerous isnt running before EDCoPilot closes automatically. Set to 0 to ignore.",
+        "section": "FeatureSettings",
+        "key": "EliteNotFoundCloseInterval"
+    },
+	{
+        "type": "title",
+        "title": "Updates"
+    },
+	{
+        "type": "bool",
+        "title": "Automatic Updates",
+        "desc": "If on, will automatically download and apply updates. If off, will require manual intervention.",
+        "section": "Updates",
+        "key": "AutomaticUpdates"
+    },
+	{
+        "type": "title",
+        "title": "Voice Attack interaction"
+    },
+	{
+        "type": "bool",
+        "title": "Call Voice Attack",
+        "desc": "If ON, will trigger a reload in Voice Attack of its dynamic variables, so it can recognise new phrases like recent system names plotted to, or new bookmark group names. If OFF, these will not be recognisable until next Voice Attack restart or executing voice command 'Refresh CoPilot'",
+        "section": "UI Preferences",
+        "key": "CallVoiceAttack"
+    },
+	{
+        "type": "bool",
+        "title": "Default Voice Attack listening state",
+        "desc": "If ON, VA listening will be resumed after loading the EDCoPilot profile, or when dynamic variables are updated. If OFF, VA listening will be stopped.",
+        "section": "UI Preferences",
+        "key": "VoiceAttackListenState"
+    },
+	{
+        "type": "title",
+        "title": "Bookmarks"
+    },
+	{
+        "type": "bool",
+        "title": "Automatically bookmark your destination system",
+        "desc": "If on, will add your destination to your bookmarks list",
+        "section": "Bookmarks",
+        "key": "AutoBookmarkDestination"
+    },
+	{
+        "type": "title",
+        "title": "On Foot"
+    },
+	{
+        "type": "bool",
+        "title": "Auto deploy on-foot shields",
+        "desc": "If on, will deploy your shield when you deploy a weapon or come under attack.",
+        "section": "On Foot",
+        "key": "OnFootAutoShield"
+    },
+	{
+        "type": "bool",
+        "title": "Auto-disable on-foot shield when you holster your weapon",
+        "desc": "If on, will disable your shield when you holster your weapon.",
+        "section": "On Foot",
+        "key": "DisableShieldOnWeaponHolster"
+    },
+	{
+        "type": "numeric",
+        "title": "Delay when dropping shields after holstering (seconds)",
+        "desc": "If Auto-disable is ON above, then this setting represents how many seconds to wait before the shield is disabled, after you holster your weapon. Re-drawing a weapon during this interval will cause the scheduled disable to be ignored.",
+        "section": "On Foot",
+        "key": "DisableShieldsDelay"
+    },
+	
+	{
+        "type": "bool",
+        "title": "Ignore disable shield on holster if at a CZ",
+        "desc": "If on, will ignore the auto-disable of on-foot shield when you holster weapon at a CZ.",
+        "section": "On Foot",
+        "key": "IgnoreDropShieldInCZ"
+    },
+	{
+        "type": "title",
+        "title": "Discovery Mode ('AutoHonk')"
+    },
+	{
+        "type": "bool",
+        "title": "Enable / disable Discovery Mode",
+        "desc": "If on (and your primary or secondary weapon keybinds are set), will activate the Discovery Scanner when you enter a system",
+        "section": "Discovery Mode",
+        "key": "AutoHonk"
+    },
+	{
+        "type": "options",
+        "title": "Discovery Scanner mapped to Primary or Secondary fire button",
+        "desc": "Select which fire button you have mapped the Discovery Scanner to in your firegroup",
+        "section": "Discovery Mode",
+        "key": "HonkFiregroup",
+		"options": ["Primary", "Secondary" ]
+    },
+	{
+        "type": "title",
+        "title": "Neutron Jumps"
+    },
+	{
+        "type": "bool",
+        "title": "Auto Neutron plotter on/off (note, there is also a button on the Neutron Highway bookmark group panel for this)",
+        "desc": "If on and you are following a plotted Neutron Highway route, will automatically plot to the next neutron star once you supercharge your FSD at the current neutron star",
+        "section": "UI Appearance",
+        "key": "AutoNeutron"
+    },
+	{
+        "type": "numeric",
+        "title": "Auto Neutron - plotting delay after supercharging (seconds)",
+        "desc": "Set the number of seconds (5 - 20) you want to allow you to exit the cone after supercharging, before EDCoPilot plots to the next neutron star in the route",
+        "section": "UI Appearance",
+        "key": "AutoNeutronDelay"
+    },
+	{
+        "type": "options",
+        "title": "Auto Neutron - plot or target to next neutron",
+        "desc": "When setting course for the next neutron, whether to plot to the system or directly target the system",
+        "section": "UI Appearance",
+        "key": "ActiveRouteNextNeutronMethod",
+		"options": ["Plot", "Target" ]
+    },
+	{
+        "type": "numeric",
+        "title": "FSD repair reminder after x supercharges (mk1 FSD)",
+        "desc": "Set the number of supercharges you wish to execute before EDCoPilot reminds you to repair your mk1 FSD. Set to 0 if you do not want a reminder.",
+        "section": "UI Appearance",
+        "key": "SuperchargeReminder"
+    },
+		{
+        "type": "numeric",
+        "title": "FSD repair reminder after x supercharges (mk2 FSD)",
+        "desc": "Set the number of supercharges you wish to execute before EDCoPilot reminds you to repair your mk2 FSD. Set to 0 if you do not want a reminder.",
+        "section": "UI Appearance",
+        "key": "SuperchargeReminderMk2"
+    },
+	{
+        "type": "title",
+        "title": "Ship Combat"
+    },
+	{
+        "type": "bool",
+        "title": "Auto-Target Highest Threat",
+        "desc": "If on, will issue the 'Target Highest Threat' command every few seconds when ship is under attack",
+        "section": "Away From Keyboard Features",
+        "key": "AFK-Mode"
+    },
+	{
+        "type": "bool",
+        "title": "Trigger Instant Replay on death (requires Geforce Instant Replay)",
+        "desc": "If on, trigger the Instant Replay capture to save the last x minutes of gameplay when your ship is destroyed",
+        "section": "Away From Keyboard Features",
+        "key": "TriggerInstantReplayOnDeath"
+    }
+	
+]

@@ -1,0 +1,64 @@
+[
+	{
+        "type": "title",
+        "title": "SubTitles Bar - displays a separate window displaying the Ship AI last spoken sentence."
+    },
+	{
+        "type": "bool",
+        "title": "Show SubTitles bar",
+        "desc": "If ON will show the SubTitles bar",
+        "section": "UI Preferences",
+        "key": "SubsBarShow"
+    },
+	{
+        "type": "numeric",
+        "title": "SubTitles bar transparency",
+        "desc": "Set level of transparency from 100 (semi-invisible) to 255 (opaque). Tip: Leave this at 255 if you plan to make the background translucent",
+        "section": "UI Preferences",
+        "key": "SubsBarTransparency"
+    },
+	{
+        "type": "bool",
+        "title": "SubTitles bar Translucency",
+        "desc": "Set this ON to make the subtitles bar background translucent. Note: Turn this OFF temporarily if you want to move the window.",
+        "section": "UI Preferences",
+        "key": "SubsBarTranslucency"
+    },
+	{
+        "type": "numeric",
+        "title": "SubTitles bar Scalar",
+        "desc": "Scales the size of the Mini-Bar (range = 0.5 to 4).",
+        "section": "UI Preferences",
+        "key": "SubsBarScalar"
+    },
+	{
+        "type": "numeric",
+        "title": "SubTitles bar width",
+        "desc": "Set your preferred width. Note, note too thin, else long sentences will scroll off end. Note: height is fixed to 3 lines in depth.",
+        "section": "UI Preferences",
+        "key": "SubsWidth"
+    },
+	{	
+	    "type": "numeric",
+        "title": "Minimum time to display new text (Normal mode)",
+        "desc": "The minimum amount of time in seconds to display new captions before clearing. If 0, captions will never clear.",
+        "section": "UI Preferences",
+        "key": "SubsBarDisplayMinInterval"
+	},
+	{	
+	    "type": "numeric",
+        "title": "Minimum time to display new text (Time Trial mode)",
+        "desc": "The minimum amount of time in seconds to display new captions before clearing, while in a Time Trial If 0, captions will never clear.",
+        "section": "UI Preferences",
+        "key": "SubsBarDisplayMinIntervalTT"
+	},
+		{	
+	    "type": "numeric",
+        "title": "Caption display time per word displayed (seconds)",
+        "desc": "This will calculate an elapsed time to display the last caption, based on number of words. Will not be less than minimum time as set above. ",
+        "section": "UI Preferences",
+        "key": "SubsBarDisplayWordIncrement"
+    }
+	
+
+]

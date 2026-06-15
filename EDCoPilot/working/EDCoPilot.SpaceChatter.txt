@@ -1,0 +1,786 @@
+[example]
+[<ship1>] Control this is Apex Interstellar flight <flightnum> to <localdestination>. Ready to depart. 
+[<stationname>] This is <stationname> control. Landing clamps disengaged. See you soon.
+[<ship1>] On our way. Apex out.
+[\example]
+
+[example]
+[<ship1>] Control this is Apex Interstellar flight <flightnum> to <localdestination>. Ready to depart. 
+[<stationname>] This is <stationname> control. Landing clamps disengaged. See you soon.
+[<ship1>] On our way. Apex out.
+[\example]
+
+[example]
+[<ship1>] <stationname>. This is Apex Interstellar flight <flightnum>, inbound from <localdestination>, on approach.
+[<stationname>] Confirmed flight <flightnum>. This is <stationname> traffic operations, Continue approach.
+[<ship1>] Roger that, control.
+[\example]
+
+[example]
+[<ship1>] <stationname>. This is Apex Interstellar flight <flightnum>, inbound from <localdestination>, on approach.
+[<stationname>] Acknowledged, <flightnum>. This is <stationname> traffic operations, Continue approach.
+[<ship1>] Roger that, control.
+[\example]
+
+
+[example] 
+[<ship1>] o7 <stationname>. Requesting permission to dock. We are carrying urgent medical supplies. Over. 
+[<stationname>] <stationname> control. Permission granted. Continue approach. We have given your priority dock clearance. We appreciate your swift response. 
+[<ship1>] Acknowledged, Continuing approach. Over.
+[\example]
+
+[example]
+[<ship1>] Oh 7 <stationname> control. Inbound cruise ship on approach. Requesting a landing pad.
+[<stationname>] Inbound cruise ship, this is space traffic operations. Oh 7 to you as well. Welcome to <stationname>. Cleared to land.
+[<ship1>] Copy that. Requesting auto dock.
+[<stationname>] Use of automated approach is approved. Throttle to zero and we'll take it from here.
+[<ship1>] Throttle at zero.
+[\example]
+
+[example]
+[<stationname>] Control to Inbound type nine class vessel. We have you on Sensors. Approval is required prior to approaching the docks.
+[<ship1>] o7 <stationname> control, Copy that. Requesting a dock.
+[<stationname>] Acknowledged. Stand by.
+[<ship1>] Standing by.
+[\example]
+
+[example]
+[<ship1>] Control, we are a Mastopolis Mining vessel, on approach.
+[<stationname>] Greetings mastopolis mining. Welcome to <stationname>. Sending you a dock assignment now.
+[<ship1>] Received. Oh 7.
+[\example]
+
+[example]
+[<ship1>] Control this is Trading vessel <flightnum> inbound from <localdestination>. Requesting docking.
+[<stationname>] Welcome to <stationname>, we welcome your business. Sending your landing pad now.
+[<ship1>] Received thank you.
+[\example]
+
+[example]
+[<ship1>] <stationname> control. Trade vessel going topside. Ready for takeoff.
+[<stationname>] Trade vessel. Acknowledged. Stand by for landing clamps release.
+[\example]
+
+
+[example]
+[<ship1>] Oh 7 <stationname> control. This is Pirate hunter <flightnum> on approach. Requesting a landing pad and topside rearming.
+[<stationname>] Oh 7, Pirate hunter. Welcome to <stationname>. Check your panel for landing information. Rearm crews will be standing by.
+[<ship1>] 10 4. We've got to get back out there as soon as possible. Lots of bounties in the system.
+[<stationname>] Understood. Your help in keeping us safe is appreciated.
+[<ship1>] As long as we get paid.
+[\example]
+
+[example]
+[<ship1>] Oh 7 <stationname> control. Pirate hunter on the move. Thanks for the ammo.
+[<stationname>] Copy that pirate hunters. Oh 7 to you and thanks for choosing <stationname>. Good hunting.
+[<ship1>] 10 4.
+[\example]
+
+[example]
+[<ship1>] Oh 7 <stationname> control. We are an exploration vessel on approach. Requesting docking and a place to stretch our legs.
+[<stationname>] Exploration vessel, this is space traffic control. Oh 7 and welcome to <stationname>. Check your panel for landing information and welcome to <starsystem>. Leg stretch approved.
+[<ship1>] Ha. Thank you. It's good to be back in populated space.
+[<stationname>] Good to have you. Enjoy your visit.
+[\example]
+
+[example]
+[<ship1>] Aegis vessel on approach. Requesting docking.
+[<stationname>] Aegis vessel, this is <stationname> space traffic operations. Check your panel for landing information.
+[<ship1>] Confirmed.
+[\example]
+
+[example]
+[<ship1>] <stationname> control. Aegis vessel ready to depart. Requesting release. 
+[<stationname>] Aegis vessel. You are cleared to depart, and we're rotating you now.
+[\example]
+
+[example]
+[<ship1>] Oh 7 <stationname>. This is Astro gator tours flight <flightnum> requesting a dock for a maintenance check and passenger disembark.
+[<stationname>] This is <stationname> space traffic control, and oh 7 to you too. Sending your dock number now. Welcome to <starsystem>.
+[<ship1>] Good to be here. Astro gator tours out.
+[\example]
+
+[example]
+[<ship1>] <stationname> control. This is Astro gator tours flight <flightnum>. We are all loaded and ready to go.
+[<stationname>] Flight <flightnum>, you are cleared to depart. Stand by for release, and thanks for your visit. 
+[<ship1>] Thanks. Astro gator tours out.
+[\example]
+
+[example]
+[<ship1>] This is Galactic logistics. Inbound.
+[<stationname>] Galactic Logistics vessel. This is <stationname> traffic operations. Sending your dock number now. We appreciate your business.
+[\example]
+
+[example]
+[<ship1>] Control. This is Galactic logistics. Ready to go.
+[<stationname>] Galactic Logistics vessel, you are cleared to depart. Thanks for doing business here with us.
+[\example]
+
+[example]
+[<ship1>] <stationname> traffic. Happy Haulers inbound. Looking for a pad for docking.
+[<stationname>] Happy Haulers vessel, this is <stationname> control. Sending your dock number now. We appreciate your business.
+[\example]
+
+[example]
+[<ship1>] Control. Happy Haulers. Just about ready to go.
+[<stationname>] Happy Haulers vessel. Acknowledged. And once again, thanks for your business.
+[<ship1>] Be back soon. Thank you.
+[\example]
+
+[example]
+[<ship1>] <stationname> control. Pathfinder solutions on approach. Looking for a pad and docking.
+[<stationname>] Pathfinder solutions vessel. This is <stationname> space traffic control. Continue approach and stand by for a pad.
+[<ship1>] Continuing. 
+[\example]
+
+[example]
+[<ship1>] <stationname> control. Pathfinder solutions ready for release.
+[<stationname>] Pathfinder solutions vessel you are cleared for departure. Clamps are now released. Safe journey.
+[<ship1>] On the move. Oh 7.
+[\example]
+
+[example]
+[<stationname>] Sirius corporation vessel. This is <stationname> space traffic control. We have you on sensors.
+[<ship1>] Acknowledged <stationname> control. Waiting for a landing pad.
+[<stationname>] Copy. Sending your dock number now.
+[<ship1>] Received. Many thanks.
+[\example]
+
+[example]
+[<ship1>] <stationname> stc. Sirius Corp. Going topside and ready to go.
+[<stationname>] Sirius corporation vessel. Confirmed. Stand by for release. Thanks for your visit with us.
+[<ship1>] A pleasure. 
+[\example]
+
+[example]
+[<ship1>] <stationname> control. Space lanes cargo vessel <flightnum> on approach.
+[<stationname>]Acknowledged, Space lanes cargo vessel. This is <stationname> space traffic operations. Continue approach and we will have your pad assignment momentarily.
+[<ship1>] Continuing approach, thank you. 
+[\example]
+
+[example]
+[<ship1>] <stationname> control. Space lanes cargo vessel on the move. Thanks for everything.
+[<stationname>] Acknowledged, Space lanes cargo vessel. Your business is valued. Come back soon.
+[<ship1>] We will. Cargo vessel out. Oh 7.
+[<stationname>] Oh 7.
+[\example]
+
+[example]
+[<ship1>] Greetings <stationname>. World craft vessel inbound requesting a dock.
+[<stationname>] Oh 7 World craft vessel. Acknowledged. Check your panel.
+[<ship1>] Received. Oh 7.
+[\example]
+
+[example]
+[<ship1>] <stationname> control. World craft vessel on the move. Until next time.
+[<stationname>] World craft vessel. Acknowledged. Come back soon.
+[\example]
+
+[example]
+[<ship1>] Oh 7 <stationname>. Neo medical industries inbound requesting a dock.
+[<stationname>] Oh 7 Neo medical industries. Acknowledged. Proceed to your assigned landing pad.
+[<ship1>] We are proceeding.
+[\example]
+
+[example]
+[<ship1>] <stationname> control. Neo medical industries. Going topside. Ready to go.
+[<stationname>] Neo medical industries. Confirmed. Standy by for release. Thanks for your visit with us.
+[<ship1>] A pleasure.
+[\example]
+
+[example]
+[<ship1>] Hello <stationname> this is Search and rescue, inbound and requesting immediate docking. Please have medical personnel standing by.
+[<stationname>] Acknowledged search and rescue. Priority clearance granted.
+[<stationname>] Medical personnel as well as a security detail have been notified of your arrival and are on their way to your hanger.
+[<ship1>] Copy that. Thanks Control.
+[<stationname>] Of course. Thank you for your service.
+[\example]
+
+
+[example]
+[<stationname>] Razza frag Technology scientific vessel. This is <stationname> space traffic control. We have you on sensors. Welcome.
+[<ship1>] Acknowledged Control. Waiting for a dock assignment.
+[<stationname>] Copy. Sending your dock number now.
+[<ship1>] Received. 
+[\example]
+
+[example]
+[<ship1>] <stationname> control, this is the Razza frag Technology science vessel, topside and ready to depart.
+[<stationname>]  <stationname> control to Razza frag Technology vessel, acknowledged, and you are clear to depart. Thanks for all you do. We love your CoPilot systems!
+[<ship1>]  Copy that, oh 7. 
+[<stationname>] oh 7.
+[\example]
+
+[example]
+[<ship1>]  oh 7 Control. Good to be here. Exploration vessel requesting docking pad.
+[<stationname>] o7 exploration vessel. <stationname> control here. Welcome to <starsystem>. Landing info dispatched.
+[<ship1>] Wonderful. Thank you. Your space station is impressive.
+[<stationname>] We thank you. And, where are you ladies and gentlemen coming from?
+[<ship1>] We were in <randomstarsystem>.
+[<stationname>] Nice. Well, enjoy your visit with us.
+[\example]
+
+[example]
+[<ship1>] Conducting experiment sequence A-12. Initializing data transmission.
+[<ship2>] Acknowledged. Data reception confirmed. Stand by for analysis.
+[\example]
+
+[example]
+[<ship1>] Reporting minor oxygen level fluctuation in module 3. Investigating.
+[<ship2>] Copy that. Monitoring life support systems closely. Keep us updated.
+[\example]
+
+[example]
+[<ship1>] Hey Comms, I'm experiencing a minor communication delay on the relay channel. Advise on troubleshooting steps.
+[<ship2>] Copy that. Stand by while we diagnose and reset the relay link.
+[\example]
+
+[example]
+[<ship1>] Preparing for EVA to check out that stabliser. Initiating suit systems check.
+[<ship2>] We read you. Confirming suit telemetry. Proceed when ready.
+[\example]
+
+[example]
+[<ship1>] Engaging thruster calibration sequence. Running diagnostics on propulsion systems.
+[<ship2>] Copy. Monitoring thruster performance. Stand by for calibration results.
+[\example]
+
+[example]
+[<ship1>] Detecting anomaly in starboard sensor array. Initiating diagnostic scan.
+[<ship2>] Acknowledged. Reviewing sensor logs. Report findings upon completion.
+[\example]
+
+[example]
+[<ship1>] Conducting plasma shield stress test. Activating shield systems for analysis.
+[<ship2>] Understood. Monitoring shield integrity. Notify of any stress threshold breaches.
+[\example]
+
+[example]
+[<ship1>] Initiating magnetic field generator startup. Verifying alignment with navigation systems.
+[<ship2>] Roger that. Confirming field generation. Notify when alignment is stabilized.
+[\example]
+
+[example]
+[<ship1>] Deploying repair drones for exterior inspection. Initiating drone launch sequence.
+[<ship2>] Copy. Monitoring drone feeds. Report visual inspection results as they come in.
+[\example]
+
+[example]
+[<ship1>] Initiating gravitational field analysis. Commencing gravitational anomaly scan.
+[<ship2>] Acknowledged. Monitoring field readings. Stand by for anomaly detection.
+[\example]
+
+[example]
+[<ship1>] Conducting spectral analysis of nearby celestial object. Initializing spectroscopy scan.
+[<ship2>] Copy. Confirming spectroscopy data reception. Await analysis results.
+[\example]
+
+[example]
+[<ship1>] Observing electromagnetic interference in navigation systems. Initiating interference analysis.
+[<ship2>] Understood. Monitoring EM spectrum. Notify of any interference patterns detected.
+[\example]
+
+[example]
+[<ship1>] Activating emergency life support systems. Testing emergency oxygen supply.
+[<ship2>] Roger. Monitoring life support backups. Report system readiness status.
+[\example]
+
+[example]
+[<ship1>] Beginning star chart calibration. Updating navigational database with latest coordinates.
+[<ship2>] Copy that. Confirming navigation updates. Stand by for updated star charts.
+[\example]
+
+[example]
+[<ship1>] Running diagnostic on auxiliary power grid. Checking power distribution efficiency.
+[<ship2>] Acknowledged. Monitoring auxiliary power levels. Notify of any anomalies detected.
+[\example]
+
+[example]
+[<ship1>] Initiating bio-sensor calibration. Testing biological monitoring systems.
+[<ship2>] Understood. Confirming bio-sensor functionality. Await calibration results.
+[\example]
+
+[example]
+[<ship1>] Conducting exterior hull inspection. Activating external camera feeds.
+[<ship2>] Copy. Monitoring hull inspection feeds. Report visual findings as they come in.
+[\example]
+
+[example]
+[<ship1>] Commencing planetary mineral survey. Deploying mineral analysis probes.
+[<ship2>] Roger that. Confirming probe deployment. Stand by for mineral composition data.
+[\example]
+
+[example]
+[<ship1>] Initiating gravity well simulation. Testing gravitational field response.
+[<ship2>] Copy. Monitoring simulation parameters. Notify of any unexpected results.
+[\example]
+
+[example]
+[<ship1>] Activating shield matrix stress test. Engaging shield integrity analysis.
+[<ship2>] Acknowledged. Monitoring shield matrix. Report stress test results upon completion.
+[\example]
+
+[example]
+[<ship1>] Conducting long-range communication test. Initiating deep space transmission.
+[<ship2>] Understood. Monitoring transmission integrity. Await communication test results.
+[\example]
+
+[example]
+[<ship1>] Running radar system diagnostics. Testing radar scanning capabilities.
+[<ship2>] Copy that. Confirming radar functionality. Notify of any discrepancies found.
+[\example]
+
+[example]
+[<ship1>] Initiating plasma containment field check. Verifying plasma stability parameters.
+[<ship2>] Roger. Monitoring plasma containment. Report field stability status.
+[\example]
+
+[example]
+[<ship1>] Activating stealth mode systems check. Testing cloaking field synchronization.
+[<ship2>] Acknowledged. Monitoring stealth system. Notify of any operational issues.
+[\example]
+
+[example]
+[<ship1>] Conducting astrometric calibration. Verifying stellar positioning accuracy.
+[<ship2>] Copy. Confirming astrometric data. Stand by for calibration results.
+[\example]
+
+[example]
+[<ship1>] Observing subspace fluctuations. Initiating subspace anomaly scan.
+[<ship2>] Understood. Monitoring subspace readings. Notify of any anomalies detected.
+[\example]
+
+[example]
+[<ship1>] Initiating biohazard containment protocol. Activating quarantine measures.
+[<ship2>] Copy that. Confirming quarantine readiness. Report protocol activation status.
+[\example]
+
+[example]
+[<ship1>] Running environmental control system check. Testing atmospheric regulation.
+[<ship2>] Roger. Monitoring environmental controls. Notify of any irregularities detected.
+[\example]
+
+[example]
+[<ship1>] Activating emergency beacon test. Initiating distress signal simulation.
+[<ship2>] Acknowledged. Monitoring distress signal transmission. Await test results.
+[\example]
+
+[example]
+[<ship1>] Conducting exterior hull inspection. Activating external camera feeds.
+[<ship2>] Copy that. Monitoring hull inspection feeds. Report visual findings as they come in.
+[<ship1>] Hey Commander, I'm seeing potential microfractures along starboard hull section.
+[<ship2>] Acknowledged. We'd best head in for repairs. Get yourself in here and we'll request a pad.
+[\example]
+
+[example]
+[<ship1>] Initiating plasma containment field check. Verifying plasma stability parameters.
+[<ship2>] Roger that. Monitoring plasma containment. Report field stability status.
+[<ship1>] Seems to be holding well. Try increasing the containment field strength by 15%.
+[<ship2>] Copy that. Adjusting containment field strength as recommended. Stand by for stability verification.
+[\example]
+
+[example]
+[<ship1>] Activating emergency life support systems. Testing emergency oxygen supply.
+[<ship2>] Understood. Monitoring life support backups. Report system readiness status.
+[<ship1>] I'm detecting oxygen flow irregularities in emergency supply line.
+[<ship2>] I see that. Switching to manual override of valve D-4 to stabilize oxygen flow. Stand by for confirmation.
+[\example]
+
+[example]
+[<ship1>] Running diagnostic on auxiliary power grid. Checking power distribution efficiency.
+[<ship2>] Copy that. Monitoring auxiliary power levels. 
+[<ship1>] I'm detecting a power surge on bank 5-C. Potential risk of overload.
+[<ship2>] Acknowledged. Re-routing power flow around it. 
+[\example]
+
+[example]
+[<ship1>] Preparing for EVA to check out that stabilizer. Initiating suit systems check.
+[<ship2>] We read you. Confirming suit telemetry. Proceed when ready.
+[<ship1>] Ah hang on, I'm detecting suit pressure fluctuations. Possible leak in left gauntlet seal.
+[<ship2>] Copy that. Try tightening the seal manually. Stand by while we monitor pressure stabilization.
+[\example]
+
+[example]
+[<ship1>] Observing electromagnetic interference in navigation systems. Initiating interference analysis.
+[<ship2>] Understood. Monitoring EM spectrum. Notify of any interference patterns detected.
+[<ship1>] I see an intermittent interference pattern in the frame shift drive module.
+[<ship2>] Acknowledged. Recommend isolating affected module and conducting EM shielding test. Stand by for further instructions.
+[\example]
+
+[example]
+[<ship1>] Activating shield matrix stress test. Engaging shield integrity analysis.
+[<ship2>] Copy that. Monitoring shield matrix. Report stress test results upon completion.
+[<ship1>] Looks like there's a stress anomaly in shield matrix section 12-D.
+[<ship2>] Roger. I'm redistributing power flow to stabilize matrix stress. Initiating adjustments.
+[\example]
+
+[example]
+[<ship1>] Conducting long-range communication test. Initiating deep space transmission.
+[<ship2>] Acknowledged. Monitoring transmission integrity. Awaiting communication test results.
+[<ship1>] Not seeing any signal degradation in the long-range transmission channel.
+[<ship2>] Copy that. Seems good on our side too.
+[\example]
+
+[example]
+[<ship1>] <callsign> to <mycallsign>. Is that you Commander <cmdrname>? I thought I recognized <myshipname>. I've heard of your deeds all the way from <randomstarsystem>. I'm a big fan, <cmdraddress>
+[<stationname>] <callsign> this is <stationname> control. You are broadcasting on an open channel.
+[<ship1>] Apologies <stationname> control. 
+[\example]
+
+[example]
+[<stationname>] Attention all ships within this flight sector.   This is <stationname> space traffic control. Be advised that threats or aggressive actions against any vessel in this zone will not be tolerated and will be countered with extreme prejudice. 
+[\example]
+
+
+[example]
+[<stationname>] Attention all ships within this flight sector.   This is <stationname> space traffic control. We have reports of increased pirate activity. All vessels are reminded to activate the report crimes tab on your transponders. Please report any radio threats to control security. Fly safe. <stationname> out.
+[\example]
+
+[example]
+[<stationname>] Attention unidentified vessel. This is <stationname> space traffic control. Silent running is not permitted in this area. Restore your signature immediately or vacate the area.
+[<stationname>] Unidentified vessel. Deactivate silent running immediately and submit to scans.
+[<ship1>] Apologies control. Don't shoot. We were having some technical difficulties. Sorry about that. How are you? 
+[\example]
+
+[example]
+[<stationname>] Attention unidentified vessel. This is <stationname> space traffic control. Silent running is not allowed in this vicinity. Abort your approach and vacate the area.
+[\example]
+
+[example]
+[<stationname>] Attention unidentified vessel. This is <stationname> space traffic control. Silent running is not permitted in this zone. Deactivate silent running immediately and submit to scans or vacate the area. Do not test us. This is your only warning.
+[<stationname>] Hotel five five, Hotel two three: move to intercept.
+[<ship1>] Hotel flight. Copy. Let's turn and burn.
+[<ship2>] This is Zulu zero. Tango squad stand by to scramble. All other squads remain at alert level 2. Stay frosty.
+[\example] (edited)
+
+[example]
+[<ship1>] Oh 7 <stationname> control. Suppose a ship has an outstanding <starsystem> bounty. A bounty for something silly. And stupid. Could that ship dock here? Asking for a friend.
+[<stationname>] Interesting. This is space traffic control. Oh 7. <stationname> will allow the approach. Of your friend. However, <starsystem> authorities will not be so generous. You have a chance. Your friend, has a chance.
+[<ship2>] We say go for it.
+[<ship1>] I'm sure you do. Easy to say when it's not your ship on the line. Roger that control.
+[<ship2>] We thought it wasn't your ship either. Wasn't it - your friend?
+[<ship1>] Yes. Someone else. A friend. Definitely not us.
+[<ship2>] Yeah - right.
+[<stationname>] Good luck commander.
+[\example]
+
+[example]
+[<ship1>] I really need to take a monster dump!
+[<stationname>] Um...this is <stationname> space traffic control. You are on an open channel.
+[<ship1>] Oh crap! Sorry about that.
+[<ship2>] Haha Crap. Literally.
+[<ship3>] The mood in here was gloomy until just now. Thanks for this!
+[<stationname>] Keep the channel clear please.
+[<ship4>] um...speaking of a clear channel...
+[<ship1>] Funny...NOT!
+[\example]
+
+
+[example]
+[<ship1>] <stationname> control. Requesting a fly by.
+[<stationname>] This is <stationname> control. Negative ghost rider. The pattern is full.
+[\example]
+
+[example]
+[<ship1>] I feel the need. The need - for - speed. 
+[<stationname>] This is <stationname> control. Be sure to fill that need outside of the exclusion zone.
+[<ship1>] Copy that.
+[\example]
+
+
+[example]
+[<stationname>] Stand by for shift change.
+[\example]
+
+[example]
+[<ship1>] Radio check.
+[<stationname>] Five by Five.
+[\example]
+
+[example]
+[<ship1>] You have no right to scan me!
+[<ship2>] Sounds like someone has something to hide.
+[\example]
+
+[example]
+[<ship1>] Cease your unauthorized scans immediately.
+[<ship2>] No.
+[<ship1>] Please?
+[\example]
+
+[example]
+[<ship1>] This is not the ship you're looking for.
+[<ship2>] It might be. How will we know unless we scan it?
+[\example]
+
+[example]
+[<ship1>] Whoever is scanning us - kiss my butt!
+[\example]
+
+[example]
+[<ship1>] Whoever just scanned us is a jerk!
+[\example]
+
+[example]
+[<ship1>] Whoever just scanned us should mind their own business!
+[\example]
+
+[example]
+[<ship1>] Whoever just scanned us needs to get a life!
+[\example]
+
+[example]
+[<ship1>] STOP scanning people!
+[\example]
+
+[example]
+[<ship1>] Whoever just scanned me. Yo momma!
+[\example]
+
+[example]
+[<ship1>] Whoever just scanned us. Brush your teeth!
+[\example]
+
+[example]
+[<ship1>] Whoever just scanned us. I want to speak to your manager!
+[\example]
+
+[example]
+[<ship1>] Whoever just scanned me. I'm allergic. I will sue you.
+[\example]
+
+[example]
+[<ship1>] Whoever just scanned us. You're fired!
+[\example]
+
+[example]
+[<ship1>] Whoever just scanned us. Shut up!
+[\example]
+
+[example]
+[<ship1>] To whomever just scanned us. The commander says go take a shower.
+[\example]
+
+[example]
+[<ship1>] Whoever just scanned us can ess my dee!
+[\example]
+
+[example]
+[<ship1>] Aw yeah it's <myshipname>! What up <cmdrname>.
+[\example]
+
+[example]
+[<ship1>] Uh oh. <myshipname> in the house! Or. In the space. Hello <cmdrname>.
+[\example]
+
+
+[example]
+[<ship1>] Oh 7, crew of <myshipname>.
+[\example]
+
+[example]
+[<ship1>] Oh 7, crew of <myshipname>. A pleasure to see you, <cmdrname>.
+[\example]
+
+[example]
+[<ship1>] o7 Commanders! Did I just see the <myshipname> go by earlier?
+[<ship2>] o7 Commander. Yeah, they scanned me. I was honored!
+[<ship3>] They helped us out of a sticky situation in a combat zone once. If you're listening, please extend our gratitude to your crew there aboard <myshipname>.
+[\example]
+
+
+[example]
+[<stationname>] Attention all ships within this flight sector.   This is <stationname> space traffic control. Be advised that threats or aggressive actions against any vessel in this zone will not be tolerated and will be countered with extreme prejudice. 
+[\example]
+
+[example]
+[<stationname>] Attention unidentified vessel. This is <stationname> space traffic control. Silent running is not permitted in this zone. Deactivate silent running immediately and submit to scans or vacate the area.
+[<stationname>] Unidentified vessel. Vacate the area or deactivate silent running immediately and submit to scans. You will not be warned again.
+[<stationname>] Cee eye cee charge lasers.
+[\example]
+
+[example]
+[<stationname>] Attention all ships. This is <stationname> space traffic control. We have reports of increased pirate activity nearby. If you receive any radio threats, report them to the nearest system authority. All vessels are encouraged to activate the report crimes tab on your transponders. Fly safe. <stationname> out.
+[\example]
+
+[example]
+[<stationname>] Be advised. You are in a no fire zone. Stow your weapons immediately. Do not test us.
+[\example]
+
+[example]
+[<stationname>] Attention all ships within the vicinity of <stationname>. This is <stationname> control. Be advised that several landing pads are closed for repairs so you may experience extended delays. We appreciate your patience. And, a softer landing would also be appreciated. <stationname> out. 
+[\example]
+
+[example]
+[<stationname>] This is <stationname> control to all ships. Flight restrictions are in place. Be advised that section four zulu bravo three and sector delta one seven 3 4 are no fly zones. Unauthorized ships should always remain clear of these areas. Thank you. <stationname> out. 
+[\example]
+
+[example]
+[<stationname>] Attention. <stationname> control to all incoming vessels. Please be advised that due to recent criminal activity, security measures have been heightened. If you approach <stationname> you will be scanned. All vessels may be subject to inspection upon docking. Your cooperation with security teams at the docks is required. <stationname> out.
+[<ship1>] That sucks.
+[\example]
+
+
+[example]
+[<ship1>] <stationname> Tower, this is <callsign>, ready for Launch.
+[<stationname>] <callsign> hold position at currently landing pad. We are currently vectoring a Heavy Transport and holding all traffic.
+[<ship2>] <othercallsign> heavy to <stationname> Tower, airlock transition complete, beginning landing sequence. 
+[<stationname>] Acknowledged, <othercallsign> heavy
+[<ship2>] What a cute little ship. Did you make it all by yourself <callsign>?
+[<ship1>] I made it out of Heavy Transport parts. Another landing like yours, and I'll have enough parts for another one.
+[\example]
+
+[example]
+[<ship1>] <callsign> how long until you're ready?
+[<ship2>] It's a new crew in the back, so we're not sure.
+[<ship3>] We'll trade you some old ones for some new ones.
+[<ship2>] I've flown with you. No thanks.
+[<\example>]
+
+[example]
+[<ship1>] <callsign> Ready to Tango with Taxi
+[<stationname>] Foxtrot on down to assigned landing pad <callsign>
+[\example]
+
+[example]
+[<ship1>] <stationname> Tower, <callsign> inbound ready for landing pad assignment.
+[<stationname>] <callsign> stand by. I just spilled tree grubs all over the floor.
+[\example]
+
+[example]
+[<stationname>] Don't worry, I haven't had my morning coffee either.
+[\example]
+
+[example]
+[<stationname>] <stationname> Tower to <callsign> be advised of traffic.
+[<ship1>] Roger, Tower. We have traffic in sight.
+[<stationname>] Roger. They'll be no factor. You couldn't catch them if you tried.
+[\example]
+
+[example]
+[<ship1>] <stationname> Tower this is <callsign>, airlock transition complete, manoeuvring in long final for touch and go.
+[<stationname>] Seems like a pretty normal sized final to me but you are approved for touch and go.
+[<ship1>] It's usually my girlfriend's shop to tell me something is not as long as I think it is, but approved for touch and go.
+[<stationname>] Wait. what?
+[<ship2>] Nice one.
+[\example]
+
+[example]
+[<ship1>] <stationname> Tower, <callsign> with a request.
+[<stationname>] <callsign> go ahead.
+[<ship1>] <stationname> Tower is it possible for you to modify our flight plan to indicate 3 souls on board instead of two?
+[<stationname>] <callsign> I can't change that specific line, but I can make a remark on your flight plan.
+[<ship2>] Congratulations!
+[\example]
+
+[example]
+[<stationname>] <callsign> <shipCorporation> at the pad just called. Everything okay down there?
+[<ship1>] Yeah. Why?
+[<stationname>] They wanted to make sure your hip and back was okay after that landing.
+[\example]
+
+[example]
+[<stationname>] <callsign> be advised traffic twelve o clock three kilometers headed towards you. Recommend you turn ten degrees right to avoid.
+[<ship1>] Searching for traffic.
+[<stationname>] If you want to continue flying straight into the traffic feel free. But recommend you deviate ten degrees right. Traffic is one half kilometer twelve o clock
+[\example]
+
+
+[example]
+[<stationname>] <callsign> is there an instructor on board?
+[<ship1>] No. I have a license.
+[<stationname>] You shouldn't have one. Lower your ship into the sealed hangar and call the tower.
+[\example]
+
+
+[example]
+[<stationname>] <callsign> state destination.
+[<ship1>] We're heading to <localdestination>.
+[<stationname>] You coming back?
+[<ship1>] Nope! Gonna miss me?
+[<stationname>] Absolutely!
+[\example]
+
+[example]
+[<stationname>] <callsign> give way to <othercallsign> heavy. They are bigger than you.
+[<ship1>] That's what she said!
+[\example]
+
+[example]
+[<stationname>] <callsign> state intentions.
+[<ship1>] We are planning on landing in one piece on our assigned landing pad if that is cool with you.
+[\example]
+
+[example]
+[<ship1>] Tower, <callsign> approaching the station airlock for landing at pad.
+[<stationname>] <callsign> Which station and which pad?
+[<ship1>] This pad at this station.
+[<ship2>] I hate to say any traffic please advise but if anyone has eyes on <callsign> please let us know so we can stay away.
+[\example]
+
+[example]
+[<stationname>] <callsign> reduce speed to full stop and hold short of the airlock.
+[<ship1>] Why? What number are we?
+[<stationname>] You're always number one with me, but right now you're twenty and counting.
+[\example]
+
+[example]
+[<ship1>] Gonna be a tight fit.
+[<ship2>] Giggity.
+[\example]
+
+[example]
+[<ship1>] Tower, who is that on my left?
+[<stationname>] If you're the instructor, that's your student.
+[\example]
+
+[example]
+[<ship1>] <stationname> tower can we request a landing pad and refuel crew on standby?
+[<stationname>] I don't see why not.
+[<ship1>] Roger.
+[<stationname>] Are you requesting a landing pad?
+[<ship1>] Roger.
+[<stationname>] <callsign> Roger means you understand what I said. I need an affirmative or negative when I ask a question.
+[<ship2>] <stationname> tower affirmative. <callsign> requesting a landing pad.
+[\example]
+
+[example]
+[<ship1>] This is <callsign> supercruise disengaged and inbound for <stationname>.
+[<stationname>] <callsign> turn ten degrees to your left I got traffic coming and then I will handle your docking request from there.
+[<ship1>] <callsign> roger.
+[<stationname>] <callsign> when you get a chance do you mind turning twenty degrees to your other left
+[\example]
+
+[example]
+[<stationname>] <callsign> docking request granted. Proceed to your designated landing pad, you are number three in line for airlock transition.
+[<ship1>] Any change I could be bumped up in line?
+[<stationname>] The last time I gave a pilot what they wanted, I was on medication for three weeks. Expect number three in line.
+[\example]
+
+[example]
+[<ship1>] Thanks for everything <stationname> tower. I love your accent! Glad to have you guiding me today.
+[<ship2>] Get that number!
+[<stationname>] You don't want this number.
+[\example]
+
+[example]
+[<ship1>] <stationname> tower, <callsign> clear of the station and navigating to first jump point for <randomstarsystem>.
+[<stationname>] Take me with you.
+[\example]
+
+[example]
+[<stationname>] No more docking approvals for you. You go home now.
+[\example]
+
+[example]
+[<stationname>] <callsign> traffic you're following is at your two o clock. Maintain visual separation.
+[<ship1>] I don't see him but I have him on my radar.
+[<stationname>] Alright then maintain radar separation.
+[\example]
+
+[example]
+[<stationname>] <callsign> begin airlock transition, navigate right with greens to your right.
+[<ship1>] Acknowledged. Right turn out of the airlock.
+[<stationname>] <callsign> try your other right, you muppet.
+[\example]
+

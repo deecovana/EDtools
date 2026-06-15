@@ -1,0 +1,22 @@
+*.OLD
+*.exe
+*.dll
+*.bak
+*.gif
+*.ico
+*.TTF
+EdgeCache/
+json files/
+images/
+sounds/
+backup files/
+!working
+docs/
+stationfacts/
+logs
+Session summaries/
+Dynamic var files/
+User custom files
+*Cache/
+tmp
+WinTTSTempFiles

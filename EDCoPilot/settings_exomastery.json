@@ -1,0 +1,117 @@
+[
+	{
+        "type": "title",
+        "title": "Exo-Mastery Route - Search Settings"
+    },
+	{
+        "type": "numeric",
+        "title": "Minimum species sample value",
+        "desc": "Only consider species whose sample value >= this amount",
+        "section": "Exo-Mastery Settings",
+        "key": "ExoMinValueThreshold"
+    },
+	{
+        "type": "numeric",
+        "title": "Minimum body value",
+        "desc": "Only consider bodies whose combined SIGNIFICANT sample values >= this amount",
+        "section": "Exo-Mastery Settings",
+        "key": "ExoMinimumBodyValue"
+    },
+	{
+        "type": "numeric",
+        "title": "Maximum body distance from star",
+        "desc": "Ignore biologicals on bodies > this distance from the star",
+        "section": "Exo-Mastery Settings",
+        "key": "ExoMaxBodyDistance"
+    }, 
+	{
+        "type": "numeric",
+        "title": "Radius around which plotter will look for systems",
+        "desc": "Set 25-50 for straight routes or 150-200 for loop routes",
+        "section": "Exo-Mastery Settings",
+        "key": "ExoRadius"
+    }, 
+	{
+        "type": "numeric",
+        "title": "Maximum number of results in route",
+        "desc": "Set route size from 1 to 100",
+        "section": "Exo-Mastery Settings",
+        "key": "ExoMaxResults"
+    }, 
+	{
+        "type": "bool",
+        "title": "Make a loop route",
+        "desc": "If ON, route will loop back to starting system",
+        "section": "Exo-Mastery Settings",
+        "key": "ExoLoop"
+    }, 
+	{
+        "type": "title",
+        "title": "Exo-Mastery Route - Announcements and Automation"
+    },
+	{
+        "type": "bool",
+        "title": "Announce bio scan results",
+        "desc": "If ON, will comment when you Composition scan or Bio scan a sample.",
+        "section": "Exo-Mastery Settings",
+        "key": "ExoAnnounceBioScans"
+    },
+	{
+        "type": "bool",
+        "title": "Announce when move too close / far enough away from prior sampled colonies",
+        "desc": "If ON, will comment when you move far enough away from a previous sample, or when you move back too close to a previous sample",
+        "section": "Exo-Mastery Settings",
+        "key": "ExoAnnounceBioDistance"
+    },
+	{
+        "type": "bool",
+        "title": "Scan all systems on jump for significant biologicals",
+        "desc": "If ON, will always scan when you jump into a system. If OFF, will only scan systems in your Exo Mastery Route bookmark group.",
+        "section": "Exo-Mastery Settings",
+        "key": "ExoScanAllSystems"
+    },
+	{
+        "type": "bool",
+        "title": "Announce systems with no significant biological samples",
+        "desc": "Will tell you when you jump into a system with no significant biological samples to scan",
+        "section": "Exo-Mastery Settings",
+        "key": "ExoAnnounceNoSignificantBodies"
+    },
+	{
+        "type": "bool",
+        "title": "Auto display the biologicals details",
+        "desc": "Automatically display the 'Biologicals In System' panel when announcing significant biological samples",
+        "section": "Exo-Mastery Settings",
+        "key": "ExoAutoDisplay"
+    },
+	{
+        "type": "bool",
+        "title": "Auto plot to next Exo Mastery system in route",
+        "desc": "Will plot to your next Exo Master Route system once you finish scanning all lucrative bodies in current Exo Route system",
+        "section": "Exo-Mastery Settings",
+        "key": "AutoExoMastery"
+    }, 
+	{
+        "type": "bool",
+        "title": "Guide to closest known sample on OC",
+        "desc": "When you enter OC on a body with known biologicals, will guide you to the closest known sample from your current location",
+        "section": "Exo-Mastery Settings",
+        "key": "ExoGuideToSample"
+    }, 
+	{
+        "type": "bool",
+        "title": "Remind you on sample scan completion if EDMC is not running",
+        "desc": "If ON, will remind you to run EDMC when you scan a new sample, so the location can be recorded on backend databases",
+        "section": "Exo-Mastery Settings",
+        "key": "ExoWarnEDMCNotRunning"
+    }, 
+	{
+        "type": "bool",
+        "title": "First foot fall detection",
+        "desc": "If on, will attempt to detect first foot fall via image captures",
+        "section": "Exo-Mastery Settings",
+        "key": "CheckForFirstFootFall"
+    }
+	
+
+]

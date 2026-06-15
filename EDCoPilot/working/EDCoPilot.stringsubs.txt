@@ -1,0 +1,7 @@
+<gf>="he|she|they"
+<gfi>="he's|she's|they're"
+<gfh>="he has|she has|they have"
+<gp>="his|her|their"
+<go>="him|her|them"
+<gfpast>="he was|she was|they were"
+<g>=""boy|girl|person"

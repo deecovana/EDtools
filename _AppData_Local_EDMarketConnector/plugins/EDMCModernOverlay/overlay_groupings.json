@@ -1,0 +1,681 @@
+{
+  "BGS-Tally": {
+    "matchingPrefixes": [
+      "bgstally-"
+    ],
+    "idPrefixGroups": {
+      "BGS-Tally Colonisation": {
+        "idPrefixes": [
+          "bgstally-msg-colonisation-"
+        ],
+        "idPrefixGroupAnchor": "nw",
+        "payloadJustification": "left",
+        "markerLabelPosition": "below",
+        "controllerPreviewBoxMode": "last",
+        "backgroundColor": "none",
+        "backgroundBorderColor": "none",
+        "backgroundBorderWidth": 3
+      },
+      "BGS-Tally Tickwarn": {
+        "idPrefixes": [
+          "bgstally-msg-tickwarn-"
+        ],
+        "idPrefixGroupAnchor": "ne",
+        "offsetX": -5,
+        "payloadJustification": "right",
+        "backgroundColor": "None",
+        "backgroundBorderColor": "None",
+        "backgroundBorderWidth": 3
+      },
+      "BGS-Tally Cmdr_info": {
+        "idPrefixes": [
+          "bgstally-msg-cmdr_info-"
+        ],
+        "idPrefixGroupAnchor": "top",
+        "payloadJustification": "left",
+        "backgroundColor": "None",
+        "backgroundBorderColor": "None",
+        "backgroundBorderWidth": 3
+      },
+      "BGS-Tally Indicator": {
+        "idPrefixes": [
+          "bgstally-msg-indicator-"
+        ],
+        "idPrefixGroupAnchor": "nw",
+        "payloadJustification": "left",
+        "backgroundColor": "#00CC00",
+        "backgroundBorderColor": "#FFFFFF",
+        "backgroundBorderWidth": 3
+      },
+      "BGS-Tally Objectives": {
+        "idPrefixes": [
+          "bgstally-msg-objectives-"
+        ],
+        "idPrefixGroupAnchor": "ne",
+        "offsetX": -5,
+        "payloadJustification": "left",
+        "backgroundColor": "none",
+        "backgroundBorderColor": "none",
+        "backgroundBorderWidth": 3
+      },
+      "BGS-Tally Tw": {
+        "idPrefixes": [
+          "bgstally-msg-tw-",
+          "bgstally-bar-tw"
+        ],
+        "idPrefixGroupAnchor": "nw",
+        "payloadJustification": "left",
+        "backgroundColor": "#63029C",
+        "backgroundBorderColor": "#1A4F09",
+        "backgroundBorderWidth": 3
+      },
+      "BGS-Tally Info": {
+        "idPrefixes": [
+          "bgstally-msg-info-"
+        ],
+        "idPrefixGroupAnchor": "nw",
+        "payloadJustification": "left",
+        "backgroundColor": "green",
+        "backgroundBorderColor": "green",
+        "backgroundBorderWidth": 3
+      },
+      "BGS-Tally System_info": {
+        "idPrefixes": [
+          "bgstally-msg-system_info-"
+        ],
+        "idPrefixGroupAnchor": "top",
+        "payloadJustification": "left",
+        "backgroundColor": "None",
+        "backgroundBorderColor": "None",
+        "backgroundBorderWidth": 3
+      },
+      "BGS-Tally Tick": {
+        "idPrefixes": [
+          "bgstally-msg-tick-"
+        ],
+        "idPrefixGroupAnchor": "ne",
+        "offsetX": -5,
+        "payloadJustification": "right",
+        "markerLabelPosition": "below",
+        "controllerPreviewBoxMode": "last",
+        "backgroundColor": "None",
+        "backgroundBorderColor": "None",
+        "backgroundBorderWidth": 3
+      },
+      "BGS-Tally System_tick": {
+        "idPrefixes": [
+          "bgstally-msg-system_tick-"
+        ],
+        "idPrefixGroupAnchor": "ne",
+        "offsetX": -5,
+        "payloadJustification": "right",
+        "markerLabelPosition": "below",
+        "controllerPreviewBoxMode": "last",
+        "backgroundColor": "None",
+        "backgroundBorderColor": "None",
+        "backgroundBorderWidth": 3
+      },
+      "BGS-Tally Warning": {
+        "idPrefixes": [
+          "bgstally-msg-warning-"
+        ],
+        "idPrefixGroupAnchor": "center",
+        "payloadJustification": "left",
+        "backgroundColor": "red",
+        "backgroundBorderColor": "red",
+        "backgroundBorderWidth": 3
+      },
+      "BGS-Tally Fleetcarrier": {
+        "idPrefixes": [
+          "bgstally-msg-fleetcarrier-"
+        ],
+        "idPrefixGroupAnchor": "ne",
+        "payloadJustification": "right",
+        "offsetX": -5.0,
+        "backgroundColor": "None",
+        "backgroundBorderColor": "None",
+        "backgroundBorderWidth": 3
+      }
+    }
+  },
+  "Bioscan": {
+    "matchingPrefixes": [
+      "bioscan_"
+    ],
+    "idPrefixGroups": {
+      "Bioscan Details": {
+        "idPrefixes": [
+          "bioscan_details_"
+        ],
+        "idPrefixGroupAnchor": "nw",
+        "offsetX": 0.0030000000000001137,
+        "offsetY": -1.0470000000000006,
+        "payloadJustification": "left"
+      },
+      "Bioscan Radar": {
+        "idPrefixes": [
+          "bioscan_radar_"
+        ],
+        "idPrefixGroupAnchor": "nw",
+        "payloadJustification": "left",
+        "markerLabelPosition": "below",
+        "backgroundColor": null
+      },
+      "Bioscan Summary": {
+        "idPrefixes": [
+          "bioscan_summary_"
+        ],
+        "idPrefixGroupAnchor": "top",
+        "offsetX": 240,
+        "payloadJustification": "center"
+      },
+      "Bioscan Title": {
+        "idPrefixes": [
+          "bioscan_title_"
+        ],
+        "idPrefixGroupAnchor": "nw",
+        "payloadJustification": "left"
+      }
+    }
+  },
+  "CANONN": {
+    "matchingPrefixes": [
+      "canonn-"
+    ],
+    "idPrefixGroups": {
+      "Canonn Patrol": {
+        "idPrefixes": [
+          "canonn-patrol-"
+        ],
+        "idPrefixGroupAnchor": "nw",
+        "payloadJustification": "left",
+        "markerLabelPosition": "below",
+        "controllerPreviewBoxMode": "last"
+      },
+      "Canonn Startup": {
+        "idPrefixes": [
+          "canonn-startup-"
+        ],
+        "idPrefixGroupAnchor": "top",
+        "offsetX": 70,
+        "payloadJustification": "center",
+        "markerLabelPosition": "below",
+        "controllerPreviewBoxMode": "last",
+        "backgroundColor": null,
+        "backgroundBorderColor": null
+      }
+    }
+  },
+  "EDMC-LogEventMiner": {
+    "matchingPrefixes": [
+      "edmclogeventminer-status-overlay-"
+    ],
+    "idPrefixGroups": {
+      "EDMC-LogEventMiner": {
+        "idPrefixGroupAnchor": "sw",
+        "offsetX": 5,
+        "offsetY": 955,
+        "backgroundColor": "#AA000000",
+        "backgroundBorderWidth": 5
+      },
+      "EDMC-LogEventMiner Journal Events": {
+        "idPrefixes": [
+          "edmclogeventminer-overlay-"
+        ],
+        "idPrefixGroupAnchor": "sw",
+        "offsetX": 5,
+        "offsetY": 955,
+        "backgroundColor": "#AA000000",
+        "backgroundBorderWidth": 5
+      },
+      "EDMC-LogEventMiner Status Flags": {
+        "idPrefixes": [
+          "edmclogeventminer-status-overlay-"
+        ],
+        "idPrefixGroupAnchor": "sw",
+        "offsetX": 5.0,
+        "offsetY": 850.0,
+        "backgroundColor": "#AA000000",
+        "backgroundBorderWidth": 5
+      }
+    }
+  },
+  "EDMC-Mining-Analytics": {
+    "matchingPrefixes": [
+      "edmcma"
+    ],
+    "idPrefixGroups": {
+      "EDMC-Mining-Analytics": {
+        "idPrefixes": [
+          "edmcma.metric.",
+          "edmcma.bar."
+        ],
+        "idPrefixGroupAnchor": "nw",
+        "payloadJustification": "left",
+        "markerLabelPosition": "below",
+        "controllerPreviewBoxMode": "last"
+      }
+    }
+  },
+  "EDMCModernOverlay": {
+    "matchingPrefixes": [
+      "modernoverlay-",
+      "edmcmodernoverlay-"
+    ],
+    "idPrefixGroups": {
+      "EDMCModernOverlay Font Preview": {
+        "idPrefixes": [
+          "edmcmodernoverlay-font-"
+        ],
+        "idPrefixGroupAnchor": "nw",
+        "payloadJustification": "left",
+        "markerLabelPosition": "below",
+        "controllerPreviewBoxMode": "last"
+      },
+      "EDMCModernOverlay Test": {
+        "idPrefixes": [
+          "modernoverlay-test",
+          "edmcmodernoverlay-test"
+        ],
+        "idPrefixGroupAnchor": "nw",
+        "payloadJustification": "left"
+      },
+      "EDMCModernOverlay Controller Status": {
+        "idPrefixes": [
+          "edmcmodernoverlay-controller-"
+        ],
+        "idPrefixGroupAnchor": "nw",
+        "payloadJustification": "left",
+        "markerLabelPosition": "below",
+        "controllerPreviewBoxMode": "max"
+      },
+      "EDMCModernOverlay Logo Test": {
+        "idPrefixes": [
+          "edmcmodernoverlay-logo-test-",
+          "edmcmodernoverlay-logo-"
+        ],
+        "idPrefixGroupAnchor": "nw",
+        "payloadJustification": "left",
+        "markerLabelPosition": "below",
+        "controllerPreviewBoxMode": "last",
+        "backgroundColor": "black",
+        "backgroundBorderColor": "blue"
+      },
+      "EDMCModernOverlay Plugin Status": {
+        "idPrefixes": [
+          "edmcmodernoverlay-plugin-status-"
+        ],
+        "idPrefixGroupAnchor": "center",
+        "offsetX": 640,
+        "offsetY": 480,
+        "payloadJustification": "left",
+        "markerLabelPosition": "below",
+        "controllerPreviewBoxMode": "last",
+        "backgroundColor": "black",
+        "backgroundBorderColor": "blue",
+        "backgroundBorderWidth": 10
+      },
+      "EDMCModernOverlay Group Status": {
+        "idPrefixes": [
+          "edmcmodernoverlay-group-status-"
+        ],
+        "idPrefixGroupAnchor": "center",
+        "offsetX": 640,
+        "offsetY": 480,
+        "payloadJustification": "left",
+        "markerLabelPosition": "below",
+        "controllerPreviewBoxMode": "last",
+        "backgroundColor": "black",
+        "backgroundBorderColor": "blue",
+        "backgroundBorderWidth": 10
+      },
+      "EDMCModernOverlay Profile Status": {
+        "idPrefixes": [
+          "edmcmodernoverlay-profile-status-"
+        ],
+        "idPrefixGroupAnchor": "nw",
+        "payloadJustification": "left",
+        "markerLabelPosition": "below",
+        "controllerPreviewBoxMode": "last",
+        "offsetX": 0.0,
+        "offsetY": 0.0,
+        "backgroundColor": "black",
+        "backgroundBorderColor": "black",
+        "backgroundBorderWidth": 3
+      },
+      "EDMCModernOverlay Profile List": {
+        "idPrefixes": [
+          "edmcmodernoverlay-profile-list-"
+        ],
+        "idPrefixGroupAnchor": "center",
+        "payloadJustification": "left",
+        "markerLabelPosition": "below",
+        "controllerPreviewBoxMode": "last",
+        "offsetX": 640.0,
+        "offsetY": 480.0,
+        "backgroundColor": "black",
+        "backgroundBorderColor": "blue",
+        "backgroundBorderWidth": 10
+      },
+      "EDMCModernOverlay Command Status": {
+        "idPrefixes": [
+          "edmcmodernoverlay-command-status-"
+        ],
+        "idPrefixGroupAnchor": "nw",
+        "payloadJustification": "left",
+        "markerLabelPosition": "below",
+        "controllerPreviewBoxMode": "last",
+        "offsetX": 40.0,
+        "offsetY": 44.0,
+        "backgroundColor": "black",
+        "backgroundBorderColor": "blue",
+        "backgroundBorderWidth": 10
+      }
+    }
+  },
+  "EDR": {
+    "matchingPrefixes": [
+      "edr-"
+    ],
+    "idPrefixGroups": {
+      "EDR Bounty": {
+        "idPrefixes": [
+          "edr-bounty"
+        ],
+        "idPrefixGroupAnchor": "nw",
+        "payloadJustification": "left",
+        "markerLabelPosition": "below",
+        "controllerPreviewBoxMode": "max",
+        "backgroundColor": null
+      },
+      "EDR Docking": {
+        "idPrefixes": [
+          "edr-docking-",
+          "edr-docking-station-"
+        ],
+        "idPrefixGroupAnchor": "nw",
+        "payloadJustification": "left",
+        "markerLabelPosition": "below",
+        "controllerPreviewBoxMode": "max",
+        "backgroundColor": null
+      },
+      "EDR Intel": {
+        "idPrefixes": [
+          "edr-intel"
+        ],
+        "idPrefixGroupAnchor": "nw",
+        "payloadJustification": "left",
+        "markerLabelPosition": "below",
+        "controllerPreviewBoxMode": "max",
+        "backgroundColor": null
+      },
+      "EDR Notice": {
+        "idPrefixes": [
+          "edr-notice-"
+        ],
+        "idPrefixGroupAnchor": "nw",
+        "payloadJustification": "left",
+        "markerLabelPosition": "below",
+        "controllerPreviewBoxMode": "max",
+        "backgroundColor": null
+      },
+      "EDR Target": {
+        "idPrefixes": [
+          "edr-target"
+        ],
+        "idPrefixGroupAnchor": "nw",
+        "payloadJustification": "left",
+        "markerLabelPosition": "below",
+        "controllerPreviewBoxMode": "max",
+        "backgroundColor": null
+      },
+      "EDR Sitrep": {
+        "idPrefixes": [
+          "edr-sitrep-"
+        ],
+        "idPrefixGroupAnchor": "nw",
+        "payloadJustification": "left",
+        "markerLabelPosition": "below",
+        "controllerPreviewBoxMode": "max",
+        "backgroundColor": null
+      },
+      "EDR Navigation": {
+        "idPrefixes": [
+          "edr-navigation-"
+        ],
+        "idPrefixGroupAnchor": "nw",
+        "payloadJustification": "left",
+        "markerLabelPosition": "below",
+        "controllerPreviewBoxMode": "max",
+        "backgroundColor": null
+      },
+      "EDR Navroute": {
+        "idPrefixes": [
+          "edr-navroute-"
+        ],
+        "idPrefixGroupAnchor": "top",
+        "offsetX": 640,
+        "offsetY": 5,
+        "payloadJustification": "left",
+        "markerLabelPosition": "below",
+        "controllerPreviewBoxMode": "last",
+        "backgroundColor": null
+      },
+      "EDR Mining": {
+        "idPrefixes": [
+          "edr-mining-"
+        ],
+        "idPrefixGroupAnchor": "nw",
+        "payloadJustification": "left",
+        "markerLabelPosition": "below",
+        "controllerPreviewBoxMode": "last"
+      }
+    }
+  },
+  "LandingPad": {
+    "matchingPrefixes": [
+      "shell-",
+      "line-",
+      "toaster-left-",
+      "toaster-right-",
+      "pad-",
+      "station-",
+      "landingpad-"
+    ],
+    "idPrefixGroups": {
+      "LandingPad": {
+        "idPrefixes": [
+          "shell-",
+          "line-",
+          "toaster-left-",
+          "toaster-right-",
+          "pad-",
+          "station-"
+        ],
+        "idPrefixGroupAnchor": "center",
+        "offsetX": 40,
+        "offsetY": 37,
+        "payloadJustification": "left",
+        "markerLabelPosition": "below",
+        "controllerPreviewBoxMode": "max",
+        "backgroundColor": null,
+        "backgroundBorderColor": null,
+        "notes": "Pre 2.5.6"
+      },
+      "Landingpad Starport": {
+        "idPrefixes": [
+          "landingpad-starport-"
+        ],
+        "idPrefixGroupAnchor": "nw",
+        "payloadJustification": "left",
+        "markerLabelPosition": "below",
+        "controllerPreviewBoxMode": "last"
+      },
+      "Landingpad FleetCarrier": {
+        "idPrefixes": [
+          "landingpad-fleetcarrier-"
+        ],
+        "idPrefixGroupAnchor": "nw",
+        "payloadJustification": "left",
+        "markerLabelPosition": "below",
+        "controllerPreviewBoxMode": "last"
+      },
+      "Landingpad SquadronCarrier": {
+        "idPrefixes": [
+          "landingpad-squadroncarrier-"
+        ],
+        "idPrefixGroupAnchor": "nw",
+        "payloadJustification": "left",
+        "markerLabelPosition": "below",
+        "controllerPreviewBoxMode": "last"
+      },
+      "Landingpad ColonisationShip": {
+        "idPrefixes": [
+          "landingpad-colonisationship-"
+        ],
+        "idPrefixGroupAnchor": "nw",
+        "payloadJustification": "left",
+        "markerLabelPosition": "below",
+        "controllerPreviewBoxMode": "last"
+      }
+    }
+  },
+  "Navroute": {
+    "matchingPrefixes": [
+      "navroute_"
+    ],
+    "idPrefixGroups": {
+      "Navroute Display": {
+        "idPrefixes": [
+          "navroute_display_"
+        ],
+        "idPrefixGroupAnchor": "top",
+        "offsetX": 640,
+        "offsetY": -60.093,
+        "payloadJustification": "center"
+      }
+    }
+  },
+  "NeutronDancer": {
+    "matchingPrefixes": [
+      "neutrondancer-"
+    ],
+    "idPrefixGroups": {
+      "Default": {
+        "idPrefixGroupAnchor": "nw",
+        "markerLabelPosition": "below",
+        "controllerPreviewBoxMode": "last",
+        "backgroundColor": "#00000000",
+        "backgroundBorderWidth": 2
+      },
+      "NeutronDancer Default": {
+        "idPrefixes": [
+          "neutrondancer-default-"
+        ],
+        "idPrefixGroupAnchor": "nw",
+        "payloadJustification": "left",
+        "markerLabelPosition": "below",
+        "controllerPreviewBoxMode": "last"
+      },
+      "NeutronDancer Galaxy Map": {
+        "idPrefixes": [
+          "neutrondancer-galaxy map-"
+        ],
+        "idPrefixGroupAnchor": "nw",
+        "payloadJustification": "left",
+        "markerLabelPosition": "below",
+        "controllerPreviewBoxMode": "last"
+      },
+      "NeutronDancer Carrier": {
+        "idPrefixes": [
+          "neutrondancer-carrier-"
+        ],
+        "idPrefixGroupAnchor": "nw",
+        "payloadJustification": "left",
+        "markerLabelPosition": "below",
+        "controllerPreviewBoxMode": "last"
+      }
+    }
+  },
+  "Pioneer": {
+    "matchingPrefixes": [
+      "pioneer_"
+    ],
+    "idPrefixGroups": {
+      "Pioneer Text": {
+        "idPrefixes": [
+          "pioneer_text_"
+        ],
+        "idPrefixGroupAnchor": "nw",
+        "payloadJustification": "left",
+        "markerLabelPosition": "below",
+        "controllerPreviewBoxMode": "max",
+        "backgroundColor": null,
+        "backgroundBorderColor": null
+      }
+    }
+  },
+  "PlanetPOI": {
+    "matchingPrefixes": [
+      "checkmark-",
+      "heading-",
+      "poi-",
+      "poi_"
+    ],
+    "idPrefixGroups": {
+      "Checkmark": {
+        "idPrefixes": [
+          "checkmark-left-",
+          "checkmark-right-"
+        ],
+        "idPrefixGroupAnchor": "nw",
+        "payloadJustification": "left",
+        "markerLabelPosition": "below",
+        "controllerPreviewBoxMode": "max",
+        "backgroundColor": null,
+        "backgroundBorderColor": null
+      },
+      "Heading Arrow": {
+        "idPrefixes": [
+          "heading-arrow-",
+          "heading-center-"
+        ],
+        "idPrefixGroupAnchor": "nw",
+        "payloadJustification": "left",
+        "markerLabelPosition": "below",
+        "controllerPreviewBoxMode": "max",
+        "backgroundColor": null,
+        "backgroundBorderColor": null
+      },
+      "POI": {
+        "idPrefixes": [
+          "poi_"
+        ],
+        "idPrefixGroupAnchor": "top",
+        "offsetX": 140,
+        "payloadJustification": "center",
+        "markerLabelPosition": "below",
+        "controllerPreviewBoxMode": "max",
+        "backgroundColor": null,
+        "backgroundBorderColor": null
+      }
+    }
+  },
+  "edmclogeventminer": {
+    "matchingPrefixes": [
+      "edmclogeventminer-"
+    ],
+    "idPrefixGroups": {
+      "Edmclogeventminer Overlay": {
+        "idPrefixes": [
+          "edmclogeventminer-overlay-",
+          "edmclogeventminer-truth-"
+        ],
+        "idPrefixGroupAnchor": "nw",
+        "payloadJustification": "left",
+        "markerLabelPosition": "below",
+        "controllerPreviewBoxMode": "last"
+      }
+    }
+  }
+}

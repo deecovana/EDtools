@@ -1,0 +1,39 @@
+[
+ { "type": "title", "title": "Voice Settings" },
+{ "type": "numeric", "title": "Voice Volume", "desc": "Change the volume of your copilot voice. NOTE: Applies to all voice types (Windows, Amazon, Google)", "section": "Voice Settings", "key": "MSVoiceVolume" },
+
+ { "type": "title", "title": "WinTTS Voice : NOTE: Edge is your default voice provider, but WinTTS will be used if all Cloud voice provider options are turned off (Edge, Amazon, Google, Azure, ElevenLabs)" },
+
+ { "type": "bool", "title": "Use WinTTS as default ship voice", "desc": "If this is ON and you have all Cloud voice provider options OFF, then will use WinTTS voice as default on startup. If this is OFF, will default to using Edge voices (which are better quality)", "section": "Voice Settings", "key": "DefaultVoiceWinTTS" },
+{ "type": "scrolloptions", "title": "Windows TTS Voice", "desc": "Change the voice used by your copilot", "section": "Voice Settings", "key": "MSVoiceName", "options": ["David", "Zira"] },
+{ "type": "numeric", "title": "Windows TTS Speech Rate", "desc": "Change the speed of your Windows TTS copilot voice (words per minute)", "section": "Voice Settings", "key": "MSVoiceRate" },
+
+{ "type": "title", "title": "Bluetooth Anti-Clipping" },
+{ "type": "bool", "title": "Bluetooth anti-clipping on/off", "desc": "Set this ON if you are using bluetooth headset or speakers and the first portion of the voice is being clipped. Starts a low background hum before the voice announcement, which wakes up any sleeping bluetooth channel", "section": "Bluetooth Anti-Clipping", "key": "BTAntiClip" },
+{ "type": "numeric", "title": "Voice start delay", "desc": "Time in seconds that EDCoPilot will pause from starting the background hum to triggering the voice announcement. Default is 0.2 seconds", "section": "Bluetooth Anti-Clipping", "key": "BTDelayBeforeSpeech" },
+
+{ "type": "title", "title": "Ship Voice Effects and Processing" },
+{ "type": "options", "title": "Radio effect", "desc": "Your selected Cloud voice sounds as if its coming through your headset. Always=always on, None=always off, NotInShip=only applied when you leave your ship", "section": "Cloud Voice Effects", "key": "RadioVoice", "options": ["Always","NotInShip","None"] },
+{ "type": "bool", "title": "Radio effect start and end beep", "desc": "If ON, your radio voice will start and end with a beep sound.", "section": "Cloud Voice Effects", "key": "RadioVoiceBeep" },
+{ "type": "numeric", "title": "Radio volume gain (dB)", "desc": "Adjusts the volume level when the radio effect is applied (-50 to 50)", "section": "Cloud Voice Effects", "key": "PedalBoard-RadioVoiceGain" },
+{ "type": "numeric", "title": "Radio white noise level", "desc": "The level of white noise heard when radio effect is applied (0-20)", "section": "Cloud Voice Effects", "key": "RadioEffectWhiteNoiseLevel" },
+{ "type": "numeric", "title": "Radio pop and click frequency", "desc": "The amount of pops and clicks heard when radio effect is applied (0-50)", "section": "Cloud Voice Effects", "key": "RadioEffectPopProbability" },
+{ "type": "numeric", "title": "Radio distortion level", "desc": "The amount of voice distortion when radio effect is applied (0-50)", "section": "Cloud Voice Effects", "key": "RadioEffectDistortionLevel" },
+{ "type": "numeric", "title": "Radio High Pass Filter", "desc": "Set this in the range 1200-2500. A higher value will sound more tinny and distant", "section": "Cloud Voice Effects", "key": "RadioEffectHPF" },
+{ "type": "bool", "title": "Synthetic Ship Voice effect", "desc": "Adds a synthetic effect to your selected Cloud voice.", "section": "Cloud Voice Effects", "key": "SynthVoice" },
+{ "type": "numeric", "title": "Synthetic voice volume gain (dB)", "desc": "Adjusts the volume level when the synthetic voice effect is applied (-50 to 50)", "section": "Synthetic Voice Effects", "key": "PedalBoard-SynthVoiceGain" },
+
+{ "type": "title", "title": "Audio Player" },
+{ "type": "bool", "title": "Use Alternate Interruptible player to play voice files", "desc": "Try setting this ON if the default player is giving you audio issues (clipping or stuttering).", "section": "Cloud Voice Effects", "key": "UseAltInterruptPlayer" },
+{ "type": "bool", "title": "Use Audioplayer to play voice files", "desc": "Only set this ON if the default player and alternate interruptible playing are both giving you issues. Note when this is set the *skip current phrase* feature will not work, nor will other voice cutoffs.", "section": "Cloud Voice Effects", "key": "UseAudioPlayer" },
+
+ { "type": "title", "title": "Synthetic Voice Effects" },
+{ "type": "bool", "title": "Apply Chorus Effect", "desc": "Toggle the chorus effect on or off", "section": "Synthetic Voice Effects", "key": "PedalBoard-SynthVoiceChorus" },
+{ "type": "numeric", "title": "Chorus Rate (Hz)", "desc": "The speed of the chorus effect low-frequency oscillator (LFO), in Hertz. This value must be between 0 Hz and 100 Hz.", "section": "Synthetic Voice Effects", "key": "PedalBoard-SynthVoiceChorusRateHz" },
+{ "type": "numeric", "title": "Chorus Depth", "desc": "The chorus depth (0 to 100)", "section": "Synthetic Voice Effects", "key": "PedalBoard-SynthVoiceChorusDepth" },
+{ "type": "numeric", "title": "Chorus Delay", "desc": "The chorus delay (0 to 30)", "section": "Synthetic Voice Effects", "key": "PedalBoard-SynthVoiceChorusCentreDelayMS" },
+{ "type": "numeric", "title": "Chorus Feedback", "desc": "The chorus feedback (0 to 200)", "section": "Synthetic Voice Effects", "key": "PedalBoard-SynthVoiceChorusFeedback" },
+{ "type": "numeric", "title": "Chorus Mix", "desc": "The chorus mix (0 to 100)", "section": "Synthetic Voice Effects", "key": "PedalBoard-SynthVoiceChorusMix" },
+{ "type": "numeric", "title": "Chorus Pitchshift", "desc": "Adjust the pitch of the voice (-10 to 10)", "section": "Synthetic Voice Effects", "key": "PedalBoard-SynthVoicePitchShift" },
+{ "type": "bool", "title": "Apply Reverb", "desc": "Toggle the reverb effect on or off", "section": "Synthetic Voice Effects", "key": "PedalBoard-SynthVoiceReverb" }
+]

@@ -1,0 +1,170 @@
+ [
+	{
+        "type": "title",
+        "title": "Ship AI Personallity - NOTE: only applies if EDCoPilot is dominant. See COVAS:NEXT Integration section below"
+    },
+	{
+        "type": "string",
+        "title": "CoPilot Name(s)",
+        "desc": "*NEW* Optionally give your CoPilot a name, or alternates delimted by a comma, that it will occasionally use when addressing you or other NPCs",
+        "section": "Personality",
+        "key": "ShipAIName"
+    },
+	{
+        "type": "options",
+        "title": "CoPilot Gender",
+        "desc": "Your CoPilot's gender (male, female, non-specific)",
+        "section": "Personality",
+        "key": "AIGender",
+		"options": ["Male", "Female", "Non-specific"]
+    },
+	{
+        "type": "options",
+        "title": "Commander Address",
+        "desc": "How you want CoPilot to refer to you",
+        "section": "Personality",
+        "key": "CommanderAddress",
+		"options": ["sir", "maam", "master", "mistress", "my Lord", "milady"]
+    },
+	{
+        "type": "options",
+        "title": "Commander Gender",
+        "desc": "Your Commander's gender (male, female, non-specific)",
+        "section": "Personality",
+        "key": "CommanderGender",
+		"options": ["Male", "Female", "Non-specific"]
+    },
+	{
+        "type": "string",
+        "title": "Commander Nickname(s)",
+        "desc": "How CoPilot will sometimes address you. Can be multiple nicknames separated by a , - example = Skipper,Boss,Mon Capitan",
+        "section": "Personality",
+        "key": "commanderNickName"
+    },
+	{
+        "type": "string",
+        "title": "Fighter Crew Nickname(s)",
+        "desc": "How CoPilot will sometimes address the fighter crew. Can be multiple nicknames separated by a , - example = Ace,Smeghead",
+        "section": "Personality",
+        "key": "fighterCrewNickName"
+    },
+    {
+        "type": "bool",
+        "title": "Profanity Mode",
+        "desc": "Whether you want clean announcements or some rather rude words indeed",
+        "section": "Personality",
+        "key": "Profanity"
+    },
+	{
+        "type": "numeric",
+        "title": "Profanity usage probability",
+        "desc": "Reduce this if you think your ship AI swears a little too often for your liking. This is a percentage probability it will include profane phrases in its random selection. 0=never, 100=always",
+        "section": "Personality",
+        "key": "ProfanityFrequency"
+    },
+	    {
+        "type": "bool",
+        "title": "Innuendo",
+        "desc": "Whether you want phrases with sexual innuendo. This will also apply to all Space Chatter",
+        "section": "Personality",
+        "key": "Innuendo"
+    },
+	{
+        "type": "bool",
+        "title": "Tough Love",
+        "desc": "If ON will throw you the occasional insult or criticism in its responses",
+        "section": "Personality",
+        "key": "ToughLove"
+    },
+	{
+        "type": "bool",
+        "title": "Sweetheart Mode",
+        "desc": "Whether you want EDCoPilot to occasionally be nicer to you",
+        "section": "Personality",
+        "key": "Flirt"
+    },
+	 {
+        "type": "bool",
+        "title": "Dislikes Mining",
+        "desc": "If ON, will grumble about mining",
+        "section": "Personality",
+        "key": "DislikesMining"
+    },
+	 {
+        "type": "bool",
+        "title": "Dislikes Trading",
+        "desc": "If ON, will grumble about trading",
+        "section": "Personality",
+        "key": "DislikesTrading"
+    },
+	 {
+        "type": "options",
+        "title": "Attitude to committing crimes",
+        "desc": "How will the AI react if you commit a crime?",
+        "section": "Personality",
+        "key": "AttitudeToCommittingCrimes",
+		"options": ["Dislikes", "Neutral", "Likes"]
+    },
+	{
+        "type": "bool",
+        "title": "Alcohol Free",
+        "desc": "If ON, will not make alcohol related comments",
+        "section": "Personality",
+        "key": "AlcoholFree"
+    },
+	{
+        "type": "bool",
+        "title": "Vegan",
+        "desc": "If ON, will not make meat consumption related comments",
+        "section": "Personality",
+        "key": "Vegan"
+    },
+	 {
+        "type": "options",
+        "title": "Stance on Xenos",
+        "desc": "Is your AI anti-xeno, peace xeno (leave them alone), pro-xeno (anti-humanity)?",
+        "section": "Personality",
+        "key": "XenoStance",
+		"options": ["Anti", "Peace", "Pro"]
+    },
+	{
+        "type": "bool",
+        "title": "Convert spoken numerics to game language words",
+        "desc": "If you are using a voice from a language not matching your game language, spoken numerics will be in the native voice language. If you set this ON, your ship AI will say the numbers in your game language ",
+        "section": "Personality",
+        "key": "ConvertNumericsToGameLanguageWords"
+    },
+	{
+        "type": "bool",
+        "title": "Chit Chat",
+        "desc": "If ON, will say random phrases if hasnt spoken for x minutes, where you can set x on next option below",
+        "section": "Personality",
+        "key": "ChitChat"
+    },
+	{
+        "type": "numeric",
+        "title": "Chit Chat - minimum duration from last spoken line (in minutes)",
+        "desc": "Set the number of minutes of no spoken EDCoPilot lines that will trigger a Chit Chat phrase",
+        "section": "Personality",
+        "key": "ChitChatMinGap"
+    },
+	{
+        "type": "bool",
+        "title": "All Business Mode",
+        "desc": "If on, will keep things professional, off = adds banter and humour.",
+        "section": "Personality",
+        "key": "AllBusiness"
+    },
+	{
+        "type": "title",
+        "title": "COVAS:NEXT Integration - requires you to have installed and configured COVAS:NEXT"
+    },
+	{
+        "type": "bool",
+        "title": "EDCoPilot Dominant",
+        "desc": "If ON, EDCoPilot Ship AI will work as per normal and take charge. If OFF, EDCoPilot Ship AI will stop speaking / printing, and COVAS:NEXT will take over as the Ship AI. You may still give EDCoPilot voice commands via Voice Attack, and utilise the UI, but the EDCoPilot Ship AI will not make announcements based on these events.",
+        "section": "Personality",
+        "key": "EDCoPilot-Dominant"
+    }
+	
+]

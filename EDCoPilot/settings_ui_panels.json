@@ -1,0 +1,121 @@
+[
+	{
+        "type": "title",
+        "title": "Data display preferences "
+    },
+	{
+        "type": "bool",
+        "title": "Show system population on Bookmarks panel",
+        "desc": "If ON, will show the population of the system in the System Features column in Bookmarks",
+        "section": "UI Appearance",
+        "key": "ShowPopulation"
+    },
+	{
+        "type": "bool",
+        "title": "Display icons for place characteristics",
+        "desc": "If ON, will show icons instead of abbreviated place characteristics in Bookmarks and Places Of Interest",
+        "section": "UI Appearance",
+        "key": "DisplayPlaceIcons"
+    },
+	{
+        "type": "bool",
+        "title": "Show controlling faction of stations on Bodies and Stations panels",
+        "desc": "If ON, will show the controlling faction after the station name",
+        "section": "UI Appearance",
+        "key": "ShowControllingFactions"
+    },
+	{
+        "type": "title",
+        "title": "Home system button"
+    },
+
+	{
+        "type": "options",
+        "title": "Home system button action",
+        "desc": "Action to perform when you click the Home button on the top navigation / tabs bar",
+        "section": "Bookmark Buttons",
+        "key": "HomeSystemAction",
+		"options": ["Set course", "Show System Commands menu"]
+    },
+	{
+        "type": "title",
+        "title": "Bookmark Panel button actions"
+    },
+
+	{
+        "type": "options",
+        "title": "Bookmark # button",
+        "desc": "Action to perform when you click a # button on the Bookmarks panel",
+        "section": "Bookmark Buttons",
+        "key": "OnClickBookmarkNum",
+		"options": ["Show the Commands submenu", "Set course", "Copy system name to clipboard", "Show system data", "Show key chart", "Do nothing"]
+    },
+	{
+        "type": "options",
+        "title": "Bookmark NAME button",
+        "desc": "Action to perform when you click a NAME button on the Bookmarks panel",
+        "section": "Bookmark Buttons",
+        "key": "OnClickBookmarkLabel",
+		"options": ["Show the Commands submenu", "Set course", "Copy system name to clipboard", "Show system data", "Show key chart", "Do nothing"]
+    },
+	{
+        "type": "options",
+        "title": "Bookmark VISITED button",
+        "desc": "Action to perform when you click a VISITED button on the Bookmarks panel",
+        "section": "Bookmark Buttons",
+        "key": "OnClickBookmarkVisited",
+		"options": ["Show the Commands submenu", "Set course", "Copy system name to clipboard", "Show system data", "Show key chart", "Do nothing"]
+    },
+	{
+        "type": "options",
+        "title": "Bookmark FEATURES button",
+        "desc": "Action to perform when you click a FEATURES button on the Bookmarks panel",
+        "section": "Bookmark Buttons",
+        "key": "OnClickBookmarkNotes",
+		"options": ["Show the Commands submenu", "Set course", "Copy system name to clipboard", "Show system data", "Show key chart", "Do nothing"]
+    },
+	{
+        "type": "options",
+        "title": "Bookmark DISTANCE button",
+        "desc": "Action to perform when you click a DISTANCE button on the Bookmarks panel",
+        "section": "Bookmark Buttons",
+        "key": "OnClickBookmarkDistance",
+		"options": ["Show the Commands submenu", "Set course", "Copy system name to clipboard", "Show system data", "Show key chart", "Do nothing"]
+    },
+	{
+        "type": "title",
+        "title": "Faction Systems Panel button actions"
+    },
+	{
+        "type": "options",
+        "title": "Faction System # button",
+        "desc": "Action to perform when you click the # value on the Faction Systems Panel",
+        "section": "Faction Systems Buttons",
+        "key": "OnClickFactionSystemNum",
+		"options": ["Show the Commands submenu", "Set course", "Copy system name to clipboard", "Show system data", "Do nothing"]
+    },
+	{
+        "type": "options",
+        "title": "Faction System SYSTEM NAME button",
+        "desc": "Action to perform when you click the SYSTEM NAME value on the Faction Systems panel",
+        "section": "Faction Systems Buttons",
+        "key": "OnClickFactionSystemName",
+		"options": ["Show the Commands submenu", "Set course", "Copy system name to clipboard", "Show system data", "Do nothing"]
+    },
+	{
+        "type": "options",
+        "title": "Faction System FACTION STATES button",
+        "desc": "Action to perform when you click the FACTION STATES value on the Faction Systems panel",
+        "section": "Faction Systems Buttons",
+        "key": "OnClickFactionSystemStates",
+		"options": ["Show the Commands submenu", "Set course", "Copy system name to clipboard", "Show system data", "Do nothing"]
+    },
+	{
+        "type": "options",
+        "title": "Faction System RIVAL FACTION button",
+        "desc": "Action to perform when you click the RIVAL FACTION value on the Faction Systems panel",
+        "section": "Faction Systems Buttons",
+        "key": "OnClickFactionSystemRival",
+		"options": ["Show the Commands submenu", "Set course", "Copy system name to clipboard", "Show system data", "Do nothing"]
+    } 
+]

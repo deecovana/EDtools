@@ -1,0 +1,70 @@
+[
+	{
+        "type": "title",
+        "title": "Telemetry and Diagnostics"
+    },
+	{
+        "type": "bool",
+        "title": "User Telemetry",
+        "desc": "If ON, EDCoPilot will send basic trace information to the backend server for support purposes: this comprises a) notification when it calls 3rd party external data sources (Spansh, Inara, eliteBGS etc), b) logging any application warning messages you receive in the VoiceLog, c) sending crash reports (the python application stacktrace) generated when a crash occurs. These notifications are reviewed to check for common errors or issues and to assist with troubleshooting user issues, and are retained for 14 days only before being automatically purged. \nPLEASE NOTE: EDCoPilot will always log basic user startup event information (Commander name, EDCoPilot version number being used), and will log application usage statistics  (duration that EDCoPilot was running, number of EDCoPilot user interactions or commands issued) on shutdown. This startup/shutdown data is used for application usage trending.",
+        "section": "Diagnostics",
+        "key": "UserTelemetry"
+    },
+	{
+        "type": "bool",
+        "title": "Debugging mode",
+        "desc": "If ON, EDCoPilot will write more information to its log file for you to send to support, and will log your UI interactions to the back end server. Only enable this on request to assist support with troubleshooting an issue",
+        "section": "Diagnostics",
+        "key": "DebugUser"
+    },
+	    {
+        "type": "title",
+        "title": "Main Folder Locations"
+    },
+	{
+		"type": "custom_path",
+        "title": "EDCoPilot folder location",
+        "desc": "Click to view / change where EDCoPilot is running from.",
+        "section": "Main Folder Locations",
+        "key": "EDCoPilotLib"
+	},
+	{
+		"type": "custom_path",
+        "title": "VoiceAttack folder location",
+        "desc": "If using VoiceAttack, set this to the folder containing the VoiceAttack executable.",
+        "section": "Main Folder Locations",
+        "key": "VoiceAttackLib"
+	},
+	{
+		"type": "custom_path",
+        "title": "Elite Dangerous game journal folder location",
+        "desc": "The location of where the Elite journal file is written.\nUsually under %userprofile%\\Saved Games\\Frontier Developments\\Elite Dangerous",
+        "section": "Main Folder Locations",
+        "key": "EliteLogLib"
+	},
+	{
+        "type": "bool",
+        "title": "Lock to current journal file",
+        "desc": "If ON, EDCoPilot will not check for a new journal file in the folder and will stay focussed on the current journal file only. Set this to ON if you have multiple game instances running on the same PC but do not wish EDCoPilot to keep switching between commanders. Note: you will need to either turn this OFF or restart EDCoPilot to pick up a new journal file.",
+        "section": "Main Folder Locations",
+        "key": "LockCurrentJournal"
+    },
+	{
+		"type": "custom_path",
+        "title": "Elite Dangerous key binds folder location",
+        "desc": "The location of where the Elite key binds files are stored.\nUsually under %userprofile%\\AppData\\Local\\Frontier Developments\\Elite Dangerous\\Options\\Bindings",
+        "section": "Main Folder Locations",
+        "key": "EliteBindsLib"
+	}, 
+	{
+        "type": "title",
+        "title": "Linux WINE or Proton users"
+    },
+	{
+        "type": "bool",
+        "title": "Running on Linux or Steam Deck?",
+        "desc": "EXPERIMENTAL : Set this to ON if you are running on Linux or Steam Deck. This uses alternate logic for monitoring the logfiles, as well as alternate calls for functions such as switching screens",
+        "section": "Diagnostics",
+        "key": "RunningOnLinux"
+    }
+]

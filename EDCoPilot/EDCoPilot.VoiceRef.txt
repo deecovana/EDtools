@@ -1,0 +1,875 @@
+
+<Basic panel control and navigation>
+
+[Basics-01-:-Stop-and-Start]
+ = |Launch (the) CoPilot
+ = |Close CoPilot
+
+[Basics-02-:-Panel-Control]
+ = |Page up , scroll up, previous
+ = |Page down, scroll down, next
+ = |Go to the top
+ = |Go to the bottom
+ = Close the current panel and go back to prior panel displayed. Note: doesn’t work for all panels yet (working on it as I find them)|Previous panel, Close panel, Close display, Close notes
+
+[Basics-03-:-Tab-Navigation]
+ = Moves to Places, brings up Location Search panel|Places Tab
+ = Moves to Activity, brings up Voice Log panel|Activity Tab
+ = Moves to Information, brings up Stations panel|Information Tab
+ = Moves to Inventory, brings up Show My Ships panel|Inventory Tab
+ = Moves to Management, brings up Command Reference|Management Tab
+
+[Basics-04-:-Panel-Navigation---Places-Tab]
+ = Display the list of bookmark groups|     Bookmark Groups
+ = Display bookmarks in the currently selected bookmark group|     Bookmarks
+ = Display a category list of systems of interest in your defined search radius|     Places Of Interest (within <x> light years)
+ = Display the selection panel for performing location search functions. Say what is on the button to initiate a search, or perform direct commands (see search commands later in this reference)|     Location Search, Location Finder
+ = Display the Guidance Computer screen, used for updating target surface coordinates and displaying direction and distance to them|     Guidance Computer
+
+[Basics-05-:-Panel-Navigation---Activity-Tab]
+ = Display the log of the CoPilot's voice communication.|     Voice Log / Main Panel
+ = Displays a log of your current session, or you can jump back to prior dates/sessions|     Event Log or Event Logs
+ = Displays a log of all visits to the system and events that have occurred there|     System History
+ = Display a (customisable) tactical screen showing information on scanned pilots, ships destroyed, materials collected|     Session Progress
+ = Displays the Mission Status panel showing list of current active and completed missions|     Missions / Mission List / Mission Status
+ = Displays a summary of bodies scanned / mapped, and estimates cartographics earnings|     Discovery Estimator / Discovery Calculator
+ = If you have mined in your current system this panel will display a summary of your previous mining sessions there, showing duration, yield per mineral, and calculated rate mined/hr.  |     Mining Statistics
+ = Displays the Trade Route panel where you can set search options, generate the route, and see commodities to buy and sell at each station in your route|     Trade Route
+
+[Basics-06-:-Panel-Navigation---Information-Tab]
+ = Displays the Systems Info panel showing last system displayed. If no previous system displayed then defaults to current system.|     System Data / System Info
+ = Display a list of stations in your current system, including data on facilities available, star distance, planetary or orbital, number of visits you have made|     Stations (in this system)
+BIOLOGICALS = If Patreon, displays known Biologicals in system, else show species list|[show;] biologicals
+BIOPROGRESS = (Patreon) Displays Biologicals by species|[show;] species list; bio progress
+ = Displays the last station fact retrieved from Inara. Displays the accompanying image if there is one.  Station facts are automatically checked for, retrieved and displayed when you drop at a station for the first time.|     Station Facts
+ = Display list of modules for which there are engineering blueprints. Can select module type and see list of blueprints and experimentals available. (work in progress, not all blueprints defined yet)|     Blueprints
+ = Retrieve and display a list of all bodies in the current system, body type, if landable, distance from star|     Bodies (in this system)
+ = Displays automatically when entering orbit. Shows surface temp, gravity, material composition etc|     Last Planet Approached, Planetary
+ = Display table of mined materials and current best sell prices|     Mining Prices, Mined Materials
+
+[Basics-07-:-Panel-Navigation---Inventory-Tab]
+ = Display a list of all ships in your fleet, for subsequent information selection|     (Show my) Ships
+ = Display a list of your stored modules and their locations|     Stored Modules
+ = Display list of materials stored / collected this session, in trader table column format|     Trading Table, Materials, Materials Table
+ = Display a list of your stored modules and their locations|     Ship Locker; (Show the) ship locker
+ = Display a list of all suit loadouts you have defined|     (Show my) suit loadouts
+ = Display a list of all suits you own|     (Show my) Suits
+ = Display a list of all personal weapons you own|     (Show  my) weapons
+
+[Basics-08-:-Panel-Navigation---Management-Tab]
+ = Show the "About / credits / acknowledgement" page.|      About EDCoPilot
+ = Display a list of configurable preset messages you can send to local or to wingman.|     (Preset) Messages
+ = Use this panel to toggle on/off which systems you have permits for.   Systems with permits are excluded from searches unless you have marked that you have the permit.  (Note: Will automatically set permits on/off as you rank up.). |     (Manage) Permits 
+ = Bring up the music panel.  Displays tracks playing either in EDCoPilot player  or VMX, depending on options set in the Settings -> Features panel|     Music / Music Panel / Now Playing
+ = Brings up confirmation panel to run History Refresh.  Running refresh clears EDCoPilot statistics and event logs and rebuilds by reprocessing all existing ED journal files.  Does not delete bookmarks or preference data.|     Refresh History, History Refresh
+ = Open the Command Reference to see help and list of voice commands to issue (like this document, but in the application and voice controlled!).  Note Command Reference reflects OLD UI. Will be improved/renovated once UI migration is completed.|     Command Reference
+ = Lets you set which materials will be announced when the prospector scans an asteroid.|Prospector Announcements
+ = Display the key of icons used on the bookmarks panel.|Key Chart
+VOICEASSIGNMENTS = Display / adjust voices used in Space Chatter|Voice Assignments
+
+<Announcements and alerts>
+
+[General-announcements]
+MUTECOPILOT = Mute / unmute main EDCoPilot voice : Note: must contain mute/shut/quiet/off to mute|[mute; unmute] copilot; shut up [please;]; shut it; quiet please; [ok;] talk to me; stop sulking; speech [off; on]
+ANNOUNCEFUELSCOOPS = Whether to announce which stars are scoopable as you jump into each system|[fuel;] [scoop; scoopable] announcements [on; off;]
+ = What scale to use when displaying or announcing surface temperatures|Temperature in <kelvin, fahrenheit, celsius>
+ = Whether copilot announces how far to your destination on each jump|Destination announcements <on, off>
+ = Whether copilot announces the name of the next system as you jump|Jump announcements <on, off>
+ = Whether copilot announces when you were last in the system, when you reach your destination system.|Last here announcements <on, off>
+ = Whether copilot checks Inara to see if there is a fact available for the station you have just dropped at.|Station facts announcements <on, off>
+ = Whether copilot verbally gives you scan information when you target a ship eg. "Scanning, Mister Big, Anaconda, Elite, very naughty boy"|Targetting announcements <on, off>
+ = If on, copilot will read you the message just received and write it to the voice log. If off, will just write the message to the voice log. Depends on how chatty your squadron is!|Squadron messages <on, off>
+ = If on, copilot will tell you if there are places of interest noted for the system you have entered.  You can then issue the command "Places Of Interest within this system" to see the entries.|Places Of Interest (announcements) <on, off>
+ = Whether to accept panel navigation commands using the joystick. Use "Joystick Bindings" voice command to open the bindings configuration panel. When joystick is enabled, will see a highlighted / underscored text on current button focus. Disable joystick to remove.|<enable / disable > joystick
+ = Whether to notify when one of your friends goes online or offline|Friend announcements <on / off>
+ = Whether to automatically download and apply updates when they are available. If disabled, use command "Download Updates" at any time when the co-pilot is online in order to initiate the download|<enable / disable > automatic updates <on / off>
+ = Whether to convert captured screenshots into JPG format.  Will be stored in same folder as your screenshots UNLESS you change the Converted ScreenShot folder location on the "Folder Locations" panel|<Screenshot conversion / convert screenshots> <on / off>
+ = Set whether the landing pad location for starports will be spoken, displayed, both or not announced at all|<say and display, say, display, speak and display, speak> landing pad assistance < on , off, say and display, say, display>
+ = Set to on when you are trying to check where in course plotting your keybinds may be going wrong. Will walk you through the steps it is trying to simulate to open Galaxy Map and plot the route.|Plotting <debug, assist, walkthrough> <on / off>
+
+[Alerts and warnings]
+ = Whether to play an audible alarm when a mission target ship is scanned|Mission Target alarm <on, off>
+ = Whether copilot warns you of a scan from a pirate|Pirate threat announcements <on, off>
+ 
+[Mining-announcements]
+PROSPECTORANNOUNCE = If on, your copilot will tell you the core detected by a prospector limpet without you having to select the limpet on your contacts|[Cancel; Set; Turn on; Turn off;] [Asteroid;] Core [Announcements; Announcement] [on; off;]
+PROSPECTORALL = Announce all material percentages from Prospector Limpet|Announce all prospector [percentages; materials]; announce all items
+PROSPECTORMUTE = Mute all prospector material announcements|[Clear; cancel; mute all] prospector announcements; prospector announcements off; mute all items
+PROSPECTORITEMNUM = Set prospector to announce percentage of numbered material (from Prospector Announcements screen)|[announce; mute] item [1..50]
+
+<Bookmarks and course plotting>
+
+[Bookmark-Groups-panel]
+ = Display the Bookmark Groups panel|Bookmark Groups
+ = Display bookmarks in the requested folder eg. "Show Combat bookmarks" |Show <groupname> bookmarks
+BGSHOWNUM = Display bookmarks in the numerated folder|[bookmark group; folder; group] [1..6] [1..6] 
+NUMDELBG = Delete numbered bookmark group|delete [bookmark group; folder; group] [1..50]
+BGDELWORPHANS = Deletes the folder/group, and deletes any bookmarks it contains that are solely mapped to that group (i.e. doesn’t delete a bookmark if it is also contained in another group)|delete with orphans [bookmark group; folder; group] [1..50] 
+ = Opens an edit panel to rename the bookmark group.  You cannot rename ALL or UNFILED folders. |Rename bookmark group <#>
+BGCOPYNUM = Select numerated bookmark group (use with "paste selected group")|copy group [1..100]
+BGPASTEGROUP = Copy all bookmarks from previously selected group into the current displayed bookmark group|paste selected group
+
+
+[Bookmarks-panel-:-contextual]
+ = Display a sub-menu of commands you can issue against the chosen system|<Commands / Command Menu / Menu> <#>
+ = Add a non-bookmarked system (gold) to bookmarks|Add <system / item> <#> to bookmarks
+ = See  generated and commander-entered information about the system. |Notes <#> / System data <#> / System info <#>
+ = Set course for the numerated system|Bookmark <#>, <set course / plot route> <#>
+ = Show the station information for the numerated system|Stations <#>
+ = Show information on bodies in the numerated system|Bodies <#>
+ = Show event summaries for all prior visits to that system|System History <#>
+ = Show mining amounts / durations for the numerated system. To find systems you have mined in, issue commands "Bookmarks", then "Hide all bookmarks", then "Show mined locations", then issue the "mining stats <#>" command for the system you are interested in|Mining (Stats / Statistics)  <#>
+ = Retrieves a route from Spansh based on your Road To Riches search parameters, and builds a bookmark group called "Road To Riches"  … (say "See Road To Riches bookmarks" to see the group.)|Road to riches <#>
+ = (you must be in the carrier management menu, on the galaxy map screen, leftmost icon highlighed but not selected)|Move the fleet carrier to bookmark <#>
+ = eg. "Add bookmark 5 to Combat"|Add bookmark <#> to <bookmark group name>
+ = eg. "Remove bookmark 5 from Bucket List"|Remove bookmark <#> from <bookmark group name>
+ = |Add bookmark <#> to quick picks
+ = |<Delete / remove> bookmark <#>
+ = Open an edit panel to rename the button label and enter commander notes about the system. |Edit bookmark <#>
+ = Copies the system name to the clipboard for future commands eg. "Set course for that location", "Reference that location", "Bookmark that system" (useful if bookmark # is a local system and you want to add to your bookmark lists)|Set context to bookmark <#>
+ = Trading Mode - find the best commodities to take to the numerated system based on current station location or on referenced station location|Best commodities <#>
+ = Trading Mode - find the commodities that will generate the largest LOSS if you sell at the numerated system, based on current station location or on referenced station location|Worst commodities <#>
+CLOSESTFACTIONSYSTEMNUM = Find the closest of your Faction's systems to the numerated system|closest faction system <#>
+
+
+[Bookmarks-panel-:-display-and-navigation]
+ = Show ALL bookmarks, show UNFILED bookmarks, or any named bookmark group eg "Show bucket list bookmarks"|Show <bookmark group name> bookmarks
+ = |Sort bookmarks by name
+ = |Sort bookmarks by distance
+ = Sorts bookmarks by distance and then positions at first page with the specified starting range.  x = 1 to 30,  40 to 490 in 10 increments, 500 to 5000 in 50 increments|Bookmarks from <x> light years
+ = eg. "bookmarks from hotel" …. Sorts bookmarks by system name, then positions to first page with an entry with the specified starting letter|Bookmarks from <phonetic letter 1>
+ = eg. "bookmarks from charlie hotel" …. Sorts bookmarks by system name, then positions to first page with an entry with the specified starting letters|Bookmarks from <phonetic letter 1> <phonetic letter 2>
+ = Note: jumps is an estimate based on your current jump range and doesn’t account for unevenly spaced stars! (but it gives you an idea)|Show system distance in <light years, jumps>
+BMSHOWNOTES = Show / hide Commander Notes on the Bookmarks panel|[show; hide;] [notes; commander notes; bookmark notes]
+
+[Bookmarks-panel-:-filters-]
+ = Removes all filters currently in place|Reset filters
+ = Shows all systems in the ALL bookmarks group (ie. All bookmarks you have made), sorts them by distance from you and positions to top of list|Show all bookmarks
+ = Hides all bookmarks in your current bookmark group. Use this to create a blank list before you add filters to pull in additional systems.|Hide all bookmarks
+ = Only show systems meeting ALL criteria in your filter list. Default is OFF, which causes an OR eg. Show Interstellar Factors  OR Material traders OR local systems|AND all filters <on, off>
+ = Limits combined filter results to systems in the current bookmark group only (ie. When added with "show res sites", will ONLY show systems with RES sites in your current bookmark group, and wont pull in other nearby systems)|restrict [to;] group [on; off;]; dont restrict [to] group
+ = Adds to the bookmark list all systems within 20 light years (retrieved from server), plus all systems within 150 light years from you that you have previously discovered (jumped into, returned in a search result, set as a reference point). Systems not in your true bookmark list show as highlighted gold.|(Show / hide) local systems
+ = |(Show / hide) interstellar factors
+BMTOGGLEENCMAT = Show systems with Encoded Material Traders|[show; hide] encoded material traders
+BMTOGGLEMANMAT = Show systems with Manufactured Material Traders|[show; hide] manufactured material traders
+BMTOGGLERAWMAT = Show systems with Raw Material Traders|[show; hide] raw material traders
+BMTOGGLEMATS = Show systems with (any) Material Traders|[show; hide] material traders
+ = |(Show / hide) RES sites
+ = |(Show / hide) hazardous RES sites
+HASCOMMANDERNOTES = Show bookmarks that have Commander Notes|[Show; hide] [notes; noted] [bookmarks; systems]
+ = Include systems where you have ships or your FC docked|(Show / hide) ship locations
+ = EDCoPilot remembers systems with CNBs that you visit.  Note: sometimes you may find the beacon is no longer compromised, in which case EDCoPilot will update its record.|(Show / hide) Compromised Nav Beacons
+ = Only show systems visited in this period.  Good for a small list if flying a trade route, for example.|Show systems visited in the last <x> days
+ = Useful if you are following a route and don’t want to jump back into a system you just left!|Hide systems visited in the last <x> days
+ = Show systems where you have discovered hotspots for the provided <mining material> eg. Show Void Opal sites|(Show / hide) <mining material> sites
+ = Shows systems where you have scanned and found hotspots|(Show / hide) hotspot sites
+ = |(Show / hide) high value hotspot sites
+ = Show systems where you have surface mined|(Show / hide) surface mining sites
+ = Show systems where you have asteroid mined|(Show / hide) core mining sites
+ = Show systems with chance of finding high grade emissions  signal sources|(Show / hide) (all) high grade emission (sites)
+ = Show all systems you either discovered, discovered a new body, first mapped a body, manually marked as first footfall or found biologicals|(Show / hide) all discoveries
+ = Show system where you were identifed as first to discover |(Show / hide) my discovered systems
+ = Show systems where you have discovered ELWs|(Show / hide) earth like [world; worlds] [discoveries;]
+ = Show systems where you were identied as first to map a body|(Show / hide) first mapped 
+ = Show systems where you mapped a body, but it had already been mapped|(Show / hide) not first mapped
+ = Show all systems where you mapped a body|(Show / hide) all mapped
+ = Show all systems where you marked a body as first footfall|[show; hide] first foot [fall;] [systems;bodies;] [on; off;]
+ = eg. Show Imperial systems|(Show / hide) <allegiance> allegiance systems
+ = eg. Show Civil War systems, Show Boom systems|(Show / hide) <system state> systems
+ = Show / hide systems with specified primary economy eg. Show Agricultute economies|(Show / hide) <economy state> economies
+ = Running out of fuel and forgot to scoop? Show nearby systems with fuel stars.|(Show / hide) fuel stars
+
+[Bookmark-Filters-(Powers)]
+POWERS_AISLING = Show Aisling Duval systems|[show; hide;] [ashling; ashling duval; aisling duval; aisling] systems
+POWERS_ARCHON = Show Archon Delaine systems|[show; hide;] [archon; archon delaine] systems
+POWERS_ARISSA = Show Arissa Lavigny-Duval systems|[show; hide;] [arissa; arissa lavigny duval; lavigny duval] systems
+POWERS_DENTON = Show Denton Patreus systems|[show; hide;] [denton; patreus; denton patreus] systems 
+POWERS_MAHON = Show Edmund Mahon systems|[show; hide;] [Edmund; Mahon; Edmund Mahon] systems
+POWERS_FELICIA = Show Felicia Winters systems|[show; hide;] [Felicia; Winters; Felicia Winters] systems
+POWERS_ARCHER = Show Jerome Archer systems|[show; hide;] [Jerome; Archer; Jeffrey Archer; Jerome Archer] systems
+POWERS_LI_YONG = Show Li Yong-Riu systems|[show; hide;] [Lee Yong; Lie Yong; Lee Yong Riu; Lie Yong Riu] systems
+POWERS_NAKATO = Show Nakato Kaine systems|[show; hide;] [Nakato; Kaine; Nakato Kaine] systems
+POWERS_PRANAV = Show Pranav Antal systems|[show; hide;] [Pranav; Antal; Pranav Antal] systems
+POWERS_YURI = Show Yuri Grom systems|[show; hide;] [Yuri; Grom; Yuri Grom] systems
+POWERS_ZEMINA = Show Zemina Torval systems|[show; hide;] [Zemina; Torval; Zemina Torval] systems
+
+[Bookmark-Filters-(Power States)]
+POWERSTATE_EXPLOITED = Show Expansion (Acquisition) state systems|[show; hide;] [exploited; acquisition] systems
+POWERSTATE_FORTIFIED = Show Fortifed (Reinforcement) state systems|[show; hide;] [fortify; reinforce; reinforcement ] systems
+POWERSTATE_CONTESTED = Show Contested state systems|[show; hide;] contested systems
+POWERSTATE_STRONGHOLD = Show Stronghold systems|[show; hide;] strong hold systems
+
+[Course-Plotting]
+ = Sets course for the system name on your clipboard.  When you perform a search, the recommended location is copied to the clip.  So you can say "Best location Interstellar Factors" followed by "Set course for that location" once the search has completed.|<Set course / plot route> for that location
+ = Set course for a system that is numerated on the display. Can be selected from : Bookmarks panel, Show My Ships panel|System <#>, Bookmark <#>, item <#>
+ = VoiceAttack will recognise by name any of the last 100 systems you have previously set as a destination using EDCoPilot, assuming it is easilly pronouncible. Eg. "Set course for A Y Indi"|<Set course / plot route> for <system name>
+ = Opens galaxy map and positions to the selected system, then prompts you to either click Plot Route to head to the system, or click System Map icon and select a body or station as the destination.|Partial plot <#>, Galaxy Map <#>
+ = Similar to Partial Plot <#> but for system names it recognises. VoiceAttack will recognise by name any of the last 125 systems you have previously set as a destination using EDCoPilot, assuming it is easilly pronouncible. Eg. "Position galaxy map to A Y Indi"|<partial plot to / (position) galaxy map to>  <system name>
+ = Performs a partial plot to the system in your clipboard.  When you perform a search, the recommended location is copied to the clip.  So you can say "Best location Interstellar Factors" followed by "Partial plot to that location" once the search has completed.|Partial plot to that location
+ = Clear the destination. Stops announcements of how far left to go on each jump.|Cancel destination
+ = Use command "Set home system" when in a system to set it to home|Set course for home
+ = Use command "Set home fleet carrier" when docked at the fleet carrier to assign it as your home carrier.  Hint: leave at least one stored module on this Fleet Carrier, so that location of carrier will be updated when you start a session.|Set course for the fleet carrier
+ = There are 10 slots available in quick picks to assign to system names. See "Quick Pick" commands below for how to manage the list.|Quick Pick <#>
+ 
+[Couse-Plotting-(Predefined-Locations)]
+ = Set course for the named Engineer|Set course [for; to] <engineer name>
+ = Set course for the named Thargoid Titan|Set course [for; to] Titan <titan name>
+ = Set course for the Jameson Crash Site system|Set course [for; to] to the Jameson crash site
+
+[Active-Route commands]
+NEXTACTIVEROUTEJUMP = Set course for next system in the current active route. An active route is set when you either select a route bookmark group in the bookmark group list, or request a new route be created|Next jump in route; Next active route [jump;]
+CLEARACTIVEROUTE = Clear the active route (stops EDCoPilot checking and following the route)|Clear active route
+NEXTGALAXYPLOTTERJUMP = Set course for next system in the Galaxy Plotter route|Next galaxy plotter jump
+ = If you have remaining jumps in the in-game route, will focus on the next system in the route. Otherwise will set to the next system in your active route if one is set|next system in route; resume course
+ 
+[Neutron-Highway
+ = Use this command from the bookmarks panel to plot a set of jumps to get to your target system|Neutron (Highway) <#>, or  Plot a Neutron (Highway) route to (bookmark / system) <#>
+ = Show the bookmark group with list of jumps to neutron stars that you can use to super charge your FSD.  |Show Neutron (Highway) bookmarks
+ = Displays the Neutron Highway Route bookmark group and sets course for the first entry in the list (will be either a set of jumps to the next neutron star in your route, or the final destination)|Next Neutron (Highway) jump
+ = Removes all bookmarks from the Neutron Highway bookmark group. Deletes bookmarks completely if they are not assigned to any other groups.|Clear Neutron (Highway) route
+ = Increase this to reduce how far off the direct route the Spansh system will plot to get to a neutron star (An efficiency of 100 will not deviate from the direct route in order to plot from A to B and will most likely break down the journey into 20000 LY blocks). |Neutron (Highway) efficiency (60..100) percent
+
+[Road-To-Riches]
+ = Show the bookmark group with list of systems with high value bodies to scan/map.  Use command <Road to riches <#>" from the bookmarks panel to generate a set based on your search parameters|Show Road To Riches bookmarks
+ = When in a R2R system, will tell you next body to scan/map or tell you if all completed.|Next body
+ = EDCoPilot will tell you what the current search parameter settings are. Note: you can now set these via the Settings -> Search Parameters panel instead of using voice commands|Road To Riches settings
+ = Whether you want to plot a list that is a loop to your target destination and then back to your current system. Default is ‘off’.|Road To Riches loop < on / off >
+ = Furthest distance from the star (ls) to include in results. Default is 100,000.   <x> = 10,000 to 100,000 in 10,000 increments,  200,000 to 1,000,000 in 100,000 increments.  |Road to riches max distance <x> 
+ = Maximum number of systems to include in the route. Default is 100.   <x> =  50 to 500 in 50 increments. |Road to riches (max) systems <x> 
+ = Distance (LY) in which the plotter will look around for systems. Default is 25.    <x> is 10 to 250 in 5 increments. |Road to riches search radius <x> 
+ = Minimum value of the scan to include in the list. Default is 100,000 (cr).  <x> is 50,000 to 500,000 in 50,000 increments.|Road to riches minimum scan (value) <x> 
+
+
+[Reference-System-/-Station]
+ = Set the reference to the system name on your clipboard|Reference that location
+ = Clear the reference and set back to your current location |Clear reference
+ = (from Bookmarks panel or Stations panel) Set the reference to the system and/or station corresponding to the entry #.  Now able to set a reference to a station on the Stations panel, for Trading Mode searches|Reference <#>
+
+
+<Controls>
+
+[Controls-:-Flight]
+ = Show the Flight controls panel|Flight controls
+SHIPCTLLANDINGGEAR = Deploy / retract landing gear|landing gear
+SHIPCTLCARGOSCOOP = Deploy / retract the cargo scoop|cargo scoop
+SHIPCTLLIGHTS = Toggle ship lights|lights [on; off;]
+SHIPCTLNIGHTVISION = Toggle night vision (in ship / srv / suit (if equipped))|night vision
+SHIPCTLFLIGHTASSIST = Toggle FA on/off|flight assist [on; off;]
+SHIPCTLHARDPOINTS = Deploy / retract hardpoints|[deploy; retract;] hardpoints
+SHIPCTLHEATSINK = Deploy a heat sink|[deploy;] heat sink
+SHIPCTLORBITLINES = Toggle orbit lines on/off|[toggle;] orbit lines
+SHIPCTLHUD = Toggle the HUD display on/off|toggle hud
+SHIPCTLALLSTOP = Set thrusters to 0|[thrusters;] all stop
+SHIPCTLTHRUST = Set thrusters to level selected|[thrusters;] [0; 25; 50; 75, 100] percent
+SHIPCTLMODE = Toggle Analysis and Combat mode|[analysis; combat] mode
+SHIPCTLNAVLOCK = Toggle the wingman navlock on/off|[toggle;] navlock
+SHIPCTLWINGMAN = Target numerated wingman|[target;] wingman [1;2;3;]
+SHIPCTLWINGMANTARGET = Target your selected wingmans target|[target;] [wingman; wingman's] target
+SHIPCTLHONK = Fire discovery scanner|discovery scanner; honk the system
+AUTOHONK = Enable / disable automatic firing of Discovery Scanner when you enter a system (requires Discovery Scanner to be active on the Primary or Secondary firegroup, and the keybind for Primary Fire or Secondary Fire to be mapped to a key press)|[auto; automatic] honk [on; off;]; [exploration; discovery] mode [on; off;]
+SHIPCTLSILENTRUNNING = Toggle Silent Running on/off|silent running
+
+[Controls-:-Combat]
+ = Show the Combat controls panel|Combat controls
+SHIPCTLHIGHESTTHREAT = Target highest threat|highest threat; biggest threat
+SHIPCTLPREVHOSTILE = Target previous hostile|[target;] previous hostile
+SHIPCTLNEXTHOSTILE = Target next hostile|[target;] next hostile
+SHIPCTLPREVSHIP = Target previous ship|[target;] previous ship
+SHIPCTLNEXTSHIP = Target next ship|[target;] next ship
+SHIPCTLCHAFF = Launch Chaff|[deploy;  launch;] chaff
+SHIPCTLECM = Deploy ECM|[deploy;] [ECM; countermeasures]
+SHIPCTLSHIELDCELL = Deploy Shield Cell|[deploy;] shield cell
+AUTOHIGHESTTHREAT = Wwhether to target highest threat when under attack. Will also target every few seconds for 25 seconds after the UnderAttack event|auto target highest threat [on; off;]
+
+[Controls-:-Power-and-Firegroups-(Ship-or-SRV)]
+SHIPSRVPIPSYS = Add a power PIP to SYS|[System; shield] PIP
+SHIPSRVPIPWEP = Add a power PIP to WEP|Weapon PIP
+SHIPSRVPIPENG = Add a power PIP to ENG|Engine PIP
+SHIPSRVPIPRST = Reset PIPs to balance power between SYS, ENG and WEP|Balance [power; PIPs]
+SHIPSRVPIPFULLSYS = Full power to SYS|Power to [systems; shields]
+SHIPSRVPIPFULLWEP = Full power to WEP|Power to [weapons]
+SHIPSRVPIPFULLENG = Full power to ENG|Power to [engines]
+SRVPREVFIREGROUP = Previous firegroup (SRV)|previous firegroup
+SRVNEXTFIREGROUP = Next firegroup (SRV)|next firegroup
+
+[Controls-:-Fighters]
+SHIPCTLFIGHTERATTACK = Attack target|attack target
+SHIPCTLFIGHTERENGAGE = Engage at will|engage at will
+SHIPCTLFIGHTERDEFEND = Defend|defend
+SHIPCTLFIGHTERHOLDFIRE = Hold your fire|Hold your fire
+SHIPCTLFIGHTERHOLD = Hold position|hold position
+SHIPCTLFIGHTERFOLLOW = Follow me|follow me
+SHIPCTLFIGHTERRECALL = Recall the fighter|recall [the;] fighter
+
+[Controls-:-SRV]
+ = Show the SRV controls panel|SRV controls
+SRVSWITCHMODE = Combat/analysis mode (SRV)|[buggy; vehicle; S R V] [analysis; combat;] mode
+SRVSWITCHMODE = Combat/analysis mode (SRV)|SRV Toggles
+SRVHANDBRAKE = Toggle handbrake|handbrake [on; off;]
+SRVHEADLIGHTS = Toggle headlights|headlights [on; off;]
+SRVDRIVEASSIST = Toggle drive assist|drive assist [on; off;]
+SRVCARGOSCOOP = Toggle cargo scoop|[buggy; vehicle; S R V;] cargo scoop
+SRVTURRET = Toggle turret view|turret [mode;]
+SRVRECALLDISMISS = Recall or dismiss the ship|[recall; dismiss] the ship
+SRVEXTERNALCAMERA = Switch to external camera|[buggy; vehicle; S R V;] external camera
+SRVJETTISON = Jettison cargo|jettison cargo
+
+[Controls-:-On-Foot]
+ = Show the OnFoot controls panel|On foot controls
+ONFOOTKEYSUITTOOL  = Switch to suit tool|suit tool; genetic [sampler; analyser]; arc cutter
+ONFOOTKEYANALYSISTOOL = Switch to the analyser tool|analyser [tool;]
+ONFOOTKEYLIGHTS = Toggle suit lights|lights [on; off;]; flashlight
+ONFOOTKEYENERGYLINKTOOL = Switch to the energy link tool|[energylink; recharge] tool
+ONFOOTKEYTOOLMODE = Toggle tool mode|[toggle;switch;] tool mode
+ONFOOTKEYNIGHTVISION = Toggle night vision (in ship / srv / suit (if equipped))|[suit;] night vision
+ONFOOTKEYPRIMARYWEAPON = Switch to primary weapon|primary weapon; rifle
+ONFOOTKEYSECONDARYWEAPON = Switch to secondary weapon|secondary weapon; pistol
+ONFOOTKEYHOLSTERWEAPON = Holster weapon|holster weapon; hide weapon
+ONFOOTKEYPREVIOUSWEAPON = Switch to previous weapon|previous weapon
+ONFOOTKEYNEXTWEAPON = Switch to next weapon|next weapon
+ONFOOTKEYGRENADEFRAG = Equip frag grenade|frag grenade
+ONFOOTKEYGRENADEEMP = Equip EMP grenade|EMP grenade
+ONFOOTKEYGRENADESHIELD = Equip shield grenade|shield grenade
+ONFOOTKEYTOGGLESHIELDS = Toggle shields|[toggle;] shields
+ONFOOTKEYHEALTHPACK = Apply health pack|[apply;] health pack; patch me up; medic!
+ONFOOTKEYBATTERY = Use battery (to charge suit)|charge suit; battery; energy cell
+ONFOOTKEYMISSIONHELP = Toggle Mission Help panel|mission help [panel;]
+ONFOOTKEYCLEARAUTH = Clear authority level|clear authority [level;]
+ONFOOTKEYRELOAD = Reload weapon|reload [weapon;]
+AUTOSHIELD = Automatically activate personal shield when deploying weapon or under attack|Auto shields [on; off]
+AUTOSHIELDDROP = Automatically disable personal shield when you holster your weapon|holster shield drop [on; off]; auto drop shields [on; off]
+
+[Controls-:-Camera]
+ = Show the Camera controls panel|Camera controls
+CAMENTER = Switch to external camera|[switch to; enter; exit] camera [suite;]
+CAMPREV = Previous camera|previous camera
+CAMNEXT = Next camera|next camera
+CAMFREETOGGLE = Toggle free camera mode|[toggle; enter; exit;] [freecam; free camera]
+CAMFREERELATIVE = Toggle between camera and shipédrv movement controls|switch controls
+CAMFREETOGGLEHUD = Toggle HUD in free camera|[toggle; hide; show;] [freecam; camera; free camera] [HUD; heads up display;]
+CAMFREESPEEDINC = Increase free camera movement speed|increase [camera;] speed; speed plus
+CAMFREESPEEDDEC = Decrease free camera movement speed|decrease [camera;] speed; speed minus
+CAMFREEWORLDTOGGLE = Attach / detach free camera|[attach; detach] camera
+CAMFREEFORWARD = Move free camera forwards [x times]|camera forward [1..10;]
+CAMFREEBACKWARD = Move free camera backwards [x times]|camera backwards [1..10;]
+CAMFREEUP = Move free camera up  [x times]|camera up [1..10;]
+CAMFREEDOWN = Move free camera down  [x times]|camera down [1..10;]
+CAMFREELEFT = Move free camera left  [x times]|camera left [1..10;]
+CAMFREERIGHT = Move free camera right  [x times]|camera right [1..10;]
+CAMFREEROLLLEFT = Roll free camera left  [x times]|roll left [1..10;]
+CAMFREEROLLRIGHT = Roll free camera right  [x times]|roll right [1..10;]
+CAMFREEPITCHUP = Pitch free camera up  [x times]|pitch up [1..10;]
+CAMFREEPITCHDOWN = Pitch free camera down  [x times]|pitch down [1..10;]
+CAMFREEYAWLEFT = Yaw free camera left  [x times]|yaw left [1..10;]
+CAMFREEYAWRIGHT = Yaw free camera right  [x times]|yaw right [1..10;]
+CAMFREEZOOMIN = Zoom free camera in  [x times]|zoom in [1..10;]
+CAMFREEZOOMOUT = Zoom free camera out  [x times]|zoom out [1..10;]
+CAMFREEROTATIONLOCK = KeyBind:ToggleRotationLock:"", # Stabiliser On/Off Toggle|Free Camera|General Controls->Free Camera", # ... 22-10-17|[toggle;] stabiliser [on; off;]
+
+[Controls-:-Pulse Fire]
+SHIPCTLAUTOPULSE = Pulse Fire on / off |[stop; start; quit; end;] pulse fire [on; off;]
+SHIPCTLAUTOPULSEINTVL = Turn on Pulse Fire with interval of x seconds|pulse fire [1..20] seconds
+SHIPCTLAUTOPULSEASSIGN = Set primary or secondary firegroup for Pulse Fire|pulse fire [primary; secondary]
+
+
+<Location search>
+
+[Search-commands-:-Commodities]
+ = Finds the system / station offering the highest price|Highest sell price <commodity name>
+ = Finds the closest system offering within 10% of the highest price|Best location to sell <commodity name>
+ = Finds the best price in your vicinity|Best local sell <commodity name>
+ = Finds the closest market to sell|Closest (system to) sell <commodity name>
+ = Finds the lowest buy price in the galaxy|Lowest <buy / purchase > price <commodity name>
+ = Finds the closest system offering within 10% of the lowest price|Best location to buy <commodity name>
+ = Finds the lowest price in your vicinity|Best local buy <commodity name>
+ = Finds the closest market to buy|Closest (system to) buy <commodity name>
+ 
+[Search-commands-:-Facilities]
+ = displays a panel showing recommended location ("Set course for that location") or alternatives you can select ("System <#>" to set course)|Best location <raw, encoded, manufactured> material trader
+ = displays a panel showing recommended location (""Set course for that location"") or alternatives you can select (""System <#>"" to set course)|Best location interstellar factors
+ = |Best location black market
+ = |Best location <human / guardian> tech broker
+ = |Best location <Rescue Megaships, Sirius Megaships, Megaships, Vista, Vista Genomics, Cartographics, Universal Cartographics, Bartender, Redemption Office, Pioneer Supplies, Frontline Solutions >
+ = |closest <Rescue Megaships, Sirius Megaships, Megaships, Vista, Vista Genomics, Cartographics, Universal Cartographics, Bartender, Redemption Office, Pioneer Supplies, Frontline Solutions > location
+ = |In system <rearm, repair, refuel, crew lounge, shipyard, tuning, workshop> (locations)
+ = |Closest <rearm, repair, refuel, crew lounge, shipyard, tuning, workshop > (locations)
+
+[Search-commands-:-Materials]
+ = Will tell you a general description of locations to find the requested material|Where can I find <material name>
+ = Finds ringed bodies with the required hotspot signals|Find [me some; us some;] <mining commodity name> [hotspots; rings; sites;]
+
+[Search-commands-:-Modules]
+ = Brings up a list of modules you can search for.  Either click the buttons, or say the module name. Use "next" and "previous" to switch pages.|Ship Outfitting
+ = eg, 'best location beam laser' or 'best location turreted beam laser' or 'best location size 3 turreted beam laser'. Prompts you for remaining information needed if spec is incomplete|Best location (size <0-8>) (fixed, gimballed, turreted) <module name>
+ = Initiate search for a ship module. Brings up a sub panel asking for module size and grade.  Just say what is on the button to select which one you want to search for|Best location <module name>
+
+[Search-commands-:-Places-Of-Interest]
+ = Find places of interest within your search radius|Places Of Interest within <x> light years
+ = When displaying a list of locations, will bookmark the numerated system|Add system <#> to bookmarks
+ = When displaying a list of locations, will add a check mark next to the item to show you have visited|Mark system <#> complete
+
+[Search-commands-:-Ships]
+ = Find the closest station selling the requested ship model. Note : Use "Discount on" or "Discount off" preferences before you invoke this command, depending on if you want discounted locations only or not.|Best location to buy a <ship type>
+ = Will tell you where ship(s) in your fleet of that type are docked. It’s a fun alternative to using "Show My Ships" panel, or adding the "Show Ship Locations" filter to bookmarks|Where did I park my <ship type>
+
+[Searches-:-Result commands]
+DISPLAYLOCATIONS = Display the last Search Results list|[open; display; show;] [the;] locations [list;]
+ = Add the system to bookmarks! Can be seen initially in the ALL and UNFILED bookmark groups|Bookmark that system
+ = Opens galaxy map and plots course to that location.  Requires focus on the Elite Dangerous game window.|Set course for that location
+ = Will send a location message to Wingman. If wingman is also running EDCoPilot, the system name will be copied to his/her clipboard|Send clipboard to [wingman; wing; team] as location
+ = Set the system name in the clipboard as the reference point for distance calculations and location searches|Reference that location
+
+[Searches-:-Search-Preferences]
+ = Useful if you don’t want the recommended station to be the one 150,000 ls away in your current system|<include / exclude> current system
+ = if off, search results will only include locations with a landing pad large enough for your current ship. If on, will return only large landing pad locations. |(Large) Landing pad override <on / off>
+ = Whether to include surface based stations in search results (applies to both  Location searches and Trading Mode searches)|Include / exclude [planetary; surface] [locations; stations]
+ = Set the minimum stock / demand level required for commodity searches.   Where x = 1 to 100, or 110 to 750 in 10 increments|set quantity to <x>
+
+<Messaging>
+
+
+[Messaging-:-Pre-defined-messages]
+ = Bring up the Messages panel|Messages
+ = Posts the numerated message to the comms panel, sending to the desired person / group|Send message <1 to 72> to (wing, local, squadron, reply, voice, target)
+
+[Messaging-:-Send and receive team data]
+WINGRECEIVE = Check for and receive data from wing|[get; check;] [wing; wingman; team] data
+WINGCLEAR = Clears any data you have previously sent to the wing. Note: data you have sent will clear automatically on EDCoPilot restart.  Only data sent while the wingman is winged can be retrieved by them  (if you send stuff earlier and they wing, they wont be available)|clear [wing; wingman; team] data
+WINGSENDLOCATION = Sends your current system name to wing. When they retrieve it, will be copied to their clipboard and the command "set course" will plot their course to it.|Send current location to [wing; wingman; team]
+WINGSENDCLIP = Sends the system name in your clipboard to the wing. When they retrieve it, will be copied to their clipboard and the command "set course" will plot their course to it.|Send that location to [wing; wingman; team]
+WINGSENDCOORDS = Sends the target coordinates from your Guidance Computer to the wing. When they retrieve it, these coordinates will be loaded into their own Guidance Computer to give them directions to the location on the surface.|Send target coordinates to [wing; wingman; team]
+WINGSENDCURRENTCOORDS = Sends your current surface coordinates to the wing.  When they retrieve it, these coordinates will be loaded into their own Guidance Computer to give them directions to the location on the surface.|Send [current;] coordinates to [wing; wingman; team]
+
+[Messaging-:-Send-clipboard]
+ = Anything on your clipboard gets sent as a message via the Comms panel to your wing|Send clipboard to wingman
+ = Useful if you have done a search command, or "Set context" on bookmarks panel, and want to share the target location with your wingman.  If wingman is also running EDCoPilot, the system name portion of the message will be copied to his clipboard, and they can then issue the "Set course for that location", "bookmark that location", or "reference that location"commands|Send clipboard to wingman as location
+
+
+<Miscellaneous>
+
+[General-items]
+LOCALTIME = Brain hurts from converting UTC to local time? Just ask EDCoPilot what time it is.|Local time
+ = Add this system to your bookmarks|Bookmark this system
+ = Opens the Add Manual Bookmark popup for you to enter / paste a system name and some optional Commander Notes|Add bookmark; manual add bookmark; add manual bookmark
+ = If docked, when last at station and how many times docked. If undocked, when last in system and how many times visited|When were we last here
+FUELLEVELS = Tells you your current fuel level percentage|Fuel levels
+LOOPOFSHAME = Comments on your loop of shame|[yet;][another;] loop of shame
+
+[Screen-shots]
+SCREENSHOTSTD = Take a standard size screen shot|[take a;] standard [photo; screenshot]
+SCREENSHOTHIRES = Take a high res screenshot (Open and Private modes only)|[take a;] high [res; resolution] [photo; screenshot]
+POSTIMAGE = Post displayed screenshot to Discord|post [this;] [screen shot; image]
+POSTIMAGENUM = Post numbered image (from System History)|post image [1..100]
+ 
+[Limpet-reminders]
+ = Tells you what the settings are for limpet reminders in your current ship|Limpet status
+ = If on, CoPilot will remind you every 30 - 45 seconds while docked if you need to add more limpets. If off, will only remind you when you first dock, and when you launch.|Nag mode {on/off}
+ = Set the minimum number of limpets required for this ship. CoPilot will remind you to buy if docked and below this number.|Set limpet reminders to <0..100>
+ = (For this session only) Stops CoPilot nagging if you are docked and don’t have the minimum # limpets set for that ship|Disable limpet reminders
+ 
+[Cargo]
+ = If OFF will not give warnings on too much unused cargo space, for ALL ships. If ON will use the reminder level set for each ship|[enable; disable;] Cargo reminders [on;off]
+CARGOSTATUS = Reports on your cargo hold contents|Cargo [hold;] status
+CARGOREMINDERLEVEL = Set reminder level for cargo hold. Warn on undocking if > this amount of free space in hold|cargo reminder [0..99]; cargo reminder [10..140, 10]
+CARGOREMINDERLEVELREPORT = Report on the remidner level set for this ship|cargo reminder status
+CARGOREMINDEROFF = Disable cargo free space reminder for this ship|ship cargo reminder off; disable ship cargo reminder
+
+[Manual-event recording]
+ = Manually add a Thargoid kill to the event log and kill stats. These will be included on subsequent History Refreshes. Use this if EDCoPilot does not congratulate you when you destroy an interceptor (there is a bug in ED when in wing you do not always get the kill logged in the game journal)|Add [cyclops; basilisk; medusa; orthrus; hydra] kill
+ = Undo a manual add (use this if you added the wrong type by mistake). Note: only works within 30 minutes of adding a kill.|[Remove; delete; undo]  [cyclops; basilisk; medusa; orthrus; hydra] 
+ = Notes first footfall datetime and location at your current surface location.|[mark; add;] first foot [fall;]; [mark; add;] first on foot
+
+[Voice-Attack]
+ = Will reload the commands and reset the active profile, so VA recompiles its recognition list|Reset Profile
+
+[Journal-Checking]
+ = Lock / unlock session to the current journal (useful if running multiple instances on same pc|[lock; unlock] current journal
+
+<Panel specific commands>
+
+[Bodies-panel]
+ = Displays the list of bodies|Bodies (in this system)
+ = Display information about the numerated body (eg. Surface temp, gravity, materials if landable)|item <#> / body data <#>
+ = Will refresh the bodies data from Spansh. Will not lose any of your discovered body entries.|Refresh body list
+
+[Event-Log]
+ = Display the image corresponding to the # mentioned in the "Captured snapshot" eventlog entry|Display image <#>
+ = Retrieve and  next / previous event log data|<Previous / next> event log
+ = Jump to a specific year and month's event log (2018, 2019, 2020)|Jump to <yyyy mm>
+ = |Back / forward <x> days
+ = |Back / forward <x> sessions
+
+[Exo-Mastery]
+EXOSCAN = Check for known biologicals in system|scan for [known;] biologicals
+EXODISPLAY = Display the 'Biologicals In System' panel|biologicals in system
+EXOCLOSEST = Set GC to the closest known non-collected significant sample|closest [known] sample 
+EXOCLOSESTNUM = Set GC to the closest known non-collected sample of the numerated species|closest [location;] [1..50]
+EXOPLOTNUM = Plot an Exo Mastery Route to the numerated system|exo route [1..50]; exo mastery [1..50]
+EXOPLOT = Plot an Exo Mastery Route to the bookmark currently in context (eg. on System Commands panel)|plot exo [mastery;] route
+
+[Faction-Systems-Reporting]
+FACTIONRPTRERUN = Rerun / restart the Faction Report|[resume; restart] faction report
+FACTIONRPTSTOP = Stop / pause the faction reporting background task|Stop / Pause faction report
+FACTIONRPTRESUME = Resume the Faction Report|resume faction report
+FACTIONLISTHOURS = Create a list of systems to visit (not visited in last x hours)|Faction systems [not visited in; not updated in;] [1..50] hours
+FACTIONLISTTICK = Create a list of systems to visit (not visited since last tick)|Faction systems [not updated since;] last tick
+ = Will show or hide the specified item|[show; hide] item [1..100]
+ = Hides the given range of items (note, only from first 10, to conserve VoiceAttack resources)|hide items [1..10] to [1..10]
+ = Unhides all hidden items on the panel|show all items
+ = Marks the starting item to perform operations on (for range functions). Will change the color of this item row to the same color as title bar background, to identify it is in the range.|mark start item [1..100]
+ = Marks the end item to perform operations on (for range functions). Will change the color of the items in the range to the same color as title bar background, to identify which are in the range selected.|mark end item [1..100]
+ = Hides items in the range you have previously specified using the "mark start item" and "mark end item" commands|hide marked items
+ = Clears any range you have previously specified ("mark start item" and/or "mark end item")|clear marked items
+FACTIONWORKORDER = Post list of systems needing work to Discord webhook|post faction work order
+FACTIONWARORDER = Post war notice for selected system to Discord webhook|post war notice [1..100]
+FACTIONELECTIONORDER = Post election notice for selected system to Discord webhook|post election notice [1..100]
+FACTIONVISITLIST = Post list of systems to visit to Discord webhook|post systems to visit
+FACTIONLOWTHRESH = Post list of systems with influence < x %|post systems with less than [1..99] percent influence
+FACTIONLOWTHRESHPREF = Post list of systems with influence < %age set in ini file DiscordFSLowInfluence value|post low influence systems
+CLOSESTFACTIONSYSTEM = Find the closest of your Faction's systems to your current system|closest faction system
+CLOSESTFACTIONSYSTEMNUM = Find the closest of your Faction's systems to the numerated system (in bookmarks)|closest faction system <#>
+
+[Guidance-Computer]
+ = Display the Guidance Computer screen, used for updating target surface coordinates and displaying direction and distance to them|Guidance Computer
+ = Clear the target coordinates in the Guidance Computer|Clear target coordinates
+ = Set the integer portion of the latitude coordinates|[lat; latitude] [minus;] [0..90] degrees
+ = Set the decimal portion of the latitude coordinates|[lat; latitude] decimal point [0..99] degrees
+ = Set the integer portion of the longitude coordinates|[long; longitude] [minus;] [0..180] degrees
+ = Set the decimal portion of the longitude coordinates|[long; longitude] decimal point [0..99] degrees
+LOCNOTEMAKE = Note current location (opens window to add a description)|[note; mark] [this;] location
+LOCNOTEPINADD = Drop a pin at current location|drop a [pin; beacon]; add [pin; beacon]
+LOCNOTEPINCLEAR = Clear all pins|clear [pins; beacons]
+LOCNOTEPINLAST = Load last pin location to Guidance Computer|[load;] last [pin; beacon]
+
+[Mission-List-panel]
+ = Display the mission List panel|Mission list / mission status
+ = Note: optimal route will sequence the mission list based on the best route to get to all destinations in the list.|Sort missions by (status / expiry / distance / location / faction / optimal route)
+ = For multiple source/return missions with different commodities : will find locations to buy for each of your commodities and update the locations on the Mission Status panel. Example: ""Source missions best local""|Source (my / all) missions ( using / with) { closest buy / best location /  lowest price / best local / recommended"
+ = For source/return mission types:  Issue the search command for the commodity you need to buy. When the Display Locations panel is displaying the list of places, issue the "mission source <x>" command against the destination your prefer. This will set the destination for that mission in the Mission List panel.|Mission source <#>  - (From the Display Locations panel)
+ = For source/return mission types : once you have purchased the commodity required, issue this command to set the destination for this mission back to the issuing system / station where you need to return the goods.|Mission return <#>
+
+[Session-Progress-:-Display customization]
+ = Valid <table type>s are : Raw Materials, Manufactured Materials, Encoded Materials, Kill Counts, Pilot History, Pilot Names, Excluded Pilots, Factions, Prospector Report, Payees, Backpack, Cargo Hold, Depot Progress, Carrier Market|
+ = Add / remove the table from the display|Show / hide <table type>
+ = Move the position of the table on the display|Show <table type> on the (left/right/centre)
+ = Move the position of the table on the display|Show <table type> at the bottom (left/right/centre)
+ = Move the position of the table on the display|Show <table type> at the top (left/right/centre)
+ = Move the position of the table on the display|Move <table type> to the top
+ = Move the position of the table on the display|Move <table type> to the bottom
+ = Note: Special command for Pilot History, Carrier Market and Depot Progress only. Display information across 2 tables on left and right panel |Show <table type> across both
+ = Exclude the nth pilot in the Pilot History table from being redisplayed on next scan. Useful for frequent names such as "System Authority Vessel", or for your wingman)|Exclude pilot <#>
+ = Where layout-type = Combat, Mining, Surface prospecting, On-foot, Colonisation eg. ""Combat Progress""- loads the default / saved layout of tables and positions for this layout-type|<layout-type> Progress, or Load <layout-type> layout"
+ = Where layout-type = Combat, Mining, Surface prospecting, On-foot, Colonisation - saves the current layout of tables and positions to the specified layout-type for later recall|save <layout-type> layout"
+
+[Session-Progress-:-Other]
+ = Clears the Pilot History table of all pilot data, as can fill up with multiple scans during combat. |Clear Pilot History
+ = Will reset all the counters and totals for this session. Useful for those who want to split their on foot vs their in space session progress.|Reset game counters
+ = Show or hide the requested material from its respective table. Useful if you just want to check current total (alternative to displaying the Trading Table)|Show / hide <material name>
+ = On session progress. Change the boldness of highlighted fields|<bold, standard, normal> highlights
+ 
+[Ship-Locker]
+SHIPLOCKERCONSUMABLES = Expand / collapse Consumables section|[expand; close; collapse] consumables
+SHIPLOCKERITEMS = Expand / collapse Items section|[expand; close; collapse] items
+SHIPLOCKERCOMPONENTS = Expand / collapse Components section|[expand; close; collapse] components
+SHIPLOCKERDATA = Expand / collapse Data section|[expand; close; collapse] data
+SHIPLOCKERUNCLASSIFIED = Expand / collapse Unclassified section|[expand; close; collapse] unclassified
+SHIPLOCKERALL = Expand / collapse all sections|[expand; close; collapse] all [sections;]
+
+[Show-My-Ships]
+ = Shows the statistics for your CURRENT ship|ship stats
+ = Shows the statistics for the numerated ship|ship stats [1..100]
+ = Shows the modules in your CURRENT ship|ship specs
+ = Shows the modules in the numerated ship|ship specs [1..100]
+ 
+[Stations panel]
+ = Display the Stations panel|Stations
+ = Opens a Stations Commands sub-menu to show available commands you can issue against the selected station. Note this is primarily for non-voice users to access the following station specific commands:|Commands <#>
+ = Set the selected system as the reference point for distance and trade route calculates. Set the selected station as the point from where to initiate trade route calculations.|Reference <#>
+ = Check for and display the station fact for this station (if one is available)|Station Facts <#>
+ = Initiates a search to find all systems within 20LY and calculate the best cargo to take from each that will yield you the most profit at the specified station. See "Local Exports commands" section.|[best;] Local Exports <#>
+ = Find the commodities from your current station to take to this specified station to yield maximum profit. You will be asked to dock and/or to open the local commodities market, to access latest prices at your current station.|Best Commodities <#>
+ = Find the commodities from your current station to take to this specified station to yield maximum LOSS (useful for undermining). You will be asked to dock and/or to open the local commodities market, to access latest prices at your current station.|Worst Commodities <#>
+
+[Stored-Modules]
+ = Display the Stored Modules panel|Stored modules
+ = |Sort (stored) modules by (name, type, distance, module number)
+
+[System-Info]
+ = Invokes the System Info panel. Will show last system displayed, or current system if none has been retrieved|System Data / System Info
+ = Invoke from the Bookmarks panel to see information specifc to a selected system|System data <#> / system info <#>
+ = Opens the Edit Commander Notes panel.  You will need to key in any changes to notes on this panel (no support for dictation).  To close, say "Cancel" or "Go Back" or "Close PopUp"|(Edit) Commander Notes
+ = Opens the Add/Remove System From Bookmark Groups panel.  Toggle on/off which groups you want this bookmark to be associated with.|(Edit) Assigned (Bookmark) Groups
+
+<Time Trials>
+
+[Time-Trials]
+TIMETRIALS = Display list of time trial events|time trials
+TIMETRIALSTARTNUM = Start the numerated time trial|start time trial [1..100]
+TIMETRIALSTARTCURRENT = Start currently displayed time trial|start [this;] time trial
+TIMETRIALNUM = View details about the numerated time trial|[display;] time trial [1..99]
+TIMETRIALCANCEL = Cancel current time trial|cancel time trial
+TIMETRIALPAUSE = Pause current time trial (only if allowed for that event)|pause time trial
+TIMETRIALRESUME = (COMING SOON) Resume current time trial (only if allowed for that event)|resume time trial
+TIMETRIALRESTART = (COMING SOON) Restart last race|restart time trial
+MUSICPLAYTIMETRIAL = Play time trial music|play [time trial; racing] music
+MUSICTIMETRIAL = Toggle auto play of time trial music|[Cancel; Set; Turn on; Turn off;] [time trial; racing] music [on; off;]
+
+<Trading Functions>
+
+[Local-Exports]
+
+ = (from the Stations display) Initiates a Local Exports search for the specified system|Local Exports <station-number>
+ = Cancels an in-progress search|Cancel search
+ = Issue from any screen EXCEPT the Stations Commands panel, and this wil redisply the current Local Exports search result screen (if a search has been initiated)|Local Exports
+
+[Trade-Route]
+ = Generate a trade route using the Spansh Trade Planner, based on search criteria set on the Trade Route panel. Note: this command will override the # hops option for whatever is verbally requested (1 to 10)|Trade Route [1..10] hops
+ = Set course for the next system in the Trade Route list  (usually issued after you have bought your commodities from your current station)|Next trade hop
+ = Clear the current Trade Route|Clear trade route
+
+[Trading-Mode]
+ = Switch Trading Mode on or off|Trading Mode on/off
+ = Maximum station distance from star  when deciding best market in the target system. Where x = 1000 to 100,000 in 1000 increments or 200,000 to 2,000,000 in 100,000 increments|Max distance <x>
+ = Maximum age of target markets that Trading Mode will consider for profit calculations. Where x = 0 to 100 hours or 200 to 2000 hours in 100 increments)|Max market age <x>
+ = Whether Trading Mode will recommend commodities to buy that are Prohibited at the target market|Include / exclude illegal goods
+ = Include = assume limpets can be replaced by commodities in cargo and profit calculations. Exclude = limpets cannot be replaced by commodities.|Include limpets (in available cargo size) / Exclude limpets (from available cargo size)
+
+
+<Fleet Carriers>
+
+[Fleet-Carrier : Single jump]
+ = For a single jump within 500 ly. Enters the system name into the galaxy map inside fleet carrier menu.  You have to be displaying Bookmarks to issue the command, and be on the galaxy map screen inside Carrier Management. |Move the fleet carrier to bookmark <x>
+ = For a single jump within 500 ly. Enters your current system name into the galaxy map inside fleet carrier menu.  You have to be displaying Bookmarks to issue the command, and be on the galaxy map screen inside Carrier Management. |Move the fleet carrier to this [location; system]
+ = For a single jump within 500 ly. Enters the contents of the clipboard into the galaxy map inside fleet carrier menu (any location search result, or a system name you have copied, will be in the clipboard).  You have to be displaying Bookmarks to issue the command, and be on the galaxy map screen inside Carrier Management. |Move the fleet carrier to that [locationl system]
+
+[Fleet Carrier : Locating]
+ = Sets the name of your home fleet carrier. You do not have to be the owner of the carrier.|Set home fleet carrier
+ = Sets course for the system containing the fleet carrier you have designated as the home carrier.  Note: will be the last known location - may have moved after you left it.|Set course for the fleet carrier
+ = For owners - where is the fleet carrier located. Note: location changes when you request the next jump.|Where did I park my fleet carrier
+
+[Fleet-Carrier-:-Spansh route-plotting]
+ = Tells EDCoPilot how much in hold before you plot the course, to accurately identify Restock locations. X is 0 to 10000 in 100 increments|Tritium in hold now <x> tons
+ = Add the tens/units totals to the tritium total, if you want a totally accurate figure before issuing the plot command.|Increment tritium in hold by <x> tons
+ = Calls the Elite Indexer site (spansh.co.uk) to plot a course to the requested destination.  To use, you have to have entered the Carrier Management screen in the 2 minutes before you issue the command, else have to exit and re-enter Carrier Management.  This is required in order to update EDCoPilot with fuel levels and amount of cargo on board.|Plot carrier course to bookmark <#>
+ = Enters the system name into Galaxy Map of the next system in the route.  To use, you have to have opened the Carrier Management screen AND the galaxy map open screen for fleet carrier in the 2 minutes before you issue this command, else have to close and reopen the Carrier Management screen.|Next carrier jump
+
+
+<Music>
+
+[Radio-Commands]
+RDOSTOP = Stop radio|stop radio
+RDOVOLUME = Set radio volume level|radio volume [0..100] [percent;]
+RDOPLAYSLOT = Play station defined in numerated save slot|play [radio; station] [slot;] [1..5]
+RDOGROOVESALAD = Play Groove Salad|play groove salad [radio;]
+RDODISTANT = Play Distant Radio (requires VLC)|play distant [worlds;] radio
+RDOHOTLINE = Play Hotline Radio (requires VLC)|play hotline [fm;] radio
+RDOHUTTON = Play Hutton Orbital Radio (requires VLC)|play hutton [orbital;] radio
+RDOLAVE = Play Lave Radio (requires VLC)|play lave radio
+RDOPULSAR = Play Pulsar FM Radio (requires VLC)|play pulsar [fm;] radio
+RDOSIDEWINDER = Play Radio Sidewinder (requires VLC)|play radio sidewinder
+RDOTHIRDROCK = Play Third Rock Radio (requires VLC)|play third rock radio
+
+[Music-commands-:-Preferences]
+ = Display panel showing tracklist and current playing track|Now playing / music / music panel
+ = Display the screen showing current VMX event assignments|Show VMX (events / assignments / playlists)
+ = Display instructions to set up music options|Music Events
+ = Pull up a list of VMX voice commands|VMX Command Reference
+ = Display the set up instructions and voice commands in the Command Reference|Music Commands
+ = Turn on/off automatic music for the specified music theme|{Docking / exploration / battle / combat} music {on / off}
+ = Whether to continue playing docking music once the ship has docked.|{Stop playing / keep playing} music on docking 
+ = Turn on/off automatic music for the specified music theme|{Docking / exploration / battle / combat} music {on / off}
+ = when switching over to a different theme, resume from where that theme was last playing. Note: only works for mp3s. Other formats will just start at the next track in the list.|Resume music theme from last position
+ = when switching over to a different theme, start from the next track in the list.|Resume music theme from next track 
+MUSICTIMETRIAL = Toggle time trial music|[Cancel; Set; Turn on; Turn off;] [time trial; racing] music [on; off;]
+
+[Music-commands-:-EDCoPilot-music-control]
+MUSICENABLE = Enable / disable EDCoPilot music player|copilot music [on; off]
+ = Display panel showing tracklist and current playing track|Now playing / music / music panel
+ = Switches music between Combat, Exploration and Docking tracklists|Next music theme
+ = immediately start playing a song from the specified music theme folder.|Play {docking / exploration / combat / battle} music 
+ = Jump to the numbered track in the playlist|Play music track <#>
+ = stops any music that is playing.|Kill (the) music 
+ = |Next music track
+ = |Previous music track
+ = |{Pause / unpause} music track
+ = Toggle situation specific playlists (whether to use specific playlists if you are in Ship, SRV, OnFoot, Fighter)|music by situation (on/off)
+MUSICCOMBATCOOLDOWN = Set combat music cooldown period|combat cooldown (0 to 60 seconds in 5 second increments)
+MUSICDIPWHENSPEAKING = Set percentage music volume decrease when ship is speaking|music dip (0 to 100 percent in 5 percent increments) percent
+
+<Preferences>
+
+[AI Personaliy-traits]
+  = If on, EDCoPilot will be curt and professional. If off, you will get subjected to the EDCoPilot personality whims.|All Business Mode <on , off>
+  = Parental guidance advised!|Profanity mode <on, off>
+  = Enable/disable sweetheart mode|[Flirt; sweetheart] [mode;] [on; off;]
+DISLIKESMINING = Turn on/off a dislike of mining|Dislikes mining [on; off]
+DISLIKESTRADING = Turn on/off a dislike of trading|Dislikes trading [on; off]
+CHITCHAT = If ON, will say random phrases every x minutes|[enable; disable;] chit chat [on; off;]
+CHITCHATINTVL = If Chit Chat is ON, sets the duration EDCoPilot must be quiet before eligible for saying a phrase (minutes)|chit chat interval [1..15] [minutes;] 
+
+[Away From Keyboard]
+
+[EDMC-Overlay]
+ = Turn entire overlay on/off|[enable; disable;] overlay [on; off;]
+ = Turn guidance computer directions on/off|[enable; disable;] guidance [computer;] overlay [on; off;]
+ = Turn landing pad directions on/off|[enable; disable;] landing pad overlay [on; off;]
+ = Change the overlay text color|overlay color [blue; green; red; yellow; custom]
+ = Change the overlay text size|overlay size [normal; large]
+ = where # = 0 to 2500 in multiples of 25.  Adjust the horzontal (x) starting pixel position of the overlay text |overlay x position # 
+ = where # = 0 to 7000 in multiples of 50.  Adjust the vertical (y) starting pixel position of the overlay text |overlay y position#
+
+[Instant-Replay]
+INSTANTREPLAYONDEATH = When you are killed and have Instant Replay enabled in GeForce now, will trigger the save of the last x seconds leading up to the kill|[trigger;] Instant replay [on death;] [on; off]
+TRIGGERINSTANTREPLAY = Manually trigger (save) Instant Replay|[trigger; save;] instant replay
+TOGGLEINSTANTREPLAY = Toggle Instant Replay on/off|[toggle; enable; disable] instant replay
+
+
+<UI-Control>
+
+[UI-Settings]
+GUIHIDE = Hide all UI instances (minimises them)|Hide [Copilot; display]
+GUISHOW = Show all UI instances (restores them from minimised state)|Show [Copilot; display]
+GUIRESTART = Close and restart all UI instances (useful after changing colors, for example)|Restart [interface; gui]
+GUIDEFAULT = Switch all UI instances to their default screens|Reset panels
+ = For VR users - blanks the current main display, leaving only the last spoken sentence displayed. Useful if you are using transparent overlay and want to temporarily hide the mains display. Does not stop auto-display of other panels at present.|Dark Mode <on>
+ = Whether to display the Windows Title Bar.  Required to be shown if using Oculus Dash or OVRTookKit so that the app can locate the panel.  When on, can move and minimise / restore the window as per normal. When off, can move the window by click-hold-dragging the EDCoPilot logo, and resize by click-hold-dragging the bottom right corner of the window)|(show / hide) title bar (on / off)
+ = Change the transparency level of the UI, where 255 = opaque|Transparency (100..255)
+GUITHEMELOADSLOT = Maximise the panel (full screen and loses title bar)|[max; full screen] panel [1..20]
+GUITHEMESAVESLOT = Restores panel back to pre-maximised size (and restores title bar)|restore panel [1..20]
+ = Will minimise the UI to the taskbar|Hide CoPilot
+ = Will restore the UI if it has been minimised to taskbar|Show CoPilot
+ = When on, other windows cannot display over it. Useful if you want to put the EDCoPilot window over Elite Dangerous on a multi-wide monitor, for example.|Always on top (on / off)
+
+[Mini-Bar Settings]
+MINIBARSHOW = Show the mini-bar|show [mini bar; info bar]
+MINIBARCLOSE = Close the mini-bar|close mini bar
+MINIBARARCADE = Toggle Arcade Mode|arcade [mode;] [on; off;]
+MINIBARALTITUDE = Toggle Altitude display|[show; hide;] altitude [on; off]
+MINIBARVERTICAL = Switch to vertical orientation|[mini bar;] vertical mode
+MINIBARHORIZONTAL = Switch to horizontal orientation|[mini bar;] [normal; regular; horizontal] mode
+MINIBARSTOCKPRICE = Switch to stock ticker display|stock prices
+MINIBARSTOCKINTERVAL = Change the stock ticker refresh interval (5 to 20 seconds)|stock update [5..20] seconds
+
+
+[Subtitles-Bar-commands]
+SUBSBARSHOW = Show the subtitles-bar|show [subtitles bar; subs bar]
+SUBSBARCLOSE = Close the subtitles-bar|close [subtitles bar; subs bar]
+SUBSBARTRANSLUCENCYON = Make the subtitles-bar background invisible|[subtitles bar; subs bar] translucency on
+SUBSBARTRANSLUCENCYOFF = Reinstate the subtitles-bar background|[subtitles bar; subs bar] translucency off
+
+[UI-multipanel]
+
+GUINEW = Open a new UI instance |[start; open; launch] [new; second; third;] [GUI; panel]
+GUICLOSENUM = Close the numbered UI instance. Note: Closing GUI 1 will bring up the power off screen.|close [GUI; panel] [1..10]
+GUIACTIVEPANEL = Set UI instance as the active panel for voice commands|[panel; GUI] [1..10]
+GUIWINDOWPOSRESETNUM = Sets the default position to top left corner (40,40) and sets default size to 720p. Use this if your UI starts but isnt displayed on the screen (if you have changed monitor layouts for example)|reset [panel; GUI] [1..10]
+GUILAYOUTSAVE = Save all open panel instance layouts to slot [1..10] (saves positions and which screen is on which UI)|save [panel; GUI;] layout [1..10]
+GUILAYOUTDELETE = Delete the layout saved in the numbered slot|delete [panel; GUI;] layout [1..10]
+GUILAYOUTLOAD = Switches all UI instances to screens previouly saved in the numbered save slot|[load;] [panel; GUI;] layout [1..10]
+GUITHEMELOADDEFAULT = Load default UI color theme|Load default theme; reset theme
+GUITHEMELOADSLOT = Load saved UI color theme stored in slot number (1-10)|[load;] theme [1..10]
+GUITHEMESAVESLOT = Save current UI color theme to slot number (1-10)|[save;] theme [1..10]
+
+[UI-behaviour]
+AUTOCONTROLS = Automatically display relevent control board when you deploy/retract hardpoints, embark or disembard SRV, go on foot|[automatic; auto] controls [on; off;]
+
+<Voice options>
+
+[Voice-Preferences-(All-Voice-Types)]
+ = Increase or decrease the volume level of the copilot voice. x = 10 to 100 in 10 increments|Copilot volume <x> percent
+
+[Voice-Preferences-(Windows-Text-To-Speech)]
+ = Switches voice to alternate speech id / voice eg. Switch to David, Switch to Zira.  Voices already configured on your PC can be seen in the Voice Preferences panel|Switch to <voicename>
+ = Speed up or slow down the copilot speech rate (words per minute)|Copilot voice rate <100 to 300 in 10 increments>
+ 
+
+[Voice-Preferences-(Amazon-Polly)]
+AMAZONUSE = Switches voice to use the last used Amazon voice|Use Amazon Polly / use Amazon speech
+AMAZONCOUNTS = Shows you how many characters used since last reset, so you can watch your consumption to avoid being billed for overage. Will warn you when at 50%, 75% and 95% of monthly limit. You can reset the limit via the Settings panel.|(Display) Amazon counts
+AMAZONSAVE = Once you have configured a voice you like (voice, pitch, speed, volume) you can save it as a preset|Save Amazon voice <1 to 10>
+AMAZONLOAD = Switch to one of your saved Google voice presets|Load Amazon voice <1 to 10>, use Amazon voice <1 to 10>
+
+[Voice-Preferences-(Azure-Text-To-Speech)]
+ = Switches voice to use the last used Azure TTS voice|Use [Microsoft / Azure] (text to) speech
+ = Shows you how many characters used since last reset, so you can watch your consumption to avoid being billed for overage. Will warn you when at 50%, 75% and 95% of monthly limit. You can reset the limit via the Settings panel.|Display [Microsoft / Azure] counts
+ = Once you have configured a voice you like (voice, pitch, speed, volume) you can save it as a preset|Save [Microsoft / Azure] voice <1 to 10>
+ = Switch to one of your saved Azure voice presets|Load [Microsoft / Azure] voice <1 to 10>, use[Microsoft / Azure] voice <1 to 10>
+
+[Voice-Preferences-(Google-Cloud-Text-To-Speech)]
+ = Switches voice to use the last used Google TTS voice|Use Google (text to) speech
+ = Shows you how many characters used since last reset, so you can watch your consumption to avoid being billed for overage. Will warn you when at 50%, 75% and 95% of monthly limit. You can reset the limit via the Settings panel.|Display Google counts
+ = Once you have configured a voice you like (voice, pitch, speed, volume) you can save it as a preset|Save Google voice <1 to 10>
+ = Switch to one of your saved Google voice presets|Load Google voice <1 to 10>, use Google voice <1 to 10>
+
+[Voice-Preferences-(ElevenLabs-Text-To-Speech)]
+ELEVENLABSCOUNTS = Display the current month's ElevenLabs Cloud TTS usage count|[display;] eleven labs counts
+ELEVENLABSLOAD = Load the voice configuration saved in ElevenLabs save slot [1..10]|[load; use] eleven labs voice [1..10]
+ELEVENLABSSAVE = Save configured ElevenLabs voice to ElevenLabs voice save slot [1..10]|save eleven labs voice [1..10]
+ELEVENLABSUSE = Switch to last used ElevenLabs voice|Use Eleven Labs [text to;] [speech; voice]
+
+[Voice-Preferences-(Edge-Text-To-Speech)]
+EDGECOUNTS = Display the current month's Edge usage counts|[display;] Edge counts
+EDGELOAD = Load the voice configuration saved in Edge save slot [1..10]|[load; use] Edge voice [1..10]
+EDGESAVE = Save configured Edge voice to Edge voice save slot [1..10]|save Edge voice [1..10]
+EDGEUSE = Switch to last used Edge voice|Use Edge [text to speech; speech; voice;]
+
+[Synthetic-Voice-settings-(works with-Cloud-voices)]
+SYNTHVTOGGLE = Toggle synthetic voice filter on Cloud voice|synthetic voice [on; off;]
+SYNTHVCHORUS = Toggle chorus filter on synthetic cloud voice|chorus [on; off]
+SYNTHVCHORUSDELAY = Synthetic voice - modify chorus delay (in MS) (default=7)|chorus delay [0..30]
+SYNTHVCHORUSDEPTH = Synthetic voice - modify chorus depth (default=25)|chorus depth [0..100] percent
+SYNTHVCHORUSFEEDBACK = Synthetic voice - modify chorus feedback (default=0)|chorus feedback [0..100] percent
+SYNTHVCHORUSMIX = Synthetic voice - modify chorus mix (default=50)|chorus mix [0..100] percent
+SYNTHVCHORUSRATE = Synthetic voice - modify chorus rate (Hz) (default=6)|chorus rate [0..100] 
+SYNTHVPITCHSHIFT = Synthetic voice - modify pitch (default=0)|[pitch;] shift [-10..10]
+SYNTHVREVERB = Toggle reverb on synthetic voice filter|voice reverb [on; off]
+
+<Space-Chatter>
+
+[Space-Chatter-:-Master-Settings]
+SPCCHATONOFF = Enable / disable Space Chatter|space chatter [on; off]
+SPCCHATOFFLINE = Enable / disable Offline mode (PLACEHOLDER FOR FUTURE RELEASE)|offline mode [on; off]
+SPCCHATRADIOBEEP = Enable / disable radio beeps|[space chatter;] radio beeps [on; off]
+SPCCHATHUMOR = Enable / disable Space Chatter humor|space chatter humor [on; off]
+SPCCHATVOLUME = Set volume of Space Chatter voices|space chatter volume [0..100]
+SPCCHATDENISTY = Adjust density (frequency) of Space Chatter|space chatter density [1..50]
+
+[In Game Voices]
+SPCCHATNPC = Enable / disable NPC voices|[NPC; enn pee sea] voices [on; off]
+SPCCHATNPCTHROTTLE = Adjust throttle of NPC chat (ignores messages received within x seconds of previous message)|space chatter throttle [0..30]
+SPCCHATLOCAL = Enable / disable Local voices|local voices [on; off]
+ = Reading out StarSystem messages (eg Commander chat)|read [out;] starsystem [messages; chatter; voices];  stop reading starsystem [messages; chatter; voices]
+ = Speaking StarSystem messages (in assigned voices)|starsystem [chatter; messages; voices] [on; off]; [mute; unmute] starsystem [chatter; messages; voices]
+# SPCCHATNOTIFYLOCKDOWN = Initiate lockdown protocol (manually turn off station chatter once FC is in lockdown) (PLACEHOLDER FOR FUTURE RELEASE)|initiate lockdown [protocols;]
+
+[Space Chatter types]
+SPCCHATSTATION = Enable / disable Station Chatter (docking, leaving etc)|station chatter [on; off]
+SPCCHATFCONOFF = Enable / disable personalised Fleet Carrier greetings|fleet carrier greetings [on; off]
+SPCCHATCREW = Enable / disable simulated crew conversations|crew chatter [on; off]
+SPCCHATCREWDENSITY = Adjust density (frequency) of Crew Chatter|crew chatter density [1..50]
+SPCCHATCREWMININTVL = Set minimum time between Crew Chatter phrases|crew chatter minimum [0..15] minutes
+SPCCHATDEEPSPACE = Enable / disable simulated crew Deep Space conversations|deep space chatter [on; off]
+SPCCHATDEEPSPACEDENSITY = Adjust density (frequency) of Deep Space Chatter|deep space chatter density [1..50]
+SPCCHATDEEPSPACEMININTVL = Set minimum time between Deep Space Chatter phrases|deep space chatter minimum [0..15] minutes
+MUTETHISSTARSYSTEMCHATTER = Mute current system's StarSystem chatter for rest of session|mute [this;] starsystems chatter
+UNMUTETHISSTARSYSTEMCHATTER = Unmute current system's StarSystem chatter (if muted)|unmute [this;] starsystems chatter
+
+[Cloud Voice usage - enable 1 or more]
+SPCCHATACCENTS = Enable / disable non-Native English voices from being used in Space Chatter|space chatter accents [on; off]
+SPCCHATGTTS = Use / include Google Cloud voices|[dont;] [use;] Google [for;] space chatter [on; off;]
+SPCCHATAMAZON =  Use / include Amazon Polly voices|[dont;] [use;] Amazon [for;] space chatter [on; off;]
+SPCCHATAZURE = Use / include Microsoft Azure voices|[dont;] [use;] [Microsoft; Azure] [for;] space chatter [on; off;]
+SPCCHATEDGE = Use / include Edge voices|[dont;] [use;] Edge [for;] space chatter [on; off;]
+
+<Open-AI>
+[Open AI interface - requires OpenAI account and Open AI Voice Attack Plugin]
+OPENAIQUERY = Initiate / continue an Open AI conversation|Hey CoPilot; chat query; chatbot [entry; query]
+OPENAIKEYMENU = Open the key menu to enter your Open AI API key (setup)|Open AI key menu
+OPENAISTOPCHAT = Stop the current OpenAI ChatGPT conversation|Stop chatting; stop conversations|crew
+OPENAIREMAINING = Display remaining ChatGPT response text if "there is more" in the voice log (but do not speak the text)|display remaining
+OPENAITELLMORE = Speak and display the next few sentences of ChatGPT response (if "there is more")|Tell me more
+OPENAICANCEL = Cancel a thinking loop (Note: also stops all VA commands and ends the conversation)|Reset chat
+
+<Customisations>
+[Customisations]
+RELOADBADSPEAK = Reload the Pronounciations override file|Refresh [pronounciations; bad speak] [file;]

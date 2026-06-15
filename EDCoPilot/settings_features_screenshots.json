@@ -1,0 +1,112 @@
+[
+
+	{
+		"type": "custom_path",
+        "title": "Elite Dangerous screenshot folder location",
+        "desc": "Set this to the location where Elite Dangerous stores its screenshots, if you want to display or convert screenshots in EDCoPilot",
+        "section": "Screenshot Processing",
+        "key": "ScreenShotLib"
+	},
+	{
+        "type": "bool",
+        "title": "Display new screenshots",
+        "desc": "Enable this to display a screenshot when you take one",
+        "section": "Screenshot Processing",
+        "key": "ShowScreenShot"
+    },
+	{ 
+		"type": "title", 
+		"title": "Screenshot conversion"
+	},
+	{
+		"type": "custom_path",
+        "title": "Converted screenshot folder location",
+        "desc": "Click to see or change where EDCoPilot will store converted screenshots if options to convert are enabled",
+        "section": "Screenshot Processing",
+        "key": "ScreenShotConvertedLib"
+	},
+	{ 
+		"type": "title", 
+		"title": "Standard screenshots"
+	},
+	{
+        "type": "bool", 
+        "title": "Convert standard screenshot",
+        "desc": "Converts your new screenshot. If combined with 'Zero out orignal' option this will help save disk space",
+        "section": "Screenshot Processing",
+        "key": "ConvertScreenShot"
+    },
+
+	{
+		"type": "options",
+		"title": "Converted standard screenshot format", 
+		"desc": "Select between JPG and PNG.", 
+		"section": "Screenshot Processing",
+        "key": "ScreenShotConvertedFormat",
+		"options": ["JPG", "PNG"]
+	},
+	{ 
+		"type": "numeric", 
+		"title": "JPG quality level for standard screenshots", 
+		"desc": "Set a level from 50 to 99. A higher level will produce larger jpg files. 90 is a good tradeoff", 
+		"section": "Screenshot Processing",
+		"key" : "ScreenShotConvertedJpegQuality"
+	},
+	{ 
+		"type": "numeric", 
+		"title": "PNG compression level for standard screenshots", 
+		"desc": "Set a level from 0 to 9. 0 will produce larger files. 3 is a good level balancing size and processing.", 
+		"section": "Screenshot Processing",
+		"key" : "ScreenShotConvertedPNGCompressLevel"
+	},
+
+	{
+        "type": "bool",
+        "title": "Zero out original standard screenshots",
+        "desc": "If on, will replace your just created original screenshot file with a 0 byte file to save space, following conversion to JPG",
+        "section": "Screenshot Processing",
+        "key": "ZeroOriginalScreenShot"
+    },
+	{ 
+		"type": "title", 
+		"title": "High resolution screenshots"
+	},
+		{
+        "type": "bool", 
+        "title": "Convert high-res screenshot",
+        "desc": "Converts your new screenshot. If combined with 'Zero out orignal' option this will help save disk space",
+        "section": "Screenshot Processing",
+        "key": "ConvertScreenShotHighRes"
+    },
+
+	{
+		"type": "options",
+		"title": "Converted high-res screenshot format", "desc": "Select between JPG and PNG.", 
+		"section": "Screenshot Processing",
+        "key": "ScreenShotConvertedFormatHighRes",
+		"options": ["JPG", "PNG"]
+	},
+	{ 
+		"type": "numeric", 
+		"title": "JPG quality level for high-res screenshots", 
+		"desc": "Set a level from 50 to 99. A higher level will produce larger jpg files. 90 is a good tradeoff", 
+		"section": "Screenshot Processing",
+		"key" : "ScreenShotConvertedJpegQualityHighRes"
+	},
+	{ 
+		"type": "numeric", 
+		"title": "PNG compression level for high-res screenshots", 
+		"desc": "Set a level from 0 to 9. 0 will produce larger files. 3 is a good level balancing size and processing.", 
+		"section": "Screenshot Processing",
+		"key" : "ScreenShotConvertedPNGCompressLevelHighRes"
+	},
+
+	{
+        "type": "bool",
+        "title": "Zero out original high-res screenshots",
+        "desc": "If on, will replace your just created original screenshot file with a 0 byte file to save space, following conversion to JPG",
+        "section": "Screenshot Processing",
+        "key": "ZeroOriginalScreenShotHighRes"
+    }
+
+]

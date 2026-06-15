@@ -1,0 +1,4 @@
+No scans detected.
+Honk or check nav beacon data.
+Estimated System Value (Max): N/A
+Unsold System Value: 1,2 kCr

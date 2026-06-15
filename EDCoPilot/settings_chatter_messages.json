@@ -1,0 +1,172 @@
+[
+	{
+        "type": "title",
+        "title": "Messages sent from you to others"
+    },
+	{
+        "type": "bool",
+        "title": "Read messages sent by you to others",
+        "desc": "If OFF, will read messages you send in game. If ON, will not read",
+        "section": "Toggles",
+        "key": "SendTextMute"
+    },
+		
+	{
+        "type": "title",
+        "title": "NPC messages"
+    },
+	
+	{
+		"type": "bool",
+		"title": "NPC voices on/off", 
+		"desc": "Whether to play an NPC message using a randomly generated Cloud voice for that character.", 
+		"section": "Space Chatter", 
+		"key": "SpaceChatterNPC"
+	},
+	{
+		"type": "bool",
+		"title": "Replace received NPC messages with variant phrases", 
+		"desc": "If ON, will replace the canned in-game NPC messages with variant phrases, if configured in the Speech Extensions file.  You will still see the original message in the Comms window in game, but will hear the alternate phrase.", 
+		"section": "Space Chatter", 
+		"key": "SwapOutCannedNPCMessages"
+	},
+	{
+		"type": "numeric",
+		"title": "NPC message throttle", 
+		"desc": "Ignore NPC message (so dont generate voice) if last NPC message was received < x seconds ago. Set to 0 if you want all messages and dont mind if voices overlap, else set to a reasonable ignore period", 
+		"section": "Space Chatter", 
+		"key": "SpaceChatterNPCThrottle" 
+	},
+	{
+        "type": "title",
+        "title": "Direct messages from players"
+    },
+	{ 
+		"type": "bool",
+		"title": "Direct message voices ON/OFF", 
+		"desc": "If Space Chatter is ON, whether to play Direct messages to you from Commanders using a randomly assigned Cloud voice.", 
+		"section": "Space Chatter", 
+		"key": "SpaceChatterDirect" 
+	},
+	{
+        "type": "bool",
+        "title": "Mute Direct messages",
+        "desc": "If 'Direct message voices ON/OFF' above is OFF, the Ship AI will read Direct messages to you instead, unless you set this Mute option to ON",
+        "section": "Toggles",
+        "key": "DirectMute"
+    },
+	
+	{
+        "type": "title",
+        "title": "Squadron messages"
+    },
+	{
+		"type": "bool", 
+		"title": "Squadron voices ON/OFF", 
+		"desc": "If Space Chatter is ON, whether to play Squadron messages using a randomly assigned Cloud voice.", 
+		"section": "Space Chatter", 
+		"key": "SpaceChatterSquadron"
+	},
+	{
+		"type": "bool", 
+		"title": "Ship announces Squadron sender before voice plays?", 
+		"desc": "If ON, Ship AI will announce who the message is from before you hear the voice message.", 
+		"section": "Space Chatter", 
+		"key": "ShipAnnounceIncomingSquadron"
+	},	
+	{
+        "type": "bool",
+        "title": "Mute Squadron messages",
+        "desc": "If 'Squadron voices ON/OFF' above is OFF, the Ship AI will read Squadron messages to you instead, unless you set this Mute option to ON",
+		"section": "Toggles",
+        "key": "SquadronMute"
+    },
+	
+	{
+        "type": "title",
+        "title": "Team messages"
+    },
+	{
+		"type": "bool", 
+		"title": "Team voices ON/OFF", 
+		"desc": "If Space Chatter is ON, whether to play Team messages using a randomly assigned Cloud voice.", 
+		"section": "Space Chatter", 
+		"key": "SpaceChatterWing" 
+	},
+	{
+		"type": "bool", 
+		"title": "Ship announces Team sender before voice plays?", 
+		"desc": "If ON, Ship AI will announce who the message is from before you hear the voice message.", 
+		"section": "Space Chatter", 
+		"key": "ShipAnnounceIncomingWing"
+	},
+	{
+        "type": "bool",
+        "title": "Mute Team messages",
+		"desc": "If 'Team voices ON/OFF' above is OFF, the Ship AI will read Team messages to you instead, unless you set this Mute option to ON",
+		"section": "Toggles",
+        "key": "WingMute"
+    },
+	{
+        "type": "title",
+        "title": "Local messages"
+    },
+	
+	{
+		"type": "bool", 
+		"title": "Local voices ON/OFF", 
+		"desc": "If Space Chatter is ON, whether to play Local channel messages using a randomly assigned Cloud voice.", 
+		"section": "Space Chatter", 
+		"key": "SpaceChatterLocal" 
+	},
+	
+	{
+        "type": "bool",
+        "title": "Mute Local messages",
+		"desc": "If 'Local voices ON/OFF' above is OFF, the Ship AI will read Local messages to you instead, unless you set this Mute option to ON", 
+		"section": "Toggles",
+        "key": "LocalMute"
+    },
+	{
+        "type": "title",
+        "title": "StarSystem messages"
+    },
+	
+	{
+		"type": "bool",
+		"title": "StarSystem voices ON/OFF", 
+		"desc": "If Space Chatter is ON, whether to play StarSystem channel messages using a randomly assigned Cloud voice.", 
+		"section": "Space Chatter", 
+		"key": "SpaceChatterStarSystem" 
+	},
+	{
+        "type": "bool",
+        "title": "Mute StarSystem messages",
+		"desc": "If 'StarSystem voices ON/OFF' above is OFF, the Ship AI will read Local messages to you instead, unless you set this Mute option to ON", 
+		"section": "Toggles",
+        "key": "SystemMute"
+    },
+	
+	{
+        "type": "title",
+        "title": "Alerting and Printing"
+    },
+	
+	{
+		
+        "type": "bool",
+        "title": "Play notification beep if message announcements are MUTED",
+        "desc": "If ON and Mute Direct or Mute Squadon are ON, will play a beep to let you know there is a message. If OFF, no beep!",
+        "section": "Toggles",
+        "key": "PlayMessageReceivedAlert"
+    },
+	{
+        "type": "bool",
+        "title": "Print received messages",
+        "desc": "If ON, will print the incoming message to the voice log.",
+        "section": "Toggles",
+        "key": "PrintReceivedMessages"
+    }
+
+]
+

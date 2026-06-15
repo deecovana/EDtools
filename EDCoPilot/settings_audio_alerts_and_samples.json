@@ -1,0 +1,88 @@
+[
+	{
+        "type": "title",
+        "title": "Audible Alerts - volume settings (set to 0 to disable)"
+    },
+	{
+		"type": "numeric",
+        "title": "Alert volume level (for alerts not settable below)",
+        "desc": "Sets a volume level for all alerts not specifically listed below",
+        "section": "Audible Alerts",
+        "key": "SampleSoundVolume"
+	},
+	{
+		"type": "numeric",
+        "title": "Encoded material alert",
+        "desc": "Issues an audible alert when you receive encoded materials",
+        "section": "Audible Alerts",
+        "key": "AlertVolumeEncoded"
+	},
+	{
+		"type": "numeric",
+        "title": "Hull damage alert",
+        "desc": "Issues an audible alert when your hull integrity drops below 40% health",
+        "section": "Audible Alerts",
+        "key": "AlertVolumeHull"
+	},
+	{
+		"type": "numeric",
+        "title": "Interdiction alert",
+        "desc": "Issues an audible alert when an interdiction attempt is detected",
+        "section": "Audible Alerts",
+        "key": "AlertVolumeInterdiction"
+	},
+	{
+		"type": "numeric",
+        "title": "Mission Target alert",
+        "desc": "Issues an audible alert when a mission target is detected",
+        "section": "Audible Alerts",
+        "key": "AlertVolumeMissionTarget"
+	},
+	{
+		"type": "numeric",
+        "title": "Odyssey material irrelevant alert",
+        "desc": "Issues an audible alert when you collect an Odyssey material that is irrelevant for suit or weapon upgrades",
+        "section": "Audible Alerts",
+        "key": "AlertVolumeOdyMatIrrelevant"
+	},
+	{
+        "type": "numeric",
+        "title": "Targeted System NOT KNOWN to EDSM",
+        "desc": "Plays EDCoPilot.NotKnownToEDSM.mp3 if the system you are targeting is NOT KNOWN to EDSM",
+        "section": "Audible Alerts",
+        "key": "AlertVolumeUnknownEDSMSystem"
+    },
+	{
+        "type": "numeric",
+        "title": "Targeted System KNOWN to EDSM",
+        "desc": "Plays EDCoPilot.KnownToEDSM.mp3 if the system you are targeting is KNOWN to EDSM",
+        "section": "Audible Alerts",
+        "key": "AlertVolumeKnownEDSMSystem"
+    },
+
+	{
+        "type": "title",
+        "title": "Custom sound samples"
+    },
+	{
+		"type": "bool",
+        "title": "Randomly trigger user custom sample",
+        "desc": "If ON and you have put sound files in the sounds/User Samples subfolders for an event type, EDCoPilot will occasionally play one of the sounds when the event happens in game",
+        "section": "Music Features",
+        "key": "TriggerRandomSounds"
+	},
+	{
+		"type": "custom_path",
+        "title": "User samples folder location",
+        "desc": "Set this to a folder containing subfolders for each triggered event eg. c:\\EDCoPilot\\sounds\\User samples",
+        "section": "Music Features",
+        "key": "UserSamplesLib"
+	},
+	{
+		"type": "bool",
+        "title": "Play samples via Voice Attack command",
+        "desc": "If ON then user samples will be triggered by VA command so they can be directed to a different audio device. Requires you to import the PlaySampleCommand-Profile.vap file and copy the 2 commands into your own custom profile, then edit the 'play sample specified in file' command to direct the Play event to your preferred Channel",
+        "section": "Music Features",
+        "key": "PlaySamplesViaVA"
+	}
+]

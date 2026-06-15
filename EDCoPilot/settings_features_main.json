@@ -1,0 +1,99 @@
+[	
+
+	
+	{
+        "type": "title",
+        "title": "User Timing Adjustments"
+    },
+	{
+        "type": "numeric",
+        "title": "Key Press Duration (seconds)",
+        "desc": "Specify the amount of time EDCoPilot will hold down a key when emulating keybind presses (default is 0.15 seconds)",
+        "section": "User Timing Adjustments",
+        "key": "KeyPressDurationMS"
+    },
+	{
+        "type": "numeric",
+        "title": "Additional Pause Duration After Opening Galaxy Map (Odyssey) (seconds)",
+        "desc": "Specify an additional amount of time in seconds to pause after opening the Galaxy Map before attempting remainder of course plot key presses",
+        "section": "User Timing Adjustments",
+        "key": "UserDelayAfterOpenGalMap"
+    },
+	
+
+		
+	{
+        "type": "title",
+        "title": "Data Externalisation"
+    },
+	{
+        "type": "bool",
+        "title": "Write Last Spoken text to file",
+        "desc": "If ON, EDCoPilot will write its last spoken phrase to the file (EDCoPilot)/working/EDCoPilot.LastSpoken.txt",
+        "section": "Data Externalisation",
+        "key": "ExportLastSpoken"
+    },
+	
+	{
+        "type": "title",
+        "title": "Time Trials"
+    },
+	{
+        "type": "bool",
+        "title": "Use direction of travel when calculating heading to target",
+        "desc": "If ON, will use your direction of travel, if OFF will use the heading you are facing",
+        "section": "Time Trials",
+        "key": "TimeTrialUseTravelDirectionAsHeading"
+    },
+	{
+        "type": "bool",
+        "title": "Use direction of travel above preferred speed",
+        "desc": "If ON, will only use your direction of travel when travelling over the preferred speed",
+        "section": "Time Trials",
+        "key": "TimeTrialUseTravelDirectionIfAtSpeed"
+    },
+	{
+		"type": "numeric",
+		"title": "Min speed to use direction of travel",
+		"desc": "Specify the speed at which the heading calculation will switch to use direction of travel intead of the direction you are facing",
+		"section": "Time Trials",
+		"key": "TimeTrialUseTravelDirectionSpeedMin"
+    },
+	{
+        "type": "bool",
+        "title": "Use direction of travel ONLY when in SRV",
+        "desc": "If ON, will only use your direction of travel to calculate the heading to the target when you are in your SRV",
+        "section": "Time Trials",
+        "key": "TimeTrialUseTravelDirectionOnlyInSRV"
+    },
+	{
+        "type": "bool",
+        "title": "Log time trial status updates to csv files",
+        "desc": "If ON, will log status updates to a csv file in (EDCoPilot)/logs folder, for each time trial attempt",
+        "section": "Time Trials",
+        "key": "TimeTrialLogToStatusFile"
+    },
+	{
+		"type": "numeric",
+		"title": "Delete status csv files if > x days old",
+		"desc": "Housekeeps the time trial csv files if older than the specified number of days (unless number of logs is less than the minimum number to be kept). Use 0 if you wish to keep them all",
+		"section": "Time Trials",
+		"key": "TimeTrialRetainLogFileDays"
+    },
+	
+	{
+		"type": "numeric",
+		"title": "Minimum number of status csv files to keep",
+		"desc": "Set this if you wish to keep at least this number of status csv files from being automatically deleted",
+		"section": "Time Trials",
+		"key": "TimeTrialRetainAtLeastXLogFiles"
+    },
+	{
+        "type": "bool",
+        "title": "Export time trial definition files",
+        "desc": "If ON, will export the time trial definition file to (EDCoPilot)/logs folder, when you click start on a time trial from the leaderboard screen",
+        "section": "Time Trials",
+        "key": "TimeTrialExportRaceDefinitions"
+    }
+	
+]

@@ -1,0 +1,9 @@
+[
+ { "type": "title", "title": "Edge Text To Speech Settings (Try this! Should work for all users. Better than Windows TTS!)" },
+{ "type": "bool", "title": "Use Edge Text To Speech", "desc": "Enable use of Edge TTS as your main EDCoPilot voice", "section": "Edge Text To Speech Settings", "key": "UseEdge" },
+{ "type": "dynamic_options", "title": "Edge Language Code", "desc": "Step 1: Select the language code from which you will pick voices.", "section": "Edge Text To Speech Settings", "key": "EdgeLang",  "function_string": "GetEdgeLangList"  },
+{ "type": "dynamic_options", "title": "Edge Locale", "desc": "Step 2: Select the locale (accent) from which you will pick voices.", "section": "Edge Text To Speech Settings", "key": "EdgeLocale",    "function_string": "GetEdgeLocaleList"  },
+{ "type": "dynamic_options", "title": "Edge Voice Name", "desc": "Step 3: Select the Edge voice to be used", "section": "Edge Text To Speech Settings", "key": "EdgeVoice", "function_string": "GetEdgeVoiceList"  },
+{ "type": "numeric", "title": "Edge Voice Rate", "desc": "Change the speed of your copilot voice, as a percentage relative to its default rate (range: 50 to 200)", "section": "Edge Text To Speech Settings", "key": "EdgeRate"  },
+{ "type": "numeric", "title": "Edge Voice Pitch", "desc": "Change the pitch of your copilot voice, in Hz (range: -50 to 50)", "section": "Edge Text To Speech Settings", "key": "EdgePitch"  }
+]

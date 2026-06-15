@@ -1,0 +1,20 @@
+[
+	{
+        "type": "title",
+        "title": "EDCoPilot Window - enable this if you need EDCoPilot to have its own dummy window, so it can be found by programs such as OBS"
+    },
+	{
+        "type": "bool",
+        "title": "Open a dummy window for EDCoPilot.exe",
+        "desc": "If ON, will open a dummy window from EDCoPilot.exe, and minimise to task bar",
+        "section": "UI Appearance",
+        "key": "EDCoPilotWindow"
+    },
+	{
+        "type": "string",
+        "title": "Title of the dummy window",
+        "desc": "Modify the title of the dummy window, if you wish",
+        "section": "UI Appearance",
+        "key": "EDCoPilotWindowTitle"
+    }
+]

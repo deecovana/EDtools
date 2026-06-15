@@ -1,0 +1,138 @@
+[
+	{
+        "type": "title",
+        "title": "Faction Systems Reporting"
+    },
+	{
+        "type": "bool",
+        "title": "Enable Faction Systems Reporting",
+        "desc": "If ON and Faction Name and Faction Systems Bookmark Groups are set below, will run background checks on your faction's systems and produce status reporting of standing in each system",
+        "section": "Faction Systems Reporting",
+        "key": "RunBGSReporter"
+    },
+	{
+        "type": "string",
+        "title": "Faction Systems Bookmark Groups",
+        "desc": "Name of the Bookmark Groups that will be created and automatically populated with a list of your faction's systems. If you want to create multiple bookmark groups, each for a different faction, set this value BEFORE you update the Faction Name below.",
+        "section": "Faction Systems Reporting",
+        "key": "MyFactionBookmarkGroups"
+    },
+	{
+        "type": "string",
+        "title": "Faction Name",
+        "desc": "Name of your faction (case sensitive, as displayed on Inara)",
+        "section": "Faction Systems Reporting",
+        "key": "MyFaction"
+    },
+
+	{
+        "type": "bool",
+        "title": "Auto create 'Faction Systems To Visit' bookmark group",
+        "desc": "If ON, will create a bookmark group called 'Faction Systems To Visit' on completion of the system checks, containing systems not visited in the last x hours, where x = either a) time since last tick + tolerance or b) constant defined in Faction Revisit Threshold setting",
+        "section": "Faction Systems Reporting",
+        "key": "CreateFactionCheckGroup"
+    },
+	{
+        "type": "bool",
+        "title": "Use Last Tick + Tolerance for checking and reporting",
+        "desc": "If ON, will use elapsed time since the last tick, plus the Last Tick Tolerance, to re-check faction systems or create groups of systems not visited in that elapsed time",
+        "section": "Faction Systems Reporting",
+        "key": "UseLastTickTime"
+    },
+	{
+        "type": "numeric",
+        "title": "Last Tick Tolerance (0 to 5 hours)",
+        "desc": "Set a tolerance level to add to the elapsed hours since last tick when checking systems or creating 'not visited' bookmark groups",
+        "section": "Faction Systems Reporting",
+        "key": "LastTickTolerance"
+    },
+	{
+        "type": "numeric",
+        "title": "Faction Revisit Threshold",
+        "desc": "If Last Tick is OFF, will determine whether to include a faction system in your 'Faction Systems To Visit' bookmark group, if number of hours since that system was last visited exceeds this number (range 1 to 50 hours)",
+        "section": "Faction Systems Reporting",
+        "key": "BGSRevisitThreshold"
+    },
+		{
+        "type": "numeric",
+        "title": "Delta Gap Threshold",
+        "desc": "If the delta between your faction and your rivals is less than this, then the row will be highlighted on the Faction Systems panel (range 1 to 100 percent)",
+        "section": "Faction Systems Reporting",
+        "key": "BGSDeltaGapHighlight"
+    },
+		{
+        "type": "numeric",
+        "title": "Low Influence Threshold",
+        "desc": "Will list systems with influence less than this, when you request a post of low influence systems to Discord (range 1 to 100 percent)",
+        "section": "Faction Systems Reporting",
+        "key": "DiscordFSLowInfluence"
+    },
+	{
+        "type": "options",
+        "title": "BGS Information source provider",
+        "desc": "You can switch providers if you are experiencing issues with data retreval ",
+		"section": "Faction Systems Reporting",
+        "key": "FactionInfSource",
+		"options": ["EliteBGS", "SPANSH" ]
+    },
+	{
+        "type": "title",
+        "title": "Discord Webhooks"
+    },
+	{
+        "type": "string",
+        "title": "Faction Status URL - Discord webhook URL to post status message",
+        "desc": "Enter the URL of the Discord webhook here, to be able to auto post Faction status messages from the FSR panel ",
+        "section":  "Discord Webhooks",
+        "key": "DiscordFSRURL"
+    },
+	{
+        "type": "string",
+        "title": "Faction Work Order - additional Discord message text",
+        "desc": "Enter a custom message to be inclded with the Faction Wor Order post on Discord ",
+        "section":  "Discord Webhooks",
+        "key": "DiscordFSRMessage"
+    },
+	{
+        "type": "custom_file",
+        "title": "Faction War Image - image to post with War notice",
+        "desc": "Click here to set an image to post on Discord above your War notice",
+        "section": "Discord Webhooks",
+        "key": "DiscordFSRWarImage"
+    },
+	{
+        "type": "string",
+        "title": "Faction War Notice - additional Discord message text",
+        "desc": "Enter a custom message to be inclded with the Faction War Notice post on Discord ",
+        "section": "Discord Webhooks",
+        "key": "DiscordFSRWarMessage"
+    },
+	{
+        "type": "string",
+        "title": "Faction Election Notice - additional Discord message text",
+        "desc": "Enter a custom message to be inclded with the Faction Election Notice post on Discord ",
+        "section":  "Discord Webhooks",
+        "key": "DiscordFSRElectionMessage"
+    },
+	{
+        "type": "custom_file",
+        "title": "Faction Election Image - image to post with Election notice",
+        "desc": "Click here to set an image to post on Discord above your Election notice",
+        "section": "Discord Webhooks",
+        "key": "DiscordFSRElectionImage"
+    },
+	{
+        "type": "string",
+        "title": "Faction Systems To Visit URL - Discord webhook URL to post 'Faction Systems To Visit' status messages",
+        "desc": "Enter the URL of the Discord webhook here, to be able to auto post list of Faction Systems To Visit ",
+        "section":  "Discord Webhooks",
+        "key": "DiscordFSVisitURL"
+    },
+	{
+        "type": "string",
+        "title": "Screenshot upload URL - Discord webhook URL to post screenshots",
+        "desc": "Enter the URL of the Discord webhook here, for sharing your screenshots ",
+        "section":  "Discord Webhooks",
+        "key": "DiscordImageURL"
+    }
+]

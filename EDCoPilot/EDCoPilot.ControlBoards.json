@@ -1,0 +1,413 @@
+{
+	"ColorDefinitions" : [
+		{ "ColorName":"white", "ColorCode":"ffffff" },
+		{ "ColorName":"grey", "ColorCode":"a9a9a9" },
+		{ "ColorName":"blue", "ColorCode":"0a8bd6" },
+		{ "ColorName":"red", "ColorCode":"ff0000" },
+		{ "ColorName":"orange", "ColorCode":"f07b05" },
+		{ "ColorName":"green", "ColorCode":"029e4c" },
+		{ "ColorName":"yellow", "ColorCode":"fff600" },
+		{ "ColorName":"black", "ColorCode":"000000" }
+		],
+	
+	"BoardSchema" : [ 
+	{
+		
+	"BoardTitle":"FLIGHT", 
+	
+	"Rows": [ 
+	
+		{
+		
+		"Row": 1, "RowHeight":0.5, "RowSpacing":20,
+		
+		"Buttons" : 
+				[
+				{ "Type":"ToggleStateButton", "Text":"LANDING GEAR", "Action":"LandingGearToggle", "BGColor":"red>yellow", "FGColor":"white>black"},
+                { "Type":"ToggleStateButton", "Text":"CARGO SCOOP", "Action":"ToggleCargoScoop", "BGColor":"red>yellow", "FGColor":"white>black"},
+				{ "Type":"TextButton", "Text":"", "Action":"EMPTY", "BGColor":"red", "FGColor":"white"},
+				{ "Type":"ToggleStateButton", "Text":"LIGHTS", "Action":"ShipSpotLightToggle", "BGColor":"grey>yellow", "FGColor":"black>black"},
+				{ "Type":"ToggleStateButton", "Text":"NIGHT VISION", "Action":"NightVisionToggle", "BGColor":"grey>yellow", "FGColor":"black>black"},
+				{ "Type":"TextButton", "Text":"", "Action":"EMPTY", "BGColor":"orange", "FGColor":"white"},
+				{ "Type":"TextButton", "Text":"FLIGHT ASSIST", "Action":"ToggleFlightAssist", "BGColor":"orange", "FGColor":"white"},
+				{ "Type":"ToggleStateButton", "Text":"HARDPOINTS", "Action":"DeployHardpointToggle", "BGColor":"red>green", "FGColor":"white>black"}  
+				]
+		},
+		
+		{ 
+		"Row": 2, "RowHeight":0.5, "RowSpacing":20,
+		
+		"Buttons" :
+				[
+				{ "Type":"TextButton", "Text":"REQUEST<n>DOCKING<n>(HCS)", "Action":"VA=request docking", "BGColor":"grey", "FGColor":"black"},
+                { "Type":"TextButton", "Text":"DEPARTURE<n>HANDOVER", "Action":"VA=departure handover", "BGColor":"grey", "FGColor":"black"},
+				{ "Type":"ToggleStateButton", "Text":"SILENT<n>RUNNING", "Action":"ToggleButtonUpInput", "BGColor":"blue>red", "FGColor":"white>white"},
+				{ "Type":"TextButton", "Text":"HEAT SINK", "Action":"DeployHeatSink", "BGColor":"grey", "FGColor":"black"},
+				{ "Type":"TextButton", "Text":"", "Action":"EMPTY", "BGColor":"orange", "FGColor":"grey"},
+				{ "Type":"TextButton", "Text":"ORBIT LINES", "Action":"OrbitLinesToggle", "BGColor":"grey", "FGColor":"white"},
+				{ "Type":"TextButton", "Text":"TOGGLE HUD", "Action":"ToggleHUD", "BGColor":"grey", "FGColor":"white"}
+				]
+		},
+		
+		{ 
+		"Row": 3, "RowHeight":0.5, "RowSpacing":20,
+		
+		"Buttons" :
+				[
+				{ "Type":"TextButton", "Text":"THROTTLE<n>ALL STOP", "Action":"SetSpeedZero", "BGColor":"grey", "FGColor":"white"},
+                { "Type":"TextButton", "Text":"THROTTLE<n>25%", "Action":"SetSpeed25", "BGColor":"grey", "FGColor":"white"},
+                { "Type":"TextButton", "Text":"THROTTLE<n>50%", "Action":"SetSpeed50", "BGColor":"grey", "FGColor":"white"},
+                { "Type":"TextButton", "Text":"THROTTLE<n>75%", "Action":"SetSpeed75", "BGColor":"grey", "FGColor":"white"},
+                { "Type":"TextButton", "Text":"THROTTLE<n>100%", "Action":"SetSpeed100", "BGColor":"grey", "FGColor":"white"},
+				{ "Type":"TextButton", "Text":"", "Action":"EMPTY", "BGColor":"red", "FGColor":"grey"},
+				{ "Type":"ConditionalToggleStateButton", "Text":"", "Action":"ConditionalSCOButton", "BGColor":"black>blue>red", "FGColor":"black>white>white"},
+				{ "Type":"TextButton", "Text":"ANALYSIS /<n>COMBAT MODE", "Action":"PlayerHUDModeToggle", "BGColor":"blue", "FGColor":"white"}
+				]
+		},
+		
+		{ 
+		"Row": 4, "RowHeight":0.5, "RowSpacing":20,
+		
+		"Buttons" :
+				[
+				{ "Type":"TextButton", "Text":"BEACON", "Action":"VA=enable beacon", "BGColor":"blue", "FGColor":"white"},
+                { "Type":"TextButton", "Text":"NAVLOCK", "Action":"WingNavLock", "BGColor":"grey", "FGColor":"white"},
+                { "Type":"TextButton", "Text":"WINGMAN<n>1", "Action":"TargetWingman0", "BGColor":"orange", "FGColor":"black"},
+				{ "Type":"TextButton", "Text":"WINGMAN<n>2", "Action":"TargetWingman1", "BGColor":"orange", "FGColor":"black"},
+				{ "Type":"TextButton", "Text":"WINGMAN<n>3", "Action":"TargetWingman2", "BGColor":"orange", "FGColor":"black"},
+				{ "Type":"TextButton", "Text":"WINGMAN<n>TARGET", "Action":"SelectTargetsTarget", "BGColor":"red", "FGColor":"white"},  
+				{ "Type":"TextButton", "Text":"", "Action":"EMPTY", "BGColor":"red", "FGColor":"grey"},
+				{ "Type":"TextButton", "Text":"NEXT SYSTEM<n>IN ROUTE", "Action":"TargetNextRouteSystem", "BGColor":"blue", "FGColor":"white"}
+				]
+		}
+		
+		]			
+				
+	},
+	
+	{
+		
+	"BoardTitle":"COMBAT", 
+	
+	"Rows":
+		[
+
+		{
+		"Row": 1, "RowHeight":0.5, "RowSpacing":20,
+		
+		"Buttons" : 
+				[
+				{ "Type":"TextButton", "Text":"PREV<n>HOSTILE", "Action":"CyclePreviousHostileTarget", "BGColor":"red", "FGColor":"grey"},
+                { "Type":"TextButton", "Text":"NEXT<n>HOSTILE", "Action":"CycleNextHostileTarget", "BGColor":"red", "FGColor":"grey"},
+				{ "Type":"TextButton", "Text":"PREV<n>SHIP", "Action":"CyclePreviousTarget", "BGColor":"red", "FGColor":"grey"},
+				{ "Type":"TextButton", "Text":"NEXT<n>SHIP", "Action":"CycleNextTarget", "BGColor":"red", "FGColor":"black"},
+				{ "Type":"TextButton", "Text":"WINGMAN<n>1", "Action":"TargetWingman0", "BGColor":"orange", "FGColor":"black"},
+				{ "Type":"TextButton", "Text":"WINGMAN<n>2", "Action":"TargetWingman1", "BGColor":"orange", "FGColor":"black"},
+				{ "Type":"TextButton", "Text":"WINGMAN<n>3", "Action":"TargetWingman2", "BGColor":"orange", "FGColor":"black"},
+				{ "Type":"TextButton", "Text":"WINGMAN<n>TARGET", "Action":"SelectTargetsTarget", "BGColor":"red", "FGColor":"white"}  
+				]
+		},
+		{ 
+		"Row": 2, "RowHeight":0.5, "RowSpacing":20,
+		
+		"Buttons" :
+				[ 
+				{ "Type":"TextButton", "Text":"", "Action":"EMPTY", "BGColor":"red", "FGColor":"grey"},
+				{ "Type":"TextButton", "Text":"TARGET POWER PLANT (HCS)", "Action":"VA=target powerplant", "BGColor":"red", "FGColor":"white"},
+				{ "Type":"TextButton", "Text":"TARGET FSD (HCS)", "Action":"VA=target fsd", "BGColor":"red", "FGColor":"white"},
+				{ "Type":"TextButton", "Text":"TARGET SHIELDS (HCS)", "Action":"VA=target shields", "BGColor":"red", "FGColor":"white"},
+				{ "Type":"TextButton", "Text":"TARGET THRUSTERS (HCS)", "Action":"VA=target thrusters", "BGColor":"red", "FGColor":"white"},
+				{ "Type":"TextButton", "Text":"TARGET POWER DISTRIBUTOR (HCS)", "Action":"VA=target power distributor", "BGColor":"red", "FGColor":"white"},
+				{ "Type":"TextButton", "Text":"TARGET LIFE SUPPORT (HCS)", "Action":"VA=target life support", "BGColor":"red", "FGColor":"white"},
+				{ "Type":"TextButton", "Text":"TARGET CARGO HATCH (HCS)", "Action":"VA=target cargo hatch", "BGColor":"red", "FGColor":"white"},  
+				{ "Type":"TextButton", "Text":"", "Action":"EMPTY", "BGColor":"red", "FGColor":"grey"}
+				]
+		},
+		{ 
+		"Row": 3, "RowHeight":0.5, "RowSpacing":40,
+		
+		"Buttons" : 
+				[
+				{ "Type":"TextButton", "Text":"HEAT SINK", "Action":"DeployHeatSink", "BGColor":"blue", "FGColor":"white"},
+				{ "Type":"TextButton", "Text":"CHAFF", "Action":"FireChaffLauncher", "BGColor":"orange", "FGColor":"black"},
+				{ "Type":"TextButton", "Text":"ECM", "Action":"ChargeECM", "BGColor":"blue", "FGColor":"white"},
+				{ "Type":"TextButton", "Text":"SHIELD CELL", "Action":"UseShieldCell", "BGColor":"blue", "FGColor":"white"}
+				]
+		},
+		{ 
+		"Row": 4, "RowHeight":0.5, "RowSpacing":20,
+		
+		"Buttons" :
+				[
+				{ "Type":"TextButton", "Text":"", "Action":"EMPTY", "BGColor":"orange", "FGColor":"grey"},
+				{ "Type":"TextButton", "Text":"LAUNCH<n>FIGHTER","Action":"VA=deploy fighter", "BGColor":"orange", "FGColor":"black"},
+				{ "Type":"TextButton", "Text":"ATTACK<n>TARGET", "Action":"OrderFocusTarget", "BGColor":"red", "FGColor":"white"},
+				{ "Type":"TextButton", "Text":"ENGAGE<n>AT WILL", "Action":"OrderAggressiveBehaviour", "BGColor":"red", "FGColor":"white"},
+				{ "Type":"TextButton", "Text":"DEFEND", "Action":"OrderDefensiveBehaviour", "BGColor":"red", "FGColor":"white"},
+				{ "Type":"TextButton", "Text":"HOLD<n>POSITION", "Action":"OrderHoldPosition", "BGColor":"red", "FGColor":"white"},
+				{ "Type":"TextButton", "Text":"FOLLOW<n>ME", "Action":"OrderFollow", "BGColor":"red", "FGColor":"white"},
+				{ "Type":"TextButton", "Text":"RECALL<n>FIGHTER", "Action":"OrderRequestDock", "BGColor":"red", "FGColor":"white"},
+				{ "Type":"TextButton", "Text":"", "Action":"EMPTY", "BGColor":"red", "FGColor":"white"}
+				]
+		},
+		{
+		"Row": 5, "RowHeight":0.5, "RowSpacing":0,
+		"Buttons" :
+				[
+				{ "Type":"TextButton", "Text":"", "Action":"EMPTY", "BGColor":"orange", "FGColor":"grey"}
+				]
+		}		
+		]
+	},
+	
+	
+	{
+		
+	"BoardTitle":"SRV", 
+	
+	"Rows":
+		[
+
+		{
+		"Row": 1, "RowHeight":0.5, "RowSpacing":20,
+		
+		"Buttons" : 
+				[
+				{ "Type":"TextButton", "Text":"SYSTEM<n>PIP", "Action":"IncreaseSystemsPower_Buggy", "BGColor":"grey", "FGColor":"white"},
+                { "Type":"TextButton", "Text":"ENGINE<n>PIP", "Action":"IncreaseEnginesPower_Buggy", "BGColor":"grey", "FGColor":"white"},
+                { "Type":"TextButton", "Text":"WEAPONS<n>PIP", "Action":"IncreaseWeaponsPower_Buggy", "BGColor":"grey", "FGColor":"white"},
+                { "Type":"TextButton", "Text":"BALANCE<n>PIPS", "Action":"ResetPowerDistribution_Buggy", "BGColor":"red", "FGColor":"white"},
+				{ "Type":"TextButton", "Text":"", "Action":"EMPTY", "BGColor":"black", "FGColor":"grey"},
+				{ "Type":"TextButton", "Text":"PREV<n>FIREGROUP", "Action":"BuggyCycleFireGroupPrevious", "BGColor":"orange", "FGColor":"white"},
+				{ "Type":"TextButton", "Text":"NEXT<n>FIREGROUP", "Action":"BuggyCycleFireGroupNext", "BGColor":"orange", "FGColor":"white"},
+				{ "Type":"TextButton", "Text":"ANALYSIS /<n>COMBAT MODE", "Action":"PlayerHUDModeToggle_Buggy", "BGColor":"blue", "FGColor":"white"}
+				]
+		},
+		
+		{ 
+		"Row": 2, "RowHeight":0.5, "RowSpacing":20,
+		
+		"Buttons" :
+				[ 
+				{ "Type":"TextButton", "Text":"", "Action":"EMPTY", "BGColor":"red", "FGColor":"grey"}
+				]
+		},		
+		
+		{ 
+		"Row": 3, "RowHeight":0.5, "RowSpacing":20,
+		
+		"Buttons" : 
+				[
+				{ "Type":"TextButton", "Text":"", "Action":"EMPTY", "BGColor":"red", "FGColor":"grey"},
+				{ "Type":"TextButton", "Text":"HANDBRAKE", "Action":"AutoBreakBuggyButton", "BGColor":"orange", "FGColor":"grey"},
+				{ "Type":"TextButton", "Text":"HEADLIGHTS", "Action":"HeadlightsBuggyButton", "BGColor":"orange", "FGColor":"grey"},
+				{ "Type":"TextButton", "Text":"DRIVE<n>ASSIST", "Action":"ToggleDriveAssist", "BGColor":"grey", "FGColor":"white"},
+				{ "Type":"TextButton", "Text":"", "Action":"EMPTY", "BGColor":"red", "FGColor":"grey"},
+				{ "Type":"TextButton", "Text":"CARGO<n>SCOOP", "Action":"ToggleCargoScoop_Buggy", "BGColor":"blue", "FGColor":"white"},
+				{ "Type":"TextButton", "Text":"JETTISON<n>CARGO", "Action":"EjectAllCargo_Buggy", "BGColor":"red", "FGColor":"white"},
+				{ "Type":"TextButton", "Text":"", "Action":"EMPTY", "BGColor":"red", "FGColor":"grey"}
+				]
+		},
+		
+		{ 
+		
+		"Row": 4, "RowHeight":0.5, "RowSpacing":20,
+		
+		"Buttons" :
+				[ 
+				{ "Type":"TextButton", "Text":"", "Action":"EMPTY", "BGColor":"red", "FGColor":"grey"}
+				]
+		},	
+		
+		{ 
+		"Row": 5, "RowHeight":0.5, "RowSpacing":20,
+		
+		"Buttons" :
+				[
+				{ "Type":"TextButton", "Text":"", "Action":"EMPTY", "BGColor":"orange", "FGColor":"grey"},
+				{ "Type":"TextButton", "Text":"TURRET","Action":"ToggleBuggyTurret", "BGColor":"blue", "FGColor":"white"},
+				{ "Type":"TextButton", "Text":"RECALL /<n>DISMISS<n>SHIP", "Action":"RecallDismissShip", "BGColor":"red", "FGColor":"white"},
+				{ "Type":"TextButton", "Text":"", "Action":"EMPTY", "BGColor":"orange", "FGColor":"grey"},
+				{ "Type":"TextButton", "Text":"", "Action":"EMPTY", "BGColor":"orange", "FGColor":"grey"},
+				{ "Type":"TextButton", "Text":"NIGHT VISION", "Action":"NightVisionToggle", "BGColor":"orange", "FGColor":"white"},
+				{ "Type":"TextButton", "Text":"CAMERA", "Action":"PhotoCameraToggle_Buggy", "BGColor":"red", "FGColor":"white"},
+				{ "Type":"TextButton", "Text":"", "Action":"EMPTY", "BGColor":"red", "FGColor":"white"}
+				]
+		}
+		]
+	},
+	
+	{
+		
+	"BoardTitle":"ON FOOT", 
+	
+	"Rows":
+		[
+
+		{
+		"Row": 1, "RowHeight":0.5, "RowSpacing":20,
+		
+		"Buttons" : 
+				[
+				{ "Type":"TextButton", "Text":"PRIMARY WEAPON", "Action":"HumanoidSelectPrimaryWeaponButton", "BGColor":"orange", "FGColor":"black"},
+				{ "Type":"TextButton", "Text":"SECONDARY WEAPON", "Action":"HumanoidSelectSecondaryButton", "BGColor":"orange", "FGColor":"black"},
+				{ "Type":"TextButton", "Text":"HOLSTER WEAPON", "Action":"HumanoidHideWeaponButton", "BGColor":"grey", "FGColor":"black"},
+                { "Type":"TextButton", "Text":"PREVIOUS WEAPON", "Action":"HumanoidSelectPreviousWeaponButton", "BGColor":"orange", "FGColor":"black"},
+                { "Type":"TextButton", "Text":"NEXT<n>WEAPON", "Action":"HumanoidSelectNextWeaponButton", "BGColor":"grey", "FGColor":"black"},
+				{ "Type":"TextButton", "Text":"", "Action":"EMPTY", "BGColor":"red", "FGColor":"white"},
+                { "Type":"TextButton", "Text":"FRAG GRENADE", "Action":"SelectFragGrenade", "BGColor":"red", "FGColor":"white"},
+				{ "Type":"TextButton", "Text":"EMP GRENADE", "Action":"SelectEmpGrenade", "BGColor":"orange", "FGColor":"white"},
+				{ "Type":"TextButton", "Text":"SHIELD GRENADE", "Action":"SelectShieldGrenade", "BGColor":"blue", "FGColor":"white"}
+				]
+		},
+		
+		
+		{ 
+		"Row": 2, "RowHeight":0.5, "RowSpacing":20,
+		
+		"Buttons" : 
+				[
+				{ "Type":"TextButton", "Text":"SHIELDS", "Action":"HumanoidToggleShieldsButton", "BGColor":"red", "FGColor":"white"},
+				{ "Type":"TextButton", "Text":"HEALTH PACK", "Action":"HumanoidHealthPack", "BGColor":"orange", "FGColor":"white"},
+				{ "Type":"TextButton", "Text":"BATTERY", "Action":"HumanoidBattery", "BGColor":"green", "FGColor":"white"},
+				{ "Type":"TextButton", "Text":"", "Action":"EMPTY", "BGColor":"red", "FGColor":"grey"},
+				{ "Type":"TextButton", "Text":"PRIMARY<n>INTERACT", "Action":"HumanoidPrimaryInteractButton", "BGColor":"grey", "FGColor":"white"},
+				{ "Type":"TextButton", "Text":"SECONDARY<n>INTERACT", "Action":"HumanoidSecondaryInteractButton", "BGColor":"grey", "FGColor":"white"}
+				]
+		},
+		
+						
+		
+		{ 
+		"Row": 3, "RowHeight":0.5, "RowSpacing":20,
+		
+		"Buttons" :
+				[
+				{ "Type":"TextButton", "Text":"ENERGYLINK", "Action":"HumanoidSwitchToRechargeTool", "BGColor":"green", "FGColor":"white"},
+				{ "Type":"TextButton", "Text":"ANALYSIS TOOL","Action":"HumanoidSwitchToCompAnalyser", "BGColor":"blue", "FGColor":"white"},
+				{ "Type":"TextButton", "Text":"", "Action":"EMPTY", "BGColor":"orange", "FGColor":"grey"},
+				{ "Type":"TextButton", "Text":"TOOL MODE","Action":"HumanoidToggleToolModeButton", "BGColor":"blue", "FGColor":"white"},
+				{ "Type":"TextButton", "Text":"", "Action":"EMPTY", "BGColor":"orange", "FGColor":"grey"},
+				{ "Type":"TextButton", "Text":"NIGHT VISION", "Action":"HumanoidToggleNightVisionButton", "BGColor":"orange", "FGColor":"white"},
+				{ "Type":"TextButton", "Text":"SUIT LIGHTS", "Action":"HumanoidToggleFlashlightButton", "BGColor":"red", "FGColor":"white"}
+				]
+		},
+		
+		
+		{ 
+		"Row": 4, "RowHeight":0.5, "RowSpacing":20,
+		
+		"Buttons" :
+				[
+				{ "Type":"TextButton", "Text":"POINT", "Action":"HumanoidEmoteSlot1", "BGColor":"grey", "FGColor":"white"},
+				{ "Type":"TextButton", "Text":"WAVE", "Action":"HumanoidEmoteSlot2", "BGColor":"grey", "FGColor":"white"},
+				{ "Type":"TextButton", "Text":"AGREE", "Action":"HumanoidEmoteSlot3", "BGColor":"grey", "FGColor":"white"},
+				{ "Type":"TextButton", "Text":"DISAGREE", "Action":"HumanoidEmoteSlot4", "BGColor":"grey", "FGColor":"white"},
+				{ "Type":"TextButton", "Text":"GO", "Action":"HumanoidEmoteSlot5", "BGColor":"grey", "FGColor":"white"},
+				{ "Type":"TextButton", "Text":"STOP", "Action":"HumanoidEmoteSlot6", "BGColor":"grey", "FGColor":"white"},
+				{ "Type":"TextButton", "Text":"APPLAUD", "Action":"HumanoidEmoteSlot7", "BGColor":"grey", "FGColor":"white"},
+				{ "Type":"TextButton", "Text":"SALUTE", "Action":"HumanoidEmoteSlot8", "BGColor":"grey", "FGColor":"white"}
+			
+				]
+		}
+		
+		]
+			
+														
+	},
+	
+	{
+		
+	"BoardTitle":"CAMERA", 
+	
+	"Rows":
+		[
+
+		{
+		"Row": 1, "RowHeight":0.5, "RowSpacing":20,
+		
+		"Buttons" : 
+				[
+				{ "Type":"TextButton", "Text":"TOGGLE CAMERA", "Action":"PhotoCameraToggle<>PhotoCameraToggle_Buggy<>PhotoCameraToggle_Humanoid", "BGColor":"blue", "FGColor":"white"},
+				{ "Type":"TextButton", "Text":"MOVE FORWARD", "Action":"MoveFreeCamForward", "BGColor":"orange", "FGColor":"white"},
+				{ "Type":"TextButton", "Text":"ZOOM IN", "Action":"FreeCamZoomIn", "BGColor":"grey", "FGColor":"white"}
+              	]
+		},
+		
+		
+		
+		{ 
+		"Row": 2, "RowHeight":0.5, "RowSpacing":20,
+		
+		"Buttons" :
+				[ 
+				{ "Type":"TextButton", "Text":"PREVIOUS<n>CAMERA", "Action":"VanityCameraScrollLeft", "BGColor":"grey", "FGColor":"white"},
+				{ "Type":"TextButton", "Text":"NEXT<n>CAMERA", "Action":"VanityCameraScrollRight", "BGColor":"grey", "FGColor":"white"},
+				{ "Type":"TextButton", "Text":"ENTER<n>FREECAM", "Action":"ToggleFreeCam", "BGColor":"blue", "FGColor":"white"},
+				{ "Type":"TextButton", "Text":"", "Action":"EMPTY", "BGColor":"red", "FGColor":"grey"},
+				{ "Type":"TextButton", "Text":"MOVE<n>UP", "Action":"MoveFreeCamUp", "BGColor":"orange", "FGColor":"white"},
+				{ "Type":"TextButton", "Text":"", "Action":"EMPTY", "BGColor":"red", "FGColor":"grey"},
+				{ "Type":"TextButton", "Text":"ROLL<n>LEFT", "Action":"RollCameraLeft", "BGColor":"brown", "FGColor":"white"},
+				{ "Type":"TextButton", "Text":"PITCH<n>UP", "Action":"PitchCameraUp", "BGColor":"brown", "FGColor":"white"},
+				{ "Type":"TextButton", "Text":"ROLL<n>RIGHT", "Action":"RollCameraRight", "BGColor":"brown", "FGColor":"white"}
+				]
+		},		
+			
+		
+		{ 
+		"Row": 3, "RowHeight":0.5, "RowSpacing":20,
+		
+		"Buttons" : 
+				[
+				{ "Type":"TextButton", "Text":"CAM / SHIP<n>CONTROLS", "Action":"FixCameraRelativeToggle", "BGColor":"orange", "FGColor":"white"},
+				{ "Type":"TextButton", "Text":"TOGGLE<n>HUD", "Action":"FreeCamToggleHUD", "BGColor":"blue", "FGColor":"white"},
+				{ "Type":"TextButton", "Text":"EXIT<n>FREECAM", "Action":"QuitCamera", "BGColor":"red", "FGColor":"white"},
+				{ "Type":"TextButton", "Text":"MOVE<n>LEFT", "Action":"MoveFreeCamLeft", "BGColor":"orange", "FGColor":"white"},
+				{ "Type":"TextButton", "Text":"ATTACH<n>DETACH", "Action":"FixCameraWorldToggle", "BGColor":"red", "FGColor":"white"},
+				{ "Type":"TextButton", "Text":"MOVE<n>RIGHT", "Action":"MoveFreeCamRight", "BGColor":"orange", "FGColor":"white"},
+				{ "Type":"TextButton", "Text":"YAW<n>LEFT", "Action":"YawCameraLeft", "BGColor":"orange", "FGColor":"white"},
+				{ "Type":"TextButton", "Text":"TOGGLE<n>STABILISER", "Action":"ToggleRotationLock", "BGColor":"grey", "FGColor":"white"},
+				{ "Type":"TextButton", "Text":"YAW<n>RIGHT", "Action":"YawCameraRight", "BGColor":"orange", "FGColor":"white"}
+				]
+		},
+		
+					
+		{ 
+		"Row": 4, "RowHeight":0.5, "RowSpacing":20,
+		
+		"Buttons" :
+				[ 
+				{ "Type":"TextButton", "Text":"SPEED -", "Action":"FreeCamSpeedDec", "BGColor":"green", "FGColor":"white"},
+				{ "Type":"TextButton", "Text":"SPEED +", "Action":"FreeCamSpeedInc", "BGColor":"red", "FGColor":"white"},
+				{ "Type":"TextButton", "Text":"HI RES<n>SHOT", "Action":"HiResScreenshot", "BGColor":"red", "FGColor":"white"},
+				{ "Type":"TextButton", "Text":"", "Action":"EMPTY", "BGColor":"red", "FGColor":"grey"},
+				{ "Type":"TextButton", "Text":"MOVE<n>DOWN", "Action":"MoveFreeCamDown", "BGColor":"orange", "FGColor":"white"},
+				{ "Type":"TextButton", "Text":"", "Action":"EMPTY", "BGColor":"red", "FGColor":"grey"},
+				{ "Type":"TextButton", "Text":"", "Action":"EMPTY", "BGColor":"red", "FGColor":"grey"},
+				{ "Type":"TextButton", "Text":"PITCH<n>DOWN", "Action":"MoveFreeCamDown", "BGColor":"green", "FGColor":"white"},
+				{ "Type":"TextButton", "Text":"", "Action":"EMPTY", "BGColor":"red", "FGColor":"grey"}
+				
+				]
+		},	
+					
+		{ 
+		"Row": 5, "RowHeight":0.5, "RowSpacing":20,
+		
+		"Buttons" :
+				[
+				{ "Type":"TextButton", "Text":"STANDARD SCREENSHOT", "Action":"StandardScreenshot", "BGColor":"blue", "FGColor":"white"},
+				{ "Type":"TextButton", "Text":"MOVE BACKWARD","Action":"MoveFreeCamBackwards", "BGColor":"orange", "FGColor":"white"},
+				{ "Type":"TextButton", "Text":"ZOOM OUT", "Action":"FreeCamZoomOut", "BGColor":"grey", "FGColor":"white"}
+				
+				]
+		}
+				
+		]
+			
+														
+	}
+	
+	]
+	
+}
+							

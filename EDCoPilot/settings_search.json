@@ -1,0 +1,166 @@
+[
+    {
+        "type": "title",
+        "title": "Location Search Preferences"
+    },
+	{
+        "type": "bool",
+        "title": "Only show discounted price results",
+        "desc": "Only shows stations with discounts on items",
+        "section": "Location Search Preferences",
+        "key": "DiscountSearch"
+    },
+    {
+        "type": "bool",
+        "title": "Include current system in results",
+        "desc": "Whether you want search results to include the current system",
+        "section": "Location Search Preferences",
+        "key": "IncludeCurrentSystem"
+    },
+	{
+        "type": "title",
+        "title": "Trading Search Parameters"
+    },
+	{
+        "type": "bool",
+        "title": "Trading Mode",
+        "desc": "If ON, when you are docked and set course for a system, will automatically look for best commodity to buy in the target system",
+        "section": "Trading Search Parameters",
+        "key": "TradingMode"
+    }, 
+	{
+        "type": "numeric",
+        "title": "Minimum hold size for Trading Mode",
+        "desc": "Suppress Trading Mode checks and announcements if hold size < this number (1-50)",
+        "section": "Trading Search Parameters",
+        "key": "MinHoldSize"
+    }, 
+	{
+        "type": "numeric",
+        "title": "Trade Route max distance between markets",
+        "desc": "The maximum distance allowed between trading systems when generating a Trade Route ",
+        "section": "Trading Search Parameters",
+        "key": "TradeRouteMaxDistance"
+    },
+
+	{
+        "type": "numeric",
+        "title": "Maximum distance from star of target market",
+        "desc": "The maximum distance from the start (in LS) you are prepared to travel to sell goods to a station",
+        "section": "Trading Search Parameters",
+        "key": "MaxDistanceFromStar"
+    },
+	{
+        "type": "numeric",
+        "title": "Starting capital to spend on cargo",
+        "desc": "The maximum amount you wish to spend to initially fill your hold with cargo",
+        "section": "Trading Search Parameters",
+        "key": "TradeRouteMaxCredits"
+    },
+	{
+        "type": "bool",
+        "title": "Exclude planetary landings",
+        "desc": "Whether to consider markets where a planetary landing is required",
+        "section": "Trading Search Parameters",
+        "key": "ExcludePlanetaryLandings"
+    }, 
+	{
+        "type": "bool",
+        "title": "Exclude illegal cargo",
+        "desc": "If ON, will filter out goods that are prohibited at the target station",
+        "section": "Trading Search Parameters",
+        "key": "ExcludeIllegalGoods"
+    }, 
+	{
+        "type": "bool",
+        "title": "Exclude limpet quantity from available cargo size",
+        "desc": "If ON, will reduce the amount of tonnage available for hauling cargo by the number of limpets you currently have on board",
+        "section": "Trading Search Parameters",
+        "key": "KeepLimpets"
+    }, 
+	{
+        "type": "bool",
+        "title": "Trade Route : allow loops",
+        "desc": "Whether to allow revisiting systems already in the Trade Route",
+        "section": "Trading Search Parameters",
+        "key": "TradeRouteLoop"
+    },
+	{
+        "type": "bool",
+        "title": "Trade Route : exclude permit systems",
+        "desc": "Whether to exclude systems requiring a permit in the Trade Route",
+        "section": "Trading Search Parameters",
+        "key": "TradeRouteExcludePermit"
+    },
+	{
+        "type": "numeric",
+        "title": "Exclude stations with market data > x hours old",
+        "desc": "Will not consider a station for trading recommendations if the last market updated time is too old",
+        "section": "Trading Search Parameters",
+        "key": "MaxMarketAge"
+    },
+
+	{
+        "type": "title",
+        "title": "Road To Riches Parameters"
+    },
+		{
+        "type": "numeric",
+        "title": "Maximum number of systems in search result",
+        "desc": "The max number of systems to include in the new R2R bookmark group",
+        "section": "Road To Riches Parameters",
+        "key": "r2rMaxSystems"
+    },
+	{
+        "type": "numeric",
+        "title": "Search radius",
+        "desc": "Distance in LY the plotter will look around for rich systems",
+        "section": "Road To Riches Parameters",
+        "key": "r2rRadius"
+    },
+	{
+        "type": "numeric",
+        "title": "Maximum distance from star",
+        "desc": "The maxiumum distance in LS from the star for bodies to be included in the R2R list",
+        "section": "Road To Riches Parameters",
+        "key": "r2rMaxDistanceToArrival"
+    },
+	{
+        "type": "bool",
+        "title": "Use map value instead of scan",
+        "desc": "If on, will apply the 'minimum map or scan value' threshold below to the Map value of the body, if OFF will apply to the Scan value",
+        "section": "Road To Riches Parameters",
+        "key": "r2rUseMappingValue"
+    }, 
+	{
+        "type": "numeric",
+        "title": "Minimum map or scan value",
+        "desc": "The minimum map or scan value to include in search results",
+        "section": "Road To Riches Parameters",
+        "key": "r2rMinScanValue"
+    },
+	{
+        "type": "bool",
+        "title": "Make a loop route",
+        "desc": "Whether route should end up back in your current location",
+        "section": "Road To Riches Parameters",
+        "key": "r2rLoop"
+    }, 
+	{
+        "type": "bool",
+        "title": "Announce next body after mapping",
+        "desc": "If ON, will tell you the next lucrative body in the system to be scanned, or tell you all done for this system",
+        "section": "Road To Riches Parameters",
+        "key": "r2rAnnounceNextBody"
+    }, 
+	{
+        "type": "bool",
+        "title": "Auto plot to next R2R system when all bodies mapped",
+        "desc": "If ON, will automatically plot the course to the next system in your R2R route once you have mapped all lucrative bodies in your current R2R system",
+        "section": "Road To Riches Parameters",
+        "key": "r2rAutoPlot"
+    }
+	
+
+
+]

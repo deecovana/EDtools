@@ -1,0 +1,478 @@
+[
+	
+	{
+        "type": "bool",
+        "title": "Mute CoPilot",
+        "desc": "Whether you want CoPilot to speak to you or not. Try not to hurt its feelings.",
+        "section": "Toggles",
+        "key": "MuteCoPilot"
+    },
+	
+	{
+        "type": "numeric",
+        "title": "Announcement Delay (Global)",
+        "desc": "Set this if you want to delay the voice announcement, (0-15 seconds). Useful if you have other tools that might want to announce first. Note: will delay EVERY announcement.",
+		"section": "Toggles",
+        "key": "GlobalSpeechDelay"
+    },
+	
+	{
+        "type": "title",
+        "title": "Starting and Stopping"
+    },
+	{
+        "type": "bool",
+        "title": "Starting Situation",
+        "desc": "Whether to provide a situation report when first starting up",
+        "section": "Toggles",
+        "key": "AnnounceSituation"
+    },
+	{
+        "type": "bool",
+        "title": "Exit To Main Menu Announcements",
+        "desc": "Whether to comment when you exit to the Main Menu in game",
+        "section": "Toggles",
+        "key": "MainMenuAnnouncement"
+    },
+
+	{
+        "type": "title",
+        "title": "Routing and Jumping"
+    },
+	{
+        "type": "bool",
+        "title": "Route Announcements",
+        "desc": "Whether to tell you route information when setting or changing course",
+        "section": "Toggles",
+        "key": "AnnounceRoute"
+    },
+	{
+        "type": "bool",
+        "title": "System Targeting",
+        "desc": "Whether to confirm the system name targeted when selecting on the Galaxy Map or Nav Panel",
+        "section": "Toggles",
+        "key": "AnnounceTargetedSystem"
+    },
+	{
+        "type": "bool",
+        "title": "Jump Announcements",
+        "desc": "Whether to tell you which system you are jumping to",
+        "section": "Toggles",
+        "key": "AnnounceJumps"
+    },
+	{
+        "type": "bool",
+        "title": "Scoop Information",
+        "desc": "Whether to tell you which stars are scoopable in your remaining route",
+        "section": "Toggles",
+        "key": "AnnounceScoopable"
+    },
+	{
+        "type": "numeric",
+        "title": "Announce remaining scoopable jumps every X jumps",
+        "desc": "If in a long chain of scoopables, you can choose to be told how many remaining in the chain every x jumps",
+        "section": "Toggles",
+        "key": "AnnounceScoopablesEveryXJumps"
+	},
+	{
+        "type": "bool",
+        "title": "Announce Target System Reached",
+        "desc": "Whether to tell you when you have reached your target system",
+        "section": "Toggles",
+        "key": "AnnounceTargetSystemReached"
+    },
+	{
+        "type": "options",
+        "title": "When to announce jumps",
+        "desc": "If Jump Announcements is ON, when to trigger the announcement",
+        "section": "Toggles",
+        "key": "AnnounceJumpEvent",
+		"options": ["On start of jump", "During jump"]
+    },
+	{
+        "type": "numeric",
+        "title": "Announce remaining jumps every X jumps",
+        "desc": "Set this for frequency of announcement of remaining jumps in your toute",
+        "section": "Toggles",
+        "key": "AnnounceRemainingJumpsEveryXJumps"
+	},
+	{
+        "type": "title",
+        "title": "System arrival announcements"
+    },
+	{
+        "type": "bool",
+        "title": "Last Here Announcements",
+        "desc": "When you reach a target system, whether to tell you info on your previous visits",
+        "section": "Toggles",
+        "key": "AnnounceLastHere"
+    },
+	{
+        "type": "bool",
+        "title": "Compromised Nav Beacons",
+        "desc": "Whether to tell you when a Compromised Nav Beacon is detected in the system",
+        "section": "Toggles",
+        "key": "AnnounceCNBs"
+    },
+	{
+        "type": "bool",
+        "title": "High Grade Emissions",
+        "desc": "Whether to tell you if the system you have just jumped to is a HGE candidate",
+        "section": "Toggles",
+        "key": "AnnounceHGEs"
+    },
+	{
+        "type": "numeric",
+        "title": "Announce Places Of Interest if system last visited was > x days ago",
+        "desc": "Will announce Places of Interest when you jump into a system if you have last visited the system > x days ago. Set this to 0 to always announce POIs",
+        "section": "Toggles",
+        "key": "MinPOIDuration"
+    },
+
+	{
+        "type": "bool",
+        "title": "Announce Thargoid controlled systems",
+        "desc": "Warn you if you jump into a Thargoid occupied system",
+        "section": "Toggles",
+        "key": "AnnounceThargoidSystems"
+    },
+	{
+        "type": "bool",
+        "title": "Announce Wanted status",
+        "desc": "Warn you if you are Wanted in this system",
+        "section": "Toggles",
+        "key": "AnnounceWantedInSystem"
+    },
+	{
+        "type": "bool",
+        "title": "Announce Warrant status",
+        "desc": "Warn you if you have a warrant in this system",
+        "section": "Toggles",
+        "key": "AnnounceWarrantInSystem"
+    },
+	{
+        "type": "bool",
+        "title": "Announce Illegal Cargo",
+        "desc": "Warn you if your cargo includes illegal items for this system",
+        "section": "Toggles",
+        "key": "AnnounceIllegalCargoInSystem"
+    },
+	{
+        "type": "bool",
+        "title": "Announce Hostile status",
+        "desc": "Warn you if you are regarded as Hostile in this system",
+        "section": "Toggles",
+        "key": "AnnounceHostileInSystem"
+    },
+	{
+        "type": "title",
+        "title": "Scanning and Targetting"
+    },
+	{
+        "type": "bool",
+        "title": "Pirate Scans",
+        "desc": "Whether to warn you when a pirate scan is detected ",
+        "section": "Toggles",
+        "key": "AnnouncePirateThreat"
+    },
+	{
+        "type": "bool",
+        "title": "Pirate Interdictions",
+        "desc": "Whether to warn you when a pirate interdiction is imminent ",
+        "section": "Toggles",
+        "key": "AnnouncePirateInterdiction"
+    },
+	{
+        "type": "bool",
+        "title": "Targetting Announcements",
+        "desc": "Whether to tell you details of the ship you are targetting",
+        "section": "Toggles",
+        "key": "AnnounceTargeting"
+    },
+		{
+        "type": "bool",
+        "title": "Announce Clean Ships",
+        "desc": "If Targetting Announcements are on, whether to announce scans of clean ships",
+        "section": "Toggles",
+        "key": "AnnounceClean"
+    },
+	{
+        "type": "title",
+        "title": "Station announcements"
+    },
+	{
+        "type": "bool",
+        "title": "Station Facts",
+        "desc": "Whether to tell you when station facts are available",
+        "section": "Toggles",
+        "key": "AnnounceStationFacts"
+    },
+	{
+        "type": "bool",
+        "title": "Landing Pad Announcements",
+        "desc": "Tell you your assigned landing pad. Will give you directions to the pad if at a starport and you have no docking computer installed.",
+        "section": "Toggles",
+        "key": "LandingPadAssist"
+    },
+	{
+        "type": "bool",
+        "title": "Autodocking announcements",
+        "desc": "Will comment when you request docking if you have a docking computer installed",
+        "section": "Toggles",
+        "key": "AnnounceAutoDocking"
+    },
+	{
+        "type": "numeric",
+        "title": "Landing Pad Directions Delay",
+        "desc": "If Landing Pad Directions is ON, then how long to delay until the landing pad directions are spoken (0-15 seconds)",
+		"section": "Toggles",
+        "key": "LandingPadAssistDelay"
+    },
+	{
+        "type": "bool",
+        "title": "Material Traders",
+        "desc": "Whether to tell you there is a Material Trader when you dock at a station",
+        "section": "Toggles",
+        "key": "AnnounceMaterialTraders"
+    },
+	{
+        "type": "bool",
+        "title": "Material Levels",
+        "desc": "If Material Traders annoucnement setting is ON, Whether to report on your material levels if there is a material trader when you dock at a station",
+        "section": "Toggles",
+        "key": "AnnounceMaterialLevels"
+    },
+	{
+        "type": "options",
+        "title": "Announce outstanding cargo after mission acceptance",
+        "desc": "Will give you a summary of all the cargo you need after accepting a cargo mission",
+        "section": "Toggles",
+        "key": "AnnounceCommoditiesToCollect",
+		"options": ["Announce", "PrintOnly", "None"]
+    },
+	{
+        "type": "title",
+        "title": "Exploration and discoveries"
+    },
+	{
+		"type": "bool",
+        "title": "Touchdown announcements",
+        "desc": "Whether to announce touchdown on a body, and the number of landings on the body.",
+        "section": "Toggles",
+        "key": "AnnounceTouchDown"
+	},
+	{
+        "type": "bool",
+        "title": "FSS scans: Terraformable announcements",
+        "desc": "Whether to tell you when a scanned body is terraformable. Note, will only announce for new discoveries unless the 'already discovered' option is ON.",
+        "section": "Toggles",
+        "key": "AnnounceTerraformables"
+    },
+	{
+        "type": "bool",
+        "title": "FSS scans: Atmospheric announcements. Note, will only announce for new discoveries unless the 'already discovered' option is ON.",
+        "desc": "Whether to tell you when a scanned body has an atmosphere",
+        "section": "Toggles",
+        "key": "AnnounceAtmospherics"
+    },
+	{
+        "type": "bool",
+        "title": "FSS scans: Announce significant body characteristics even if already discovered",
+        "desc": "If ON, EDCoPilot will tell you about signifant bodies you scan (ELW, terraformable, landable, atmo) even if already discovered",
+        "section": "Toggles",
+        "key": "AnnounceDiscoveredBodyTypes" 
+    },
+		{
+        "type": "bool",
+        "title": "Announce Signals (geo, bio, human)",
+        "desc": "If OFF, will not announce when you detect these signals",
+        "section": "Toggles",
+        "key": "AnnounceSignals"
+    },
+	{
+        "type": "bool",
+        "title": "Announce Geological Signals",
+        "desc": "If  Announce Signals is ON, and this is OFF, will not announce Geological signals when detected",
+        "section": "Toggles",
+        "key": "AnnounceGeoSignals"
+    },
+	{
+        "type": "bool",
+        "title": "Announce Human Signals",
+        "desc": "If  Announce Signals is ON, and this is OFF, will not announce Human signals when detected",
+        "section": "Toggles",
+        "key": "AnnounceHumanSignals"
+    },
+	{
+        "type": "title",
+        "title": "Mining"
+    },
+	{
+        "type": "bool",
+        "title": "Asteroid Core Announcements",
+        "desc": "Whether to tell you if a prospected asteroid contains cores",
+        "section": "Toggles",
+        "key": "AnnounceCores"
+    },
+	{
+        "type": "bool",
+        "title": "Asteroid Non-Core Announcements",
+        "desc": "Whether to tell you if a prospected asteroid contains minerals of interest (those marked in your Management tab -> Prospector Announcements panel)",
+        "section": "Toggles",
+        "key": "AnnounceNonCores"
+    },
+
+	{
+        "type": "numeric",
+        "title": "Minimal Mineral Interest Level",
+        "desc": "Set this to the minimal percentage composition you want to be informed of.  Set which minerals you want it to announce this for on your Management Tab -> Prospector Announcements panel",
+		"section": "Toggles",
+        "key": "MineralInterestLevel"
+    },
+	
+	{
+        "type": "title",
+        "title": "Combat"
+    },
+	{
+        "type": "bool",
+        "title": "Kill Announcements (in Ship or SRV)",
+        "desc": "Whether to comment on your latest kill",
+        "section": "Toggles",
+        "key": "AnnounceKills"
+    },
+	{
+        "type": "bool",
+        "title": "Kill Announcements (On Foot)",
+        "desc": "Whether to comment on a kill when you are on foot",
+        "section": "Toggles",
+        "key": "AnnounceKillsOnFoot"
+    },
+	{
+        "type": "bool",
+        "title": "Read Pirate Warnings",
+        "desc": "Whether to read any pirate warnings that are detected",
+        "section": "Toggles",
+        "key": "ReadPirateWarnings"
+    },
+	{
+        "type": "title",
+        "title": "Time Trials"
+    },
+	{
+        "type": "bool",
+        "title": "Time Trial waypoint passed announcement",
+        "desc": "Tells you if you passed completely through a waypoint during a Time Trial. Useful when testing your own tracks",
+        "section": "Toggles",
+        "key": "TimeTrialAnnounceWaypointPassed"
+    },
+	{
+        "type": "title",
+        "title": "Miscellaneous"
+    },
+	{
+        "type": "string",
+        "title": "Low Fuel warning levels",
+        "desc": "Set a list of fuel levels that EDCoPilot will warn once you cross, comma seperated ... eg 2,5,10,15",
+        "section": "Toggles",
+        "key": "LowFuelWarningLevels"
+    },
+	{
+        "type": "bool",
+        "title": "Synthesis completion",
+        "desc": "Announce when a synthesis process (to repair or rearm) has completed",
+        "section": "Toggles",
+        "key": "AnnounceSynthesis"
+    },
+	{
+        "type": "bool",
+        "title": "GalNet Announcements",
+        "desc": "Tell you if there are new articles since your last session",
+        "section": "Toggles",
+        "key": "GalnetAnnouncements"
+    },
+	{
+        "type": "bool",
+        "title": "Friend Online Announcement",
+        "desc": "Whether to tell you when a friend goes online",
+        "section": "Toggles",
+        "key": "AnnounceFriendsOnline"
+    },
+	{
+        "type": "bool",
+        "title": "Friend Offline Announcement",
+        "desc": "Whether to tell you when a friend goes offline",
+        "section": "Toggles",
+        "key": "AnnounceFriendsOffline"
+    },
+
+	{
+        "type": "bool",
+        "title": "Odyssey materials - Warning beep if collected material is irrelevant",
+        "desc": "If ON, will give you an audible alert that you have picked up something that is irrelevant for suit or weapon progression",
+        "section": "Toggles",
+        "key": "OdyMatsWarnBeepIfIrrelevant"
+    },
+	{
+        "type": "bool",
+        "title": "Odyssey materials - INFO message on Voice Log (not spoken) if collected material is irrelevant",
+        "desc": "If ON, display on the last spoken bar and voice log the material you have just collected that is irrelevant for suit or weapon progression",
+        "section": "Toggles",
+        "key": "OdyMatsInfoMessage"
+    },
+	{
+        "type": "bool",
+        "title": "Announce player emotes",
+        "desc": "Whether to announce player emotes received in the game (eg. 'pointed at')",
+        "section": "Toggles",
+        "key": "AnnounceOnFootEmotes"
+    },
+
+
+	{
+        "type": "title",
+        "title": "Configuration announcements"
+    },
+	{
+        "type": "bool",
+        "title": "Warn if not latest version of Voice Attack Profile (VAP)",
+        "desc": "Warn you if you dont have the latest profile active (Turn this OFF if you dont have VoiceAttack)",
+        "section": "Toggles",
+        "key": "AnnounceVAPWarning"
+    },
+	{
+        "type": "bool",
+        "title": "Announce keybind changes and backups",
+        "desc": "If ON will tell you when changes detected and backed up, if OFF will only print as INFO to the VoiceLog",
+        "section": "Toggles",
+        "key": "AnnounceKeyBindChange"
+    },
+	{
+        "type": "bool",
+        "title": "Verbally notify about keybind issues",
+        "desc": "If ON will verbally warn you when there are issues with keybinds (usually on startup). If OFF, will only print warning messages in the Voice Log",
+        "section": "Toggles",
+        "key": "AnnounceKeyBindIssues"
+    },
+	{
+        "type": "bool",
+        "title": "Hide missing keybind warnings for non-Course Plotting contols",
+        "desc": "If ON will not issue warnings for keybinds needed for the Controls panels",
+        "section": "Toggles",
+        "key": "HideNonCourseBindWarnings"
+    },
+	{
+        "type": "bool",
+        "title": "Announce GUI disconnection messages",
+        "desc": "If ON will warn you when the GUI disconnects. This could be either the GUI has crashed, or took too long to respond to the main process",
+        "section": "Toggles",
+        "key": "AnnounceGUIDisconnects"
+    },
+	{
+        "type": "bool",
+        "title": "Plotting Debug Assistance",
+        "desc": "Will walk you slowly through the steps required to plot course, to help you spot issues",
+        "section": "Toggles",
+        "key": "PlotDebug"
+    }
+]

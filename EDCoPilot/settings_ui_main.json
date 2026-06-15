@@ -1,0 +1,203 @@
+[
+
+	{
+        "type": "bool", 
+        "title": "Waiting Animation",
+        "desc": "Whether to display a waiting animation while data is being retrieved from the main process",
+        "section": "UI Preferences",
+        "key": "WaitingAnimation"
+    },
+	{
+        "type": "options",
+        "title": "Waiting Animation Style",
+        "desc": "Pick the animation style to use. Note 'Custom' requires you create a file named edcopilot-waiting-Custom.gif in the EDCoPilot folder.  'Random' will pick between Pulse, Spin and Custom",
+        "section": "UI Preferences",
+        "key": "WaitingAnimationStyle",
+		"options": ["Pulse", "Spin", "Custom", "Random"]
+    },
+		{
+        "type": "bool", 
+        "title": "Windows Title Bar",
+        "desc": "Add / remove the title bar",
+        "section": "UI Preferences",
+        "key": "ShowTitleBar"
+    },
+		{
+        "type": "bool",
+        "title": "Always On Top",
+        "desc": "Whether window will remain over other app windows",
+        "section": "UI Preferences",
+        "key": "AlwaysOnTop"
+    },
+	{
+        "type": "bool",
+        "title": "Apply 'Always On Top' when showing screen via hotkey",
+        "desc": "If you use the hotkey to toggle the UI on/off the screen, set this ON if you want On Top to also be set when UI is shown ",
+        "section": "UI Preferences",
+        "key": "ToggleOnTop"
+    },
+		{
+        "type": "numeric",
+        "title": "Transparency",
+        "desc": "Set level of transparency from 100 (semi-invisible) to 255 (opaque)",
+        "section": "UI Preferences",
+        "key": "UITransparency"
+    },
+	{
+        "type": "bool",
+        "title": "Refocus Elite on every button click",
+        "desc": "Immediately focus back on Elite after a button is clicked. Handy for overlay apps like Desktop+",
+        "section": "UI Preferences",
+        "key": "FocusOnEveryGUIClick"
+    },
+		{
+        "type": "bool",
+        "title": "Refocus Elite on every scroll",
+        "desc": "Immediately focus back on Elite after a screen is scrolled.",
+        "section": "UI Preferences",
+        "key": "FocusOnEveryScroll"
+    },
+	{
+        "type": "bool",
+        "title": "Auto focus UI on hover",
+        "desc": "Puts focus on the UI when you mouse over it. Note: this will move focus off of Elite Dangerous whenever you move the mouse over the panel. Do not use if you want to refocus Elite on every click",
+        "section": "UI Preferences",
+        "key": "UIAutoFocusOnHover"
+	},
+	{
+        "type": "numeric",
+        "title": "Number of UI instances to start",
+        "desc": "Number of UI instances you would like started when you launch EDCoPilot (1 to 4)",
+        "section": "UI Preferences",
+        "key": "UINumToLoad"
+    },
+	{
+        "type": "bool",
+        "title": "Save default UI position and size",
+        "desc": "Toggle this to ON to save the current UI position and size as its new default",
+        "section": "UI Preferences",
+        "key": "SaveGUIDefaultPosition"
+    },
+	{
+        "type": "options",
+        "title": "Keyboard Type",
+        "desc": "Pick between US (QWERTY), FR (AZERTY) or DE. NOTE: Restart EDCoPilot if you change this value to pick up new mappings",
+        "section": "UI Preferences",
+        "key": "KeyboardLanguage",
+		"options": ["US", "FR", "DE"]
+    },
+	{
+        "type": "title",
+        "title": "Hot Keys - Built In"
+    },
+	{
+        "type": "bool",
+        "title": "Hot Key Checking",
+        "desc": "If ON, will check for hot keys being pressed",
+        "section": "Toggles",
+        "key": "EnableHotKeys"
+    },
+	{
+        "type": "title",
+        "title": "Hot Keys - Using EXTERNAL PROGRAM AutoHotkey - *NOTE* requires you install AutoHotkey separately"
+    },
+	{
+        "type": "bool",
+        "title": "Use AutoHotkey",
+        "desc": "If ON, will create and run an AutoHotkey script to handle EDCoPilot hotkey presses. Turn 'Hot Key Checking' above to OFF if you switch this one ON, else hot keys will fire twice!",
+        "section": "Toggles",
+        "key": "LaunchAutoHotKey"
+    },
+	{
+        "type": "bool",
+        "title": "Automatically close AutoHotkey",
+        "desc": "If ON, will termminate AutoHotkey when EDCoPilot closes, or when the Use AutoHotkey option is disable",
+        "section": "Toggles",
+        "key": "TerminateAutoHotKey"
+    },
+	{
+        "type": "title",
+        "title": "UI Appearance"
+    },
+	{
+        "type": "options",
+        "title": "Clickable column title color",
+        "desc": "If ON, will show the column name in a different color than rest of column names, for columns that have clickable fields",
+        "section": "UI Appearance",
+        "key": "HighlightClickableCols",
+		"options": ["Dark Blue", "White", "Light Yellow", "None" ]
+    },
+
+	{
+        "type": "bool",
+        "title": "Show system population on Bookmarks panel",
+        "desc": "If ON, will show the population of the system in the System Features column in Bookmarks",
+        "section": "UI Appearance",
+        "key": "ShowPopulation"
+    },
+		
+	{
+        "type": "bool",
+        "title": "Check if route systems in EDSM",
+        "desc": "If ON, will check systems in route to see if known to EDSM. Useful if in remote locations. Keep OFF to avoid unnecessary EDSM calls when not needed",
+        "section": "UI Appearance",
+        "key": "CheckSystemInEDSM"
+    },
+	{
+        "type": "title",
+        "title": "UI Auto Display Behaviour"
+    },
+	{
+        "type": "bool",
+        "title": "Lock display (disables automatic panel swapping)",
+        "desc": "If ON, this will stop ALL of the display options below from automatically switching to different panels when events happen in game.",
+        "section": "UI Appearance",
+        "key": "LockCurrentScreen"
+    },
+	{
+        "type": "options",
+        "title": "Action to take on starting system jump",
+        "desc": "What action to take when you initiate a system jump",
+        "section": "UI Appearance",
+		"key" : "OnFSDJump",
+		"options": ["Display bookmarks", "Display current route", "No display change"]
+    },
+	{
+        "type": "options",
+        "title": "Action to take on system arrival",
+        "desc": "What action to take when you jump into a system",
+        "section": "UI Appearance",
+		"key" : "OnSystemArrival",
+       "options": ["Display system data", "Display bodies data", "No display change"]
+    },
+	{
+        "type": "bool",
+        "title": "Auto-display body information on approach",
+        "desc": "If on, will display the Body Information panel when you approach the body",
+        "section": "UI Appearance",
+        "key": "AutoDisplayBodyInfo"
+    },
+	{
+        "type": "bool",
+        "title": "Auto-display Controls panels",
+        "desc": "If on, will display the Combat Controls panel when you deploy your hardpoints, Flight Controls when you retract, SRV controls when you board SRV, OnFoot controls when you go On Foot",
+        "section": "UI Appearance",
+        "key": "AutoDisplayControls"
+    },
+	{
+        "type": "bool",
+        "title": "Auto-display System Commands panel when manually plotting in game",
+        "desc": "If on, will display the System Commands panel for the selected system when you set as target in either your Galaxy Map or Navigation panel",
+        "section": "UI Appearance",
+        "key": "OpenSystemCommandsOnTargetFSD"
+    },
+	
+	{
+        "type": "bool",
+        "title": "Auto-display Colonisation Progress when viewing Commodities Market",
+        "desc": "If on, will display the Colonisation Progress panel when you open a station's Commodity Market menu",
+        "section": "UI Appearance",
+        "key": "DisplayColonisationProgressOnMarketUpdate"
+    }
+	
+]

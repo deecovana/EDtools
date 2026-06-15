@@ -1,0 +1,793 @@
+[
+  {
+    "header": {
+      "appName": "Coriolis",
+      "appVersion": "4.0",
+      "appURL": "https://coriolis.io/outfit/imperial_corsair?code=A2pptpFJliduspf52b2b2b7e7e7e040404047Y3cp11O1K1K2bxBm33x4F.Iw18RAMVA%3D%3D%3D.Aw18QjBxA%3D%3D%3D.H4sIAAAAAAAAA42SvUvDUBTFT9M2Nk3SNOmHUbF%2BVd2kjhXByVE3obOL4CAdFDp00E0cRXD1D3BwdOjo6ODoIP0LHEVE673eW8ibhCbD4cD55b5773ugKQC%2FeZHRtYg7sAD%2F3APCjrjo0QWaHxmAM7RjyL5I4ckBgu1P5vpdILlFdZOfigTNb%2BZq44e5pnn8kANWutNCZmnWkL2EHJ9U7deEfJOEc7SZQEHvXfLnITPnqW1%2BvRBxPGIu3oTAkrpldavq1tSxTYcJHl9WgI3FfWCm9SWVCnRkKl2J5DtzgH3vS5Pj850JeXFC7tKBybMiKK8DOZVIlxC%2FyN7n45F04qUm%2FdRkiXYNeasr1J6i1plAem0LryVpMUgDldNAYRooouME2urKnrhCDXPFY1Yn4SrtmVonIpYOZOvrcdsydDgUqWnB5kDGZcY%2F3x9o%2F9CY1gIAAA%3D%3D&bn=Corsair%20PFC"
+    },
+    "data": {
+      "Ship": "Corsair",
+      "Modules": [
+        {
+          "Slot": "Armour",
+          "Item": "corsair_armour_grade3",
+          "On": true,
+          "Engineering": {
+            "BlueprintName": "Armour_HeavyDuty",
+            "Level": 5,
+            "Quality": 1,
+            "ExperimentalEffect": "special_armour_chunky",
+            "Modifiers": [
+              {
+                "Label": "ExplosiveResistance",
+                "Value": -0.3699,
+                "OriginalValue": -0.4,
+                "LessIsGood": 0
+              },
+              {
+                "Label": "DefenceModifierHealthMultiplier",
+                "Value": 3.9896,
+                "OriginalValue": 2.5,
+                "LessIsGood": 0
+              },
+              {
+                "Label": "KineticResistance",
+                "Value": -0.1742,
+                "OriginalValue": -0.2,
+                "LessIsGood": 0
+              },
+              {
+                "Label": "Mass",
+                "Value": 81.9,
+                "OriginalValue": 63,
+                "LessIsGood": 1
+              },
+              {
+                "Label": "ThermicResistance",
+                "Value": 0.0215,
+                "OriginalValue": 0,
+                "LessIsGood": 0
+              }
+            ]
+          }
+        },
+        {
+          "Slot": "CargoHatch",
+          "Item": "modularcargobaydoor",
+          "On": true,
+          "Priority": 0
+        },
+        {
+          "Slot": "PowerPlant",
+          "Item": "Int_Powerplant_Size7_Class5",
+          "On": true,
+          "Priority": 0,
+          "Engineering": {
+            "BlueprintName": "PowerPlant_Boosted",
+            "Level": 5,
+            "Quality": 1,
+            "ExperimentalEffect": "special_powerplant_highcharge",
+            "Modifiers": [
+              {
+                "Label": "HeatEfficiency",
+                "Value": 0.5,
+                "OriginalValue": 0.4,
+                "LessIsGood": 1
+              },
+              {
+                "Label": "Integrity",
+                "Value": 108,
+                "OriginalValue": 144,
+                "LessIsGood": 0
+              },
+              {
+                "Label": "PowerCapacity",
+                "Value": 44.1,
+                "OriginalValue": 30,
+                "LessIsGood": 0
+              }
+            ]
+          }
+        },
+        {
+          "Slot": "MainEngines",
+          "Item": "Int_Engine_Size7_Class5",
+          "On": true,
+          "Priority": 0,
+          "Engineering": {
+            "BlueprintName": "Engine_Dirty",
+            "Level": 5,
+            "Quality": 1,
+            "ExperimentalEffect": "special_engine_overloaded",
+            "Modifiers": [
+              {
+                "Label": "Integrity",
+                "Value": 122.4,
+                "OriginalValue": 144,
+                "LessIsGood": 0
+              },
+              {
+                "Label": "EngineOptimalMass",
+                "Value": 1890,
+                "OriginalValue": 2160,
+                "LessIsGood": 0
+              },
+              {
+                "Label": "EngineOptPerformance",
+                "Value": 1.456,
+                "OriginalValue": 1,
+                "LessIsGood": 0
+              },
+              {
+                "Label": "PowerDraw",
+                "Value": 10.2144,
+                "OriginalValue": 9.12,
+                "LessIsGood": 1
+              }
+            ]
+          }
+        },
+        {
+          "Slot": "FrameShiftDrive",
+          "Item": "Int_Hyperdrive_Overcharge_Size5_Class5",
+          "On": true,
+          "Priority": 0,
+          "Engineering": {
+            "BlueprintName": "FSD_LongRange",
+            "Level": 5,
+            "Quality": 1,
+            "ExperimentalEffect": "special_fsd_heavy",
+            "Modifiers": [
+              {
+                "Label": "Integrity",
+                "Value": 93.84,
+                "OriginalValue": 120,
+                "LessIsGood": 0
+              },
+              {
+                "Label": "Mass",
+                "Value": 26,
+                "OriginalValue": 20,
+                "LessIsGood": 1
+              },
+              {
+                "Label": "EngineOptimalMass",
+                "Value": 1894.1,
+                "OriginalValue": 1175,
+                "LessIsGood": 0
+              },
+              {
+                "Label": "PowerDraw",
+                "Value": 0.69,
+                "OriginalValue": 0.6,
+                "LessIsGood": 1
+              }
+            ]
+          }
+        },
+        {
+          "Slot": "LifeSupport",
+          "Item": "Int_LifeSupport_Size4_Class2",
+          "On": true,
+          "Priority": 0,
+          "Engineering": {
+            "BlueprintName": "LifeSupport_LightWeight",
+            "Level": 5,
+            "Quality": 1,
+            "Modifiers": [
+              {
+                "Label": "Integrity",
+                "Value": 36,
+                "OriginalValue": 72,
+                "LessIsGood": 0
+              },
+              {
+                "Label": "Mass",
+                "Value": 0.6,
+                "OriginalValue": 4,
+                "LessIsGood": 1
+              }
+            ]
+          }
+        },
+        {
+          "Slot": "PowerDistributor",
+          "Item": "Int_PowerDistributor_Size7_Class5",
+          "On": true,
+          "Priority": 0,
+          "Engineering": {
+            "BlueprintName": "PowerDistributor_HighFrequency",
+            "Level": 5,
+            "Quality": 1,
+            "ExperimentalEffect": "special_powerdistributor_fast",
+            "Modifiers": [
+              {
+                "Label": "EnginesCapacity",
+                "Value": 37.392,
+                "OriginalValue": 41,
+                "LessIsGood": 0
+              },
+              {
+                "Label": "EnginesRecharge",
+                "Value": 6.032,
+                "OriginalValue": 4,
+                "LessIsGood": 0
+              },
+              {
+                "Label": "SystemsCapacity",
+                "Value": 37.392,
+                "OriginalValue": 41,
+                "LessIsGood": 0
+              },
+              {
+                "Label": "SystemsRecharge",
+                "Value": 6.032,
+                "OriginalValue": 4,
+                "LessIsGood": 0
+              },
+              {
+                "Label": "WeaponsCapacity",
+                "Value": 55.632,
+                "OriginalValue": 61,
+                "LessIsGood": 0
+              },
+              {
+                "Label": "WeaponsRecharge",
+                "Value": 9.1988,
+                "OriginalValue": 6.1,
+                "LessIsGood": 0
+              }
+            ]
+          }
+        },
+        {
+          "Slot": "Radar",
+          "Item": "Int_Sensors_Size6_Class5",
+          "On": true,
+          "Priority": 0,
+          "Engineering": {
+            "BlueprintName": "Sensor_WideAngle",
+            "Level": 5,
+            "Quality": 1,
+            "Modifiers": [
+              {
+                "Label": "PowerDraw",
+                "Value": 2.25,
+                "OriginalValue": 1.5,
+                "LessIsGood": 1
+              },
+              {
+                "Label": "SensorTargetScanAngle",
+                "Value": 90,
+                "OriginalValue": 30,
+                "LessIsGood": 0
+              },
+              {
+                "Label": "ScannerRange",
+                "Value": 5.76,
+                "OriginalValue": 7.2,
+                "LessIsGood": 0
+              }
+            ]
+          }
+        },
+        {
+          "Slot": "FuelTank",
+          "Item": "Int_FuelTank_Size5_Class3",
+          "On": true,
+          "Priority": 0
+        },
+        {
+          "Slot": "LargeHardpoint1",
+          "Item": "Hpt_PlasmaAccelerator_Fixed_Large",
+          "On": true,
+          "Priority": 0,
+          "Engineering": {
+            "BlueprintName": "Weapon_Overcharged",
+            "Level": 5,
+            "Quality": 1,
+            "ExperimentalEffect": "special_weapon_damage",
+            "Modifiers": [
+              {
+                "Label": "Damage",
+                "Value": 146.0334,
+                "OriginalValue": 83.4,
+                "LessIsGood": 0
+              },
+              {
+                "Label": "EnergyPerRegen",
+                "Value": 18.36,
+                "OriginalValue": 13.6,
+                "LessIsGood": 1
+              },
+              {
+                "Label": "EngineHeatRate",
+                "Value": 25.0125,
+                "OriginalValue": 21.75,
+                "LessIsGood": 1
+              }
+            ]
+          }
+        },
+        {
+          "Slot": "LargeHardpoint2",
+          "Item": "Hpt_PlasmaAccelerator_Fixed_Large",
+          "On": true,
+          "Priority": 0,
+          "Engineering": {
+            "BlueprintName": "Weapon_Overcharged",
+            "Level": 5,
+            "Quality": 1,
+            "ExperimentalEffect": "special_weapon_damage",
+            "Modifiers": [
+              {
+                "Label": "Damage",
+                "Value": 146.0334,
+                "OriginalValue": 83.4,
+                "LessIsGood": 0
+              },
+              {
+                "Label": "EnergyPerRegen",
+                "Value": 18.36,
+                "OriginalValue": 13.6,
+                "LessIsGood": 1
+              },
+              {
+                "Label": "EngineHeatRate",
+                "Value": 25.0125,
+                "OriginalValue": 21.75,
+                "LessIsGood": 1
+              }
+            ]
+          }
+        },
+        {
+          "Slot": "LargeHardpoint3",
+          "Item": "Hpt_PlasmaAccelerator_Fixed_Large",
+          "On": true,
+          "Priority": 0,
+          "Engineering": {
+            "BlueprintName": "Weapon_Overcharged",
+            "Level": 5,
+            "Quality": 1,
+            "ExperimentalEffect": "special_weapon_damage",
+            "Modifiers": [
+              {
+                "Label": "Damage",
+                "Value": 146.0334,
+                "OriginalValue": 83.4,
+                "LessIsGood": 0
+              },
+              {
+                "Label": "EnergyPerRegen",
+                "Value": 18.36,
+                "OriginalValue": 13.6,
+                "LessIsGood": 1
+              },
+              {
+                "Label": "EngineHeatRate",
+                "Value": 25.0125,
+                "OriginalValue": 21.75,
+                "LessIsGood": 1
+              }
+            ]
+          }
+        },
+        {
+          "Slot": "MediumHardpoint1",
+          "Item": "Hpt_Slugshot_Gimbal_Medium",
+          "On": true,
+          "Priority": 0,
+          "Engineering": {
+            "BlueprintName": "Weapon_HighCapacity",
+            "Level": 5,
+            "Quality": 1,
+            "ExperimentalEffect": "special_corrosive_shell",
+            "Modifiers": [
+              {
+                "Label": "AmmoMaximum",
+                "Value": 288,
+                "OriginalValue": 180,
+                "LessIsGood": 0
+              },
+              {
+                "Label": "AmmoClipSize",
+                "Value": 6,
+                "OriginalValue": 3,
+                "LessIsGood": 0
+              },
+              {
+                "Label": "Mass",
+                "Value": 6.4,
+                "OriginalValue": 4,
+                "LessIsGood": 1
+              },
+              {
+                "Label": "PowerDraw",
+                "Value": 1.236,
+                "OriginalValue": 1.03,
+                "LessIsGood": 1
+              },
+              {
+                "Label": "RateOfFire",
+                "Value": 5.847953,
+                "OriginalValue": 5.263158,
+                "LessIsGood": 1
+              }
+            ]
+          }
+        },
+        {
+          "Slot": "MediumHardpoint2",
+          "Item": "Hpt_Slugshot_Gimbal_Medium",
+          "On": true,
+          "Priority": 0,
+          "Engineering": {
+            "BlueprintName": "Weapon_HighCapacity",
+            "Level": 5,
+            "Quality": 1,
+            "ExperimentalEffect": "special_corrosive_shell",
+            "Modifiers": [
+              {
+                "Label": "AmmoMaximum",
+                "Value": 288,
+                "OriginalValue": 180,
+                "LessIsGood": 0
+              },
+              {
+                "Label": "AmmoClipSize",
+                "Value": 6,
+                "OriginalValue": 3,
+                "LessIsGood": 0
+              },
+              {
+                "Label": "Mass",
+                "Value": 6.4,
+                "OriginalValue": 4,
+                "LessIsGood": 1
+              },
+              {
+                "Label": "PowerDraw",
+                "Value": 1.236,
+                "OriginalValue": 1.03,
+                "LessIsGood": 1
+              },
+              {
+                "Label": "RateOfFire",
+                "Value": 5.847953,
+                "OriginalValue": 5.263158,
+                "LessIsGood": 1
+              }
+            ]
+          }
+        },
+        {
+          "Slot": "MediumHardpoint3",
+          "Item": "Hpt_Slugshot_Gimbal_Medium",
+          "On": true,
+          "Priority": 0,
+          "Engineering": {
+            "BlueprintName": "Weapon_HighCapacity",
+            "Level": 5,
+            "Quality": 1,
+            "ExperimentalEffect": "special_corrosive_shell",
+            "Modifiers": [
+              {
+                "Label": "AmmoMaximum",
+                "Value": 288,
+                "OriginalValue": 180,
+                "LessIsGood": 0
+              },
+              {
+                "Label": "AmmoClipSize",
+                "Value": 6,
+                "OriginalValue": 3,
+                "LessIsGood": 0
+              },
+              {
+                "Label": "Mass",
+                "Value": 6.4,
+                "OriginalValue": 4,
+                "LessIsGood": 1
+              },
+              {
+                "Label": "PowerDraw",
+                "Value": 1.236,
+                "OriginalValue": 1.03,
+                "LessIsGood": 1
+              },
+              {
+                "Label": "RateOfFire",
+                "Value": 5.847953,
+                "OriginalValue": 5.263158,
+                "LessIsGood": 1
+              }
+            ]
+          }
+        },
+        {
+          "Slot": "TinyHardpoint1",
+          "Item": "Hpt_ShieldBooster_Size0_Class5",
+          "On": true,
+          "Priority": 0,
+          "Engineering": {
+            "BlueprintName": "ShieldBooster_HeavyDuty",
+            "Level": 5,
+            "Quality": 1,
+            "ExperimentalEffect": "special_shieldbooster_thermic",
+            "Modifiers": [
+              {
+                "Label": "Integrity",
+                "Value": 55.2,
+                "OriginalValue": 48,
+                "LessIsGood": 0
+              },
+              {
+                "Label": "Mass",
+                "Value": 14,
+                "OriginalValue": 3.5,
+                "LessIsGood": 1
+              },
+              {
+                "Label": "PowerDraw",
+                "Value": 1.5,
+                "OriginalValue": 1.2,
+                "LessIsGood": 1
+              },
+              {
+                "Label": "DefenceModifierShieldMultiplier",
+                "Value": 0.63944,
+                "OriginalValue": 0.2,
+                "LessIsGood": 0
+              }
+            ]
+          }
+        },
+        {
+          "Slot": "TinyHardpoint2",
+          "Item": "Hpt_ShieldBooster_Size0_Class5",
+          "On": true,
+          "Priority": 0,
+          "Engineering": {
+            "BlueprintName": "ShieldBooster_HeavyDuty",
+            "Level": 5,
+            "Quality": 1,
+            "ExperimentalEffect": "special_shieldbooster_thermic",
+            "Modifiers": [
+              {
+                "Label": "Integrity",
+                "Value": 55.2,
+                "OriginalValue": 48,
+                "LessIsGood": 0
+              },
+              {
+                "Label": "Mass",
+                "Value": 14,
+                "OriginalValue": 3.5,
+                "LessIsGood": 1
+              },
+              {
+                "Label": "PowerDraw",
+                "Value": 1.5,
+                "OriginalValue": 1.2,
+                "LessIsGood": 1
+              },
+              {
+                "Label": "DefenceModifierShieldMultiplier",
+                "Value": 0.63944,
+                "OriginalValue": 0.2,
+                "LessIsGood": 0
+              }
+            ]
+          }
+        },
+        {
+          "Slot": "TinyHardpoint3",
+          "Item": "Hpt_ShieldBooster_Size0_Class5",
+          "On": true,
+          "Priority": 0,
+          "Engineering": {
+            "BlueprintName": "ShieldBooster_HeavyDuty",
+            "Level": 5,
+            "Quality": 1,
+            "ExperimentalEffect": "special_shieldbooster_thermic",
+            "Modifiers": [
+              {
+                "Label": "Integrity",
+                "Value": 55.2,
+                "OriginalValue": 48,
+                "LessIsGood": 0
+              },
+              {
+                "Label": "Mass",
+                "Value": 14,
+                "OriginalValue": 3.5,
+                "LessIsGood": 1
+              },
+              {
+                "Label": "PowerDraw",
+                "Value": 1.5,
+                "OriginalValue": 1.2,
+                "LessIsGood": 1
+              },
+              {
+                "Label": "DefenceModifierShieldMultiplier",
+                "Value": 0.63944,
+                "OriginalValue": 0.2,
+                "LessIsGood": 0
+              }
+            ]
+          }
+        },
+        {
+          "Slot": "TinyHardpoint4",
+          "Item": "Hpt_ShieldBooster_Size0_Class5",
+          "On": true,
+          "Priority": 0,
+          "Engineering": {
+            "BlueprintName": "ShieldBooster_HeavyDuty",
+            "Level": 5,
+            "Quality": 1,
+            "ExperimentalEffect": "special_shieldbooster_thermic",
+            "Modifiers": [
+              {
+                "Label": "Integrity",
+                "Value": 55.2,
+                "OriginalValue": 48,
+                "LessIsGood": 0
+              },
+              {
+                "Label": "Mass",
+                "Value": 14,
+                "OriginalValue": 3.5,
+                "LessIsGood": 1
+              },
+              {
+                "Label": "PowerDraw",
+                "Value": 1.5,
+                "OriginalValue": 1.2,
+                "LessIsGood": 1
+              },
+              {
+                "Label": "DefenceModifierShieldMultiplier",
+                "Value": 0.63944,
+                "OriginalValue": 0.2,
+                "LessIsGood": 0
+              }
+            ]
+          }
+        },
+        {
+          "Slot": "Slot01_Size6",
+          "Item": "Int_CargoRack_Size6_Class1",
+          "On": true,
+          "Priority": 0,
+          "Engineering": {
+            "BlueprintName": "CargoRack_IncreasedCapacity",
+            "Level": 5,
+            "Quality": 1,
+            "Modifiers": [
+              {
+                "Label": "CargoCapacity",
+                "Value": 86.016,
+                "OriginalValue": 64,
+                "LessIsGood": 0
+              }
+            ]
+          }
+        },
+        {
+          "Slot": "Slot02_Size6",
+          "Item": "Int_FuelScoop_Size6_Class5",
+          "On": true,
+          "Priority": 0,
+          "Engineering": {
+            "BlueprintName": "FuelScoop_Shielded",
+            "Level": 5,
+            "Quality": 1,
+            "Modifiers": [
+              {
+                "Label": "PowerDraw",
+                "Value": 1.66,
+                "OriginalValue": 0.83,
+                "LessIsGood": 1
+              }
+            ]
+          }
+        },
+        {
+          "Slot": "Slot03_Size6",
+          "Item": "Int_ShieldGenerator_Size6_Class5_Strong",
+          "On": true,
+          "Priority": 0,
+          "Engineering": {
+            "BlueprintName": "ShieldGenerator_Reinforced",
+            "Level": 5,
+            "Quality": 1,
+            "ExperimentalEffect": "special_shield_thermic",
+            "Modifiers": [
+              {
+                "Label": "BrokenRegenRate",
+                "Value": 2.88,
+                "OriginalValue": 3.2,
+                "LessIsGood": 0
+              },
+              {
+                "Label": "EnergyPerRegen",
+                "Value": 0.672,
+                "OriginalValue": 0.6,
+                "LessIsGood": 1
+              },
+              {
+                "Label": "ExplosiveResistance",
+                "Value": 0.5825,
+                "OriginalValue": 0.5,
+                "LessIsGood": 0
+              },
+              {
+                "Label": "KineticResistance",
+                "Value": 0.499,
+                "OriginalValue": 0.4,
+                "LessIsGood": 0
+              },
+              {
+                "Label": "EngineOptPerformance",
+                "Value": 2.0079,
+                "OriginalValue": 1.5,
+                "LessIsGood": 0
+              },
+              {
+                "Label": "ThermicResistance",
+                "Value": 0.0782,
+                "OriginalValue": -0.2,
+                "LessIsGood": 0
+              }
+            ]
+          }
+        },
+        {
+          "Slot": "Slot04_Size5",
+          "Item": "Int_GuardianFSDBooster_Size5",
+          "On": true,
+          "Priority": 1
+        },
+        {
+          "Slot": "Slot05_Size5",
+          "Item": "Int_GuardianShieldReinforcement_Size5_Class2",
+          "On": true,
+          "Priority": 0
+        },
+        {
+          "Slot": "Slot06_Size5",
+          "Item": "Int_GuardianShieldReinforcement_Size5_Class2",
+          "On": true,
+          "Priority": 0
+        },
+        {
+          "Slot": "Slot07_Size4",
+          "Item": "Int_HullReinforcement_Size4_Class2",
+          "On": true,
+          "Priority": 0
+        },
+        {
+          "Slot": "Slot08_Size3",
+          "Item": "Int_MultiDroneControl_Operations_Size3_Class3",
+          "On": true,
+          "Priority": 0
+        },
+        {
+          "Slot": "Slot09_Size2",
+          "Item": "Int_ModuleReinforcement_Size2_Class2",
+          "On": true,
+          "Priority": 0
+        },
+        {
+          "Slot": "Slot10_Size1",
+          "Item": "Int_DockingComputer_Advanced",
+          "On": true,
+          "Priority": 0
+        }
+      ]
+    }
+  }
+]

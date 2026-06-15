@@ -1,0 +1,105 @@
+[
+	{
+        "type": "title",
+        "title": "UI Colors (requires restart after making changes)"
+    },
+	{
+        "type": "hexcolor",
+        "title": "Divider bar color",
+        "desc": "Color of the thin horizontal lines at top and bottom of panel. Default is ff8000 (orange)",
+        "section": "UI Colors",
+        "key": "dividerColor"
+    },
+	{
+        "type": "hexcolor",
+        "title": "Icon background color",
+        "desc": "Background color for (unselected) icons and panel tabs. Default is 0d0d09 (dark brown)",
+        "section": "UI Colors",
+        "key": "iconBackgroundColor"
+    },
+	{
+        "type": "hexcolor",
+        "title": "Icon foreground color",
+        "desc": "Foreground color of (unselected) icons and panel tabs. Default is ff8000 (orange).",
+        "section": "UI Colors",
+        "key": "iconForegroundColor"
+    },
+	{
+        "type": "hexcolor",
+        "title": "Canvas background color",
+        "desc": "The overall background color of the panel. Default is 000000 (black).",
+        "section": "UI Colors",
+        "key": "canvasBackgroundColor"
+    },
+	{
+        "type": "hexcolor",
+        "title": "Table heading background color",
+        "desc": "Background color of table headings.  Default is ff8000 (orange)",
+        "section": "UI Colors",
+        "key": "tableheadingBackgroundColor"
+    },
+	{
+        "type": "hexcolor",
+        "title": "Table heading foreground color",
+        "desc": "Foreground color of table headings. Default is 000000 (black)",
+        "section": "UI Colors",
+        "key": "tableheadingForegroundColor"
+    },
+
+	{
+        "type": "hexcolor",
+        "title": "Panel title text color",
+        "desc": "Color of the panel name text. Default is ffffff (white)",
+        "section": "UI Colors",
+        "key": "titleForegroundColor"
+    },
+	{
+        "type": "hexcolor",
+        "title": "Captions text color",
+        "desc": "Color of the any captions / directions under the panel title. Default is ffffff (white)",
+        "section": "UI Colors",
+        "key": "captionsColor"
+    },
+	{
+        "type": "hexcolor",
+        "title": "Panel text color",
+        "desc": "Normal color of standard text on a display panel. Default is ffffff (white)",
+        "section": "UI Colors",
+        "key": "normalTextColor"
+    },
+	{
+        "type": "hexcolor",
+        "title": "Lowlight color",
+        "desc": "Lowlighted text on a display panel. Default is bfbfbf (Grey)",
+        "section": "UI Colors",
+        "key": "lolightTextColor"
+    },
+	{
+        "type": "hexcolor",
+        "title": "Highlight color 1",
+        "desc": "Highlighted text on a display panel. Default is ffffb2 (pale yellow)",
+        "section": "UI Colors",
+        "key": "highlight1Color"
+    },
+	{
+        "type": "hexcolor",
+        "title": "Highlight color 2",
+        "desc": "Highlighted text on a display panel. Default is 00aaff (blue)",
+        "section": "UI Colors",
+        "key": "highlight2Color"
+    },
+	{
+        "type": "hexcolor",
+        "title": "Warning color",
+        "desc": "Color of warning text. Default is fc4c02 (orange-red)",
+        "section": "UI Colors",
+        "key": "warningColor"
+    },
+	{
+        "type": "hexcolor",
+        "title": "Last spoken text color",
+        "desc": "Color of text in the Last Spoken box at the bottom of the UI. Default is ffffb2 (green)",
+        "section": "UI Colors",
+        "key": "lastSpokenColor"
+    }
+]

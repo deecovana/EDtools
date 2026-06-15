@@ -1,0 +1,3420 @@
+"""Preferences management and Tk UI for the Modern Overlay plugin."""
+from __future__ import annotations
+
+import copy
+import json
+import logging
+import math
+import re
+import tkinter as tk
+import webbrowser
+from dataclasses import dataclass, field
+from pathlib import Path
+from typing import Any, Callable, Dict, Mapping, Optional, Sequence, Tuple
+
+import overlay_plugin.preferences_profile_helpers as profile_pref_helpers
+
+from overlay_plugin.standalone_support import (
+    STANDALONE_MODE_LABEL,
+    STANDALONE_MODE_PREF_KEY,
+    STANDALONE_MODE_TOOLTIP,
+    standalone_mode_supported,
+)
+
+try:
+    import config as _edmc_config_module  # type: ignore
+    from config import config as EDMC_CONFIG  # type: ignore
+    from config import number_from_string as _edmc_number_from_string  # type: ignore
+except Exception:  # pragma: no cover - running outside EDMC
+    _edmc_config_module = None
+    EDMC_CONFIG = None
+    _edmc_number_from_string = None
+
+try:  # pragma: no cover - prefer package-relative import when available
+    from ..version import __version__ as MODERN_OVERLAY_VERSION  # type: ignore
+except Exception:  # pragma: no cover - running outside package layout
+    try:
+        from version import __version__ as MODERN_OVERLAY_VERSION  # type: ignore
+    except Exception:
+        MODERN_OVERLAY_VERSION = ""
+
+
+PREFERENCES_FILE = "overlay_settings.json"
+STATUS_BASE_MARGIN = 20
+LEGACY_STATUS_SLOT_MARGIN = 17
+STATUS_GUTTER_MAX = 500
+STATUS_GUTTER_DEFAULT = 50
+ROW_PAD = (6, 0)
+LATEST_RELEASE_URL = "https://github.com/SweetJonnySauce/EDMC-ModernOverlay/releases/latest"
+OVERLAY_ID_PREFIX = "EDMCModernOverlay-"
+CONFIG_PREFIX = "edmc_modern_overlay."
+CONFIG_STATE_VERSION = 1
+CONFIG_VERSION_KEY = f"{CONFIG_PREFIX}state_version"
+DEV_MODE_PREF_KEY = "dev_mode"
+CLIENT_LOG_RETENTION_MIN = 1
+CLIENT_LOG_RETENTION_MAX = 20
+DEFAULT_CLIENT_LOG_RETENTION = 5
+TOGGLE_ARGUMENT_DEFAULT = "t"
+TEST_OVERLAY_TTL_SECONDS = 10
+PHYSICAL_CLAMP_SCALE_MIN = 0.5
+PHYSICAL_CLAMP_SCALE_MAX = 3.0
+FONT_BOUND_MIN = 6.0
+FONT_BOUND_MAX = 32.0
+FONT_STEP_MIN = 0
+FONT_STEP_MAX = 10
+SPAM_WINDOW_MIN = 0.1
+SPAM_WINDOW_MAX = 60.0
+SPAM_MAX_PAYLOADS_MIN = 1
+SPAM_MAX_PAYLOADS_MAX = 5000
+SPAM_WARN_COOLDOWN_MIN = 0.0
+SPAM_WARN_COOLDOWN_MAX = 600.0
+PREFERENCES_TAB_OVERLAY = "Overlay"
+PREFERENCES_TAB_CONTROLLER = "Controller"
+PREFERENCES_TAB_PROFILES = "Profiles"
+PREFERENCES_TAB_EXPERIMENTAL = "Experimental"
+CONTROLLER_TAB_CONTROL_LAUNCH_BUTTON = "launch_controller"
+CONTROLLER_TAB_CONTROL_LAUNCH_COMMAND = "launch_command"
+CONTROLLER_TAB_CONTROL_TOGGLE_ARGUMENT = "toggle_argument"
+DEFAULT_PROFILE_NAME = "Default"
+PROFILE_STATUS_POLL_INTERVAL_MS = 750
+DEFAULT_DEBUG_OVERLAY_CORNER = "SE"
+DEFAULT_GRIDLINES_ENABLED = True
+DEFAULT_FORCE_XWAYLAND = True
+DEFAULT_MAX_FONT_POINT = 12.0
+DEFAULT_LEGACY_FONT_STEP = 4
+DEFAULT_TITLE_BAR_HEIGHT = 30
+DEFAULT_SCALE_MODE = "fill"
+DEFAULT_PAYLOAD_NUDGE_GUTTER = 20
+DEFAULT_STATUS_MESSAGE_GUTTER = 20
+DEFAULT_LOG_PAYLOADS = True
+CONFIG_BACKED_PREFERENCE_NAMES = (
+    DEV_MODE_PREF_KEY,
+    "overlay_opacity",
+    "global_payload_opacity",
+    "show_connection_status",
+    "debug_overlay_corner",
+    "client_log_retention",
+    "gridlines_enabled",
+    "gridline_spacing",
+    "force_render",
+    STANDALONE_MODE_PREF_KEY,
+    "force_xwayland",
+    "physical_clamp_enabled",
+    "physical_clamp_overrides",
+    "show_debug_overlay",
+    "min_font_point",
+    "max_font_point",
+    "legacy_font_step",
+    "title_bar_enabled",
+    "title_bar_height",
+    "cycle_payload_ids",
+    "copy_payload_id_on_cycle",
+    "scale_mode",
+    "nudge_overflow_payloads",
+    "payload_nudge_gutter",
+    "status_message_gutter",
+    "log_payloads",
+    "payload_log_delay_seconds",
+    "controller_launch_command",
+    "controller_toggle_argument",
+    "last_on_payload_opacity",
+)
+
+LOGGER = logging.getLogger(__name__)
+
+
+@dataclass(frozen=True)
+class TroubleshootingPanelState:
+    diagnostics_enabled: bool = False
+    capture_enabled: bool = False
+    log_retention_override: Optional[int] = None
+    exclude_plugins: Tuple[str, ...] = ()
+    payload_spam_enabled: bool = False
+    payload_spam_window_seconds: float = 2.0
+    payload_spam_max_payloads: int = 200
+    payload_spam_warn_cooldown_seconds: float = 30.0
+
+
+def _preferences_tab_order() -> tuple[str, str, str, str]:
+    return (
+        PREFERENCES_TAB_OVERLAY,
+        PREFERENCES_TAB_CONTROLLER,
+        PREFERENCES_TAB_PROFILES,
+        PREFERENCES_TAB_EXPERIMENTAL,
+    )
+
+
+def _controller_tab_control_order() -> tuple[str, str, str]:
+    return (
+        CONTROLLER_TAB_CONTROL_LAUNCH_BUTTON,
+        CONTROLLER_TAB_CONTROL_LAUNCH_COMMAND,
+        CONTROLLER_TAB_CONTROL_TOGGLE_ARGUMENT,
+    )
+
+
+def _config_getter(name: str) -> Optional[Callable[..., Any]]:
+    if _edmc_config_module is not None:
+        getter = getattr(_edmc_config_module, name, None)
+        if callable(getter):
+            return getter
+    if EDMC_CONFIG is not None:
+        getter = getattr(EDMC_CONFIG, name, None)
+        if callable(getter):
+            return getter
+    return None
+
+
+def _config_available() -> bool:
+    return _config_getter("set") is not None
+
+
+def _config_key(name: str) -> str:
+    return f"{CONFIG_PREFIX}{name}"
+
+
+def _config_call(getter: Callable[..., Any], key: str, default: Any) -> Any:
+    try:
+        return getter(key, default)
+    except TypeError:
+        try:
+            return getter(key)
+        except Exception:
+            return default
+    except Exception:
+        return default
+
+
+def _config_get_raw(key: str, default: Any) -> Any:
+    if not _config_available():
+        return default
+    getter = _config_getter("get")
+    if getter is not None:
+        value = _config_call(getter, key, default)
+    else:
+        value = getattr(EDMC_CONFIG, key, default) if EDMC_CONFIG is not None else default
+    return default if value is None else value
+
+
+def _config_has_value(key: str) -> bool:
+    if not _config_available():
+        return False
+    sentinel = object()
+    return _config_get_raw(key, sentinel) is not sentinel
+
+
+def _config_get_value(name: str, key: str, default: Any) -> Any:
+    getter = _config_getter(name)
+    if getter is None:
+        return _config_get_raw(key, default)
+    return _config_call(getter, key, default)
+
+
+def _config_get_str(key: str, default: str) -> str:
+    value = _config_get_value("get_str", key, default)
+    if value is None:
+        return default
+    try:
+        return str(value)
+    except Exception:
+        return default
+
+
+def _config_get_bool(key: str, default: bool) -> bool:
+    value = _config_get_value("get_bool", key, default)
+    return _coerce_bool(value, default)
+
+
+def _config_get_int(key: str, default: int) -> int:
+    value = _config_get_value("get_int", key, default)
+    return _coerce_int(value, default)
+
+
+def _config_get_list(key: str, default: Sequence[Any]) -> list[Any]:
+    value = _config_get_value("get_list", key, default)
+    if isinstance(value, list):
+        return value
+    return list(default)
+
+
+def _config_set_value(key: str, value: Any) -> None:
+    if not _config_available():
+        return
+    setter = _config_getter("set")
+    if callable(setter):
+        try:
+            setter(key, value)
+            return
+        except (TypeError, ValueError):
+            try:
+                setter(key, str(value))
+                return
+            except Exception:
+                pass
+        except Exception:
+            pass
+    try:
+        if EDMC_CONFIG is not None:
+            setattr(EDMC_CONFIG, key, value)
+    except Exception:
+        LOGGER.debug("Failed to persist %s into EDMC config", key)
+
+
+def _parse_number(value: Any) -> Optional[float]:
+    if value is None:
+        return None
+    if isinstance(value, (int, float)):
+        return float(value)
+    try:
+        text = str(value).strip()
+    except Exception:
+        return None
+    if not text:
+        return None
+    if _edmc_number_from_string is not None:
+        try:
+            return float(_edmc_number_from_string(text))
+        except Exception:
+            pass
+    try:
+        return float(text)
+    except Exception:
+        return None
+
+
+def _config_get_locale_number(key: str, default: float) -> Optional[float]:
+    raw = _config_get_str(key, str(default))
+    return _parse_number(raw)
+
+
+def _coerce_bool(value: Any, default: bool) -> bool:
+    if isinstance(value, bool):
+        return value
+    if isinstance(value, (int, float)):
+        return bool(value)
+    if isinstance(value, str):
+        token = value.strip().lower()
+        if token in {"1", "true", "yes", "on"}:
+            return True
+        if token in {"0", "false", "no", "off"}:
+            return False
+    return default
+
+
+def _coerce_int(value: Any, default: int, *, minimum: Optional[int] = None, maximum: Optional[int] = None) -> int:
+    try:
+        numeric = int(value)
+    except (TypeError, ValueError):
+        numeric = default
+    if minimum is not None:
+        numeric = max(minimum, numeric)
+    if maximum is not None:
+        numeric = min(maximum, numeric)
+    return numeric
+
+
+def _coerce_float(value: Any, default: float, *, minimum: Optional[float] = None, maximum: Optional[float] = None) -> float:
+    try:
+        numeric = float(value)
+    except (TypeError, ValueError):
+        numeric = default
+    if minimum is not None:
+        numeric = max(minimum, numeric)
+    if maximum is not None:
+        numeric = min(maximum, numeric)
+    return numeric
+
+
+def _validate_font_bound(value: Any) -> Optional[float]:
+    try:
+        numeric = float(value)
+    except (TypeError, ValueError):
+        return None
+    if numeric < FONT_BOUND_MIN or numeric > FONT_BOUND_MAX:
+        return None
+    return numeric
+
+
+def _validate_font_step(value: Any) -> Optional[int]:
+    try:
+        numeric = int(value)
+    except (TypeError, ValueError):
+        return None
+    if numeric < FONT_STEP_MIN or numeric > FONT_STEP_MAX:
+        return None
+    return numeric
+
+
+def _apply_font_bounds_edit(
+    current_min: float,
+    current_max: float,
+    edited_field: str,
+    edited_value: Any,
+) -> tuple[float, float, bool]:
+    """Validate and apply a font-bound edit, returning updated bounds + acceptance."""
+    candidate = _validate_font_bound(edited_value)
+    if candidate is None:
+        return current_min, current_max, False
+    if edited_field == "min":
+        if candidate > current_max:
+            return current_min, current_max, False
+        return candidate, current_max, True
+    if edited_field == "max":
+        if candidate < current_min:
+            return current_min, current_max, False
+        return current_min, candidate, True
+    return current_min, current_max, False
+
+
+def _apply_font_step_edit(current_step: int, edited_value: Any) -> tuple[int, bool]:
+    """Validate and apply a legacy font step edit, returning value + acceptance."""
+    candidate = _validate_font_step(edited_value)
+    if candidate is None:
+        return current_step, False
+    return candidate, True
+
+
+def _coerce_str(
+    value: Any,
+    default: str,
+    *,
+    allowed: Optional[set[str]] = None,
+    transform: Callable[[str], str] | None = None,
+) -> str:
+    if value is None:
+        return default
+    try:
+        text = str(value)
+    except Exception:
+        return default
+    text = text.strip()
+    if transform:
+        text = transform(text)
+    if allowed and text not in allowed:
+        return default
+    return text or default
+
+
+def _format_physical_clamp_overrides(overrides: Mapping[str, float]) -> str:
+    """Convert the override map into a stable, user-friendly string."""
+    if not overrides:
+        return ""
+    tokens: list[str] = []
+    for name in sorted(overrides.keys()):
+        try:
+            tokens.append(f"{name}={float(overrides[name]):g}")
+        except Exception:
+            continue
+    return ", ".join(tokens)
+
+
+def _attach_tooltip(widget, text: str, *, nb_module=None, delay_ms: int = 500) -> None:
+    if not text:
+        return
+    if nb_module is not None:
+        tooltip_factory = (
+            getattr(nb_module, "ToolTip", None)
+            or getattr(nb_module, "Tooltip", None)
+            or getattr(nb_module, "CreateToolTip", None)
+        )
+        if tooltip_factory:
+            try:
+                tooltip_factory(widget, text)
+                return
+            except Exception:
+                LOGGER.debug("Failed to attach notebook tooltip helper", exc_info=True)
+    tip_window = None
+    after_id = None
+
+    def hide_tip() -> None:
+        nonlocal tip_window, after_id
+        if after_id is not None:
+            try:
+                widget.after_cancel(after_id)
+            except Exception:
+                pass
+            after_id = None
+        if tip_window is not None:
+            try:
+                tip_window.destroy()
+            except Exception:
+                pass
+            tip_window = None
+
+    def show_tip() -> None:
+        nonlocal tip_window
+        if tip_window is not None:
+            return
+        try:
+            x = widget.winfo_rootx() + 16
+            y = widget.winfo_rooty() + widget.winfo_height() + 8
+        except Exception:
+            return
+        tip_window = tk.Toplevel(widget)
+        tip_window.wm_overrideredirect(True)
+        try:
+            tip_window.attributes("-topmost", True)
+        except Exception:
+            pass
+        label = tk.Label(
+            tip_window,
+            text=text,
+            background="#ffffe0",
+            relief="solid",
+            borderwidth=1,
+            justify="left",
+        )
+        label.pack(ipadx=6, ipady=3)
+        tip_window.wm_geometry(f"+{x}+{y}")
+
+    def schedule_tip(_event=None) -> None:
+        nonlocal after_id
+        hide_tip()
+        after_id = widget.after(delay_ms, show_tip)
+
+    widget.bind("<Enter>", schedule_tip, add="+")
+    widget.bind("<Leave>", lambda _event: hide_tip(), add="+")
+    widget.bind("<ButtonPress>", lambda _event: hide_tip(), add="+")
+
+
+def _coerce_physical_clamp_overrides(
+    value: Any,
+    default: Optional[Mapping[str, float]],
+    *,
+    allow_empty: bool = False,
+    errors: Optional[list[str]] = None,
+) -> Dict[str, float]:
+    """Parse per-monitor clamp overrides from mappings or strings.
+
+    Accepts a mapping (preferred) or a comma-separated string of name=scale entries.
+    Scales are clamped to a safe range to avoid destructive values.
+    """
+
+    def _record(message: str) -> None:
+        if errors is not None:
+            errors.append(message)
+
+    def _normalise_map(raw_map: Mapping[str, Any]) -> Dict[str, float]:
+        overrides: Dict[str, float] = {}
+        for raw_name, raw_scale in raw_map.items():
+            try:
+                name = str(raw_name).strip()
+            except Exception:
+                _record(f"Skipping override with invalid screen name {raw_name!r}")
+                continue
+            if not name:
+                _record("Skipping override with empty screen name")
+                continue
+            try:
+                scale = float(raw_scale)
+            except (TypeError, ValueError):
+                _record(f"Skipping override for {name}: invalid scale {raw_scale!r}")
+                continue
+            if not math.isfinite(scale) or scale <= 0:
+                _record(f"Skipping override for {name}: non-finite or non-positive scale {raw_scale!r}")
+                continue
+            clamped = max(PHYSICAL_CLAMP_SCALE_MIN, min(PHYSICAL_CLAMP_SCALE_MAX, scale))
+            if not math.isclose(clamped, scale):
+                _record(f"Clamped override for {name} to {clamped:g}")
+            overrides[name] = clamped
+        return overrides
+
+    def _parse_string(text: str) -> Dict[str, Any]:
+        try:
+            parsed_json = json.loads(text)
+        except Exception:
+            parsed_json = None
+        if isinstance(parsed_json, Mapping):
+            return dict(parsed_json)
+        raw_map: Dict[str, Any] = {}
+        for token in text.split(","):
+            if not token:
+                continue
+            if "=" not in token:
+                if token.strip():
+                    _record(f"Skipping override '{token.strip()}': expected name=scale")
+                continue
+            name, _, raw_scale = token.partition("=")
+            raw_map[name] = raw_scale
+        return raw_map
+
+    base_default: Dict[str, float] = dict(default or {})
+    if value is None:
+        return base_default
+    if isinstance(value, Mapping):
+        overrides = _normalise_map(value)
+    elif isinstance(value, str):
+        text = value.strip()
+        if not text:
+            return {} if allow_empty else base_default
+        overrides = _normalise_map(_parse_string(text))
+    else:
+        return base_default
+
+    if overrides:
+        return overrides
+    return {} if allow_empty else base_default
+
+
+def _normalise_launch_command(value: str) -> str:
+    text = (value or "").strip()
+    if not text:
+        return "!ovr"
+    if not text.startswith("!"):
+        text = "!" + text
+    return text
+
+
+_TOGGLE_ARGUMENT_RE = re.compile(r"^[A-Za-z0-9]+$")
+
+
+def _parse_toggle_argument(value: Any) -> tuple[str, Optional[str], bool]:
+    try:
+        text = str(value or "")
+    except Exception:
+        return "", "Toggle argument must be text.", False
+    text = text.strip()
+    if not text:
+        return "", None, True
+    if not _TOGGLE_ARGUMENT_RE.fullmatch(text):
+        return "", "Toggle argument must be alphanumeric (A-Z, a-z, 0-9).", False
+    if text.isdigit():
+        return "", "Toggle argument cannot be numeric-only.", False
+    return text, None, False
+
+
+def _coerce_toggle_argument(value: Any, default: str) -> str:
+    text, error, is_empty = _parse_toggle_argument(value)
+    if is_empty or error:
+        return default
+    return text
+
+
+def _validate_toggle_argument(value: Any, *, default: str, previous: str) -> tuple[str, Optional[str]]:
+    text, error, is_empty = _parse_toggle_argument(value)
+    if is_empty:
+        return default, None
+    if error:
+        return previous, error
+    return text, None
+
+
+def _coerce_last_on_payload_opacity(value: Any, default: int) -> int:
+    try:
+        numeric = int(value)
+    except (TypeError, ValueError):
+        return default
+    if numeric <= 0 or numeric > 100:
+        return default
+    return numeric
+
+
+@dataclass
+class Preferences:
+    """Simple JSON-backed preferences store."""
+
+    plugin_dir: Path
+    dev_mode: bool = False
+    overlay_opacity: float = 0.0
+    global_payload_opacity: int = 100
+    show_connection_status: bool = False
+    debug_overlay_corner: str = DEFAULT_DEBUG_OVERLAY_CORNER
+    client_log_retention: int = DEFAULT_CLIENT_LOG_RETENTION
+    gridlines_enabled: bool = DEFAULT_GRIDLINES_ENABLED
+    gridline_spacing: int = 120
+    force_render: bool = False
+    standalone_mode: bool = False
+    force_xwayland: bool = DEFAULT_FORCE_XWAYLAND
+    physical_clamp_enabled: bool = False
+    physical_clamp_overrides: Dict[str, float] = field(default_factory=dict)
+    show_debug_overlay: bool = False
+    min_font_point: float = 6.0
+    max_font_point: float = DEFAULT_MAX_FONT_POINT
+    legacy_font_step: int = DEFAULT_LEGACY_FONT_STEP
+    title_bar_enabled: bool = False
+    title_bar_height: int = DEFAULT_TITLE_BAR_HEIGHT
+    cycle_payload_ids: bool = False
+    copy_payload_id_on_cycle: bool = False
+    scale_mode: str = DEFAULT_SCALE_MODE
+    nudge_overflow_payloads: bool = False
+    payload_nudge_gutter: int = DEFAULT_PAYLOAD_NUDGE_GUTTER
+    status_message_gutter: int = DEFAULT_STATUS_MESSAGE_GUTTER
+    log_payloads: bool = DEFAULT_LOG_PAYLOADS
+    payload_log_delay_seconds: float = 0.5
+    controller_launch_command: str = "!ovr"
+    controller_toggle_argument: str = TOGGLE_ARGUMENT_DEFAULT
+    last_on_payload_opacity: int = 100
+
+    def __post_init__(self) -> None:
+        self.plugin_dir = Path(self.plugin_dir)
+        self._path = self.plugin_dir / PREFERENCES_FILE
+        self._config_enabled = _config_available()
+        if self._config_enabled:
+            self._maybe_import_legacy_json()
+            self._load_from_config()
+            # Backfill only config keys that are missing; the shadow file must not
+            # override valid EDMC config values during upgrades.
+            self._backfill_missing_config_from_json(silent=True)
+            try:
+                self._persist_to_config()
+            except Exception:
+                LOGGER.debug("Failed to persist preferences into EDMC config after shadow merge.", exc_info=True)
+            self._ensure_state_version_mark()
+        else:
+            self._load_from_json()
+        try:
+            self._write_shadow_file()
+        except Exception:
+            LOGGER.debug("Unable to write initial overlay_settings.json shadow file.", exc_info=True)
+
+    # Persistence ---------------------------------------------------------
+
+    def _read_shadow_data(self, *, silent: bool = False) -> Optional[Mapping[str, Any]]:
+        try:
+            data = json.loads(self._path.read_text(encoding="utf-8"))
+        except FileNotFoundError:
+            return None
+        except json.JSONDecodeError:
+            if not silent:
+                LOGGER.debug("overlay_settings.json is not valid JSON; ignoring contents.")
+            return None
+        if not isinstance(data, Mapping):
+            return None
+        return data
+
+    def _load_from_json(self, *, silent: bool = False) -> None:
+        data = self._read_shadow_data(silent=silent)
+        if data is None:
+            return
+        self._apply_raw_data(data)
+
+    def _backfill_missing_config_from_json(self, *, silent: bool = False) -> None:
+        data = self._read_shadow_data(silent=silent)
+        if data is None:
+            return
+        missing_names = [
+            name for name in CONFIG_BACKED_PREFERENCE_NAMES if not _config_has_value(_config_key(name))
+        ]
+        if not missing_names:
+            return
+        shadow = copy.deepcopy(self)
+        shadow._apply_raw_data(data)
+        for name in missing_names:
+            setattr(self, name, copy.deepcopy(getattr(shadow, name)))
+
+    def _maybe_import_legacy_json(self) -> None:
+        current_version = _config_get_int(CONFIG_VERSION_KEY, 0)
+        if current_version >= CONFIG_STATE_VERSION:
+            return
+        data = self._read_shadow_data(silent=True)
+        if data is None:
+            _config_set_value(CONFIG_VERSION_KEY, CONFIG_STATE_VERSION)
+            return
+        self._apply_raw_data(data)
+        self._persist_to_config()
+
+    def _load_from_config(self) -> None:
+        LOGGER.debug(
+            "Loading prefs from EDMC config (controller_launch_command=%s default=%s)",
+            _config_get_str(_config_key("controller_launch_command"), self.controller_launch_command),
+            self.controller_launch_command,
+        )
+        overrides_default = "{}"
+        try:
+            overrides_default = json.dumps(self.physical_clamp_overrides)
+        except Exception:
+            pass
+        payload: Dict[str, Any] = {
+            "dev_mode": _config_get_bool(_config_key(DEV_MODE_PREF_KEY), self.dev_mode),
+            "overlay_opacity": _config_get_locale_number(_config_key("overlay_opacity"), self.overlay_opacity),
+            "global_payload_opacity": _config_get_int(
+                _config_key("global_payload_opacity"),
+                self.global_payload_opacity,
+            ),
+            "show_connection_status": _config_get_bool(_config_key("show_connection_status"), self.show_connection_status),
+            "debug_overlay_corner": _config_get_str(_config_key("debug_overlay_corner"), self.debug_overlay_corner),
+            "client_log_retention": _config_get_int(_config_key("client_log_retention"), self.client_log_retention),
+            "gridlines_enabled": _config_get_bool(_config_key("gridlines_enabled"), self.gridlines_enabled),
+            "gridline_spacing": _config_get_locale_number(_config_key("gridline_spacing"), self.gridline_spacing),
+            "force_render": _config_get_bool(_config_key("force_render"), self.force_render),
+            "standalone_mode": _config_get_bool(
+                _config_key(STANDALONE_MODE_PREF_KEY),
+                self.standalone_mode,
+            ),
+            "force_xwayland": _config_get_bool(_config_key("force_xwayland"), self.force_xwayland),
+            "physical_clamp_enabled": _config_get_bool(
+                _config_key("physical_clamp_enabled"),
+                self.physical_clamp_enabled,
+            ),
+            "physical_clamp_overrides": _config_get_str(
+                _config_key("physical_clamp_overrides"),
+                overrides_default,
+            ),
+            "show_debug_overlay": _config_get_bool(_config_key("show_debug_overlay"), self.show_debug_overlay),
+            "min_font_point": _config_get_locale_number(_config_key("min_font_point"), self.min_font_point),
+            "max_font_point": _config_get_locale_number(_config_key("max_font_point"), self.max_font_point),
+            "legacy_font_step": _config_get_int(_config_key("legacy_font_step"), self.legacy_font_step),
+            "title_bar_enabled": _config_get_bool(_config_key("title_bar_enabled"), self.title_bar_enabled),
+            "title_bar_height": _config_get_int(_config_key("title_bar_height"), self.title_bar_height),
+            "cycle_payload_ids": _config_get_bool(_config_key("cycle_payload_ids"), self.cycle_payload_ids),
+            "copy_payload_id_on_cycle": _config_get_bool(
+                _config_key("copy_payload_id_on_cycle"),
+                self.copy_payload_id_on_cycle,
+            ),
+            "scale_mode": _config_get_str(_config_key("scale_mode"), self.scale_mode),
+            "nudge_overflow_payloads": _config_get_bool(
+                _config_key("nudge_overflow_payloads"),
+                self.nudge_overflow_payloads,
+            ),
+            "payload_nudge_gutter": _config_get_locale_number(
+                _config_key("payload_nudge_gutter"),
+                self.payload_nudge_gutter,
+            ),
+            "status_message_gutter": _config_get_locale_number(
+                _config_key("status_message_gutter"),
+                self.status_message_gutter,
+            ),
+            "log_payloads": _config_get_bool(_config_key("log_payloads"), self.log_payloads),
+            "payload_log_delay_seconds": _config_get_locale_number(
+                _config_key("payload_log_delay_seconds"),
+                self.payload_log_delay_seconds,
+            ),
+            "controller_launch_command": _config_get_str(
+                _config_key("controller_launch_command"),
+                self.controller_launch_command,
+            ),
+            "controller_toggle_argument": _config_get_str(
+                _config_key("controller_toggle_argument"),
+                self.controller_toggle_argument,
+            ),
+            "last_on_payload_opacity": _config_get_int(
+                _config_key("last_on_payload_opacity"),
+                self.last_on_payload_opacity,
+            ),
+        }
+        self._apply_raw_data(payload)
+
+    def _apply_raw_data(self, data: Mapping[str, Any]) -> None:
+        self.dev_mode = _coerce_bool(data.get("dev_mode"), self.dev_mode)
+        self.overlay_opacity = _coerce_float(data.get("overlay_opacity"), self.overlay_opacity, minimum=0.0, maximum=1.0)
+        self.global_payload_opacity = _coerce_int(
+            data.get("global_payload_opacity"),
+            self.global_payload_opacity,
+            minimum=0,
+            maximum=100,
+        )
+        self.show_connection_status = _coerce_bool(data.get("show_connection_status"), self.show_connection_status)
+        self.debug_overlay_corner = _coerce_str(
+            data.get("debug_overlay_corner"),
+            self.debug_overlay_corner,
+            allowed={"NW", "NE", "SW", "SE"},
+            transform=str.upper,
+        )
+        self.client_log_retention = _coerce_int(
+            data.get("client_log_retention"),
+            self.client_log_retention,
+            minimum=1,
+        )
+        self.gridlines_enabled = _coerce_bool(data.get("gridlines_enabled"), self.gridlines_enabled)
+        self.gridline_spacing = _coerce_int(data.get("gridline_spacing"), self.gridline_spacing, minimum=10)
+        self.force_render = _coerce_bool(data.get("force_render"), self.force_render)
+        self.standalone_mode = _coerce_bool(
+            data.get(STANDALONE_MODE_PREF_KEY),
+            self.standalone_mode,
+        )
+        self.force_xwayland = _coerce_bool(data.get("force_xwayland"), self.force_xwayland)
+        self.physical_clamp_enabled = _coerce_bool(
+            data.get("physical_clamp_enabled"),
+            self.physical_clamp_enabled,
+        )
+        self.physical_clamp_overrides = _coerce_physical_clamp_overrides(
+            data.get("physical_clamp_overrides"),
+            self.physical_clamp_overrides,
+            allow_empty=True,
+        )
+        self.show_debug_overlay = _coerce_bool(data.get("show_debug_overlay"), self.show_debug_overlay)
+        self.min_font_point = _coerce_float(
+            data.get("min_font_point"),
+            self.min_font_point,
+            minimum=FONT_BOUND_MIN,
+            maximum=FONT_BOUND_MAX,
+        )
+        self.max_font_point = _coerce_float(
+            data.get("max_font_point"),
+            self.max_font_point,
+            minimum=self.min_font_point,
+            maximum=FONT_BOUND_MAX,
+        )
+        self.legacy_font_step = _coerce_int(
+            data.get("legacy_font_step"),
+            self.legacy_font_step,
+            minimum=FONT_STEP_MIN,
+            maximum=FONT_STEP_MAX,
+        )
+        self.title_bar_enabled = _coerce_bool(data.get("title_bar_enabled"), self.title_bar_enabled)
+        self.title_bar_height = _coerce_int(data.get("title_bar_height"), self.title_bar_height, minimum=0)
+        self.cycle_payload_ids = _coerce_bool(data.get("cycle_payload_ids"), self.cycle_payload_ids)
+        self.copy_payload_id_on_cycle = _coerce_bool(data.get("copy_payload_id_on_cycle"), self.copy_payload_id_on_cycle)
+        self.scale_mode = _coerce_str(
+            data.get("scale_mode"),
+            self.scale_mode,
+            allowed={"fit", "fill"},
+            transform=str.lower,
+        )
+        self.nudge_overflow_payloads = _coerce_bool(data.get("nudge_overflow_payloads"), self.nudge_overflow_payloads)
+        self.payload_nudge_gutter = _coerce_int(
+            data.get("payload_nudge_gutter"),
+            self.payload_nudge_gutter,
+            minimum=0,
+            maximum=500,
+        )
+        status_default = data.get("status_message_gutter", self.status_message_gutter)
+        status_gutter = _coerce_int(status_default, self.status_message_gutter, minimum=0, maximum=STATUS_GUTTER_MAX)
+        if "status_message_gutter" not in data:
+            legacy_slots = int(bool(data.get("show_ed_bandwidth"))) + int(bool(data.get("show_ed_fps")))
+            status_gutter = max(status_gutter, LEGACY_STATUS_SLOT_MARGIN * legacy_slots)
+        self.status_message_gutter = status_gutter
+        self.log_payloads = _coerce_bool(data.get("log_payloads"), self.log_payloads)
+        self.payload_log_delay_seconds = _coerce_float(
+            data.get("payload_log_delay_seconds"),
+            self.payload_log_delay_seconds,
+            minimum=0.0,
+        )
+        launch_value = data.get("controller_launch_command")
+        if launch_value is None:
+            launch_value = data.get("launch_command")
+        self.controller_launch_command = _coerce_str(
+            launch_value,
+            self.controller_launch_command,
+            transform=_normalise_launch_command,
+        )
+        self.controller_toggle_argument = _coerce_toggle_argument(
+            data.get("controller_toggle_argument"),
+            self.controller_toggle_argument or TOGGLE_ARGUMENT_DEFAULT,
+        )
+        self.last_on_payload_opacity = _coerce_last_on_payload_opacity(
+            data.get("last_on_payload_opacity"),
+            self.last_on_payload_opacity,
+        )
+
+    def save(self) -> None:
+        """Persist preferences to EDMC config and the JSON shadow file."""
+        if self._config_enabled:
+            self._persist_to_config()
+        self._write_shadow_file()
+
+    def _shadow_payload(self) -> Dict[str, Any]:
+        return {
+            "dev_mode": bool(self.dev_mode),
+            "overlay_opacity": float(self.overlay_opacity),
+            "global_payload_opacity": int(self.global_payload_opacity),
+            "show_connection_status": bool(self.show_connection_status),
+            "debug_overlay_corner": str(self.debug_overlay_corner or DEFAULT_DEBUG_OVERLAY_CORNER),
+            "client_log_retention": int(self.client_log_retention),
+            "gridlines_enabled": bool(self.gridlines_enabled),
+            "gridline_spacing": int(self.gridline_spacing),
+            "force_render": bool(self.force_render),
+            STANDALONE_MODE_PREF_KEY: bool(self.standalone_mode),
+            "force_xwayland": bool(self.force_xwayland),
+            "physical_clamp_enabled": bool(self.physical_clamp_enabled),
+            "physical_clamp_overrides": dict(self.physical_clamp_overrides or {}),
+            "show_debug_overlay": bool(self.show_debug_overlay),
+            "min_font_point": float(self.min_font_point),
+            "max_font_point": float(self.max_font_point),
+            "legacy_font_step": int(self.legacy_font_step),
+            "status_bottom_margin": int(self.status_bottom_margin()),
+            "title_bar_enabled": bool(self.title_bar_enabled),
+            "title_bar_height": int(self.title_bar_height),
+            "cycle_payload_ids": bool(self.cycle_payload_ids),
+            "copy_payload_id_on_cycle": bool(self.copy_payload_id_on_cycle),
+            "scale_mode": str(self.scale_mode or DEFAULT_SCALE_MODE),
+            "nudge_overflow_payloads": bool(self.nudge_overflow_payloads),
+            "payload_nudge_gutter": int(self.payload_nudge_gutter),
+            "status_message_gutter": int(self.status_message_gutter),
+            "log_payloads": bool(self.log_payloads),
+            "payload_log_delay_seconds": float(self.payload_log_delay_seconds),
+            "controller_launch_command": str(self.controller_launch_command or "!ovr"),
+            "controller_toggle_argument": str(self.controller_toggle_argument or TOGGLE_ARGUMENT_DEFAULT),
+            "last_on_payload_opacity": int(self.last_on_payload_opacity),
+        }
+
+    def _write_shadow_file(self) -> None:
+        payload = self._shadow_payload()
+        self._path.write_text(json.dumps(payload, indent=2), encoding="utf-8")
+
+    def _persist_to_config(self) -> None:
+        if not self._config_enabled:
+            return
+        _config_set_value(_config_key(DEV_MODE_PREF_KEY), bool(self.dev_mode))
+        _config_set_value(_config_key("overlay_opacity"), float(self.overlay_opacity))
+        _config_set_value(_config_key("global_payload_opacity"), int(self.global_payload_opacity))
+        _config_set_value(_config_key("show_connection_status"), bool(self.show_connection_status))
+        _config_set_value(_config_key("debug_overlay_corner"), str(self.debug_overlay_corner or DEFAULT_DEBUG_OVERLAY_CORNER))
+        _config_set_value(_config_key("client_log_retention"), int(self.client_log_retention))
+        _config_set_value(_config_key("gridlines_enabled"), bool(self.gridlines_enabled))
+        _config_set_value(_config_key("gridline_spacing"), int(self.gridline_spacing))
+        _config_set_value(_config_key("force_render"), bool(self.force_render))
+        _config_set_value(_config_key(STANDALONE_MODE_PREF_KEY), bool(self.standalone_mode))
+        _config_set_value(_config_key("force_xwayland"), bool(self.force_xwayland))
+        _config_set_value(_config_key("physical_clamp_enabled"), bool(self.physical_clamp_enabled))
+        try:
+            overrides_payload = json.dumps(self.physical_clamp_overrides)
+        except Exception:
+            overrides_payload = "{}"
+        _config_set_value(_config_key("physical_clamp_overrides"), overrides_payload)
+        _config_set_value(_config_key("show_debug_overlay"), bool(self.show_debug_overlay))
+        _config_set_value(_config_key("min_font_point"), float(self.min_font_point))
+        _config_set_value(_config_key("max_font_point"), float(self.max_font_point))
+        _config_set_value(_config_key("legacy_font_step"), int(self.legacy_font_step))
+        _config_set_value(_config_key("title_bar_enabled"), bool(self.title_bar_enabled))
+        _config_set_value(_config_key("title_bar_height"), int(self.title_bar_height))
+        _config_set_value(_config_key("cycle_payload_ids"), bool(self.cycle_payload_ids))
+        _config_set_value(_config_key("copy_payload_id_on_cycle"), bool(self.copy_payload_id_on_cycle))
+        _config_set_value(_config_key("scale_mode"), str(self.scale_mode or DEFAULT_SCALE_MODE))
+        _config_set_value(_config_key("nudge_overflow_payloads"), bool(self.nudge_overflow_payloads))
+        _config_set_value(_config_key("payload_nudge_gutter"), int(self.payload_nudge_gutter))
+        _config_set_value(_config_key("status_message_gutter"), int(self.status_message_gutter))
+        _config_set_value(_config_key("log_payloads"), bool(self.log_payloads))
+        _config_set_value(_config_key("payload_log_delay_seconds"), float(self.payload_log_delay_seconds))
+        _config_set_value(_config_key("controller_launch_command"), str(self.controller_launch_command or "!ovr"))
+        _config_set_value(
+            _config_key("controller_toggle_argument"),
+            str(self.controller_toggle_argument or TOGGLE_ARGUMENT_DEFAULT),
+        )
+        _config_set_value(_config_key("last_on_payload_opacity"), int(self.last_on_payload_opacity))
+        _config_set_value(CONFIG_VERSION_KEY, CONFIG_STATE_VERSION)
+
+    def _ensure_state_version_mark(self) -> None:
+        if not self._config_enabled:
+            return
+        current_version = _config_get_int(CONFIG_VERSION_KEY, 0)
+        if current_version < CONFIG_STATE_VERSION:
+            _config_set_value(CONFIG_VERSION_KEY, CONFIG_STATE_VERSION)
+
+    def status_bottom_margin(self) -> int:
+        return STATUS_BASE_MARGIN + int(max(0, self.status_message_gutter))
+
+
+class PreferencesPanel:
+    """Builds a Tkinter frame that edits Modern Overlay preferences."""
+
+    def __init__(
+        self,
+        parent,
+        preferences: Preferences,
+        send_test_callback: Optional[Callable[[str, Optional[int], Optional[int]], None]] = None,
+        set_opacity_callback: Optional[Callable[[float], None]] = None,
+        set_status_callback: Optional[Callable[[bool], None]] = None,
+        set_status_gutter_callback: Optional[Callable[[int], None]] = None,
+        set_debug_overlay_corner_callback: Optional[Callable[[str], None]] = None,
+        set_gridlines_enabled_callback: Optional[Callable[[bool], None]] = None,
+        set_gridline_spacing_callback: Optional[Callable[[int], None]] = None,
+        set_payload_nudge_callback: Optional[Callable[[bool], None]] = None,
+        set_payload_gutter_callback: Optional[Callable[[int], None]] = None,
+        set_force_render_callback: Optional[Callable[[bool], None]] = None,
+        set_standalone_mode_callback: Optional[Callable[[bool], None]] = None,
+        set_title_bar_config_callback: Optional[Callable[[bool, int], None]] = None,
+        set_debug_overlay_callback: Optional[Callable[[bool], None]] = None,
+        set_payload_logging_callback: Optional[Callable[[bool], None]] = None,
+        set_font_min_callback: Optional[Callable[[float], None]] = None,
+        set_font_max_callback: Optional[Callable[[float], None]] = None,
+        set_font_step_callback: Optional[Callable[[int], None]] = None,
+        preview_font_sizes_callback: Optional[Callable[[], None]] = None,
+        set_cycle_payload_callback: Optional[Callable[[bool], None]] = None,
+        set_cycle_payload_copy_callback: Optional[Callable[[bool], None]] = None,
+        cycle_payload_prev_callback: Optional[Callable[[], None]] = None,
+        cycle_payload_next_callback: Optional[Callable[[], None]] = None,
+        restart_overlay_callback: Optional[Callable[[], None]] = None,
+        launch_controller_callback: Optional[Callable[[], None]] = None,
+        set_launch_command_callback: Optional[Callable[[str], None]] = None,
+        set_toggle_argument_callback: Optional[Callable[[str], None]] = None,
+        set_payload_opacity_callback: Optional[Callable[[int], None]] = None,
+        reset_group_cache_callback: Optional[Callable[[], bool]] = None,
+        profile_status_callback: Optional[Callable[[], Mapping[str, Any]]] = None,
+        create_profile_callback: Optional[Callable[[str], Mapping[str, Any]]] = None,
+        clone_profile_callback: Optional[Callable[[str, str], Mapping[str, Any]]] = None,
+        rename_profile_callback: Optional[Callable[[str, str], Mapping[str, Any]]] = None,
+        delete_profile_callback: Optional[Callable[[str], Mapping[str, Any]]] = None,
+        reorder_profile_callback: Optional[Callable[[str, int], Mapping[str, Any]]] = None,
+        set_current_profile_callback: Optional[Callable[[str], Mapping[str, Any]]] = None,
+        set_profile_rules_callback: Optional[Callable[[str, list[Mapping[str, Any]]], Mapping[str, Any]]] = None,
+        dev_mode: bool = False,
+        plugin_version: Optional[str] = None,
+        version_update_available: bool = False,
+        troubleshooting_state: Optional[TroubleshootingPanelState] = None,
+        set_capture_override_callback: Optional[Callable[[bool], None]] = None,
+        set_log_retention_override_callback: Optional[Callable[[Optional[int]], None]] = None,
+        set_payload_exclusion_callback: Optional[Callable[[Sequence[str]], None]] = None,
+        set_payload_spam_detection_callback: Optional[Callable[[bool, float, int, float], None]] = None,
+        payload_logging_initial: Optional[bool] = None,
+    ) -> None:
+        from tkinter import ttk
+        import tkinter.font as tkfont
+        import myNotebook as nb
+
+        self._preferences = preferences
+        self._style = ttk.Style()
+        (
+            self._frame_style,
+            self._spinbox_style,
+            self._scale_style,
+            self._labelframe_style,
+        ) = self._init_theme_styles(nb)
+        initial_opacity = _coerce_float(preferences.overlay_opacity, 0.0, minimum=0.0, maximum=1.0)
+        self._var_opacity = tk.DoubleVar(value=initial_opacity)
+        self._var_payload_opacity = tk.DoubleVar(value=float(preferences.global_payload_opacity))
+        self._var_show_status = tk.BooleanVar(value=preferences.show_connection_status)
+        self._var_status_gutter = tk.IntVar(value=max(0, int(preferences.status_message_gutter)))
+        self._var_debug_overlay_corner = tk.StringVar(value=(preferences.debug_overlay_corner or "NW"))
+        self._var_gridlines_enabled = tk.BooleanVar(value=preferences.gridlines_enabled)
+        self._var_gridline_spacing = tk.IntVar(value=max(10, int(preferences.gridline_spacing)))
+        self._var_payload_nudge = tk.BooleanVar(value=preferences.nudge_overflow_payloads)
+        self._var_payload_gutter = tk.IntVar(value=max(0, int(preferences.payload_nudge_gutter)))
+        self._var_force_render = tk.BooleanVar(value=preferences.force_render)
+        self._var_standalone_mode = tk.BooleanVar(value=preferences.standalone_mode)
+        self._var_physical_clamp = tk.BooleanVar(value=preferences.physical_clamp_enabled)
+        self._var_physical_clamp_overrides = tk.StringVar(
+            value=_format_physical_clamp_overrides(preferences.physical_clamp_overrides)
+        )
+        self._var_title_bar_enabled = tk.BooleanVar(value=preferences.title_bar_enabled)
+        self._var_title_bar_height = tk.IntVar(value=int(preferences.title_bar_height))
+        self._var_debug_overlay = tk.BooleanVar(value=preferences.show_debug_overlay)
+        initial_logging = preferences.log_payloads if payload_logging_initial is None else bool(payload_logging_initial)
+        self._var_payload_logging = tk.BooleanVar(value=initial_logging)
+        self._var_min_font = tk.DoubleVar(value=float(preferences.min_font_point))
+        self._var_max_font = tk.DoubleVar(value=float(preferences.max_font_point))
+        self._var_legacy_font_step = tk.IntVar(value=int(preferences.legacy_font_step))
+        self._font_min_committed = float(preferences.min_font_point)
+        self._font_max_committed = float(preferences.max_font_point)
+        self._font_step_committed = int(preferences.legacy_font_step)
+        self._var_cycle_payload = tk.BooleanVar(value=preferences.cycle_payload_ids)
+        self._var_cycle_copy = tk.BooleanVar(value=preferences.copy_payload_id_on_cycle)
+        self._var_launch_command = tk.StringVar(value=preferences.controller_launch_command)
+        self._var_toggle_argument = tk.StringVar(value=preferences.controller_toggle_argument)
+        self._var_profile_current = tk.StringVar(value=DEFAULT_PROFILE_NAME)
+        self._var_profile_new_name = tk.StringVar(value="")
+        self._var_profile_rename_name = tk.StringVar(value="")
+        self._var_rule_in_main_ship = tk.BooleanVar(value=False)
+        self._var_rule_in_srv = tk.BooleanVar(value=False)
+        self._var_rule_in_fighter = tk.BooleanVar(value=False)
+        self._var_rule_on_foot = tk.BooleanVar(value=False)
+        self._var_rule_in_wing = tk.BooleanVar(value=False)
+        self._var_rule_in_taxi = tk.BooleanVar(value=False)
+        self._var_rule_in_multicrew = tk.BooleanVar(value=False)
+        state = troubleshooting_state or TroubleshootingPanelState(
+            diagnostics_enabled=False,
+            capture_enabled=False,
+            log_retention_override=None,
+            exclude_plugins=(),
+        )
+        self._diagnostics_enabled = bool(state.diagnostics_enabled)
+        self._var_capture_override = tk.BooleanVar(value=state.capture_enabled)
+        spam_window = _coerce_float(
+            state.payload_spam_window_seconds,
+            2.0,
+            minimum=SPAM_WINDOW_MIN,
+            maximum=SPAM_WINDOW_MAX,
+        )
+        spam_max = _coerce_int(
+            state.payload_spam_max_payloads,
+            200,
+            minimum=SPAM_MAX_PAYLOADS_MIN,
+            maximum=SPAM_MAX_PAYLOADS_MAX,
+        )
+        spam_cooldown = _coerce_float(
+            state.payload_spam_warn_cooldown_seconds,
+            30.0,
+            minimum=SPAM_WARN_COOLDOWN_MIN,
+            maximum=SPAM_WARN_COOLDOWN_MAX,
+        )
+        self._var_payload_spam_enabled = tk.BooleanVar(value=state.payload_spam_enabled)
+        self._var_payload_spam_window = tk.DoubleVar(value=spam_window)
+        self._var_payload_spam_max = tk.IntVar(value=spam_max)
+        self._var_payload_spam_cooldown = tk.DoubleVar(value=spam_cooldown)
+        self._payload_spam_enabled_committed = bool(state.payload_spam_enabled)
+        self._payload_spam_window_committed = spam_window
+        self._payload_spam_max_committed = spam_max
+        self._payload_spam_cooldown_committed = spam_cooldown
+        retention_value = state.log_retention_override
+        if retention_value is None:
+            try:
+                base_value = int(preferences.client_log_retention)
+            except Exception:
+                base_value = DEFAULT_CLIENT_LOG_RETENTION
+            base_value = max(CLIENT_LOG_RETENTION_MIN, min(base_value, CLIENT_LOG_RETENTION_MAX))
+            retention_value = base_value
+        self._var_log_retention_override_active = tk.BooleanVar(value=state.log_retention_override is not None)
+        self._var_log_retention_value = tk.IntVar(value=int(retention_value))
+        self._var_payload_exclude = tk.StringVar(value=", ".join(state.exclude_plugins))
+        self._var_dev_mode = tk.BooleanVar(value=preferences.dev_mode)
+        self._font_bounds_apply_in_progress = False
+        self._font_step_apply_in_progress = False
+        self._launch_command_apply_in_progress = False
+        self._toggle_argument_apply_in_progress = False
+        self._payload_opacity_apply_in_progress = False
+
+        self._send_test = send_test_callback
+        self._set_opacity = set_opacity_callback
+        self._set_status = set_status_callback
+        self._set_status_gutter = set_status_gutter_callback
+        self._set_debug_overlay_corner = set_debug_overlay_corner_callback
+        self._set_gridlines_enabled = set_gridlines_enabled_callback
+        self._set_gridline_spacing = set_gridline_spacing_callback
+        self._set_payload_nudge = set_payload_nudge_callback
+        self._set_payload_gutter = set_payload_gutter_callback
+        self._set_force_render = set_force_render_callback
+        self._set_standalone_mode = set_standalone_mode_callback
+        self._set_title_bar_config = set_title_bar_config_callback
+        self._set_debug_overlay = set_debug_overlay_callback
+        self._set_payload_logging = set_payload_logging_callback
+        self._set_font_min = set_font_min_callback
+        self._set_font_max = set_font_max_callback
+        self._set_font_step = set_font_step_callback
+        self._preview_font_sizes = preview_font_sizes_callback
+        self._set_cycle_payload = set_cycle_payload_callback
+        self._set_cycle_payload_copy = set_cycle_payload_copy_callback
+        self._cycle_prev_callback = cycle_payload_prev_callback
+        self._cycle_next_callback = cycle_payload_next_callback
+        self._restart_overlay = restart_overlay_callback
+        self._launch_controller = launch_controller_callback
+        self._set_launch_command = set_launch_command_callback
+        self._set_toggle_argument = set_toggle_argument_callback
+        self._set_payload_opacity = set_payload_opacity_callback
+        self._reset_group_cache = reset_group_cache_callback
+        self._profile_status_callback = profile_status_callback
+        self._create_profile_callback = create_profile_callback
+        self._clone_profile_callback = clone_profile_callback
+        self._rename_profile_callback = rename_profile_callback
+        self._delete_profile_callback = delete_profile_callback
+        self._reorder_profile_callback = reorder_profile_callback
+        self._set_current_profile_callback = set_current_profile_callback
+        self._set_profile_rules_callback = set_profile_rules_callback
+        self._set_capture_override = set_capture_override_callback
+        self._set_log_retention_override = set_log_retention_override_callback
+        self._set_payload_exclusions = set_payload_exclusion_callback
+        self._set_payload_spam_detection = set_payload_spam_detection_callback
+
+        self._legacy_client = None
+        self._status_gutter_spin = None
+        self._payload_gutter_spin = None
+        self._title_bar_height_spin = None
+        self._gridline_spacing_spin = None
+        self._cycle_prev_btn = None
+        self._cycle_next_btn = None
+        self._cycle_copy_checkbox = None
+        self._log_retention_spin = None
+        self._payload_exclude_entry = None
+        self._payload_spam_window_spin = None
+        self._payload_spam_max_spin = None
+        self._payload_spam_cooldown_spin = None
+        self._payload_spam_apply_btn = None
+        self._payload_spam_checkbox = None
+        self._profile_listbox = None
+        self._profile_table = None
+        self._profile_table_columns: tuple[str, ...] = ()
+        self._profile_table_order: list[str] = []
+        self._profile_table_clipboard: Optional[str] = None
+        self._profile_table_editor = None
+        self._profile_ship_table = None
+        self._profile_current_combo = None
+        self._profile_state_snapshot: Mapping[str, Any] = {}
+        self._profile_ship_ids: list[int] = []
+        self._profile_ship_row_to_ship_id: Dict[str, int] = {}
+        self._profile_ship_checked_ids: set[int] = set()
+        self._profile_ship_sort_column = "name"
+        self._profile_ship_sort_desc = False
+        self._profile_rule_checkbuttons: list[Any] = []
+        self._profile_rules_apply_button = None
+        self._managed_fonts = []
+        self._status_gutter_apply_in_progress = False
+        self._payload_spam_apply_in_progress = False
+        self._var_status_gutter.trace_add("write", self._on_status_gutter_trace)
+        self._plugin_version = (plugin_version or "").strip()
+        self._version_update_available = bool(version_update_available)
+        self._test_var = tk.StringVar()
+        self._test_x_var = tk.StringVar()
+        self._test_y_var = tk.StringVar()
+        self._status_var = tk.StringVar(value="")
+        self._profile_ship_hint_var = tk.StringVar(value="")
+        self._profile_menu_icons: Dict[str, Any] = {}
+        self._profile_poll_after_id: Optional[str] = None
+        self._profile_poll_interval_ms = PROFILE_STATUS_POLL_INTERVAL_MS
+        opacity_percent = int(round(initial_opacity * 100))
+        self._opacity_label = tk.StringVar(value=f"{opacity_percent}%")
+        self._payload_opacity_label = tk.StringVar(value=f"{int(preferences.global_payload_opacity)}%")
+        self._dev_mode = bool(dev_mode)
+        self._load_profile_menu_icons()
+
+        frame = nb.Frame(parent)
+
+        header_frame = ttk.Frame(frame, style=self._frame_style)
+        header_frame.grid(row=0, column=0, sticky="we")
+        header_frame.columnconfigure(0, weight=1)
+        header_frame.columnconfigure(1, weight=0)
+
+        if self._plugin_version:
+            version_column = ttk.Frame(header_frame, style=self._frame_style)
+            version_column.grid(row=0, column=1, sticky="ne")
+            version_label = nb.Label(
+                version_column,
+                text=f"Version {self._plugin_version}",
+                cursor="hand2",
+                foreground="#1a73e8",
+            )
+            try:
+                link_font = tkfont.Font(root=parent, font=version_label.cget("font"))
+                link_font.configure(underline=True)
+                self._managed_fonts.append(link_font)
+                version_label.configure(font=link_font)
+            except Exception:
+                pass
+            version_label.grid(row=0, column=0, sticky="e")
+            version_label.bind("<Button-1>", self._open_release_link)
+            version_label.bind("<Return>", self._open_release_link)
+            version_label.bind(
+                "<Enter>", lambda _event, widget=version_label: widget.configure(foreground="#0b57d0")
+            )
+            version_label.bind(
+                "<Leave>", lambda _event, widget=version_label: widget.configure(foreground="#1a73e8")
+            )
+            if self._version_update_available:
+                warning_label = nb.Label(
+                    version_column,
+                    text="A newer version is available",
+                    foreground="#c62828",
+                )
+                warning_label.grid(row=1, column=0, sticky="e", pady=(2, 0))
+
+        tabs = nb.Notebook(frame)
+        overlay_tab = nb.Frame(tabs)
+        controller_tab = nb.Frame(tabs)
+        profiles_tab = nb.Frame(tabs)
+        experimental_tab = nb.Frame(tabs)
+        overlay_tab_label, controller_tab_label, profiles_tab_label, experimental_tab_label = _preferences_tab_order()
+        tabs.add(overlay_tab, text=overlay_tab_label)
+        tabs.add(controller_tab, text=controller_tab_label)
+        tabs.add(profiles_tab, text=profiles_tab_label)
+        tabs.add(experimental_tab, text=experimental_tab_label)
+        tabs.grid(row=1, column=0, sticky="we")
+
+        self._controller_tab_control_order = _controller_tab_control_order()
+
+        user_section = ttk.Frame(overlay_tab, style=self._frame_style)
+        user_section.grid(row=0, column=0, sticky="we")
+        user_section.columnconfigure(0, weight=1)
+        overlay_tab.columnconfigure(0, weight=1)
+        controller_section = ttk.Frame(controller_tab, style=self._frame_style)
+        controller_section.grid(row=0, column=0, sticky="we")
+        controller_section.columnconfigure(0, weight=1)
+        controller_tab.columnconfigure(0, weight=1)
+        profiles_section = ttk.Frame(profiles_tab, style=self._frame_style)
+        profiles_section.grid(row=0, column=0, sticky="nsew")
+        profiles_section.columnconfigure(0, weight=1)
+        profiles_tab.columnconfigure(0, weight=1)
+        controller_row = 0
+
+        launch_controller_row = ttk.Frame(controller_section, style=self._frame_style)
+        launch_controller_btn = nb.Button(
+            launch_controller_row,
+            text="Launch Controller",
+            command=self._on_launch_controller,
+        )
+        if self._launch_controller is None:
+            launch_controller_btn.configure(state="disabled")
+        launch_controller_btn.pack(side="left")
+        launch_controller_row.grid(row=controller_row, column=0, sticky="w", pady=ROW_PAD)
+        controller_row += 1
+
+        launch_row = ttk.Frame(controller_section, style=self._frame_style)
+        nb.Label(launch_row, text="Chat command to launch controller:").pack(side="left")
+        launch_entry = nb.EntryMenu(launch_row, width=10, textvariable=self._var_launch_command)
+        launch_entry.pack(side="left", padx=(8, 0))
+        launch_entry.bind("<FocusOut>", self._on_launch_command_event)
+        launch_entry.bind("<Return>", self._on_launch_command_event)
+        launch_row.grid(row=controller_row, column=0, sticky="w", pady=ROW_PAD)
+        controller_row += 1
+
+        toggle_row = ttk.Frame(controller_section, style=self._frame_style)
+        nb.Label(toggle_row, text="Chat command argument to toggle overlay:").pack(side="left")
+        toggle_entry = nb.EntryMenu(toggle_row, width=10, textvariable=self._var_toggle_argument)
+        toggle_entry.pack(side="left", padx=(8, 0))
+        toggle_entry.bind("<FocusOut>", self._on_toggle_argument_event)
+        toggle_entry.bind("<Return>", self._on_toggle_argument_event)
+        toggle_row.grid(row=controller_row, column=0, sticky="w", pady=ROW_PAD)
+        controller_row += 1
+
+        profile_row = 0
+
+        profile_table_frame = ttk.Frame(profiles_section, style=self._frame_style)
+        profile_table_frame.grid(row=profile_row, column=0, sticky="we", pady=ROW_PAD)
+        profile_table_frame.columnconfigure(0, weight=1)
+        nb.Label(profile_table_frame, text="Profiles (right click for options):").grid(row=0, column=0, sticky="w")
+        profile_table_columns = ("active", "name", "ims", "srv", "ftr", "foot", "wing", "taxi", "mc")
+        profile_table = ttk.Treeview(
+            profile_table_frame,
+            columns=profile_table_columns,
+            show="tree headings",
+            height=8,
+            selectmode="browse",
+        )
+        profile_table.heading("#0", text="#")
+        profile_table.column("#0", width=36, minwidth=30, stretch=False, anchor="center")
+        profile_table.heading("active", text="Active")
+        profile_table.column("active", width=56, minwidth=52, stretch=False, anchor="center")
+        profile_table.heading("name", text="Profile")
+        profile_table.column("name", width=180, minwidth=120, stretch=True, anchor="w")
+        for column, label in (
+            ("ims", "Ship"),
+            ("srv", "SRV"),
+            ("ftr", "SLF"),
+            ("foot", "Foot"),
+            ("wing", "Wing"),
+            ("taxi", "Taxi"),
+            ("mc", "MC"),
+        ):
+            profile_table.heading(column, text=label)
+            profile_table.column(column, width=44, minwidth=36, stretch=False, anchor="center")
+        profile_table.grid(row=1, column=0, sticky="we")
+        profile_table.bind("<<TreeviewSelect>>", self._on_profile_table_selected)
+        profile_table.bind("<Button-3>", self._on_profile_table_right_click)
+        profile_table.bind("<Double-1>", self._on_profile_table_double_click)
+        self._profile_table = profile_table
+        self._profile_table_clipboard: Optional[str] = None
+        self._profile_table_editor = None
+        self._profile_table_columns = profile_table_columns
+        self._profile_table_order: list[str] = []
+        profile_row += 1
+
+        rules_frame = ttk.Frame(profiles_section, style=self._frame_style)
+        rules_frame.grid(row=profile_row, column=0, sticky="we", pady=ROW_PAD)
+        rules_frame.columnconfigure(0, weight=1)
+        nb.Label(rules_frame, text="Auto rules for selected profile:").grid(row=0, column=0, sticky="w")
+        rules_toggle_row = ttk.Frame(rules_frame, style=self._frame_style)
+        rules_toggle_row.grid(row=1, column=0, sticky="w", pady=(4, 0))
+        self._profile_rule_checkbuttons = []
+        rule_controls = (
+            ("In Main Ship", self._var_rule_in_main_ship),
+            ("In SRV", self._var_rule_in_srv),
+            ("In SLF", self._var_rule_in_fighter),
+            ("On Foot", self._var_rule_on_foot),
+            ("In Wing", self._var_rule_in_wing),
+            ("In Taxi", self._var_rule_in_taxi),
+            ("In Multicrew", self._var_rule_in_multicrew),
+        )
+        for index, (label, variable) in enumerate(rule_controls):
+            check = nb.Checkbutton(
+                rules_toggle_row,
+                text=label,
+                variable=variable,
+                onvalue=True,
+                offvalue=False,
+                command=self._on_profile_rule_toggle,
+            )
+            if index == 0:
+                check.pack(side="left")
+            else:
+                check.pack(side="left", padx=(8, 0))
+            self._profile_rule_checkbuttons.append(check)
+
+        ships_row = ttk.Frame(rules_frame, style=self._frame_style)
+        ships_row.grid(row=2, column=0, sticky="we", pady=(4, 0))
+        ships_row.columnconfigure(0, weight=1)
+        nb.Label(ships_row, text="In scope ships (optional):").grid(row=0, column=0, sticky="w")
+        ship_columns = ("name", "id", "type")
+        profile_ship_table = ttk.Treeview(
+            ships_row,
+            columns=ship_columns,
+            show="tree headings",
+            selectmode="extended",
+            height=8,
+        )
+        profile_ship_table.heading("#0", text="Apply", command=lambda: self._on_profile_ship_sort("apply"))
+        profile_ship_table.column("#0", width=56, minwidth=48, stretch=False, anchor="center")
+        profile_ship_table.heading("name", text="Name", command=lambda: self._on_profile_ship_sort("name"))
+        profile_ship_table.column("name", width=220, minwidth=120, stretch=True, anchor="w")
+        profile_ship_table.heading("id", text="ID", command=lambda: self._on_profile_ship_sort("id"))
+        profile_ship_table.column("id", width=64, minwidth=54, stretch=False, anchor="center")
+        profile_ship_table.heading("type", text="Model", command=lambda: self._on_profile_ship_sort("type"))
+        profile_ship_table.column("type", width=160, minwidth=100, stretch=True, anchor="w")
+        profile_ship_table.grid(row=1, column=0, sticky="nsew")
+        profile_ship_scroll = ttk.Scrollbar(ships_row, orient="vertical", command=profile_ship_table.yview)
+        profile_ship_scroll.grid(row=1, column=1, sticky="ns")
+        profile_ship_table.configure(yscrollcommand=profile_ship_scroll.set)
+        profile_ship_table.bind("<Button-1>", self._on_profile_ship_table_click)
+        profile_ship_table.bind("<Double-1>", self._on_profile_ship_table_double_click)
+        self._profile_ship_table = profile_ship_table
+        profile_ship_hint = nb.Label(
+            ships_row,
+            textvariable=self._profile_ship_hint_var,
+            wraplength=800,
+            justify="left",
+        )
+        profile_ship_hint.grid(row=2, column=0, columnspan=2, sticky="w", pady=(4, 0))
+        profile_row += 1
+
+        self._refresh_profile_state()
+
+        user_row = 0
+
+        status_row = ttk.Frame(user_section, style=self._frame_style)
+        status_checkbox = nb.Checkbutton(
+            status_row,
+            text="Show connection status message at bottom of overlay",
+            variable=self._var_show_status,
+            onvalue=True,
+            offvalue=False,
+            command=self._on_show_status_toggle,
+        )
+        status_checkbox.pack(side="left")
+        gutter_label = nb.Label(status_row, text="Gutter (px):")
+        gutter_label.pack(side="left", padx=(16, 4))
+        status_gutter_spin = ttk.Spinbox(
+            status_row,
+            from_=0,
+            to=STATUS_GUTTER_MAX,
+            increment=5,
+            width=5,
+            textvariable=self._var_status_gutter,
+            command=self._on_status_gutter_command,
+            style=self._spinbox_style,
+        )
+        status_gutter_spin.pack(side="left")
+        status_gutter_spin.bind("<FocusOut>", self._on_status_gutter_event)
+        status_gutter_spin.bind("<Return>", self._on_status_gutter_event)
+        self._status_gutter_spin = status_gutter_spin
+        self._update_status_gutter_spin_state()
+
+        status_row.grid(row=user_row, column=0, sticky="w", pady=ROW_PAD)
+        user_row += 1
+
+        force_row = ttk.Frame(user_section, style=self._frame_style)
+        force_checkbox = nb.Checkbutton(
+            force_row,
+            text="Keep overlay visible when Elite Dangerous is not the foreground window",
+            variable=self._var_force_render,
+            onvalue=True,
+            offvalue=False,
+            command=self._on_force_render_toggle,
+        )
+        force_checkbox.pack(side="left")
+        force_row.grid(row=user_row, column=0, sticky="w", pady=ROW_PAD)
+        user_row += 1
+
+        font_row = ttk.Frame(user_section, style=self._frame_style)
+        font_label = nb.Label(font_row, text="Font scaling bounds (pt):")
+        _attach_tooltip(
+            font_label,
+            "Clamp the auto-scaled font size range; these bounds do not set a fixed font size.",
+            nb_module=nb,
+        )
+        font_label.pack(side="left")
+        min_spin = ttk.Spinbox(
+            font_row,
+            from_=FONT_BOUND_MIN,
+            to=FONT_BOUND_MAX,
+            increment=0.5,
+            width=5,
+            textvariable=self._var_min_font,
+            style=self._spinbox_style,
+        )
+        min_spin.pack(side="left", padx=(6, 0))
+        min_spin.bind("<FocusOut>", lambda event: self._on_font_bounds_event("min", event))
+        nb.Label(font_row, text="–").pack(side="left", padx=(4, 4))
+        max_spin = ttk.Spinbox(
+            font_row,
+            from_=FONT_BOUND_MIN,
+            to=FONT_BOUND_MAX,
+            increment=0.5,
+            width=5,
+            textvariable=self._var_max_font,
+            style=self._spinbox_style,
+        )
+        max_spin.pack(side="left")
+        max_spin.bind("<FocusOut>", lambda event: self._on_font_bounds_event("max", event))
+        step_label = nb.Label(font_row, text="Font Step:")
+        _attach_tooltip(
+            step_label,
+            'Font Step is the difference in font size between "Small", "Normal", "Large", and "Huge" font sizes.',
+            nb_module=nb,
+        )
+        step_label.pack(side="left", padx=(12, 4))
+        step_spin = ttk.Spinbox(
+            font_row,
+            from_=FONT_STEP_MIN,
+            to=FONT_STEP_MAX,
+            increment=1,
+            width=3,
+            textvariable=self._var_legacy_font_step,
+            style=self._spinbox_style,
+        )
+        step_spin.pack(side="left")
+        step_spin.bind("<FocusOut>", self._on_font_step_event)
+        preview_btn = nb.Button(font_row, text="Preview", command=self._on_font_preview)
+        preview_btn.pack(side="left", padx=(8, 0))
+        font_row.grid(row=user_row, column=0, sticky="w", pady=ROW_PAD)
+        user_row += 1
+
+        title_bar_row = ttk.Frame(user_section, style=self._frame_style)
+        title_bar_checkbox = nb.Checkbutton(
+            title_bar_row,
+            text="Compensate for Elite Dangerous title bar",
+            variable=self._var_title_bar_enabled,
+            onvalue=True,
+            offvalue=False,
+            command=self._on_title_bar_toggle,
+        )
+        title_bar_checkbox.pack(side="left")
+        title_bar_height_label = nb.Label(title_bar_row, text="Height (px):")
+        title_bar_height_label.pack(side="left", padx=(12, 4))
+        title_bar_height_spin = ttk.Spinbox(
+            title_bar_row,
+            from_=0,
+            to=200,
+            increment=1,
+            width=4,
+            textvariable=self._var_title_bar_height,
+            command=self._on_title_bar_height_command,
+            style=self._spinbox_style,
+        )
+        title_bar_height_spin.pack(side="left")
+        title_bar_height_spin.bind("<FocusOut>", self._on_title_bar_height_event)
+        title_bar_height_spin.bind("<Return>", self._on_title_bar_height_event)
+        if not self._var_title_bar_enabled.get():
+            title_bar_height_spin.state(["disabled"])
+        self._title_bar_height_spin = title_bar_height_spin
+        title_bar_row.grid(row=user_row, column=0, sticky="w", pady=ROW_PAD)
+        user_row += 1
+
+        nudge_row = ttk.Frame(user_section, style=self._frame_style)
+        nudge_checkbox = nb.Checkbutton(
+            nudge_row,
+            text="Nudge overflowing payloads back into view",
+            variable=self._var_payload_nudge,
+            onvalue=True,
+            offvalue=False,
+            command=self._on_payload_nudge_toggle,
+        )
+        nudge_checkbox.pack(side="left")
+        gutter_label = nb.Label(nudge_row, text="Gutter (px):")
+        gutter_label.pack(side="left", padx=(12, 4))
+        gutter_spin = ttk.Spinbox(
+            nudge_row,
+            from_=0,
+            to=500,
+            increment=5,
+            width=6,
+            textvariable=self._var_payload_gutter,
+            command=self._on_payload_gutter_command,
+            style=self._spinbox_style,
+        )
+        gutter_spin.pack(side="left")
+        gutter_spin.bind("<FocusOut>", self._on_payload_gutter_event)
+        gutter_spin.bind("<Return>", self._on_payload_gutter_event)
+        self._payload_gutter_spin = gutter_spin
+        self._update_payload_gutter_spin_state()
+        nudge_row.grid(row=user_row, column=0, sticky="w", pady=ROW_PAD)
+        user_row += 1
+
+        payload_opacity_row = ttk.Frame(user_section, style=self._frame_style)
+        payload_opacity_label = nb.Label(payload_opacity_row, text="Overlay payload opacity:")
+        _attach_tooltip(
+            payload_opacity_label,
+            "Adjust the opacity of all payloads drawn on the game screen. "
+            "If a payload is already semi-transparent this setting will adjust its opacity linearly.",
+            nb_module=nb,
+        )
+        payload_opacity_label.pack(side="left")
+        payload_opacity_scale = ttk.Scale(
+            payload_opacity_row,
+            variable=self._var_payload_opacity,
+            from_=100,
+            to=0,
+            orient=tk.HORIZONTAL,
+            length=200,
+            command=self._on_payload_opacity_change,
+            style=self._scale_style,
+        )
+        payload_opacity_scale.pack(side="left", padx=(8, 0))
+        payload_opacity_value = nb.Label(payload_opacity_row, textvariable=self._payload_opacity_label)
+        payload_opacity_value.pack(side="left", padx=(8, 0))
+        payload_opacity_row.grid(row=user_row, column=0, sticky="w", pady=ROW_PAD)
+        user_row += 1
+
+        test_overlay_row = ttk.Frame(user_section, style=self._frame_style)
+        test_overlay_btn = nb.Button(test_overlay_row, text="Test Overlay", command=self._on_test_overlay)
+        test_overlay_btn.pack(side="left")
+        test_overlay_row.grid(row=user_row, column=0, sticky="w", pady=ROW_PAD)
+        user_row += 1
+
+        if self._diagnostics_enabled:
+            diagnostics_label = nb.Label(user_section, text="Diagnostics")
+            try:
+                diag_font = tkfont.Font(root=parent, font=diagnostics_label.cget("font"))
+            except Exception:
+                diag_font = None
+            else:
+                try:
+                    diag_font.configure(weight="bold")
+                    self._managed_fonts.append(diag_font)
+                    diagnostics_label.configure(font=diag_font)
+                except Exception:
+                    pass
+            diagnostics_frame = ttk.LabelFrame(
+                user_section,
+                labelwidget=diagnostics_label,
+                padding=(8, 8),
+                style=self._labelframe_style,
+            )
+            diagnostics_frame.grid(row=user_row, column=0, sticky="we", pady=ROW_PAD)
+            diagnostics_frame.columnconfigure(0, weight=1)
+            diag_row = 0
+
+            debug_row = ttk.Frame(diagnostics_frame, style=self._frame_style)
+            debug_checkbox = nb.Checkbutton(
+                debug_row,
+                text="Show debug overlay metrics (frame size, scaling)",
+                variable=self._var_debug_overlay,
+                onvalue=True,
+                offvalue=False,
+                command=self._on_debug_overlay_toggle,
+            )
+            debug_checkbox.pack(side="left")
+            corner_label = nb.Label(debug_row, text="Corner:")
+            corner_label.pack(side="left", padx=(12, 4))
+            for label, value in (("NW", "NW"), ("NE", "NE"), ("SW", "SW"), ("SE", "SE")):
+                rb = nb.Radiobutton(
+                    debug_row,
+                    text=label,
+                    value=value,
+                    variable=self._var_debug_overlay_corner,
+                    command=self._on_debug_overlay_corner_change,
+                )
+                rb.pack(side="left", padx=(4, 0))
+            debug_row.grid(row=diag_row, column=0, sticky="w", pady=ROW_PAD)
+            diag_row += 1
+
+            payload_logging_checkbox = nb.Checkbutton(
+                diagnostics_frame,
+                text="Log incoming payloads to overlay-payloads.log (required for Payload Inspector)",
+                variable=self._var_payload_logging,
+                onvalue=True,
+                offvalue=False,
+                command=self._on_payload_logging_toggle,
+            )
+            payload_logging_checkbox.grid(row=diag_row, column=0, sticky="w", pady=ROW_PAD)
+            diag_row += 1
+
+            capture_checkbox = nb.Checkbutton(
+                diagnostics_frame,
+                text="Capture overlay stdout/stderr in the EDMC log",
+                variable=self._var_capture_override,
+                onvalue=True,
+                offvalue=False,
+                command=self._on_capture_override_toggle,
+            )
+            if not (self._diagnostics_enabled and self._set_capture_override):
+                capture_checkbox.state(["disabled"])
+            capture_checkbox.grid(row=diag_row, column=0, sticky="w", pady=ROW_PAD)
+            diag_row += 1
+
+            retention_row = ttk.Frame(diagnostics_frame, style=self._frame_style)
+            retention_row.grid(row=diag_row, column=0, sticky="w", pady=ROW_PAD)
+            retention_checkbox = nb.Checkbutton(
+                retention_row,
+                text="Override overlay log retention (rotating log files)",
+                variable=self._var_log_retention_override_active,
+                onvalue=True,
+                offvalue=False,
+                command=self._on_log_retention_override_toggle,
+            )
+            retention_checkbox.pack(side="left")
+            retention_spin = ttk.Spinbox(
+                retention_row,
+                from_=CLIENT_LOG_RETENTION_MIN,
+                to=CLIENT_LOG_RETENTION_MAX,
+                increment=1,
+                width=3,
+                textvariable=self._var_log_retention_value,
+                command=self._on_log_retention_override_command,
+                style=self._spinbox_style,
+            )
+            retention_spin.pack(side="left", padx=(12, 0))
+            retention_spin.bind("<FocusOut>", self._on_log_retention_override_event)
+            retention_spin.bind("<Return>", self._on_log_retention_override_event)
+            self._log_retention_spin = retention_spin
+            if not (self._diagnostics_enabled and self._set_log_retention_override):
+                retention_checkbox.state(["disabled"])
+            self._update_log_retention_spin_state()
+            diag_row += 1
+
+            exclude_row = ttk.Frame(diagnostics_frame, style=self._frame_style)
+            exclude_row.grid(row=diag_row, column=0, sticky="we", pady=ROW_PAD)
+            exclude_row.columnconfigure(0, weight=1)
+            exclude_label = nb.Label(exclude_row, text="Skip payload logging for plugin IDs:")
+            exclude_label.pack(side="left")
+            exclude_entry = nb.EntryMenu(exclude_row, width=28, textvariable=self._var_payload_exclude)
+            exclude_entry.pack(side="left", padx=(8, 0), fill="x", expand=True)
+            exclude_entry.bind("<Return>", self._on_payload_exclude_event)
+            self._payload_exclude_entry = exclude_entry
+            exclude_button = nb.Button(exclude_row, text="Apply", command=self._on_payload_exclude_apply)
+            exclude_button.pack(side="left", padx=(8, 0))
+            if not (self._diagnostics_enabled and self._set_payload_exclusions):
+                exclude_entry.configure(state="disabled")
+                exclude_button.configure(state="disabled")
+            diag_row += 1
+
+            spam_row = ttk.Frame(diagnostics_frame, style=self._frame_style)
+            spam_row.grid(row=diag_row, column=0, sticky="w", pady=ROW_PAD)
+            spam_checkbox = nb.Checkbutton(
+                spam_row,
+                text="Warn when a plugin spams payloads:",
+                variable=self._var_payload_spam_enabled,
+                onvalue=True,
+                offvalue=False,
+                command=self._on_payload_spam_toggle,
+            )
+            spam_checkbox.pack(side="left")
+            max_label = nb.Label(spam_row, text="Max:")
+            max_label.pack(side="left", padx=(12, 4))
+            spam_max_spin = ttk.Spinbox(
+                spam_row,
+                from_=SPAM_MAX_PAYLOADS_MIN,
+                to=SPAM_MAX_PAYLOADS_MAX,
+                increment=10,
+                width=5,
+                textvariable=self._var_payload_spam_max,
+                command=self._on_payload_spam_apply,
+                style=self._spinbox_style,
+            )
+            spam_max_spin.pack(side="left")
+            per_label = nb.Label(spam_row, text="per")
+            per_label.pack(side="left", padx=(8, 4))
+            spam_window_spin = ttk.Spinbox(
+                spam_row,
+                from_=SPAM_WINDOW_MIN,
+                to=SPAM_WINDOW_MAX,
+                increment=0.5,
+                width=5,
+                textvariable=self._var_payload_spam_window,
+                command=self._on_payload_spam_apply,
+                style=self._spinbox_style,
+            )
+            spam_window_spin.pack(side="left")
+            window_label = nb.Label(spam_row, text="s, cooldown")
+            window_label.pack(side="left", padx=(8, 4))
+            spam_cooldown_spin = ttk.Spinbox(
+                spam_row,
+                from_=SPAM_WARN_COOLDOWN_MIN,
+                to=SPAM_WARN_COOLDOWN_MAX,
+                increment=5,
+                width=5,
+                textvariable=self._var_payload_spam_cooldown,
+                command=self._on_payload_spam_apply,
+                style=self._spinbox_style,
+            )
+            spam_cooldown_spin.pack(side="left")
+            cooldown_label = nb.Label(spam_row, text="s")
+            cooldown_label.pack(side="left", padx=(4, 0))
+            spam_apply_btn = nb.Button(spam_row, text="Apply", command=self._on_payload_spam_apply)
+            spam_apply_btn.pack(side="left", padx=(8, 0))
+            spam_max_spin.bind("<FocusOut>", self._on_payload_spam_apply_event)
+            spam_max_spin.bind("<Return>", self._on_payload_spam_apply_event)
+            spam_window_spin.bind("<FocusOut>", self._on_payload_spam_apply_event)
+            spam_window_spin.bind("<Return>", self._on_payload_spam_apply_event)
+            spam_cooldown_spin.bind("<FocusOut>", self._on_payload_spam_apply_event)
+            spam_cooldown_spin.bind("<Return>", self._on_payload_spam_apply_event)
+            self._payload_spam_checkbox = spam_checkbox
+            self._payload_spam_max_spin = spam_max_spin
+            self._payload_spam_window_spin = spam_window_spin
+            self._payload_spam_cooldown_spin = spam_cooldown_spin
+            self._payload_spam_apply_btn = spam_apply_btn
+            self._update_payload_spam_controls_state()
+            user_row += 1
+
+        experimental_tab.columnconfigure(0, weight=1)
+        experimental_row = 0
+        disclaimer_label = nb.Label(
+            experimental_tab,
+            text="Experimental settings are unstable, unsupported, and may change without notice.",
+            wraplength=640,
+            justify="left",
+        )
+        try:
+            disclaimer_font = tkfont.Font(root=parent, font=disclaimer_label.cget("font"))
+        except Exception:
+            disclaimer_font = None
+        else:
+            try:
+                disclaimer_font.configure(weight="bold")
+                self._managed_fonts.append(disclaimer_font)
+                disclaimer_label.configure(font=disclaimer_font)
+            except Exception:
+                pass
+        disclaimer_label.grid(row=experimental_row, column=0, sticky="w", pady=ROW_PAD)
+        experimental_row += 1
+        dev_mode_row = ttk.Frame(experimental_tab, style=self._frame_style)
+        dev_mode_checkbox = nb.Checkbutton(
+            dev_mode_row,
+            text="Enable dev mode (requires restart)",
+            variable=self._var_dev_mode,
+            onvalue=True,
+            offvalue=False,
+            command=self._on_dev_mode_toggle,
+        )
+        dev_mode_checkbox.pack(side="left")
+        dev_mode_row.grid(row=experimental_row, column=0, sticky="w", pady=ROW_PAD)
+        experimental_row += 1
+        standalone_row = ttk.Frame(experimental_tab, style=self._frame_style)
+        standalone_checkbox = nb.Checkbutton(
+            standalone_row,
+            text=STANDALONE_MODE_LABEL,
+            variable=self._var_standalone_mode,
+            onvalue=True,
+            offvalue=False,
+            command=self._on_standalone_mode_toggle,
+        )
+        _attach_tooltip(
+            standalone_checkbox,
+            STANDALONE_MODE_TOOLTIP,
+            nb_module=nb,
+        )
+        standalone_checkbox.pack(side="left")
+        if not standalone_mode_supported():
+            standalone_checkbox.state(["disabled"])
+        standalone_row.grid(row=experimental_row, column=0, sticky="w", pady=ROW_PAD)
+        experimental_row += 1
+
+        clamp_row = ttk.Frame(experimental_tab, style=self._frame_style)
+        clamp_checkbox = nb.Checkbutton(
+            clamp_row,
+            text="Clamp fractional desktop scaling (physical clamp)",
+            variable=self._var_physical_clamp,
+            onvalue=True,
+            offvalue=False,
+            command=self._on_physical_clamp_toggle,
+        )
+        clamp_checkbox.pack(side="left")
+        clamp_row.grid(row=experimental_row, column=0, sticky="w", pady=ROW_PAD)
+        experimental_row += 1
+
+        clamp_override_row = ttk.Frame(experimental_tab, style=self._frame_style)
+        clamp_override_row.columnconfigure(1, weight=1)
+        nb.Label(
+            clamp_override_row,
+            text="Per-monitor clamp overrides (name=scale, comma-separated):",
+        ).grid(row=0, column=0, sticky="w")
+        clamp_override_entry = nb.EntryMenu(
+            clamp_override_row,
+            width=40,
+            textvariable=self._var_physical_clamp_overrides,
+        )
+        clamp_override_entry.grid(row=0, column=1, padx=(8, 0), sticky="we")
+        clamp_override_entry.bind("<Return>", self._on_physical_clamp_overrides_event)
+        clamp_override_entry.bind("<FocusOut>", self._on_physical_clamp_overrides_event)
+        clamp_override_apply = nb.Button(
+            clamp_override_row,
+            text="Apply",
+            command=self._on_physical_clamp_overrides_apply,
+        )
+        clamp_override_apply.grid(row=0, column=2, padx=(8, 0), sticky="e")
+        helper_label = nb.Label(
+            clamp_override_row,
+            text="Example: DisplayPort-2=1.0, HDMI-0=1.25 (empty to clear)",
+        )
+        helper_label.grid(row=1, column=0, columnspan=3, sticky="w", pady=(ROW_PAD[0], 0))
+        clamp_override_row.grid(row=experimental_row, column=0, sticky="we", pady=ROW_PAD)
+        experimental_row += 1
+
+        cache_row = ttk.Frame(experimental_tab, style=self._frame_style)
+        cache_label = nb.Label(cache_row, text="Overlay group cache:")
+        cache_label.pack(side="left")
+        reset_cache_btn = nb.Button(cache_row, text="Reset cached values", command=self._on_reset_group_cache)
+        if self._reset_group_cache is None:
+            reset_cache_btn.configure(state="disabled")
+        reset_cache_btn.pack(side="left", padx=(8, 0))
+        cache_row.grid(row=experimental_row, column=0, sticky="w", pady=ROW_PAD)
+        experimental_row += 1
+        if self._dev_mode:
+            dev_label = nb.Label(experimental_tab, text="Developer Settings")
+            try:
+                dev_font = tkfont.Font(root=parent, font=dev_label.cget("font"))
+            except Exception:
+                dev_font = None
+            else:
+                try:
+                    dev_font.configure(weight="bold")
+                    self._managed_fonts.append(dev_font)
+                    dev_label.configure(font=dev_font)
+                except Exception:
+                    pass
+            dev_frame = ttk.LabelFrame(
+                experimental_tab,
+                labelwidget=dev_label,
+                padding=(8, 8),
+                style=self._labelframe_style,
+            )
+            dev_frame.grid(row=experimental_row, column=0, sticky="we", pady=ROW_PAD)
+            dev_frame.columnconfigure(0, weight=1)
+            dev_row = 0
+
+            restart_row = ttk.Frame(dev_frame, style=self._frame_style)
+            restart_btn = nb.Button(restart_row, text="Restart overlay client", command=self._on_restart_overlay)
+            if self._restart_overlay is None:
+                restart_btn.configure(state="disabled")
+            restart_btn.pack(side="left")
+            restart_row.grid(row=dev_row, column=0, sticky="w", pady=ROW_PAD)
+            dev_row += 1
+
+            opacity_label = nb.Label(
+                dev_frame,
+                text="Overlay background opacity (100% opaque - 0% transparent).",
+            )
+            opacity_label.grid(row=dev_row, column=0, sticky="w", pady=ROW_PAD)
+            dev_row += 1
+
+            opacity_row = ttk.Frame(dev_frame, style=self._frame_style)
+            opacity_scale = ttk.Scale(
+                opacity_row,
+                variable=self._var_opacity,
+                from_=1.0,
+                to=0.0,
+                orient=tk.HORIZONTAL,
+                length=250,
+                command=self._on_opacity_change,
+                style=self._scale_style,
+            )
+            opacity_scale.pack(side="left", fill="x")
+            opacity_value = nb.Label(opacity_row, textvariable=self._opacity_label)
+            opacity_value.pack(side="left", padx=(8, 0))
+            opacity_row.grid(row=dev_row, column=0, sticky="we", pady=ROW_PAD)
+            dev_row += 1
+
+            grid_row = ttk.Frame(dev_frame, style=self._frame_style)
+            grid_checkbox = nb.Checkbutton(
+                grid_row,
+                text="Show light gridlines over the overlay background",
+                variable=self._var_gridlines_enabled,
+                onvalue=True,
+                offvalue=False,
+                command=self._on_gridlines_toggle,
+            )
+            grid_checkbox.pack(side="left")
+            grid_spacing_label = nb.Label(grid_row, text="Spacing (px):")
+            grid_spacing_label.pack(side="left", padx=(12, 4))
+            grid_spacing_spin = ttk.Spinbox(
+                grid_row,
+                from_=10,
+                to=400,
+                increment=10,
+                width=5,
+                textvariable=self._var_gridline_spacing,
+                command=self._on_gridline_spacing_command,
+                style=self._spinbox_style,
+            )
+            grid_spacing_spin.pack(side="left")
+            grid_spacing_spin.bind("<FocusOut>", self._on_gridline_spacing_event)
+            grid_spacing_spin.bind("<Return>", self._on_gridline_spacing_event)
+            self._gridline_spacing_spin = grid_spacing_spin
+            self._update_gridline_spacing_spin_state()
+            grid_row.grid(row=dev_row, column=0, sticky="w", pady=ROW_PAD)
+            dev_row += 1
+
+            cycle_row = ttk.Frame(dev_frame, style=self._frame_style)
+            cycle_checkbox = nb.Checkbutton(
+                cycle_row,
+                text="Cycle through Payload IDs",
+                variable=self._var_cycle_payload,
+                onvalue=True,
+                offvalue=False,
+                command=self._on_cycle_payload_toggle,
+            )
+            self._cycle_prev_btn = nb.Button(cycle_row, text="<", width=3, command=self._on_cycle_payload_prev)
+            self._cycle_next_btn = nb.Button(cycle_row, text=">", width=3, command=self._on_cycle_payload_next)
+            self._cycle_copy_checkbox = nb.Checkbutton(
+                cycle_row,
+                text="Copy current payload ID to clipboard",
+                variable=self._var_cycle_copy,
+                onvalue=True,
+                offvalue=False,
+                command=self._on_cycle_copy_toggle,
+            )
+            cycle_checkbox.pack(side="left")
+            self._cycle_prev_btn.pack(side="left", padx=(8, 0))
+            self._cycle_next_btn.pack(side="left", padx=(4, 0))
+            self._cycle_copy_checkbox.pack(side="left", padx=(12, 0))
+            cycle_row.grid(row=dev_row, column=0, sticky="w", pady=ROW_PAD)
+            dev_row += 1
+
+            test_row = ttk.Frame(dev_frame, style=self._frame_style)
+            test_label = nb.Label(test_row, text="Send test message to overlay:")
+            test_label.pack(side="left", padx=(0, 8))
+            test_entry = nb.EntryMenu(test_row, textvariable=self._test_var, width=28)
+            x_label = nb.Label(test_row, text="X:")
+            x_entry = nb.EntryMenu(test_row, textvariable=self._test_x_var, width=6)
+            y_label = nb.Label(test_row, text="Y:")
+            y_entry = nb.EntryMenu(test_row, textvariable=self._test_y_var, width=6)
+            send_button = nb.Button(test_row, text="Send", command=self._on_send_click)
+            test_entry.pack(side="left", fill="x", expand=True)
+            x_label.pack(side="left", padx=(8, 2))
+            x_entry.pack(side="left")
+            y_label.pack(side="left", padx=(8, 2))
+            y_entry.pack(side="left")
+            send_button.pack(side="left", padx=(8, 0))
+            test_row.grid(row=dev_row, column=0, sticky="we", pady=ROW_PAD)
+            test_row.columnconfigure(0, weight=1)
+            dev_row += 1
+
+            legacy_row = ttk.Frame(dev_frame, style=self._frame_style)
+            legacy_label = nb.Label(legacy_row, text="Legacy edmcoverlay compatibility:")
+            legacy_label.pack(side="left", padx=(0, 8))
+            legacy_text_btn = nb.Button(legacy_row, text="Send legacy text", command=self._on_legacy_text)
+            legacy_rect_btn = nb.Button(legacy_row, text="Send legacy rectangle", command=self._on_legacy_rect)
+            legacy_emoji_btn = nb.Button(legacy_row, text="Send legacy emoji", command=self._on_legacy_emoji)
+            legacy_text_btn.pack(side="left")
+            legacy_rect_btn.pack(side="left", padx=(8, 0))
+            legacy_emoji_btn.pack(side="left", padx=(8, 0))
+            legacy_row.grid(row=dev_row, column=0, sticky="w", pady=ROW_PAD)
+            dev_row += 1
+
+            experimental_row += 1
+
+        self._update_cycle_button_state()
+
+        status_label = nb.Label(frame, textvariable=self._status_var, wraplength=800, justify="left")
+        status_label.grid(row=2, column=0, sticky="w", pady=ROW_PAD)
+        frame.columnconfigure(0, weight=1)
+
+        self._frame = frame
+        try:
+            self._frame.bind("<Destroy>", self._on_preferences_frame_destroy, add="+")
+        except Exception:
+            pass
+        self._start_profile_state_monitor()
+
+    @property
+    def frame(self):  # pragma: no cover - Tk integration
+        """Return the root Tk frame for embedding in EDMC."""
+        return self._frame
+
+    def apply(self) -> None:
+        """Apply pending UI edits and persist preferences."""
+        # Ensure any pending entry/spinbox values are written back before saving.
+        self._apply_font_bounds(update_remote=False)
+        self._apply_font_step(update_remote=False)
+        self._apply_status_gutter(update_remote=False, force=True)
+        self._apply_title_bar_height(update_remote=False)
+        self._apply_payload_gutter()
+        self._preferences.save()
+
+    def _init_theme_styles(self, nb):
+        try:
+            bg = nb.PAGEBG
+            fg = nb.PAGEFG
+        except AttributeError:
+            bg = fg = None
+        frame_style = "OverlayPrefs.TFrame"
+        labelframe_style = "OverlayPrefs.TLabelframe"
+        labelframe_label_style = "OverlayPrefs.TLabelframe.Label"
+        spin_style = "OverlayPrefs.TSpinbox"
+        scale_style = "OverlayPrefs.Horizontal.TScale"
+        self._style.configure(frame_style, background=bg)
+        self._style.configure(labelframe_style, background=bg)
+        self._style.configure(spin_style, arrowsize=12)
+        if bg is not None and fg is not None:
+            self._style.configure(labelframe_label_style, background=bg, foreground=fg)
+            self._style.configure(spin_style, fieldbackground=bg, foreground=fg, background=bg)
+            self._style.configure(scale_style, background=bg)
+        return frame_style, spin_style, scale_style, labelframe_style
+
+    def _on_opacity_change(self, value: str) -> None:
+        try:
+            numeric = float(value)
+        except (TypeError, ValueError):
+            numeric = 0.0
+        numeric = max(0.0, min(1.0, numeric))
+        self._var_opacity.set(numeric)
+        self._opacity_label.set(f"{int(round(numeric * 100))}%")
+        self._preferences.overlay_opacity = numeric
+        if self._set_opacity:
+            try:
+                self._set_opacity(numeric)
+            except Exception as exc:
+                self._status_var.set(f"Failed to update opacity: {exc}")
+                return
+        self._preferences.save()
+
+    def _on_payload_opacity_change(self, value: str) -> None:
+        self._apply_payload_opacity(value=value, update_remote=True)
+
+    def _apply_payload_opacity(self, *, value: Optional[str] = None, update_remote: bool = True) -> int:
+        if self._payload_opacity_apply_in_progress:
+            return int(self._preferences.global_payload_opacity)
+        self._payload_opacity_apply_in_progress = True
+        try:
+            if value is None:
+                raw_value: object = self._var_payload_opacity.get()
+            else:
+                raw_value = value
+            try:
+                numeric = int(round(float(raw_value)))
+            except (TypeError, ValueError):
+                numeric = int(self._preferences.global_payload_opacity)
+            numeric = max(0, min(100, numeric))
+            if float(numeric) != float(self._var_payload_opacity.get()):
+                self._var_payload_opacity.set(float(numeric))
+            self._payload_opacity_label.set(f"{numeric}%")
+            old_value = int(self._preferences.global_payload_opacity)
+            if update_remote and self._set_payload_opacity and numeric != old_value:
+                try:
+                    self._set_payload_opacity(numeric)
+                except Exception as exc:
+                    self._status_var.set(f"Failed to update payload opacity: {exc}")
+                    self._var_payload_opacity.set(float(old_value))
+                    self._payload_opacity_label.set(f"{old_value}%")
+                    self._preferences.global_payload_opacity = old_value
+                    return old_value
+            if numeric != old_value:
+                self._preferences.global_payload_opacity = numeric
+                self._preferences.save()
+            return numeric
+        finally:
+            self._payload_opacity_apply_in_progress = False
+
+    def _on_reset_group_cache(self) -> None:
+        if not callable(self._reset_group_cache):
+            self._status_var.set("Reset cached values is unavailable.")
+            return
+        try:
+            success = self._reset_group_cache()
+        except Exception as exc:
+            LOGGER.debug("Reset cached values failed", exc_info=True)
+            self._status_var.set(f"Failed to reset cached values: {exc}")
+            return
+        if success is False:
+            self._status_var.set("Failed to reset cached values.")
+            return
+        self._status_var.set("Cached overlay values reset.")
+
+    def _on_dev_mode_toggle(self) -> None:
+        value = bool(self._var_dev_mode.get())
+        self._preferences.dev_mode = value
+        self._preferences.save()
+        self._dev_mode = value
+        self._status_var.set("Dev mode updated. Restart EDMC to apply.")
+
+    def _on_show_status_toggle(self) -> None:
+        value = bool(self._var_show_status.get())
+        self._preferences.show_connection_status = value
+        self._update_status_gutter_spin_state()
+        if self._set_status:
+            try:
+                self._set_status(value)
+            except Exception as exc:
+                self._status_var.set(f"Failed to update connection status: {exc}")
+                return
+        self._preferences.save()
+
+    def _on_status_gutter_command(self) -> None:
+        self._apply_status_gutter()
+
+    def _on_status_gutter_event(self, _event) -> None:  # pragma: no cover - Tk event
+        self._apply_status_gutter()
+
+    def _on_status_gutter_trace(self, *_args) -> None:
+        if self._status_gutter_apply_in_progress:
+            return
+        self._apply_status_gutter()
+
+    def _on_launch_command_trace(self, *_args) -> None:
+        if self._launch_command_apply_in_progress:
+            return
+        self._apply_launch_command()
+
+    def _on_launch_command_event(self, _event=None) -> None:  # pragma: no cover - Tk event
+        self._apply_launch_command()
+
+    def _on_toggle_argument_event(self, _event=None) -> None:  # pragma: no cover - Tk event
+        self._apply_toggle_argument()
+
+    def _apply_launch_command(self) -> None:
+        if self._launch_command_apply_in_progress:
+            return
+        self._launch_command_apply_in_progress = True
+        raw_value = self._var_launch_command.get()
+        normalised = _coerce_str(
+            raw_value,
+            self._preferences.controller_launch_command,
+            transform=_normalise_launch_command,
+        )
+        LOGGER.info(
+            "Overlay Controller launch command change requested (UI): raw=%r normalised=%s current=%s",
+            raw_value,
+            normalised,
+            self._preferences.controller_launch_command,
+        )
+        if normalised != self._var_launch_command.get():
+            self._var_launch_command.set(normalised)
+        if normalised == self._preferences.controller_launch_command:
+            self._launch_command_apply_in_progress = False
+            return
+        old_value = self._preferences.controller_launch_command
+        self._preferences.controller_launch_command = normalised
+        self._preferences.save()
+        if callable(self._set_launch_command):
+            try:
+                self._set_launch_command(normalised)
+            except Exception:
+                LOGGER.debug("Failed to propagate launch command change", exc_info=True)
+        self._status_var.set(f"Overlay launch command set to {normalised}")
+        LOGGER.info("Overlay Controller launch command updated (UI): %s -> %s", old_value, normalised)
+        self._launch_command_apply_in_progress = False
+
+    def _apply_toggle_argument(self) -> None:
+        if self._toggle_argument_apply_in_progress:
+            return
+        self._toggle_argument_apply_in_progress = True
+        raw_value = self._var_toggle_argument.get()
+        normalised, error = _validate_toggle_argument(
+            raw_value,
+            default=TOGGLE_ARGUMENT_DEFAULT,
+            previous=self._preferences.controller_toggle_argument,
+        )
+        if error:
+            if normalised != self._var_toggle_argument.get():
+                self._var_toggle_argument.set(normalised)
+            self._status_var.set(error)
+            self._toggle_argument_apply_in_progress = False
+            return
+        if normalised != self._var_toggle_argument.get():
+            self._var_toggle_argument.set(normalised)
+        if normalised == self._preferences.controller_toggle_argument:
+            self._toggle_argument_apply_in_progress = False
+            return
+        old_value = self._preferences.controller_toggle_argument
+        self._preferences.controller_toggle_argument = normalised
+        self._preferences.save()
+        if callable(self._set_toggle_argument):
+            try:
+                self._set_toggle_argument(normalised)
+            except Exception:
+                LOGGER.debug("Failed to propagate toggle argument change", exc_info=True)
+        self._status_var.set(f"Overlay toggle argument set to {normalised}")
+        LOGGER.info("Overlay toggle argument updated (UI): %s -> %s", old_value, normalised)
+        self._toggle_argument_apply_in_progress = False
+
+    def _load_profile_menu_icons(self) -> None:
+        profile_pref_helpers.load_profile_menu_icons(self)
+
+    def _refresh_profile_state(self) -> None:
+        self._maybe_refresh_profile_state_from_callback(silent=False)
+
+    def _sync_profile_table_from_status(self, status: Mapping[str, Any]) -> None:
+        raw_profiles = status.get("profiles") if isinstance(status, Mapping) else None
+        profiles = [str(item).strip() for item in raw_profiles] if isinstance(raw_profiles, list) else []
+        profiles = [item for item in profiles if item]
+        if not profiles:
+            profiles = [DEFAULT_PROFILE_NAME]
+        current_profile = str(status.get("current_profile") or profiles[0]).strip() or profiles[0]
+
+        combo = getattr(self, "_profile_current_combo", None)
+        if combo is not None:
+            try:
+                combo.configure(values=profiles)
+            except Exception:
+                pass
+        var_current = getattr(self, "_var_profile_current", None)
+        if var_current is not None:
+            try:
+                var_current.set(current_profile)
+            except Exception:
+                pass
+        sync_profile_table = getattr(self, "_sync_profile_table", None)
+        if callable(sync_profile_table):
+            sync_profile_table(status=status, profiles=profiles, current_profile=current_profile)
+
+    def _maybe_refresh_profile_state_from_callback(self, *, silent: bool) -> bool:
+        callback = self._profile_status_callback
+        if not callable(callback):
+            self._profile_state_snapshot = {}
+            self._sync_profile_widgets()
+            return False
+        try:
+            status = callback()
+        except Exception as exc:
+            if not silent:
+                self._status_var.set(f"Failed to load profile state: {exc}")
+            return False
+        if not isinstance(status, Mapping):
+            if not silent:
+                self._status_var.set("Invalid profile state response.")
+            return False
+        previous = self._profile_state_snapshot if isinstance(self._profile_state_snapshot, Mapping) else {}
+        if status == previous:
+            return False
+        self._profile_state_snapshot = status
+        if silent:
+            # Silent background polling should update profile list/active marker
+            # without clobbering in-progress rule edits in the right-side controls.
+            self._sync_profile_table_from_status(status)
+        else:
+            self._sync_profile_widgets()
+        return True
+
+    def _profile_frame_exists(self) -> bool:
+        frame = getattr(self, "_frame", None)
+        if frame is None:
+            return False
+        try:
+            return bool(frame.winfo_exists())
+        except Exception:
+            return False
+
+    def _start_profile_state_monitor(self) -> None:
+        if not callable(self._profile_status_callback):
+            return
+        if self._profile_poll_after_id:
+            return
+        self._schedule_profile_state_monitor(delay_ms=self._profile_poll_interval_ms)
+
+    def _schedule_profile_state_monitor(self, *, delay_ms: int) -> None:
+        if not self._profile_frame_exists():
+            return
+        frame = self._frame
+        try:
+            self._profile_poll_after_id = frame.after(max(100, int(delay_ms)), self._poll_profile_state_monitor)
+        except Exception:
+            self._profile_poll_after_id = None
+
+    def _stop_profile_state_monitor(self) -> None:
+        after_id = self._profile_poll_after_id
+        self._profile_poll_after_id = None
+        if not after_id:
+            return
+        frame = getattr(self, "_frame", None)
+        if frame is None:
+            return
+        try:
+            frame.after_cancel(after_id)
+        except Exception:
+            pass
+
+    def _on_preferences_frame_destroy(self, event=None) -> None:  # pragma: no cover - Tk event
+        frame = getattr(self, "_frame", None)
+        if frame is None:
+            return
+        widget = getattr(event, "widget", None)
+        if widget is not None and widget is not frame:
+            return
+        self._stop_profile_state_monitor()
+
+    def _poll_profile_state_monitor(self) -> None:
+        self._profile_poll_after_id = None
+        if not self._profile_frame_exists():
+            return
+        if self._profile_table_editor is None:
+            self._maybe_refresh_profile_state_from_callback(silent=True)
+        self._schedule_profile_state_monitor(delay_ms=self._profile_poll_interval_ms)
+
+    def _sync_profile_widgets(self) -> None:
+        profile_pref_helpers.sync_profile_widgets(self)
+
+    @staticmethod
+    def _status_rules_map(status: Mapping[str, Any]) -> Dict[str, list[Mapping[str, Any]]]:
+        return profile_pref_helpers.status_rules_map(status)
+
+    @staticmethod
+    def _rule_context_state(rules: list[Mapping[str, Any]]) -> Dict[str, bool]:
+        return profile_pref_helpers.rule_context_state(rules)
+
+    def _sync_profile_table(self, *, status: Mapping[str, Any], profiles: list[str], current_profile: str) -> None:
+        profile_pref_helpers.sync_profile_table(
+            self,
+            status=status,
+            profiles=profiles,
+            current_profile=current_profile,
+        )
+
+    def _selected_profile_name(self) -> str:
+        return profile_pref_helpers.selected_profile_name(self)
+
+    def _on_profile_table_selected(self, _event=None) -> None:  # pragma: no cover - Tk event
+        profile_pref_helpers.on_profile_table_selected(self, _event)
+
+    def _on_profile_table_right_click(self, event) -> None:  # pragma: no cover - Tk event
+        profile_pref_helpers.on_profile_table_right_click(self, event)
+
+    @staticmethod
+    def _next_profile_copy_name(source_name: str, existing: list[str]) -> str:
+        return profile_pref_helpers.next_profile_copy_name(source_name, existing)
+
+    def _on_profile_copy(self) -> None:
+        profile_pref_helpers.on_profile_copy(self)
+
+    def _on_profile_paste(self) -> None:
+        profile_pref_helpers.on_profile_paste(self)
+
+    def _on_profile_insert_row(self, _where: str) -> None:
+        profile_pref_helpers.on_profile_insert_row(self, _where)
+
+    def _on_profile_move_row(self, direction: str) -> None:
+        profile_pref_helpers.on_profile_move_row(self, direction)
+
+    def _on_profile_table_double_click(self, event) -> None:  # pragma: no cover - Tk event
+        profile_pref_helpers.on_profile_table_double_click(self, event)
+
+    def _toggle_profile_table_rule(self, context: str) -> None:
+        profile_pref_helpers.toggle_profile_table_rule(self, context)
+
+    def _sync_profile_ship_list(self, status: Mapping[str, Any]) -> None:
+        profile_pref_helpers.sync_profile_ship_list(self, status)
+
+    def _on_profile_ship_sort(self, column: str) -> None:
+        profile_pref_helpers.on_profile_ship_sort(self, column)
+
+    def _on_profile_ship_table_click(self, event):  # pragma: no cover - Tk event
+        return profile_pref_helpers.on_profile_ship_table_click(self, event)
+
+    def _on_profile_ship_table_double_click(self, event):  # pragma: no cover - Tk event
+        return profile_pref_helpers.on_profile_ship_table_double_click(self, event)
+
+    def _on_profile_in_main_ship_toggle(self) -> None:
+        profile_pref_helpers.on_profile_in_main_ship_toggle(self)
+
+    def _on_profile_rule_toggle(self) -> None:
+        profile_pref_helpers.on_profile_rule_toggle(self)
+
+    def _on_profile_list_selected(self, _event=None) -> None:  # pragma: no cover - Tk event
+        profile_pref_helpers.on_profile_list_selected(self, _event)
+
+    def _load_selected_profile_rules(self) -> None:
+        profile_pref_helpers.load_selected_profile_rules(self)
+
+    def _on_profile_set_current(self) -> None:
+        profile_pref_helpers.on_profile_set_current(self)
+
+    def _on_profile_create(self, _event=None) -> None:  # pragma: no cover - Tk event
+        profile_pref_helpers.on_profile_create(self, _event)
+
+    def _on_profile_rename(self, _event=None) -> None:  # pragma: no cover - Tk event
+        profile_pref_helpers.on_profile_rename(self, _event)
+
+    def _on_profile_delete(self) -> None:
+        profile_pref_helpers.on_profile_delete(self)
+
+    def _on_profile_rules_apply(self) -> None:
+        profile_pref_helpers.on_profile_rules_apply(self)
+
+    def _selected_ship_ids_for_rules(self) -> list[int]:
+        return profile_pref_helpers.selected_ship_ids_for_rules(self)
+
+    def _open_release_link(self, _event=None) -> None:
+        try:
+            webbrowser.open_new(LATEST_RELEASE_URL)
+        except Exception as exc:
+            self._status_var.set(f"Failed to open release notes: {exc}")
+
+    def _apply_status_gutter(self, update_remote: bool = True, force: bool = False) -> int:
+        if self._status_gutter_apply_in_progress and not force:
+            return self._preferences.status_message_gutter
+        self._status_gutter_apply_in_progress = True
+        try:
+            try:
+                gutter_raw = self._status_gutter_spin.get() if self._status_gutter_spin is not None else None
+            except Exception:
+                gutter_raw = None
+            if gutter_raw is None:
+                gutter = int(self._var_status_gutter.get())
+            else:
+                gutter = int(gutter_raw)
+        except (TypeError, ValueError):
+            gutter = self._preferences.status_message_gutter
+        gutter = max(0, min(gutter, STATUS_GUTTER_MAX))
+        if str(gutter) != str(self._var_status_gutter.get()):
+            self._var_status_gutter.set(gutter)
+        old_value = self._preferences.status_message_gutter
+        if update_remote and self._set_status_gutter:
+            try:
+                self._set_status_gutter(gutter)
+            except Exception as exc:
+                self._status_var.set(f"Failed to update status gutter: {exc}")
+                self._var_status_gutter.set(old_value)
+                self._status_gutter_apply_in_progress = False
+                return old_value
+        elif gutter == old_value:
+            self._status_gutter_apply_in_progress = False
+            return gutter
+        self._preferences.status_message_gutter = gutter
+        self._preferences.save()
+        self._status_gutter_apply_in_progress = False
+        return gutter
+
+    def _on_debug_overlay_corner_change(self) -> None:
+        value = (self._var_debug_overlay_corner.get() or "NW").upper()
+        if value not in {"NW", "NE", "SW", "SE"}:
+            value = "NW"
+        self._preferences.debug_overlay_corner = value
+        if self._set_debug_overlay_corner:
+            try:
+                self._set_debug_overlay_corner(value)
+            except Exception as exc:
+                self._status_var.set(f"Failed to update debug overlay corner: {exc}")
+                return
+        self._preferences.save()
+
+    def _on_payload_logging_toggle(self) -> None:
+        value = bool(self._var_payload_logging.get())
+        try:
+            if self._set_payload_logging:
+                self._set_payload_logging(value)
+            else:
+                self._preferences.log_payloads = value
+                self._preferences.save()
+        except Exception as exc:
+            self._status_var.set(f"Failed to update payload logging: {exc}")
+            self._var_payload_logging.set(not value)
+            self._preferences.log_payloads = bool(self._var_payload_logging.get())
+            return
+        self._preferences.log_payloads = value
+        self._preferences.save()
+
+    def _on_capture_override_toggle(self) -> None:
+        desired = bool(self._var_capture_override.get())
+        if not (self._diagnostics_enabled and self._set_capture_override):
+            self._var_capture_override.set(not desired)
+            self._status_var.set("Set EDMC log level to DEBUG (or enable dev mode) to capture stdout/stderr.")
+            return
+        try:
+            self._set_capture_override(desired)
+        except Exception as exc:
+            self._status_var.set(f"Failed to update stdout/stderr capture: {exc}")
+            self._var_capture_override.set(not desired)
+            return
+        self._status_var.set(
+            "Overlay stdout/stderr capture {}".format("enabled" if desired else "disabled")
+        )
+
+    def _update_status_gutter_spin_state(self) -> None:
+        if self._status_gutter_spin is None:
+            return
+        if bool(self._var_show_status.get()):
+            self._status_gutter_spin.state(["!disabled"])
+        else:
+            self._status_gutter_spin.state(["disabled"])
+
+    def _update_payload_gutter_spin_state(self) -> None:
+        if self._payload_gutter_spin is None:
+            return
+        if bool(self._var_payload_nudge.get()):
+            self._payload_gutter_spin.state(["!disabled"])
+        else:
+            self._payload_gutter_spin.state(["disabled"])
+
+    def _update_gridline_spacing_spin_state(self) -> None:
+        if self._gridline_spacing_spin is None:
+            return
+        if bool(self._var_gridlines_enabled.get()):
+            self._gridline_spacing_spin.state(["!disabled"])
+        else:
+            self._gridline_spacing_spin.state(["disabled"])
+
+    def _update_log_retention_spin_state(self) -> None:
+        if self._log_retention_spin is None:
+            return
+        enabled = (
+            self._diagnostics_enabled
+            and self._set_log_retention_override is not None
+            and bool(self._var_log_retention_override_active.get())
+        )
+        if enabled:
+            self._log_retention_spin.state(["!disabled"])
+        else:
+            self._log_retention_spin.state(["disabled"])
+
+    def _update_payload_spam_controls_state(self) -> None:
+        enabled = self._diagnostics_enabled and self._set_payload_spam_detection is not None
+        if self._payload_spam_checkbox is not None:
+            if enabled:
+                self._payload_spam_checkbox.state(["!disabled"])
+            else:
+                self._payload_spam_checkbox.state(["disabled"])
+        for spin in (
+            self._payload_spam_window_spin,
+            self._payload_spam_max_spin,
+            self._payload_spam_cooldown_spin,
+        ):
+            if spin is None:
+                continue
+            if enabled:
+                spin.state(["!disabled"])
+            else:
+                spin.state(["disabled"])
+        if self._payload_spam_apply_btn is not None:
+            if enabled:
+                self._payload_spam_apply_btn.configure(state="normal")
+            else:
+                self._payload_spam_apply_btn.configure(state="disabled")
+
+    def _on_log_retention_override_toggle(self) -> None:
+        active = bool(self._var_log_retention_override_active.get())
+        if not (self._diagnostics_enabled and self._set_log_retention_override):
+            self._var_log_retention_override_active.set(False)
+            self._status_var.set("Set EDMC logging to DEBUG to override overlay log retention.")
+            self._update_log_retention_spin_state()
+            return
+        if not active:
+            try:
+                self._set_log_retention_override(None)
+            except Exception as exc:
+                self._status_var.set(f"Failed to clear log retention override: {exc}")
+                self._var_log_retention_override_active.set(True)
+            else:
+                self._status_var.set("Overlay log retention override disabled.")
+        else:
+            if self._apply_log_retention_override(update_remote=True) is None:
+                self._var_log_retention_override_active.set(False)
+        self._update_log_retention_spin_state()
+
+    def _on_log_retention_override_command(self) -> None:
+        self._apply_log_retention_override()
+
+    def _on_log_retention_override_event(self, _event) -> None:  # pragma: no cover - Tk event
+        self._apply_log_retention_override()
+
+    def _apply_log_retention_override(self, update_remote: bool = True) -> Optional[int]:
+        try:
+            value = int(self._var_log_retention_value.get())
+        except Exception:
+            try:
+                value = int(self._preferences.client_log_retention)
+            except Exception:
+                value = DEFAULT_CLIENT_LOG_RETENTION
+        value = max(CLIENT_LOG_RETENTION_MIN, min(value, CLIENT_LOG_RETENTION_MAX))
+        self._var_log_retention_value.set(value)
+        if not update_remote or self._set_log_retention_override is None:
+            return value
+        try:
+            self._set_log_retention_override(value)
+        except Exception as exc:
+            self._status_var.set(f"Failed to update log retention override: {exc}")
+            return None
+        self._status_var.set(f"Overlay log retention override set to {value} files.")
+        return value
+
+    def _current_payload_excludes(self) -> Tuple[str, ...]:
+        raw = (self._var_payload_exclude.get() or "").replace(",", " ")
+        tokens: list[str] = []
+        seen: set[str] = set()
+        for token in raw.split():
+            cleaned = token.strip().lower()
+            if not cleaned or cleaned in seen:
+                continue
+            tokens.append(cleaned)
+            seen.add(cleaned)
+        return tuple(tokens)
+
+    def _on_payload_exclude_apply(self) -> None:
+        if not (self._diagnostics_enabled and self._set_payload_exclusions):
+            self._status_var.set("Set EDMC logging to DEBUG to edit payload exclusions.")
+            return
+        try:
+            self._set_payload_exclusions(self._current_payload_excludes())
+        except Exception as exc:
+            self._status_var.set(f"Failed to update payload exclusions: {exc}")
+            return
+        self._status_var.set("Payload logging exclusions updated.")
+
+    def _on_payload_exclude_event(self, _event) -> str:  # pragma: no cover - Tk event
+        self._on_payload_exclude_apply()
+        return "break"
+
+    def _restore_payload_spam_committed(self) -> None:
+        self._var_payload_spam_enabled.set(self._payload_spam_enabled_committed)
+        self._var_payload_spam_window.set(self._payload_spam_window_committed)
+        self._var_payload_spam_max.set(self._payload_spam_max_committed)
+        self._var_payload_spam_cooldown.set(self._payload_spam_cooldown_committed)
+
+    def _on_payload_spam_toggle(self) -> None:
+        if not (self._diagnostics_enabled and self._set_payload_spam_detection):
+            self._restore_payload_spam_committed()
+            self._status_var.set("Set EDMC logging to DEBUG to edit payload spam detection.")
+            return
+        self._apply_payload_spam_detection()
+
+    def _on_payload_spam_apply(self) -> None:
+        if not (self._diagnostics_enabled and self._set_payload_spam_detection):
+            self._status_var.set("Set EDMC logging to DEBUG to edit payload spam detection.")
+            return
+        self._apply_payload_spam_detection()
+
+    def _on_payload_spam_apply_event(self, _event) -> str:  # pragma: no cover - Tk event
+        self._on_payload_spam_apply()
+        return "break"
+
+    def _apply_payload_spam_detection(self) -> bool:
+        if self._payload_spam_apply_in_progress:
+            return False
+        self._payload_spam_apply_in_progress = True
+        try:
+            enabled = bool(self._var_payload_spam_enabled.get())
+            try:
+                raw_window = (
+                    self._payload_spam_window_spin.get()
+                    if self._payload_spam_window_spin is not None
+                    else self._var_payload_spam_window.get()
+                )
+            except Exception:
+                raw_window = self._payload_spam_window_committed
+            window_seconds = _coerce_float(
+                raw_window,
+                self._payload_spam_window_committed,
+                minimum=SPAM_WINDOW_MIN,
+                maximum=SPAM_WINDOW_MAX,
+            )
+            try:
+                raw_max = (
+                    self._payload_spam_max_spin.get()
+                    if self._payload_spam_max_spin is not None
+                    else self._var_payload_spam_max.get()
+                )
+            except Exception:
+                raw_max = self._payload_spam_max_committed
+            max_payloads = _coerce_int(
+                raw_max,
+                self._payload_spam_max_committed,
+                minimum=SPAM_MAX_PAYLOADS_MIN,
+                maximum=SPAM_MAX_PAYLOADS_MAX,
+            )
+            try:
+                raw_cooldown = (
+                    self._payload_spam_cooldown_spin.get()
+                    if self._payload_spam_cooldown_spin is not None
+                    else self._var_payload_spam_cooldown.get()
+                )
+            except Exception:
+                raw_cooldown = self._payload_spam_cooldown_committed
+            warn_cooldown = _coerce_float(
+                raw_cooldown,
+                self._payload_spam_cooldown_committed,
+                minimum=SPAM_WARN_COOLDOWN_MIN,
+                maximum=SPAM_WARN_COOLDOWN_MAX,
+            )
+            self._var_payload_spam_window.set(window_seconds)
+            self._var_payload_spam_max.set(max_payloads)
+            self._var_payload_spam_cooldown.set(warn_cooldown)
+            if self._set_payload_spam_detection is None:
+                return False
+            self._set_payload_spam_detection(enabled, window_seconds, max_payloads, warn_cooldown)
+        except Exception as exc:
+            self._status_var.set(f"Failed to update payload spam detection: {exc}")
+            self._restore_payload_spam_committed()
+            return False
+        else:
+            self._payload_spam_enabled_committed = enabled
+            self._payload_spam_window_committed = window_seconds
+            self._payload_spam_max_committed = max_payloads
+            self._payload_spam_cooldown_committed = warn_cooldown
+            self._status_var.set("Payload spam detection updated.")
+            return True
+        finally:
+            self._payload_spam_apply_in_progress = False
+
+    def _update_cycle_button_state(self) -> None:
+        state = "normal" if self._var_cycle_payload.get() else "disabled"
+        for button in (self._cycle_prev_btn, self._cycle_next_btn, self._cycle_copy_checkbox):
+            if button is not None:
+                try:
+                    button.configure(state=state)
+                except Exception:
+                    pass
+
+    def _on_cycle_payload_toggle(self) -> None:
+        value = bool(self._var_cycle_payload.get())
+        try:
+            if self._set_cycle_payload:
+                self._set_cycle_payload(value)
+            else:
+                self._preferences.cycle_payload_ids = value
+                self._preferences.save()
+        except Exception as exc:
+            self._status_var.set(f"Failed to update payload cycling: {exc}")
+            self._var_cycle_payload.set(not value)
+            self._preferences.cycle_payload_ids = bool(self._var_cycle_payload.get())
+            self._update_cycle_button_state()
+            return
+        self._preferences.cycle_payload_ids = value
+        self._update_cycle_button_state()
+
+    def _on_cycle_copy_toggle(self) -> None:
+        value = bool(self._var_cycle_copy.get())
+        if not self._var_cycle_payload.get():  # Should not be reachable because checkbox disabled, but guard anyway.
+            value = False
+            self._var_cycle_copy.set(False)
+        try:
+            if self._set_cycle_payload_copy:
+                self._set_cycle_payload_copy(value)
+            else:
+                self._preferences.copy_payload_id_on_cycle = value
+                self._preferences.save()
+        except Exception as exc:
+            self._status_var.set(f"Failed to update copy-on-cycle setting: {exc}")
+            self._var_cycle_copy.set(self._preferences.copy_payload_id_on_cycle)
+            return
+        self._preferences.copy_payload_id_on_cycle = value
+        self._preferences.save()
+
+    def _on_cycle_payload_prev(self) -> None:
+        if not self._var_cycle_payload.get():
+            return
+        if self._cycle_prev_callback:
+            try:
+                self._cycle_prev_callback()
+            except Exception as exc:
+                self._status_var.set(f"Failed to cycle payload IDs: {exc}")
+
+    def _on_cycle_payload_next(self) -> None:
+        if not self._var_cycle_payload.get():
+            return
+        if self._cycle_next_callback:
+            try:
+                self._cycle_next_callback()
+            except Exception as exc:
+                self._status_var.set(f"Failed to cycle payload IDs: {exc}")
+
+    def _on_restart_overlay(self) -> None:
+        if self._restart_overlay is None:
+            self._status_var.set("Overlay restart unavailable.")
+            return
+        try:
+            self._restart_overlay()
+        except Exception as exc:  # pragma: no cover - defensive UI handler
+            self._status_var.set(f"Failed to restart overlay: {exc}")
+            return
+        self._status_var.set("Overlay restart requested.")
+
+    def _on_launch_controller(self) -> None:
+        callback = self._launch_controller
+        if callback is None:
+            return
+        try:
+            callback()
+        except Exception as exc:  # pragma: no cover - defensive UI handler
+            LOGGER.debug("Controller launch callback failed from preferences UI: %s", exc, exc_info=True)
+
+    def _on_force_render_toggle(self) -> None:
+        value = bool(self._var_force_render.get())
+        if self._set_force_render:
+            try:
+                self._set_force_render(value)
+            except Exception as exc:
+                self._status_var.set(f"Failed to update force-render option: {exc}")
+                return
+        else:
+            self._preferences.force_render = value
+            self._preferences.save()
+
+    def _on_standalone_mode_toggle(self) -> None:
+        value = bool(self._var_standalone_mode.get())
+        if self._set_standalone_mode:
+            try:
+                self._set_standalone_mode(value)
+            except Exception as exc:
+                self._status_var.set(f"Failed to update stand-alone mode: {exc}")
+                return
+        else:
+            self._preferences.standalone_mode = value
+            self._preferences.save()
+
+    def _on_physical_clamp_toggle(self) -> None:
+        self._preferences.physical_clamp_enabled = bool(self._var_physical_clamp.get())
+        try:
+            self._preferences.save()
+        except Exception as exc:
+            LOGGER.debug("Failed to persist physical clamp preference: %s", exc, exc_info=exc)
+
+    def _on_physical_clamp_overrides_event(self, _event) -> None:  # pragma: no cover - Tk event
+        self._on_physical_clamp_overrides_apply()
+
+    def _on_physical_clamp_overrides_apply(self) -> None:
+        errors: list[str] = []
+        overrides = _coerce_physical_clamp_overrides(
+            self._var_physical_clamp_overrides.get(),
+            {},
+            allow_empty=True,
+            errors=errors,
+        )
+        self._preferences.physical_clamp_overrides = overrides
+        try:
+            self._preferences.save()
+        except Exception as exc:
+            LOGGER.debug("Failed to persist physical clamp overrides: %s", exc, exc_info=exc)
+            self._status_var.set(f"Failed to save per-monitor clamp overrides: {exc}")
+            return
+        self._var_physical_clamp_overrides.set(_format_physical_clamp_overrides(overrides))
+        if errors:
+            self._status_var.set(f"Applied {len(overrides)} override(s); " + "; ".join(errors))
+        else:
+            self._status_var.set(f"Applied {len(overrides)} per-monitor override(s).")
+
+    def _on_title_bar_toggle(self) -> None:
+        enabled = bool(self._var_title_bar_enabled.get())
+        height = self._apply_title_bar_height()
+        self._preferences.title_bar_enabled = enabled
+        if self._title_bar_height_spin is not None:
+            if enabled:
+                self._title_bar_height_spin.state(["!disabled"])
+            else:
+                self._title_bar_height_spin.state(["disabled"])
+        if self._set_title_bar_config:
+            try:
+                self._set_title_bar_config(enabled, height)
+            except Exception as exc:
+                self._status_var.set(f"Failed to update title bar compensation: {exc}")
+                return
+        self._preferences.save()
+
+    def _on_title_bar_height_command(self) -> None:
+        self._apply_title_bar_height(update_remote=True)
+
+    def _on_title_bar_height_event(self, _event) -> None:  # pragma: no cover - Tk event
+        self._apply_title_bar_height(update_remote=True)
+
+    def _apply_title_bar_height(self, update_remote: bool = False) -> int:
+        try:
+            value = int(self._var_title_bar_height.get())
+        except Exception:
+            value = self._preferences.title_bar_height
+        value = max(0, value)
+        self._var_title_bar_height.set(value)
+        self._preferences.title_bar_height = value
+        if update_remote and self._set_title_bar_config:
+            try:
+                self._set_title_bar_config(bool(self._var_title_bar_enabled.get()), value)
+            except Exception as exc:
+                self._status_var.set(f"Failed to update title bar height: {exc}")
+                return value
+        if update_remote:
+            self._preferences.save()
+        return value
+
+    def _on_debug_overlay_toggle(self) -> None:
+        value = bool(self._var_debug_overlay.get())
+        self._preferences.show_debug_overlay = value
+        if self._set_debug_overlay:
+            try:
+                self._set_debug_overlay(value)
+            except Exception as exc:
+                self._status_var.set(f"Failed to update debug overlay: {exc}")
+                return
+        self._preferences.save()
+
+    def _on_gridlines_toggle(self) -> None:
+        enabled = bool(self._var_gridlines_enabled.get())
+        self._preferences.gridlines_enabled = enabled
+        self._update_gridline_spacing_spin_state()
+        if self._set_gridlines_enabled:
+            try:
+                self._set_gridlines_enabled(enabled)
+            except Exception as exc:
+                self._status_var.set(f"Failed to update gridlines: {exc}")
+                return
+        self._preferences.save()
+
+    def _on_gridline_spacing_command(self) -> None:
+        self._apply_gridline_spacing()
+
+    def _on_gridline_spacing_event(self, _event) -> None:  # pragma: no cover - Tk event
+        self._apply_gridline_spacing()
+
+    def _apply_gridline_spacing(self) -> None:
+        try:
+            spacing = int(self._var_gridline_spacing.get())
+        except (TypeError, ValueError):
+            spacing = self._preferences.gridline_spacing
+        spacing = max(10, spacing)
+        self._var_gridline_spacing.set(spacing)
+        self._preferences.gridline_spacing = spacing
+        if self._set_gridline_spacing:
+            try:
+                self._set_gridline_spacing(spacing)
+            except Exception as exc:
+                self._status_var.set(f"Failed to update grid spacing: {exc}")
+                return
+        self._preferences.save()
+
+    def _on_payload_nudge_toggle(self) -> None:
+        enabled = bool(self._var_payload_nudge.get())
+        self._preferences.nudge_overflow_payloads = enabled
+        self._update_payload_gutter_spin_state()
+        if self._set_payload_nudge:
+            try:
+                self._set_payload_nudge(enabled)
+            except Exception as exc:
+                self._status_var.set(f"Failed to update payload nudging: {exc}")
+                self._var_payload_nudge.set(not enabled)
+                self._preferences.nudge_overflow_payloads = bool(self._var_payload_nudge.get())
+                self._update_payload_gutter_spin_state()
+                return
+        self._preferences.save()
+
+    def _on_payload_gutter_command(self) -> None:
+        self._apply_payload_gutter()
+
+    def _on_payload_gutter_event(self, _event) -> None:  # pragma: no cover - Tk event
+        self._apply_payload_gutter()
+
+    def _apply_payload_gutter(self) -> None:
+        try:
+            gutter = int(self._var_payload_gutter.get())
+        except (TypeError, ValueError):
+            gutter = self._preferences.payload_nudge_gutter
+        gutter = max(0, min(gutter, 500))
+        self._var_payload_gutter.set(gutter)
+        self._preferences.payload_nudge_gutter = gutter
+        if self._set_payload_gutter:
+            try:
+                self._set_payload_gutter(gutter)
+            except Exception as exc:
+                self._status_var.set(f"Failed to update payload gutter: {exc}")
+                return
+        self._preferences.save()
+
+        self._preferences.save()
+
+    def _on_font_bounds_event(self, field: str, event) -> None:  # pragma: no cover - Tk event
+        widget = getattr(event, "widget", None)
+        if widget is not None and hasattr(widget, "after_idle"):
+            widget.after_idle(lambda: self._apply_font_bounds(edited_field=field))
+            return
+        self._apply_font_bounds(edited_field=field)
+
+    def _on_font_step_event(self, event) -> None:  # pragma: no cover - Tk event
+        widget = getattr(event, "widget", None)
+        if widget is not None and hasattr(widget, "after_idle"):
+            widget.after_idle(self._apply_font_step)
+            return
+        self._apply_font_step()
+
+    def _apply_font_bounds(self, edited_field: Optional[str] = None, *, update_remote: bool = True) -> None:
+        if self._font_bounds_apply_in_progress:
+            return
+        self._font_bounds_apply_in_progress = True
+        try:
+            if edited_field:
+                raw_value = None
+                try:
+                    if edited_field == "min":
+                        raw_value = self._var_min_font.get()
+                    elif edited_field == "max":
+                        raw_value = self._var_max_font.get()
+                except Exception:
+                    raw_value = None
+                min_value, max_value, accepted = _apply_font_bounds_edit(
+                    self._font_min_committed,
+                    self._font_max_committed,
+                    edited_field,
+                    raw_value,
+                )
+                if not accepted:
+                    if edited_field == "min":
+                        self._var_min_font.set(self._font_min_committed)
+                    elif edited_field == "max":
+                        self._var_max_font.set(self._font_max_committed)
+                    return
+            else:
+                min_value = self._font_min_committed
+                max_value = self._font_max_committed
+                raw_max = None
+                raw_min = None
+                try:
+                    raw_max = self._var_max_font.get()
+                except Exception:
+                    raw_max = None
+                try:
+                    raw_min = self._var_min_font.get()
+                except Exception:
+                    raw_min = None
+                min_value, max_value, max_ok = _apply_font_bounds_edit(
+                    min_value,
+                    max_value,
+                    "max",
+                    raw_max,
+                )
+                if not max_ok:
+                    self._var_max_font.set(self._font_max_committed)
+                    min_value = self._font_min_committed
+                    max_value = self._font_max_committed
+                min_value, max_value, min_ok = _apply_font_bounds_edit(
+                    min_value,
+                    max_value,
+                    "min",
+                    raw_min,
+                )
+                if not min_ok:
+                    self._var_min_font.set(self._font_min_committed)
+                    min_value = self._font_min_committed
+            self._var_min_font.set(min_value)
+            self._var_max_font.set(max_value)
+            callback_failed = False
+            if update_remote and self._set_font_min:
+                try:
+                    self._set_font_min(min_value)
+                except Exception as exc:
+                    self._status_var.set(f"Failed to update minimum font size: {exc}")
+                    callback_failed = True
+            if update_remote and self._set_font_max:
+                try:
+                    self._set_font_max(max_value)
+                except Exception as exc:
+                    self._status_var.set(f"Failed to update maximum font size: {exc}")
+                    callback_failed = True
+            if callback_failed:
+                return
+            self._preferences.min_font_point = min_value
+            self._preferences.max_font_point = max_value
+            self._preferences.save()
+            self._font_min_committed = min_value
+            self._font_max_committed = max_value
+        finally:
+            self._font_bounds_apply_in_progress = False
+
+    def _apply_font_step(self, update_remote: bool = True) -> None:
+        if self._font_step_apply_in_progress:
+            return
+        self._font_step_apply_in_progress = True
+        try:
+            raw_value = None
+            try:
+                raw_value = self._var_legacy_font_step.get()
+            except Exception:
+                raw_value = None
+            step_value, accepted = _apply_font_step_edit(self._font_step_committed, raw_value)
+            if not accepted:
+                self._var_legacy_font_step.set(self._font_step_committed)
+                return
+            self._var_legacy_font_step.set(step_value)
+            if update_remote and self._set_font_step:
+                try:
+                    self._set_font_step(step_value)
+                except Exception as exc:
+                    self._status_var.set(f"Failed to update font step: {exc}")
+                    return
+            self._preferences.legacy_font_step = step_value
+            self._preferences.save()
+            self._font_step_committed = step_value
+        finally:
+            self._font_step_apply_in_progress = False
+
+    def _on_font_preview(self) -> None:
+        if not self._preview_font_sizes:
+            self._status_var.set("Overlay not running; preview unavailable.")
+            return
+        self._apply_font_bounds()
+        self._apply_font_step()
+        try:
+            self._preview_font_sizes()
+        except Exception as exc:  # pragma: no cover - defensive UI handler
+            self._status_var.set(f"Preview failed: {exc}")
+            return
+        self._status_var.set("Font size preview sent to overlay.")
+
+    def _on_send_click(self) -> None:
+        message = self._test_var.get().strip()
+        if not message:
+            self._status_var.set("Enter a test message first.")
+            return
+        if not self._send_test:
+            self._status_var.set("Overlay not running; message not sent.")
+            return
+        x_raw = self._test_x_var.get().strip()
+        y_raw = self._test_y_var.get().strip()
+        x_val: Optional[int] = None
+        y_val: Optional[int] = None
+        if x_raw or y_raw:
+            if not x_raw or not y_raw:
+                self._status_var.set("Provide both X and Y coordinates or leave both blank.")
+                return
+            try:
+                x_val = max(0, int(float(x_raw)))
+            except (TypeError, ValueError):
+                self._status_var.set("X coordinate must be a number.")
+                return
+            try:
+                y_val = max(0, int(float(y_raw)))
+            except (TypeError, ValueError):
+                self._status_var.set("Y coordinate must be a number.")
+                return
+            self._test_x_var.set(str(x_val))
+            self._test_y_var.set(str(y_val))
+        try:
+            if x_val is None or y_val is None:
+                self._send_test(message, None, None)  # type: ignore[arg-type]
+            else:
+                self._send_test(message, x_val, y_val)
+        except Exception as exc:  # pragma: no cover - defensive UI handler
+            self._status_var.set(f"Failed to send message: {exc}")
+            return
+        if x_val is None or y_val is None:
+            self._status_var.set("Test message sent to overlay.")
+        else:
+            self._status_var.set(f"Test message sent to overlay at ({x_val}, {y_val}).")
+
+    def _legacy_overlay(self):
+        if self._legacy_client is None:
+            try:
+                from EDMCOverlay import edmcoverlay
+            except ImportError:
+                self._status_var.set("Legacy API not available.")
+                return None
+            self._legacy_client = edmcoverlay.Overlay()
+        return self._legacy_client
+
+    def _on_legacy_text(self) -> None:
+        overlay = self._legacy_overlay()
+        if overlay is None:
+            return
+        message = self._test_var.get().strip() or "Hello from edmcoverlay"
+        try:
+            overlay.send_message(f"{OVERLAY_ID_PREFIX}test", message, "#80d0ff", 60, 120, ttl=5, size="large")
+        except Exception as exc:
+            self._status_var.set(f"Legacy text failed: {exc}")
+            return
+        self._status_var.set("Legacy text sent via edmcoverlay API.")
+
+    def _on_legacy_emoji(self) -> None:
+        overlay = self._legacy_overlay()
+        if overlay is None:
+            return
+        try:
+            overlay.send_message(
+                f"{OVERLAY_ID_PREFIX}test-emoji",
+                "\N{memo}",
+                "#80d0ff",
+                60,
+                120,
+                ttl=5,
+                size="large",
+            )
+        except Exception as exc:
+            self._status_var.set(f"Legacy emoji failed: {exc}")
+            return
+        self._status_var.set("Legacy emoji sent via edmcoverlay API.")
+
+    def _on_legacy_rect(self) -> None:
+        overlay = self._legacy_overlay()
+        if overlay is None:
+            return
+        try:
+            overlay.send_shape(
+                f"{OVERLAY_ID_PREFIX}test-rect",
+                "rect",
+                "#80d0ff",
+                "#20004080",
+                40,
+                80,
+                400,
+                120,
+                ttl=5,
+            )
+        except Exception as exc:
+            self._status_var.set(f"Legacy rectangle failed: {exc}")
+            return
+        self._status_var.set("Legacy rectangle sent via edmcoverlay API.")
+
+    def _on_test_overlay(self) -> None:
+        overlay = self._legacy_overlay()
+        if overlay is None:
+            return
+        ttl = TEST_OVERLAY_TTL_SECONDS
+        # FDev media usage rules: https://forums.frontier.co.uk/threads/elite-dangerous-media-usage-rules.510879/
+        disclaimer = (
+            "The EDMCModernOverlay Test Overlay feature was created using assets and imagery from Elite Dangerous, with the permission of Frontier Developments plc, for non-commercial "
+            "purposes. It is not endorsed by nor reflects the views or opinions of Frontier Developments and no employee of Frontier Developments was involved in the making of it."
+        )
+        plugin_dir = self._preferences.plugin_dir
+        log_path = plugin_dir / "assets" / "ed-logo-test.log"
+        try:
+            raw_lines = log_path.read_text(encoding="utf-8").splitlines()
+        except FileNotFoundError:
+            self._status_var.set(f"Test overlay payloads not found: {log_path}")
+            return
+        except Exception as exc:
+            self._status_var.set(f"Failed to read test overlay payloads: {exc}")
+            return
+
+        sent = 0
+        label_anchor: Optional[tuple[int, int, str]] = None
+        try:
+            for line in raw_lines:
+                brace = line.find("{")
+                if brace == -1:
+                    continue
+                payload = json.loads(line[brace:])
+                payload_type = payload.get("type")
+                if payload_type == "message":
+                    text_value = str(payload.get("text") or "")
+                    color_value = str(payload.get("color") or "white")
+                    x_val = int(payload.get("x", 0))
+                    y_val = int(payload.get("y", 0))
+                    size_value = str(payload.get("size") or "normal")
+                    overlay.send_message(
+                        str(payload.get("id") or ""),
+                        text_value,
+                        color_value,
+                        x_val,
+                        y_val,
+                        ttl=ttl,
+                        size=size_value,
+                    )
+                    if text_value.strip().lower() == "edmc modern overlay":
+                        label_anchor = (x_val, y_val, color_value)
+                    sent += 1
+                    continue
+                if payload_type == "shape":
+                    shape = str(payload.get("shape") or "")
+                    base = {
+                        "id": str(payload.get("id") or ""),
+                        "shape": shape,
+                        "color": payload.get("color") or "white",
+                        "ttl": ttl,
+                    }
+                    if shape == "vect":
+                        base["vector"] = payload.get("vector") or []
+                        overlay.send_raw(base)
+                        sent += 1
+                        continue
+                    if shape == "rect":
+                        base.update(
+                            {
+                                "fill": payload.get("fill") or "#00000000",
+                                "x": int(payload.get("x", 0)),
+                                "y": int(payload.get("y", 0)),
+                                "w": int(payload.get("w", 0)),
+                                "h": int(payload.get("h", 0)),
+                            }
+                        )
+                        overlay.send_raw(base)
+                        sent += 1
+                        continue
+        except Exception as exc:
+            self._status_var.set(f"Test overlay failed: {exc}")
+            return
+
+        version_text = f"v{MODERN_OVERLAY_VERSION}".strip()
+        if version_text and label_anchor is not None:
+            try:
+                anchor_x, anchor_y, anchor_color = label_anchor
+                line_height = 16
+                overlay.send_message(
+                    f"{OVERLAY_ID_PREFIX.lower()}logo-version",
+                    version_text,
+                    anchor_color or "#f5821f",
+                    int(anchor_x),
+                    int(anchor_y + line_height),
+                    ttl=ttl,
+                    size="normal",
+                )
+                sent += 1
+            except Exception as exc:
+                self._status_var.set(f"Test overlay failed: {exc}")
+                return
+
+        self._status_var.set(disclaimer)

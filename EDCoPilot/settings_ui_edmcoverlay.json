@@ -1,0 +1,65 @@
+[
+	{
+        "type": "title",
+        "title": "EDMCOverlay Integration - NOTE this feature is largely superceded by the superior MiniBar and SubTitles bar features. Recommeend you use those instead."
+    },
+	{
+		"type": "bool",
+        "title": "Use EDMCOverlay Integration",
+        "desc": "If ON and EDMCOverlay is installed, will display some messages on your HUD (NOTE: doesnt display in VR)",
+        "section": "EDMCOverlay",
+        "key": "UseEDMCOverlay"
+	},
+	{
+		"type": "bool",
+        "title": "Show Guidance Computer bearing and distance to target",
+        "desc": "If ON will display the bearing and distance to your target coordinates in the overlay, when using the Guidance Computer",
+        "section": "EDMCOverlay",
+        "key": "EDMCGuidance"
+	},
+	{
+		"type": "bool",
+        "title": "Show starport landing pad directions",
+        "desc": "If ON will display the location of your landing pad when requesting docking at a starport",
+        "section": "EDMCOverlay",
+        "key": "EDMCLandingPad"
+	},
+	
+	{
+		"type": "numeric",
+        "title": "Overlay X position on screen",
+        "desc": "The X coordinate of where to place the overlay message on your HUD",
+        "section": "EDMCOverlay",
+        "key": "EDMC_x"
+	},
+	{
+		"type": "numeric",
+        "title": "Overlay Y position on screen",
+        "desc": "The Y coordinate of where to place the overlay message on your HUD",
+        "section": "EDMCOverlay",
+        "key": "EDMC_y"
+	},
+	{
+        "type": "options",
+        "title": "Overlay font size",
+        "desc": "The size of the font used in the overlay",
+        "section": "EDMCOverlay",
+        "key": "EDMC_size",
+		"options": ["normal", "large"]
+    },
+	{
+        "type": "options",
+        "title": "Overlay font color",
+        "desc": "The color of the font used in the overlay",
+        "section": "EDMCOverlay",
+        "key": "EDMC_color",
+		"options": ["red", "green", "yellow", "blue", "custom"]
+    },
+	{
+        "type": "hexcolor",
+        "title": "Font color custom color (hex)",
+        "desc": "The hex value of the custom color. Default is 00ff00 (green).",
+        "section": "EDMCOverlay",
+        "key": "EDMC_customcolor"
+    }
+]

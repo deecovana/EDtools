@@ -1,0 +1,19 @@
+[
+{ "type": "title", "title": "Space Chatter - Radio Effects" },
+{ "type": "bool", "title": "Space Chatter Radio Beep", "desc": "Whether to include a radio beep at the start and end of a spoken space chatter message", "section": "Space Chatter", "key": "SpaceChatterRadioBeep" },
+{ "type": "numeric", "title": "Space Chatter Radio white noise level", "desc": "The level of white noise heard when radio effect is applied (0-20)", "section": "Space Chatter", "key": "SpaceChatterRadioEffectWhiteNoiseLevel" },
+{ "type": "numeric", "title": "Space Chatter Radio pop and click frequency", "desc": "The amount of pops and clicks heard when radio effect is applied (0-50)", "section": "Space Chatter", "key": "SpaceChatterRadioEffectPopProbability" },
+{ "type": "numeric", "title": "Space Chatter Radio distortion level", "desc": "The amount of voice distortion when radio effect is applied (0-50)", "section": "Space Chatter", "key": "SpaceChatterRadioEffectDistortionLevel" },
+{ "type": "numeric", "title": "Space Chatter Radio High Pass Filter", "desc": "Set this in the range 1200-2500. A higher value will sound more tinny and distant", "section": "Space Chatter", "key": "SpaceChatterRadioEffectHPF" },
+{ "type": "title", "title": "Space Chatter - Random Voice Effects (currently applies only to Edge voices)" },
+{ "type": "bool", "title": "Apply random effect to voices", "desc": "If ON, will apply a random effect (currently radio static or synthetic voice)", "section": "Space Chatter", "key": "SpaceChatterRandomVoiceEffect" },
+{ "type": "bool", "title": "Apply random pitch to voices", "desc": "If ON, will apply a random pitch to character voices", "section": "Space Chatter", "key": "SpaceChatterRandomPitch" },
+{ "type": "numeric", "title": "Random Pitch - Low Pitch value", "desc": "When generating random pitched voices, this is the lowest adjustment, in -Hz, that will be considered (set this between -40 and 0)", "section": "Space Chatter", "key": "SpaceChatterVoicePitchLow"  },
+{ "type": "numeric", "title": "Random Pitch - High Pitch", "desc": "When generating random pitched voices, this is the highest adjustment, in +Hz, that will be considered (set this between 0 and 40)", "section": "Space Chatter", "key": "SpaceChatterVoicePitchHigh"  },
+
+{ "type": "title", "title": "Space Chatter - Voice Placement Settings (requires Cloud voice provider(s))" },
+{ "type": "numeric", "title": "Left Speaker volume", "desc": "Volume percentage in left ear (applies a percentage to Space Chatter volume * individual message-type volume.). Keep at least one of the speakers in the 80-100 range.", "section": "Space Chatter", "key": "StationChatterLeftBalance" },
+{ "type": "numeric", "title": "Right Speaker volume", "desc": "Volume percentage in left ear (applies a percentage to Space Chatter volume * individual message-type volume.) Keep at least one of the speakers in the 80-100 range.", "section": "Space Chatter", "key": "StationChatterRightBalance" },
+{ "type": "bool", "title": "Randomly assign left-right speaker levels", "desc": "If ON, will randomly switch left and right percentages .. example if you have Left=100, Right=0 then voices will normally sound in left ear only. With this ON, will randomly pick left only vs right only for played conversations.", "section": "Space Chatter", "key": "StationChatterRandomBalance" },
+{ "type": "bool", "title": "Alternate left-right speaker levels", "desc": "If ON, will alternately switch left and right percentages .. example if you have Left=100, Right=0 then voices will normally sound in left ear only. With this ON, will alternate conversations between left and right ear", "section": "Space Chatter", "key": "StationChatterAlternateBalance" } 
+]

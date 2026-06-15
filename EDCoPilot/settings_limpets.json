@@ -1,0 +1,72 @@
+[
+	{
+        "type": "bool",
+        "title": "Nag Mode",
+        "desc": "If ON, will regularly remind you while docked if you need limpets or crew (assuming reminders are ON below).  If OFF, will only remind you on startup, when you dock, and when you launch.",
+        "section": "Limpets and Crew Reminders",
+        "key": "NagMode"
+    },
+	{
+        "type": "title",
+        "title": "Limpets"
+    },
+	{
+        "type": "bool",
+        "title": "Limpet Reminders (global setting)",
+        "desc": "If ON, set individial reminders levels for your current ship below. If OFF, will disable reminders FOR ALL SHIPS",
+        "section": "Limpets and Crew Reminders",
+        "key": "AnnounceLimpetsReminder"
+    },
+    {
+        "type": "numeric",
+        "title": "Limpet Reminder Threshold (current ship)",
+        "desc": "Set this to -1 to disable reminders for this ship, 0 to default to a % of your cargo capacity, else set a specific number for your current ship",
+        "section": "Limpets and Crew Reminders",
+        "key": "LimpetReminderThreshold"
+    },
+	{
+        "type": "options",
+        "title": "Limpet Reminder Frequency (global setting)",
+        "desc": "If Nag Mode is ON, how often to remind you, when docked (in seconds)",
+        "section": "Limpets and Crew Reminders",
+        "key": "LimpetReminderFrequency",
+		"options": ["30", "45", "60", "75", "90", "120"]
+    },
+		{
+        "type": "title",
+        "title": "Cargo"
+    },
+	{
+        "type": "bool",
+        "title": "Cargo Reminders (global setting)",
+        "desc": "Whether the Ship AI will remind you on takeoff if your hold is too empty. Handy to check if you remembered to hit the buy button before you leave! If ON, set individial reminders levels for your current ship below. If OFF, will disable reminders FOR ALL SHIPS",
+        "section": "Limpets and Crew Reminders",
+        "key": "AnnounceCargoReminder"
+    },
+	{
+        "type": "numeric",
+        "title": "Cargo Reminder Threshold (current ship)",
+        "desc": "Change this value and it will apply to your current ship. Set this to 9999 to disable reminders for this ship. Else set to a free space level which if exceeded will remind you on Undocking that you have empty hold space.",
+        "section": "Limpets and Crew Reminders",
+        "key": "CargoReminderThreshold"
+    },
+	{
+        "type": "title",
+        "title": "Fighter Crew"
+    },
+	    {
+        "type": "bool",
+        "title": "Crew Reminders (global setting)",
+        "desc": "Remind you when docked if you need to add your crew",
+        "section": "Limpets and Crew Reminders",
+        "key": "AnnounceCrewReminder"
+    },
+	{
+        "type": "options",
+        "title": "Crew Reminder Frequency (global setting)",
+        "desc": "If Nag Mode is ON, how often to remind you, when docked (in seconds)",
+        "section": "Limpets and Crew Reminders",
+        "key": "CrewReminderFrequency",
+		"options": ["30", "45", "60", "75", "90", "120"]
+    }
+]

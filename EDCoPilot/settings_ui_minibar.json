@@ -1,0 +1,71 @@
+[
+	{
+        "type": "title",
+        "title": "Mini-Bar - displays a small status window for Time Trials and navigation"
+    },
+	{
+        "type": "bool",
+        "title": "Show Mini-Bar",
+        "desc": "If ON will show the Mini-Bar when in a Time Trial, else will remain hidden",
+        "section": "UI Preferences",
+        "key": "MinibarShow"
+    },
+	{
+        "type": "bool",
+        "title": "Leave Mini-Bar open after Time Trial completed",
+        "desc": "If ON will leave the bar open when you complete a race, else will close it after announcing result",
+        "section": "UI Preferences",
+        "key": "MinibarLeaveOpen"
+    },
+	{
+        "type": "bool",
+        "title": "Mini-Bar Arcade Mode",
+        "desc": "If ON will show a mini-bar with scalar of 3, and reposition it to last location for the Arcade size bar",
+        "section": "UI Preferences",
+        "key": "MinibarArcadeMode"
+    },
+		{
+        "type": "options",
+        "title": "Mini-Bar orientation",
+        "desc": "Change the orientation (horizontal vs vertical) of the mini bar-display",
+        "section": "UI Preferences",
+        "key": "MinibarOrientation",
+		"options": ["Horizontal","Vertical"]
+    },
+	{
+        "type": "numeric",
+        "title": "Mini-Bar Transparency",
+        "desc": "Set level of transparency from 100 (semi-invisible) to 255 (opaque)",
+        "section": "UI Preferences",
+        "key": "MinibarTransparency"
+    },
+	{
+        "type": "numeric",
+        "title": "Mini-Bar Size Scalar (Normal Mode)",
+        "desc": "Scales the size of the Mini-Bar (range = 0.5 to 4).",
+        "section": "UI Preferences",
+        "key": "MinibarScalar"
+    },
+	{
+        "type": "numeric",
+        "title": "Mini-Bar Size Scalar (Arcade Mode)",
+        "desc": "Scales the size of the Mini-Bar when in Arcade Mode (range = 0.5 to 4).",
+        "section": "UI Preferences",
+        "key": "MinibarScalarArcade"
+    },
+	{
+        "type": "options",
+        "title": "Mini-Bar Direction Arrow Placement",
+        "desc": "Set which side of the Mini-Bar the direction arrow will display",
+        "section": "UI Preferences",
+        "key": "MinibarArrowAlignment",
+		"options": ["Left", "Right" ]
+    },
+		{
+        "type": "bool",
+        "title": "Show Speed and Altitude",
+        "desc": "If ON show your speed and altitude (handy for Time Trials)",
+        "section": "UI Preferences",
+        "key": "MinibarShowAltitude"
+    }
+]

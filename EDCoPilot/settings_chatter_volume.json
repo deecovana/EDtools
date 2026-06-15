@@ -1,0 +1,12 @@
+[
+{ "type": "title", "title": "Space Chatter - Volume Settings (requires Cloud voice provider(s))" },
+{ "type": "numeric", "title": "Space Chatter volume", "desc": "The master volume for all Space Chatter voices (0-100) - other Space Chatter volume settings will be a percentage of this value.", "section": "Space Chatter", "key": "SpaceChatterVolume" },
+{ "type": "numeric", "title": "NPC message volume", "desc": "Set the volume of the messages received from NPCs in game (eg. pirates, cruise ships etc) (0-100)", "section": "Space Chatter", "key": "SpaceChatterNPCVolume" },
+{ "type": "numeric", "title": "Local message volume", "desc": "Set the volume of the messages received on the Local channel (eg. player messages) (0-100)", "section": "Space Chatter", "key": "SpaceChatterLocalVolume" },
+{ "type": "numeric", "title": "StarSystem message volume", "desc": "Set the volume of the messages received from within system (eg. Commander messages) (0-100)", "section": "Space Chatter", "key": "SpaceChatterStarSystemVolume" },
+{ "type": "numeric", "title": "Direct message volume", "desc": "Set the volume of the messages received directly from Commanders to you (0-100)", "section": "Space Chatter", "key": "SpaceChatterDirectVolume" },
+{ "type": "numeric", "title": "Station chatter volume", "desc": "Set the volume of the messages generated when around a station (docking, undocking, galnet discussions etc)  (0-100)", "section": "Space Chatter", "key": "StationChatterVolume" },
+{ "type": "numeric", "title": "Social Space chatter volume", "desc": "Set the volume of the messages heard when in a station concourse or bar (NPCs and tannoy broadcasts)  (0-100)", "section": "Space Chatter", "key": "SpaceChatterSocialSpaceVolume" },
+{ "type": "numeric", "title": "Crew Chatter volume", "desc": "The volume for Crew Chatter (0-100)", "section": "Space Chatter", "key": "SpaceChatterCrewVolume" },
+{ "type": "numeric", "title": "Fleet Carrier / station greetings volume", "desc": "Set the volume of the greetings received from a Fleet Carrier or Station (0-100)", "section": "Space Chatter", "key": "StationChatterFCVolume" }
+]

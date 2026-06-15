@@ -1,0 +1,11 @@
+
+// any string with a // is a comment and will be ignored
+
+// any strings listed below will not be translated
+limpet
+limpets
+
+// Overrides : Any strings separated with a "|" below will be changed from the left string to the right string before being sent to Google Translate
+scoopable|refuellable
+
+// Note: if you wanted "refuellable" above to also NOT be translated, then you can just also add as a single string, same as "limpets"

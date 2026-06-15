@@ -1,0 +1,41 @@
+[
+	{
+        "type": "title",
+        "title": "Remote UI"
+    },
+	{
+        "type": "custom_path",
+        "title": "Remote UI folder - Local copy location",
+        "desc": "If you create a folder and point this setting at it, EDCoPilot will keep a copy of all files needed on your remote PC required to run the UI remotely. You can then either copy the whole folder, or use synchronisation software such as OneDrive, to keep the contents in synch automatically). Note this folder will also be updated when required files get updated",
+        "section": "Remote UI",
+        "key": "RemoteGUIFolder"
+    },	
+	{
+        "type": "string",
+        "title": "Remote UI - IP address of server running EDCoPilot.exe",
+        "desc": "Set this to the IP address of the server running EDCoPilot.exe eg. 192.168.0.x",
+        "section": "Remote UI",
+        "key": "RemoteServerIP"
+    },
+	{
+        "type": "bool",
+        "title": "Set focus on game when Remote UI control buttons are pressed",
+        "desc": "Whether the main process should attempt to refocus on the game before pressing keys to execute commandes, when you press a button on the Control Boards",
+        "section": "Remote UI",
+        "key": "RemoteControlBoardSetFocus"
+    },
+	{
+        "type": "bool",
+        "title": "Verbal confirmation when Remote UI control buttons are pressed ",
+        "desc": "Whether to issue a 'confirmed Commander' confirmation when you press a button on the Control Boards",
+        "section": "Remote UI",
+        "key": "RemoteControlBoardVerbalConfirmation"
+    },
+	{
+        "type": "bool",
+        "title": "Audio confirmation when Remote UI control buttons are pressed ",
+        "desc": "Whether to play an audio confirmation when you press a button on the Control Boards (plays EDCoPilot.ControlBoardButtonConfirm.wav",
+        "section": "Remote UI",
+        "key": "RemoteControlBoardAudioConfirmation"
+    }
+]

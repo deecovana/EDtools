@@ -1,0 +1,117 @@
+[
+	
+	{
+		"type": "bool",
+        "title": "Use EDCoPilot music",
+        "desc": "If ON and music folders have been set below, EDCoPilot will play music when you are docking, in combat, or doing some exploration/cruising.",
+        "section": "Music Features",
+        "key": "UseEDCoPilotMusic"
+	},
+
+	{
+		"type": "numeric",
+        "title": "Music volume",
+        "desc": "Adjust the volume level of the music player (0 to 100)",
+        "section": "Music Features",
+        "key": "MusicVolume"
+	},
+	{
+		"type": "numeric",
+        "title": "Reduce music volume by x% when there are announcements",
+        "desc": "Temporarily reduce the current volume level by x% when an announcement is made (0 to 100). Example if current music volume is 20 and this is set to 50%, music will reduce to 10% while voice is speaking",
+        "section": "Music Features",
+        "key": "MusicVolumeWhenSpeaking"
+	},
+	
+	{
+		"type": "custom_path",
+        "title": "Docking music folder location",
+        "desc": "Set this to a folder containing mp3s to be played when you are docking",
+        "section": "Music Features",
+        "key": "DockingMusicFolder"
+	},
+	{
+		"type": "custom_path",
+        "title": "Combat music folder location",
+        "desc": "Set this to a folder containing mp3s to be played when you are in combat",
+        "section": "Music Features",
+        "key": "CombatMusicFolder"
+	},
+	{
+		"type": "custom_path",
+        "title": "Exploration music folder location",
+        "desc": "Set this to a folder containing mp3s to be played when you are exploring or travelling",
+		"section": "Music Features",
+        "key": "ExplorationMusicFolder"
+	},
+	{
+		"type": "custom_path",
+        "title": "Time Trials music folder location",
+        "desc": "Set this to a folder containing mp3s to be played when you are running a Time Trial",
+		"section": "Music Features",
+        "key": "TimeTrialMusicFolder"
+	},
+	{
+		"type": "bool",
+        "title": "Use music subfolders based on your being in Ship, SRV, Fighter or OnFoot",
+        "desc": "If ON, EDCoPilot will use separate playlists from subfolders SRV, Ship, Fighter or OnFoot within your music folders, based on your current situation.",
+        "section": "Music Features",
+        "key": "MusicPlaylistByStatus"
+	},
+	{
+		"type": "bool",
+        "title": "Play Docking Music",
+        "desc": "Enable / disable music playing when you dock",
+        "section": "Music Features",
+        "key": "PlayDockingMusic"
+	},
+	{
+		"type": "bool",
+        "title": "Play Combat Music",
+        "desc": "Enable / disable music playing when you are in combat",
+        "section": "Music Features",
+        "key": "PlayCombatMusic"
+	},
+	{
+		"type": "bool",
+        "title": "Play Exploration Music",
+        "desc": "Enable / disable music playing when you are exploring or travelling",
+        "section": "Music Features",
+        "key": "PlayExplorationMusic"
+	},
+	{
+		"type": "bool",
+        "title": "Play Time Trial Music",
+        "desc": "Enable / disable music playing when you are running a Time Trial",
+        "section": "Music Features",
+        "key": "PlayTimeTrialMusic"
+	},
+	{
+		"type": "bool",
+        "title": "Turn off music on docking",
+        "desc": "If on, music will stop once you dock. If OFF, will continue playing",
+        "section": "Music Features",
+        "key": "TurnOffMusicOnDocking"
+	},
+	{
+		"type": "bool",
+        "title": "Stop current music if switching to a theme that is not enabled",
+        "desc": "If ON, when trying to auto-switch to a theme, will stop music playing if the new theme is not enabled. If OFF, will continue playing the current (enabled) theme",
+        "section": "Music Features",
+        "key": "StopMusicIfNoThemeEnabled"
+	},
+	{
+		"type": "bool",
+        "title": "Continue last song when switching back to a theme (works on MP3s only)",
+        "desc": "If ON, and the song previously played in the theme was an MP3, will attempt to play from last recorded position. If OFF, will skip to next track in the list",
+        "section": "Music Features",
+        "key": "ContinueLastSongOnThemeSwitch"
+	}, 
+		{
+		"type": "numeric",
+        "title": "Combat music cooldown period",
+        "desc": "Specify number of seconds combat music will continue to play after combat ends, before theme switches back to exploration",
+        "section": "Music Features",
+        "key": "MusicCombatCooldown"
+	}
+]

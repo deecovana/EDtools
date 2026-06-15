@@ -1,0 +1,42 @@
+[
+
+	{
+        "type": "title",
+        "title": "Radio Station Presets"
+    },
+	{
+		"type": "string",
+        "title": "Radio station preset #1",
+        "desc": "Enter the URL (not pls or m3u) of the internet radio stream you want assigned to this slot",
+        "section": "Music Features",
+        "key": "RadioSlot1"
+	},
+	{
+		"type": "string",
+        "title": "Radio station preset #2",
+        "desc": "Enter the URL (not pls or m3u) of the internet radio stream you want assigned to this slot",
+        "section": "Music Features",
+        "key": "RadioSlot2"
+	},
+	{
+		"type": "string",
+        "title": "Radio station preset #3",
+        "desc": "Enter the URL (not pls or m3u) of the internet radio stream you want assigned to this slot",
+        "section": "Music Features",
+        "key": "RadioSlot3"
+	},
+	{
+		"type": "string",
+        "title": "Radio station preset #4",
+        "desc": "Enter the URL (not pls or m3u) of the internet radio stream you want assigned to this slot",
+        "section": "Music Features",
+        "key": "RadioSlot4"
+	},
+	{
+		"type": "string",
+        "title": "Radio station preset #5",
+        "desc": "Enter the URL (not pls or m3u) of the internet radio stream you want assigned to this slot",
+        "section": "Music Features",
+        "key": "RadioSlot5"
+	}
+]

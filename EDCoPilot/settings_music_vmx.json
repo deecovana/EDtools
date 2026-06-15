@@ -1,0 +1,20 @@
+[
+	{
+        "type": "title",
+        "title": "VMX music player integration - requires VMX by Dark Nebula"
+    },
+	{
+		"type": "bool",
+        "title": "Enable VMX integration",
+        "desc": "If ON will use VMX to play music when events are triggered in game. Will display VMX information in the Music Display panel (old UI only at present - on list to finish in new UI)",
+        "section": "Music Features",
+        "key": "UseVMX"
+	},
+	{
+		"type": "custom_path",
+        "title": "VMX Stream Data folder location",
+        "desc": "Set this to the folder containing the VMX StreamData files, usually c:/users/(user)/AppData/Roaming/VMX_StreamData",
+        "section": "Music Features",
+        "key": "VMXFolder"
+	}
+]

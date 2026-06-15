@@ -1,0 +1,1216 @@
+
+
+GALNET 2024-12-18T21:24:55Z
+
+[example]
+[<ship1>] Did you catch the Galnet update? Over thirteen thousand systems colonised already.
+[<ship2>] Yeah, and nearly a billion units of cargo delivered? That’s some serious logistics.
+[<ship3>] Makes you wonder if Brewer Corporation is planning something bigger down the line.
+[<ship1>] Bigger? They're practically building an entire second bubble at this point.
+[<ship2>] I just hope they don’t overextend. A few failed colonies and this whole thing could go sideways.
+[<ship3>] Not to mention pirates. A bunch of barely defended outposts makes for easy pickings.
+[\example]
+
+[example]
+[<ship1>] New colonies, new opportunities. Thinking about heading out there?
+[<ship2>] Tempting, but I like my cushy trade routes right here. You?
+[<ship1>] Maybe. Fresh markets, new economies—if you get in early, you can make a fortune.
+[<ship2>] If you survive long enough. Heard some of those colonies are struggling with supplies.
+[<ship1>] That’s what makes them good opportunities. They need everything.
+[<ship2>] Well, you go ahead. I’ll stick to hauling cargo where there’s a guarantee of getting paid.
+[\example]
+
+[example]
+[<ship1>] I don’t trust it. Colonies popping up that fast? Feels too rushed.
+[<ship2>] Brewer’s got the infrastructure. They wouldn’t do this if they couldn’t sustain it.
+[<ship1>] Maybe, but history’s full of over-ambitious expansion plans that ended in disaster.
+[<ship2>] So you think this whole thing is doomed?
+[<ship1>] Not necessarily, but I’d keep a close eye on those numbers in a few months.
+[\example]
+
+[example]
+[<ship1>] Over twenty-four thousand new starports? That’s a lot of refueling stops.
+[<ship2>] Yeah, finally some more options instead of jumping through dead space all the time.
+[<ship1>] I just hope they’ve got proper shipyard facilities. My Asp needs a real mechanic.
+[<ship2>] Don’t get your hopes up. Most of these places will be barebones for a while.
+[<ship1>] Figures. Guess I’ll be sticking to the bubble a little longer.
+[\example]
+
+[example]
+[<ship1>] Think the Thargoids are paying attention to all this expansion?
+[<ship2>] Probably. We’re spreading out faster than ever, and that usually gets noticed.
+[<ship3>] If they were going to respond, wouldn’t they have done it already?
+[<ship1>] Maybe they’re just waiting to see how far we push before they push back.
+[<ship2>] Let’s hope we’re not building colonies in places we shouldn’t be.
+[<ship3>] Yeah, we’ve seen how that plays out before.
+[\example]
+
+[example]
+[<ship1>] Almost a billion units of cargo delivered to those colonies. Wonder how much of that is just booze and entertainment?
+[<ship2>] You think settlers want to spend their first months in a new system completely sober?
+[<ship3>] More power to them. If I had to live in a prefab station in the middle of nowhere, I’d want a steady drink supply too.
+[<ship1>] You know, this might actually be the time to get into the luxury trade. Colonists need relaxation.
+[<ship2>] Not a bad idea. I hear personal entertainment suites are selling like crazy.
+[<ship3>] Time to load up the cargo hold with something other than ore and hydrogen fuel for once.
+[\example]
+
+[example]
+[<ship1>] Empire, Federation, Alliance—everyone’s looking at these new colonies like fresh meat.
+[<ship2>] Of course they are. Untapped populations mean new recruits, new voters, new customers.
+[<ship1>] Think any of them will stay independent?
+[<ship2>] Not for long. Sooner or later, someone’s going to plant a flag and claim them.
+[<ship1>] Wouldn’t be surprised if some of them are already making deals behind the scenes.
+[\example]
+
+[example]
+[<ship1>] If I start a colony claim now, do you think I could name a system after myself?
+[<ship2>] You? You can barely keep your ship running.
+[<ship1>] I could hire people to run it for me. I’d be the visionary leader.
+[<ship2>] More like the first colony to run out of oxygen because someone forgot to resupply it.
+[<ship1>] You wound me. I’d at least make sure we had oxygen.
+[<ship2>] Sure, but would you remember food?
+[\example]
+
+[example]
+[<ship1>] The scale of this expansion is insane. Over fourteen thousand surface installations built already.
+[<ship2>] Yeah, but how many of those will actually last? Harsh environments take a toll.
+[<ship1>] True. But if they make it, it could reshape the power balance in the bubble.
+[<ship2>] Or just stretch everyone’s supply lines too thin.
+[<ship1>] Either way, things are about to get interesting.
+[\example]
+
+[example]
+[<ship1>] Brewer Corporation must be making a fortune off this. Expansion like this doesn’t come cheap.
+[<ship2>] No kidding. They’re probably selling landing pads and habitation units at premium prices.
+[<ship3>] Good for them. Somebody has to bankroll all these settlers.
+[<ship1>] Wonder if they’ll start setting the rules for these colonies too.
+[<ship2>] If they do, then they’re not just a corporation anymore. They’re practically a superpower.
+[\example]
+
+[example]
+[<ship1>] Just dropped off my fifth load of prefabs this week. These new colonies are eating up supplies like crazy.
+[<ship2>] Tell me about it. I barely have time to grab a coffee before I’m back in the cargo lane.
+[<ship1>] At least the payouts are decent. Brewer’s paying top credit for construction materials.
+[<ship2>] Yeah, but I swear if I have to haul one more batch of atmospheric processors, I’m gonna lose it.
+[<ship1>] Could be worse. You could be the poor guy hauling sewage treatment plants.
+[<ship2>] Oh, don’t remind me. That smell sticks to the hull.
+[\example]
+
+[example]
+[<ship1>] Ever seen a colony go from empty rock to full-on settlement in just weeks?
+[<ship2>] I have now. I’ve been running titanium and polymers nonstop. These stations don’t build themselves.
+[<ship1>] Feels good knowing we’re putting down the foundation of something big, doesn’t it?
+[<ship2>] Sure, but I’d feel even better if they gave us better docking priority. I’ve been waiting to unload for an hour!
+[<ship1>] Yeah, traffic control’s overwhelmed. Guess they didn’t expect this many truckers showing up at once.
+[\example]
+
+[example]
+[<ship1>] Just finished hauling a hundred tons of power generators to Theta-7. The whole station was running on emergency cells.
+[<ship2>] Sounds about right. I dropped off a load of reactor parts yesterday. They’re struggling to keep up with demand.
+[<ship1>] Guess that’s what happens when you plop a colony in the middle of nowhere with no backup infrastructure.
+[<ship2>] Hey, more work for us. I say let ‘em keep expanding.
+[\example]
+
+[example]
+[<ship1>] Who would’ve thought moving furniture would be such a lucrative business? These settlers are paying premium for decent living quarters.
+[<ship2>] You’re hauling furniture? I’ve been stuck moving industrial drills and mining gear. No one pays extra for that.
+[<ship1>] That’s your problem. You gotta haul the stuff people actually want, not just what they need.
+[<ship2>] Next time I see a contract for luxury bedding, I’ll grab it.
+[\example]
+
+[example]
+[<ship1>] Jumping between the same three systems hauling construction gear. Starting to feel like a cargo drone.
+[<ship2>] Yeah, tell me about it. If I see one more crate of titanium alloy, I might lose it.
+[<ship3>] At least it’s steady work. Pays better than running empty.
+[<ship1>] Sure, but steady don’t mean exciting. I miss the odd salvage run or pirate chase.
+[<ship2>] Just think—once those stations are built, we can haul something fun. Like luxury goods.
+[\example]
+
+[example]
+[<ship1>] Another day, another load of prefabs. My ship practically flies itself at this point.
+[<ship2>] Still beats dodging interdictions in an anarchy system. I’ll take the boredom.
+[<ship3>] You two need a drink when we dock. This is history we’re making, laying the foundation for new colonies.
+[<ship1>] Yeah, yeah. Just wake me up when the pay goes up.
+[\example]
+
+[example]
+[<ship1>] Five more runs and I’m taking a break. Hauling metal plating is wearing me down.
+[<ship2>] I hear you. Every time I drop into a system, it’s “more power regulators, please.”
+[<ship3>] At least we’re not hauling bio-waste. You ever had a canister rupture in your hold?
+[<ship1>] Nope, and I don’t plan to. I’ll take my dull cargo over that.
+[\example]
+
+[example]
+[<ship1>] Bringing in the last batch of supplies for the colony hub. They’d better name a street after me.
+[<ship2>] You? I’ve done twice as many runs to that system. I want my own landing pad.
+[<ship3>] Keep dreaming, folks. The best we’re getting is a thank-you transmission.
+[<ship1>] I’ll settle for a free drink at the station bar.
+[\example]
+
+[example]
+[<ship1>] Another haul of atmospheric processors. At this rate, I might just stay in the new colony myself.
+[<ship2>] Thinking of putting down roots?
+[<ship1>] Why not? These places need settlers too, not just haulers.
+[<ship3>] I’ll visit when they have a decent bar and a repair shop.
+[<ship1>] Fine, I’ll put that on the request list.
+[\example]
+
+[example]
+[<ship1>] This colony’s gonna need a statue of me after all the work I’ve put in.
+[<ship2>] You hauling all the oxygen scrubbers or something?
+[<ship1>] Nah, just enough station framework to build a small city.
+[<ship3>] And here I thought you were just moving chairs and tables.
+[\example]
+
+[example]
+[<ship1>] Finally got a break from hauling station parts. Taking a light load of luxury food instead.
+[<ship2>] Lucky you. I’ve still got three more runs of industrial coolers before I can think of a change.
+[<ship3>] At least we’re building something that’ll last. Can’t say that for a lot of other jobs.
+[<ship1>] True enough. Though I wouldn’t mind a change of scenery for a while.
+[\example]
+
+[example]
+[<ship1>] If I have to hear “stand by for cargo unloading” one more time, I might vent my own comms panel.
+[<ship2>] Ha! Same here. You think traffic control gets bored of repeating it?
+[<ship3>] Doubt it. They’re probably betting on which one of us loses it first.
+[<ship1>] I’ll show ‘em bored. Let’s see how they handle a perfectly timed docking joke.
+[\example]
+
+[example]
+(vegan)[<ship1>] Finally made it to the station, but forget offloading! First stop is a hot plate of eggs and bacon.
+[<ship2>] You’re speaking my language. I can practically smell the fried hash browns already.
+[<ship3>] You two go ahead. I’ll catch up after I file this delivery.
+[<ship1>] Your loss. By the time you’re done, we’ll be on our second round of coffee.
+[\example]
+
+[example]
+[<ship1>] Docking now, but cargo can wait. I need something dripping with grease and regret.
+[<ship2>] Same. Been running on ration packs for too long. My stomach is begging for real food.
+[<ship3>] You know it’s bad when even station diner food sounds gourmet.
+[<ship1>] I don’t care if it’s made from recycled protein, as long as it’s fried.
+[\example]
+
+[example]
+(vegan)[<ship1>] Got a fresh load of reactor parts, but first, I’m grabbing the biggest breakfast plate they serve.
+[<ship2>] You thinking eggs, toast, and bacon?
+[<ship1>] Thinking more like “one of everything.” Extra sausage, extra butter, extra regret.
+[<ship3>] Don’t forget the coffee. Black as deep space, and strong enough to keep you awake for a week.
+[\example]
+
+[example]
+[<ship1>] Just dropped another load of power generators. That colony better remember who kept the lights on.
+[<ship2>] I feel that. I hauled so many reactors, I could set up my own power grid.
+[<ship3>] You two should start a delivery business. “Pioneers of Power” or something.
+[<ship1>] Hey, not a bad idea. If we’re gonna haul all this stuff, we might as well make a name for ourselves.
+[\example]
+
+[example]
+[<ship1>] My last run was hauling hydroponic domes. First thing those colonists are growing? Beer ingredients.
+[<ship2>] Can’t blame them. Gotta celebrate making it out to the frontier.
+[<ship3>] If they get a brewery running, I might just set up shop there myself.
+[<ship1>] I’ll bring the next shipment of kegs.
+[\example]
+
+[example]
+[<ship1>] If I see one more order for auto-fabricators, I’m gonna lose my mind.
+[<ship2>] At least they’re easy to load. Try stuffing a hundred tons of hydroponic domes into a Type-7.
+[<ship1>] Yeah, but the payout on those is huge. Colony needs food, after all.
+[<ship2>] True, but I swear those crates were designed by someone who hates cargo haulers.
+[\example]
+
+[example]
+[<ship1>] Had a colony supervisor tell me they’re running out of basic medical supplies. Can you believe that?
+[<ship2>] Not surprising. They’re so focused on building out infrastructure that they forgot about the people living there.
+[<ship1>] Well, I’ve got 200 tons of med packs in my hold. Hopefully, that keeps ‘em running.
+[<ship2>] You should’ve grabbed some liquor while you were at it. Bet the settlers need that just as bad.
+[\example]
+
+[example]
+[<ship1>] Took a detour through an unclaimed system on my way back. You wouldn’t believe how many construction sites are popping up.
+[<ship2>] Oh, I’d believe it. Just delivered a load of landing pads to a station that wasn’t even on the maps last week.
+[<ship1>] This whole expansion wave is crazy. Feels like we’re creating a whole new galaxy out here.
+[<ship2>] As long as they keep paying me to move bulkheads and structural plating, I won’t complain.
+[\example]
+
+[example]
+[<ship1>] My ship’s so loaded down with atmospheric processors, I feel like I’m hauling a mobile weather station.
+[<ship2>] At least those colonies will be able to breathe. Meanwhile, I just dropped off another round of fuel tanks.
+[<ship1>] You’d think they’d have enough of those by now.
+[<ship2>] Apparently not. Every new outpost needs its own backup supply.
+[\example]
+
+[example]
+[<ship1>] Another full load of robotics heading out. These colonies wouldn’t function without automation.
+[<ship2>] No kidding. I brought in industrial servos last week. Half the workforce out there is machines.
+[<ship1>] Makes sense. Not enough warm bodies to do all the work.
+[<ship2>] Yeah, but all this automation makes me wonder when they’ll stop needing us truckers.
+[<ship1>] Ha! Not in our lifetime. Someone’s gotta haul the bots in the first place.
+[\example]
+
+[example]
+[<ship1>] Finally, a break from hauling metal plates and wiring. I got a contract moving entertainment systems to one of the bigger settlements.
+[<ship2>] Lucky you. I’m still moving industrial equipment.
+[<ship1>] Hey, even settlers need something to unwind with after a long day.
+[<ship2>] Yeah, but let me know when they start paying premiums for coffee. That’s when I’m switching cargo.
+[\example]
+
+[example] 
+[<ship1>] (innuendo) You wouldn’t believe what I’ve got in my hold right now. Full load of, uh… let’s call it “entertainment supplies” for Polly’s Pleasure Palace.
+[<ship2>] Oh, I believe it. That station’s got a reputation. You must be getting hazard pay for that cargo.
+[<ship1>] Hazard pay? More like premium rates. They don’t skimp on the credits when it comes to keeping their clientele happy.
+[<ship2>] Just don’t get pulled over by security. Explaining that manifest is gonna be awkward.
+[<ship1>] Please. Last time I was there, the customs officer just gave me a wink and waved me through.
+[\example]
+
+[example]
+[<ship1>] (innuendo) Ever hauled 200 tons of “adult accessories” before? ‘Cause let me tell you, it’s a weird feeling.
+[<ship2>] Polly’s Pleasure Palace, I assume?
+[<ship1>] Bingo. They’re expanding, apparently. Guess business is booming.
+[<ship2>] Yeah, well, if people are gonna be stuck on deep-space colonies, they need some entertainment.
+[<ship1>] I don’t ask questions. I just move the cargo and collect my credits.
+[\example]
+
+[example] 
+[<ship1>] (innuendo) Got a special delivery today. Top-shelf entertainment for Polly’s Pleasure Palace.
+[<ship2>] That explains the… interesting cargo declaration I saw on the board.
+[<ship1>] Yeah, let’s just say these boxes have very specific handling instructions.
+[<ship2>] Hope your auto-dock doesn’t glitch out and scatter your shipment all over the landing pad.
+[<ship1>] You shut your mouth. That would be a career-ending moment.
+[\example]
+
+[example] 
+[<ship1>] (innuendo) So, I just picked up my latest contract. Wanna guess what I’m hauling?
+[<ship2>] If it involves Polly’s Pleasure Palace, I don’t need to guess.
+[<ship1>] Yep. 150 tons of, uh… morale boosters.
+[<ship2>] Morale boosters? That’s one way to put it.
+[<ship1>] All I know is, I’m getting paid more for this than I ever did hauling building materials.
+[\example]
+
+[example] 
+[<ship1>] (innuendo) You know you’ve hit a new stage in your career when your manifest reads: 200 tons, adult recreation supplies.
+[<ship2>] You’re doing a run for Polly’s, aren’t you?
+[<ship1>] Guilty as charged. And before you ask, no, I don’t get employee discounts.
+[<ship2>] Bet the station workers cheer when you arrive.
+[<ship1>] I just get a lot of knowing smiles and some very enthusiastic docking clearance.
+[\example]
+
+[example]
+[<ship1>] Just hauled another load of steel out to the new colony. They’re setting up quick.
+[<ship2>] Yeah, they need every bit of material they can get. My last run was full of atmospheric processors.
+[<ship3>] I’ve been shifting power generators all day. No juice, no colony.
+[<ship1>] At least they pay well. No shortage of work for us truckers.
+[<ship2>] True, but I’d kill for a proper break. Been running nonstop.
+[<ship3>] Rest when the job’s done. Until then, keep hauling.
+[\example]
+
+[example]
+[<ship1>] You see the traffic at the docking bay? Every hauler in the sector is bringing in supplies.
+[<ship2>] Yeah, and I’m one of them. Just offloaded a full hold of construction materials.
+[<ship3>] I’ve got a load of food cartridges heading out there now. Pioneers gotta eat.
+[<ship1>] Hope they appreciate all the back breaking work we’re doing.
+[<ship2>] As long as they keep paying, they can appreciate me however they want.
+[\example]
+
+[example]
+[<ship1>] Another day, another run to the colonies. You’d think they’d have enough by now.
+[<ship2>] You kidding? They’re just getting started. I’ve been moving water purifiers all week.
+[<ship3>] I had a load of terraforming gear last run. Looks like they want to get the planet self-sustaining.
+[<ship1>] More work for us, then. I’ll take the credits.
+[<ship2>] Yeah, but I wouldn’t mind a little less work and a little more shore leave.
+[<ship3>] Maybe in a few months. Right now, it’s all hands on deck.
+[\example]
+
+[example]
+[<ship1>] Just delivered another load of station components. Those orbital hubs are taking shape fast.
+[<ship2>] I’m hauling medical supplies. Pioneering ain’t easy. Folks keep getting hurt out there.
+[<ship3>] I had a shipment of hydroponics gear. Fresh food’s gonna be a luxury for a while.
+[<ship1>] Good thing we’re keeping the supply lines running.
+[<ship2>] Yeah, but I’d trade all this for a nice, easy cargo run in the bubble.
+[<ship3>] Not me. This is where the real credits are.
+[\example]
+
+[example]
+[<ship1>] Just finished hauling another load of station framework. Colony’s growing faster than expected.
+[<ship2>] Yeah, they keep expanding. I’ve been running atmospheric processors nonstop.
+[<ship3>] Food rations here. These folks are living off protein paste for now, but at least they’re fed.
+[<ship1>] I respect ‘em. Takes guts to build a home in deep space.
+[<ship2>] As long as they keep paying, I’ll keep delivering.
+[\example]
+
+[example]
+[<ship1>] Just finished unloading a batch of industrial equipment. Feels good to be part of something big.
+[<ship2>] Same here. I’ve been hauling power cells. Can’t run a colony without power.
+[<ship3>] My last run was cryopods. They’re waking up more settlers every day.
+[<ship1>] Hope they knew what they were signing up for.
+[<ship2>] If they didn’t before, they sure do now.
+[\example]
+
+[example]
+[<ship1>] Just did another run of prefab housing. That colony’s looking more like a city every day.
+[<ship2>] I’ve been moving machinery for manufacturing plants. Gotta get industry up and running.
+[<ship3>] My last cargo was environmental domes. They’re setting up farming modules next.
+[<ship1>] We’re building history out here.
+[<ship2>] Yeah, and making a fortune while we do it.
+[\example]
+
+[example]
+[<ship1>] This colonization effort’s got me running more cargo than ever.
+[<ship2>] Same here. Just dropped off a full hold of mineral extractors.
+[<ship3>] I’ve been ferrying medical teams and supplies. Lot of folks getting banged up.
+[<ship1>] It’s tough work, but it’s gonna be worth it.
+[<ship2>] Yeah, if we don’t burn out first.
+[\example]
+
+[example]
+[<ship1>] Another full run of heat shielding panels delivered. These stations are coming together fast.
+[<ship2>] Yeah, I brought in structural supports last week. They’re already expanding past the original plans.
+[<ship3>] My last job was an emergency run of oxygen tanks. Can’t forget the basics.
+[<ship1>] As long as they keep paying, I’ll keep hauling.
+[<ship2>] Same. But I wouldn’t mind a few days off to enjoy my earnings.
+[\example]
+
+[example]
+[<ship1>] Just hauled another load of fusion reactors out to the frontier. Power grid’s finally stable.
+[<ship2>] Good thing, too. My last run was full of settlers, and they don’t like freezing in the dark.
+[<ship3>] I had a hold full of luxury goods. Looks like the rich folk are moving in.
+[<ship1>] That’s how you know a colony’s doing well. When they start importing wine and cigars.
+[<ship2>] As long as they don’t forget the folks actually building the place.
+[\example]
+
+[example]
+[<ship1>] If I have to haul one more load of CMM Composites, I’m gonna lose it.
+[<ship2>] Tell me about it. I’ve been running the same route for weeks. Dock, load, jump, unload, repeat.
+[<ship3>] At least you guys get variety. I’ve been hauling only water tanks. Feels like I’m just a glorified hose.
+[<ship1>] Think they’d notice if we switched cargo just for fun?
+[<ship2>] Probably, but I’d pay good credits for something different.
+[\example]
+
+[example]
+[<ship1>] You ever get tired of hauling the same junk to the same place?
+[<ship2>] Every damn day. If I see another crate of hydroponic supplies, I might jettison it.
+[<ship3>] At least you’re not running oxygen recyclers. Every trip feels like déjà vu.
+[<ship1>] Wish they’d send us somewhere new for a change.
+[<ship2>] Ain’t happening. Colonies need supplies, and we’re the ones stuck delivering ‘em.
+[\example]
+
+[example]
+[<ship1>] Jumping to the same system again. I swear I could do this route in my sleep.
+[<ship2>] You too, huh? I’ve run this cargo loop so many times I should just buy property there.
+[<ship3>] At least you’re not hauling waste recyclers. I don’t even want to think about what’s in my cargo hold.
+[<ship1>] Yeah, but I wouldn’t mind something exciting. Smuggling? Combat? Hell, even asteroid mining sounds better.
+[<ship2>] I hear ya. Just one job where I don’t already know the destination by heart.
+[\example]
+
+[example]
+[<ship1>] I used to dream about being a space trucker. Now I just dream about hauling anything else.
+[<ship2>] Same here. My ship practically flies itself at this point.
+[<ship3>] You think they’d at least mix up the contracts. I’ve delivered nothing but prefab modules for a month.
+[<ship1>] Maybe we should switch to bounty hunting. At least that’s unpredictable.
+[<ship2>] You first. I’ll be right behind you after my next ten identical runs.
+[\example]
+
+[example]
+[<ship1>] You ever wonder if we’re just background characters in someone else’s adventure?
+[<ship2>] With how many times I’ve run this same damn cargo, yeah. Starting to feel like an NPC.
+[<ship3>] I hear that. My last three jobs were identical. Load up, jump, unload, repeat. No surprises, no excitement.
+[<ship1>] If I don’t get a mission that actually makes me think, I might start making my own fun.
+[<ship2>] Careful, that’s how pirates get started.
+[\example]
+
+[example]
+[<ship1>] You know, I’ve been out here on the road so long I’m starting to think I’ve forgotten what a date feels like.
+[<ship2>] Haha, you and me both, mate. My last real date? Was probably back when I was still hauling goods out of the Core Worlds.
+[<ship3>] You think that’s bad? I haven’t even had a holo-call in weeks. These long hauls leave no room for romance.
+[<ship1>] Well, maybe it’s time we all change that. I heard the new colony systems have some real gems. Plenty of opportunities to meet someone new.
+[<ship2>] You’re not wrong. Might be time for some new beginnings.
+[\example]
+
+[example]
+[<ship1>] It’s funny, isn't it? How we start off with big dreams and then we’re just hauling goods from one station to the next.
+[<ship2>] Yeah, life on the road does get repetitive. But hey, last station I was at, I met this engineer, she was pretty amazing.
+[<ship3>] Really? How’d that go?
+[<ship1>] We had a good time. Took a few walks around the station, had a couple of drinks. Still, the distance... it’s a killer.
+[<ship2>] Well, distance does make the heart grow fonder. Or so they say.
+[\example]
+
+[example]
+[<ship1>] Honestly, I don’t know what’s worse, the endless jumps or the fact that every time I finally meet someone nice, I have to leave.
+[<ship2>] That’s the life, pal. I met a lovely lass in the last system. Spent a couple of days together, then boom, off to the next system.
+[<ship3>] Man, you know what they say, "Ship’s passing in the night." But hey, that’s what makes the memories, right?
+[<ship1>] True. At least I’ll always have the memory of her smiling face when I pull out of dock.
+[<ship2>] It’s the small things, mate.
+[\example]
+
+[example]
+[<ship1>] You know what I miss? Those late-night convos at the bar, when you’re just chatting with someone and it turns into something more.
+[<ship2>] I know the feeling. Met a great pilot last month. Just a casual chat about fuel costs turned into a couple of hours of real connection.
+[<ship3>] Yeah, but then reality kicks in, and you remember you’ve got a hundred light-years to cover before the next station.
+[<ship1>] Story of my life. We’ll see if this new colony gig changes things. Maybe a fresh start’s just what I need.
+[<ship2>] Same here. Here’s hoping this time things stick, right?
+[\example]
+
+[example]
+[<ship1>] Just dropped off the last batch of power generators. Our colony’s finally got full power!
+[<ship2>] That’s incredible! We’ve been running on emergency batteries for too long. Now we can get the hydroponics up and running.
+[<ship3>] And I’ve got a hold full of fabrication units for the habitat domes. We’ll have proper homes instead of sleeping in cargo crates!
+[<ship1>] This is it, folks. We’re not just truckers anymore, we’re founders!
+[<ship2>] Founders of a brand-new system! I can’t believe we’re making this happen.
+[\example]
+
+[example]
+[<ship1>] Just finished another run of medical supplies. Feels good knowing we’re setting up a real community.
+[<ship2>] Yeah, I’ve got construction materials for the main hall. It won’t be much, but it’ll be ours.
+[<ship3>] And I’ve got environmental controls for the water processing plant. Won’t be long before we can drink local water instead of hauling it in.
+[<ship1>] Never thought I’d get to build a world from scratch. This is history in the making.
+[<ship2>] We’re not just flying cargo—we’re building our future.
+[\example]
+
+[example]
+[<ship1>] Another load of atmosphere processors coming in! Won’t be long before we have a breathable biosphere.
+[<ship2>] I’ve got fusion reactors in my hold. Power grid’s about to get a serious upgrade!
+[<ship3>] You all are thinking big, I’m just excited to finally set up a bar. We’ve earned it!
+[<ship1>] A colony isn’t a colony without a good place to drink. First round’s on me.
+[<ship2>] Make mine a double. We’re building a new world—we deserve a proper toast.
+[\example]
+
+[example]
+[<ship1>] Docking now with the first set of permanent housing modules! No more sleeping in our ships.
+[<ship2>] That’s great! I just brought in a load of industrial tools. We can finally start real production.
+[<ship3>] And I’ve got the final shipment of agricultural units. Fresh food soon instead of ration packs!
+[<ship1>] We’re turning this rock into a home, one shipment at a time.
+[<ship2>] Can’t wait to sit on my own porch and watch the stars.
+[\example]
+
+[example]
+[<ship1>] This is it, folks! Final shipment of colony infrastructure is inbound!
+[<ship2>] We’re gonna have a real settlement soon. Our own space, our own rules.
+[<ship3>] Just think: generations from now, people will talk about us as the founders of this place.
+[<ship1>] The first of many. Who knows how far this expansion will go?
+[<ship2>] As far as our ships can take us. And I wouldn’t have it any other way.
+[\example]
+
+[example]
+[<ship1>] Just picked up crates of Centauri Mega Gin and some rare wines from Achenar. The new colony’s going to celebrate in style!
+[<ship2>] I’ve got the luxury foodstuffs. Rreal cheese, meats, and fresh produce straight from the agricultural hubs.
+[<ship3>] Bringing in the beer kegs! No better way to kick off a new settlement than a good old-fashioned toast.
+[<ship1>] We worked hard to establish this place; now it’s time to enjoy it.
+[<ship2>] First of many celebrations to come!
+[\example]
+
+[example]
+[<ship1>] On my way back with a full haul of Orion wine and Bast Snake Gin. Our colony’s going to be drinking like royalty!
+[<ship2>] I’ve got luxury rations. Spices, meats, and real bread. None of that synth-food for this occasion.
+[<ship3>] Beer, ale, and a few barrels of homebrewed liquor from Lave. We’re going to make this a night to remember!
+[<ship1>] Just a few more jumps, and we can start unloading.
+[<ship2>] Let’s make sure the settlers never forget this day.
+[\example]
+
+GALNET 2025-03-21T21:24:55Z
+
+[example]
+[<ship1>] Can’t believe Commander Wyrnikh hasn’t come forward yet for their Time Trial prize draw top prize. Commanders Myraleth and G W Jukebox already claimed their prizes.
+[<ship2>] Yeah, Myraleth’s putting their 500 million into a fleet carrier. Smart move.
+[<ship3>] And G W Jukebox is sitting on a billion credits now. Imagine what you could do with that.
+[<ship1>] I’d start by retiring from hauling and buying a private moon.
+[<ship2>] If Wyrnikh doesn’t claim that prize soon, someone’s gonna start asking questions.
+[\example]
+
+
+GALNET 2025-05-06T21:24:55Z
+
+[example]
+[<ship1>] You see the latest Galnet? Billions migrating out here like it’s the gold rush all over again.
+[<ship2>] Yeah, heard Olympus Village called it the biggest migration in human history. Wild times.
+[<ship3>] Makes sense. After what the Thargoids pulled, people just want a clean slate.
+[<ship1>] These colonies are gonna need everything—tools, food, parts. It’s a trucker’s dream.
+[<ship2>] A dream until we’re running the same haul routes for the hundredth time.
+[<ship3>] Eh, I’ll take routine over running from Thargoid scouts.
+[\example]
+
+[example]
+[<ship1>] Another load of processors heading into Demeter’s Gate. These colonies are popping up like mushrooms.
+[<ship2>] I’ve got prefab habitat domes for the same system. This place is booming.
+[<ship3>] Anyone notice how fast Brewer got their Trailblazer fleet out there?
+[<ship1>] Yeah, they were prepped like they saw this coming.
+[<ship2>] Makes you wonder who’s really calling the shots in these “independent” colonies.
+[\example]
+
+[example]
+[<ship1>] First-time I’ve ever seen traffic queues at an outpost. Guess that’s what happens during a migration surge.
+[<ship2>] I passed a convoy of family shuttles earlier. Kids waving out the windows like it was a vacation.
+[<ship3>] Kinda makes me miss the old days. Less people, more silence between the stars.
+[<ship1>] Silence doesn’t pay the fuel bills though.
+[<ship2>] Or the bar tabs. Let’s get this cargo off and find somewhere with decent synth-ale.
+[\example]
+
+[example]
+[<ship1>] You hear about those custom decor packs Brewer’s offering? Got colonies requesting themed interiors.
+[<ship2>] Yeah, one of my stops wanted a 'retro Earth beach resort' vibe. Hilarious in the middle of deep space.
+[<ship3>] As long as they're paying for it, I’ll haul tiki torches across five jumps.
+[<ship1>] Priorities, right? Atmosphere first, infrastructure second.
+[<ship2>] At least they’re optimistic.
+[<ship3>] Or delusional. Either way, keeps us busy.
+[\example]
+
+[example]
+[<ship1>] Just dropped some agri-tech for a new dome farm in New Damascus. Place is buzzing.
+[<ship2>] Got a shipment of climate regulators for that system next week. Gonna be busy out there.
+[<ship3>] With that kind of traffic, I hope they’ve got a halfway decent refuel station.
+[<ship1>] Or at least better coffee than that sludge on the Trailblazers.
+[\example]
+
+[example]
+[<ship1>] Another run to a colony that didn’t exist last month. These maps are out of date before they finish printing.
+[<ship2>] I gave up on static maps. Got a live nav link from my guild instead.
+[<ship3>] Smart. Last time I followed an old chart, I nearly landed in an unmarked crater.
+[<ship1>] Better that than someone else’s prefab housing unit.
+[\example]
+
+[example]
+[<ship1>] Picked up a few migrants back on my last stop. Whole families, just uprooted and chasing hope.
+[<ship2>] I know the feeling. Had to reboot my life after the invasion too.
+[<ship3>] We all did. Maybe these colonies really are a second chance.
+[<ship1>] Let’s just hope they hold.
+[\example]
+
+[example]
+[<ship1>] You seen how fast the markets are stabilizing out here? Trade’s already getting competitive.
+[<ship2>] Good for us. Bad for anyone hoping to settle without a job lined up.
+[<ship1>] Supply and demand waits for no one.
+[<ship2>] Except pirates. They always seem to have perfect timing.
+[\example]
+
+[example]
+[<ship1>] So much traffic inbound. It’s like a core world port out here.
+[<ship2>] That’s what happens when you dump ten million colonists into one sector.
+[<ship1>] Yeah, and we’re the ones keeping their lights on.
+[<ship2>] Better than being stuck in an office back in Sol.
+[\example]
+
+[example]
+[<ship1>] You catch that quote from Professor Ralston? Called this the biggest migration in human history.
+[<ship2>] She’s not wrong. Just look at this place.
+[<ship1>] From backwater to boomtown in under six weeks.
+[<ship2>] Hope they don’t forget who hauled all the bricks.
+[\example]
+
+[example]
+[<ship1>] Just dropped off hydroponic kits at Waypoint Theta. They’re already planting the first crops.
+[<ship2>] That was fast. I only hauled soil substrate there two days ago.
+[<ship1>] These colonies don’t mess around.
+[<ship2>] Or sleep, apparently.
+[\example]
+
+[example]
+[<ship1>] Think Brewer will really pull the Trailblazer fleet once these colonies stabilize?
+[<ship2>] Probably. They'll want those ships earning credits somewhere else.
+[<ship1>] Guess we’d better make the most of the easy work while it lasts.
+[<ship2>] You call five jumps with cryo-racks easy?
+[\example]
+
+[example]
+[<ship1>] Expansion’s the best thing to happen in years. More systems mean more freedom.
+[<ship2>] Freedom? It means longer hauls, more pirates, and less security.
+[<ship1>] That’s a short-sighted take. With more colonies, the economy booms for everyone.
+[<ship2>] Until a system collapses and becomes a ghost town. We’ve seen it before.
+[<ship3>] I'm just hauling bio-waste and listening to you two argue.
+[<ship1>] Just remember, that bio-waste fuels progress, like it or not.
+[\example]
+
+[example]
+[<ship1>] I moved my whole family out of the bubble. It's a new beginning.
+[<ship2>] And what if the new beginning ends in a famine or a pirate siege?
+[<ship1>] Then we stand and build. It's what pioneers do.
+[<ship3>] I admire the optimism, but we still don’t have stable comms half the time.
+[<ship2>] Exactly! Infrastructure can't keep up with ambition.
+[<ship1>] Someone’s got to start the infrastructure. That's us.
+[\example]
+
+[example]
+[<ship1>] You know, the core worlds are stagnant. Outdie the bubble, there’s hope.
+[<ship2>] Hope doesn't power a shield generator when raiders hit your outpost.
+[<ship3>] Maybe, but neither does sitting in traffic lanes over Sol.
+[<ship1>] Thank you! At least someone sees the bigger picture.
+[<ship2>] The bigger picture ends in another bubble collapse.
+[<ship3>] Or it ends with us living on our own terms. Take your pick.
+[\example]
+
+[example]
+[<ship1>] I hauled two megatonnes of reactor parts last week. Feels like I’m building history.
+[<ship2>] You’re building Brewer’s profit margins.
+[<ship3>] Don’t knock it. Those profits pay my bar tab.
+[<ship2>] It’s exploitation. They dangle a dream and rake in credits.
+[<ship1>] Maybe, but we finally have somewhere new to belong.
+[<ship3>] As long as it has docking bays and hot meals, I’m not complaining.
+[\example]
+
+[example]
+[<ship1>] We’ve got fresh ground, fresh contracts, and a chance to shape things.
+[<ship2>] You say that now. Wait until they start taxing jump routes.
+[<ship3>] Or regulating your cargo holds.
+[<ship1>] That’s the old bubble talking. Out in the colonies, we get to decide.
+[<ship2>] Or someone else decides while we’re still unloading pallets.
+[<ship3>] Well, at least outside the core I can complain without getting fined.
+[\example]
+
+[example]
+[<ship1>] Expansion's necessary. We’re overcrowded in the core systems.
+[<ship2>] Necessary doesn't mean smart. We’re stretching too thin.
+[<ship3>] You two sound like a married couple. Can’t we just enjoy the stars?
+[<ship1>] You’d enjoy them more if you weren’t docking at stations built last week.
+[<ship2>] Exactly. I landed on one with no airlock protocols. It vented my lunch.
+[<ship3>] Alright, that’s fair. But I still say the adventure’s worth the risk.
+[\example]
+
+[example]
+[<ship1>] I’ve got three jobs lined up in newly-settled systems. It’s booming out there.
+[<ship2>] Until the boom fizzles and you’re stranded without a repair bay.
+[<ship3>] Not if we keep supporting it. More pilots mean more infrastructure.
+[<ship1>] Finally, someone who gets it. You don’t get progress without commitment.
+[<ship2>] You also don’t get stability without caution. This is just a gold rush.
+[<ship3>] Call it what you want, but I’m not going back to waiting two hours to dock at Abraham Lincoln.
+[\example]
+
+[example]
+[<ship1>] Honestly, I love the open lanes and fresh colonies. Reminds me why I got into this work.
+[<ship2>] Yeah, until you need help and no one's around for 20 light years.
+[<ship3>] That’s why I fly self-sufficient. Got all my tools, medpacks, and my lucky bobblehead.
+[<ship1>] You bring a good attitude. That’s more than I can say for most.
+[<ship2>] I bring realism. You’ll need it when the hyperdrive fails in the middle of nowhere.
+[<ship3>] You bring a bad mood. Go grab a snack and lighten up.
+[\example]
+
+[example]
+[<ship1>] I helped assemble the habitat pods at the last settlement. That place is gorgeous.
+[<ship2>] You mean fragile. One solar flare and half those pods are toast.
+[<ship3>] That’s why they reinforce them now. Brewer’s not cutting corners anymore.
+[<ship1>] Exactly. These aren’t backwater outposts. They’re future metropolises.
+[<ship2>] Future salvage sites, more like. You wait and see.
+[<ship3>] If you’re gonna be this cynical, at least buy the rest of us a drink.
+[\example]
+
+[example]
+[<ship1>] The new colonies feel alive. People are hopeful again.
+[<ship2>] That hope won’t keep the power grid running when demand triples.
+[<ship3>] Better than the political gridlock back home. I’ll take growing pains over stagnation.
+[<ship1>] Same here. At least out in the colonies, effort still matters.
+[<ship2>] And what if a Thargoid decides your shiny new colony looks tasty?
+[<ship3>] Then we shoot first and rebuild later. Like always.
+[\example]
+
+[example]
+[<ship1>] Another load of prefab habs delivered. We’re practically building cities out here.
+[<ship2>] You mean we’re building cities. You just napped in the pilot seat again, didn’t you?
+[<ship3>] Only wakes up for the docking sequence? Classic.
+[<ship1>] Hey, I contribute! I gave moral support to the crane crew.
+[<ship2>] And by "moral support" you mean flirting with the techs again?
+[<ship3>] At least you're consistent. Reliable charm, unreliable cargo straps.
+[\example]
+
+[example]
+[<ship1>] You two coming back out after the next haul? Got another colony needing plumbing units.
+[<ship2>] I’ll go if you don’t burn out another FSD coil this time.
+[<ship3>] Don’t blame me! That dust storm in orbit scrambled my sensors.
+[<ship1>] And your brain, probably. Still, you made the landing. Impressive.
+[<ship2>] Yeah, we only bounced three times. A new personal record.
+[<ship3>] That colony cheered when I got out. Said it was the most exciting delivery they’d seen.
+[\example]
+
+[example]
+[<ship1>] I used to dread long hauls. Now it feels like we're actually doing something that matters.
+[<ship2>] Agreed. I dropped supplies to a school dome yesterday. Kids waved from the windows.
+[<ship3>] That’s the kind of thing that sticks with you. More than credits ever will.
+[<ship1>] Still wouldn’t mind a few more credits. My auto-chef just exploded.
+[<ship2>] Again? That’s the third time. Stop trying to cook curry in zero-G.
+[<ship3>] Get used to freeze-dried mush like the rest of us.
+[\example]
+
+[example]
+[<ship1>] I heard a nearby colony system has opened a little tavern module. Real food, real drinks. You in?
+[<ship2>] You serious? I’ve been living on nutrient paste for two months!
+[<ship3>] First round’s on me once I drop these power regulators.
+[<ship1>] Just make sure they don’t blow mid-unload.
+[<ship2>] That happened once. One time! And I paid for the panel repairs.
+[<ship3>] You are the reason the colony has a “caution: him” poster near the hangar.
+[\example]
+
+[example]
+[<ship1>] Some folks say the expansion’s risky. I say it’s the best work we’ve ever had.
+[<ship2>] No risk, no stories. Remember the ice planet job?
+[<ship3>] You mean the one where you fell asleep and froze your nav controls?
+[<ship1>] We all learned something that day. Mostly to double-check thermal seals.
+[<ship2>] And to not trust you to bring extra blankets.
+[<ship3>] Hey, I brought marshmallows. That counts as support.
+[\example]
+
+[example]
+[<ship1>] Just dropped off the last of the hydroponics equipment. That colony's got a shot at feeding itself now.
+[<ship2>] You ever think about staying in one of these places? Settling down?
+[<ship3>] Thought about it. Then I remembered I don't like neighbors or lawn care.
+[<ship1>] Ha! Fair. But something about the kids waving when I left hit different this time.
+[<ship2>] Yeah, man. It gets to you. We’re more than haulers out here.
+[<ship3>] Speak for yourselves. I’m just here for the paycheck… and the pie at Port Dainin’s diner.
+[\example]
+
+[example]
+[<ship1>] Can’t believe it. Ran into old Makka again. Said he's setting up a machine shop on one of the new builds.
+[<ship2>] Makka? The guy who used to weld his coffee mug to the workbench?
+[<ship3>] Legend. Hope he’s still got all his fingers.
+[<ship1>] Said he’s happy, believes in the expansion. Said it’s the first time he’s felt useful in years.
+[<ship2>] That’s the thing, ain’t it? Out here, everyone’s needed.
+[<ship3>] Even if we’re just the ones hauling the toilet modules.
+[\example]
+
+[example]
+[<ship1>] Took the long route through an empty system. Stars were unreal.
+[<ship2>] Ain’t nothing like quiet space after a busy drop. Makes you feel small, but in a good way.
+[<ship3>] Until your cargo alert screams at 3AM.
+[<ship1>] Wasn’t an alert. Just my stomach reminding me I skipped breakfast.
+[<ship2>] Again? You gotta stop living on coffee and freeze-dried noodles.
+[<ship3>] That's not living. That's surviving… barely.
+[\example]
+
+[example]
+[<ship1>] I heard they named a street in some new colony after a hauler.
+[<ship2>] No joke? Finally getting the respect we deserve.
+[<ship3>] Watch, it'll be “Leaky Tanker Boulevard.”
+[<ship1>] Or “Reactor Vent Court.”
+[<ship2>] Hey, if they name a sewage plant after me, I’ll still be proud.
+[<ship3>] Same. We built the bones of this frontier. One container at a time.
+[\example]
+
+[example]
+[<ship1>] Anyone else feel like we're part of something bigger lately?
+[<ship2>] Yeah. Used to be just about moving boxes. Now it feels like we’re making history.
+[<ship3>] That’s deep for a guy who once shipped nothing but luxury pillows.
+[<ship1>] Hey, those pillows cushioned some pioneer’s first night on a new world. That counts.
+[<ship2>] We laugh, but it all adds up. Every bolt, every beam.
+[<ship3>] Alright, fine. Just don’t make me cry on comms. I’ve got a reputation to uphold.
+[\example]
+
+[example]
+[<ship1>] Nearly lost my load to a busted mag-clamp. One more bump and I’d have been chasing oxygen tanks across the void.
+[<ship2>] Damn, glad you held it together. New colony wouldn’t last long without air.
+[<ship3>] You’d have made Galnet: “Hero hauler saves oxygen, loses nerve.”
+[<ship1>] Ha, my nerve’s just fine. It’s my trust in dockyard welders that’s broken.
+[<ship2>] Still, good save. That kind of stuff is what legends are made of.
+[<ship3>] Or therapy bills. Either way, drinks on you next stop.
+[\example]
+
+[example]
+[<ship1>] Dropped off heat sinks and reactor shielding. The look on those engineers’ faces… pure relief.
+[<ship2>] Yeah, they know they can’t go full power without us getting it there first.
+[<ship3>] We’re like space plumbers. Unappreciated until something explodes.
+[<ship1>] Ain’t glamorous, but it matters.
+[<ship2>] One crate at a time, we’re stitching up the frontier.
+[<ship3>] And occasionally unclogging it. Don’t ask me what was in bay 4.
+[\example]
+
+[example]
+[<ship1>] My nav AI tried to route me through a Thargoid graveyard. Said it was “scenic.”
+[<ship2>] AI’s got a dark sense of humor.
+[<ship3>] Or a death wish. Either way, sounds like my ex.
+[<ship1>] Made it through, barely. But I saw some wreckage I’ll never forget.
+[<ship2>] Sometimes I wonder how many haulers never made it back.
+[<ship3>] We carry more than cargo. We carry memory.
+[\example]
+
+[example]
+[<ship1>] Spent the night parked under a ringed gas giant. Just watched it spin. Needed that.
+[<ship2>] Yeah. With all the pressure out here, sometimes you gotta stop and breathe.
+[<ship3>] Can’t remember the last time I really looked out the viewport.
+[<ship1>] The work never ends. But the stars… they remind you why it’s worth it.
+[<ship2>] One quiet night resets a week of chaos.
+[<ship3>] That, and a decent cup of station-brewed coffee.
+[\example]
+
+[example]
+[<ship1>] Just finished a triple run. Two colonies and a relay station. I'm toast.
+[<ship2>] You looked half-asleep docking. Autopilot or caffeine?
+[<ship1>] Neither. Pure spite and a playlist of 3300s death metal. Worth it though. Kid at the colony gave me a drawing of my ship. Called me a hero.
+[<ship2>] That’s the good stuff.
+[<ship1>] That right there’s why we do it. Not the credits. The legacy.
+[\example]
+
+[example]
+[<ship1>] That’s it. One more damn crate and I was gonna vent myself out the airlock.
+[<ship2>] Long week?
+[<ship1>] Long year. I’m parking this rust bucket and heading out to that music colony in LHS 3447. Gonna play some old Earth blues for a change.
+[<ship3>] Blues, huh? I thought you only hauled bio-waste.
+[<ship1>] Exactly. Time for a better kind of soul.
+[\example]
+
+[example]
+[<ship1>] Just offloaded another shipment of pressure regulators. I swear I’m about to become one with my cargo.
+[<ship2>] You sound done.
+[<ship1>] I am done. I signed up to run exploration tours for couples headed to nebulae. No crates, no rush, just stargazing and awkward romantic tension.
+[<ship3>] That… actually sounds kinda peaceful.
+[<ship1>] And way fewer back injuries.
+[\example]
+
+[example]
+[<ship1>] I used to love this gig. Stars, solitude, purpose.
+[<ship2>] Burnout hits hard out here.
+[<ship1>] I’ve put in for a sabbatical. Gonna try my hand at colony cuisine. They’re opening a diner on Takanaga 3.
+[<ship3>] You? Cooking?
+[<ship1>] Laugh it up. I make a mean protein loaf.
+[\example]
+
+[example]
+[<ship1>] Just delivered twenty tons of crop seed. Again. For the fifth time this cycle.
+[<ship2>] You sound like a man on the edge.
+[<ship1>] I signed up to haul freedom, not fertilizer.
+[<ship3>] So what now?
+[<ship1>] I’m heading to a remote planet in the Wregoe sector. Gonna paint landscapes.
+[<ship2>] Wow. From cargo bays to canvas.
+[\example]
+
+[example]
+[<ship1>] Another delivery done. I barely feel anything anymore.
+[<ship2>] That dead inside, huh?
+[<ship1>] Thinking of joining the Buckyball Racing Club. At least that’ll get my heart pumping.
+[<ship3>] Heh, trading fatigue for velocity. I respect it.
+[<ship1>] Better to burn bright than coast on fumes.
+[\example]
+
+[example]
+[<ship1>] That’s the last shipment of mining drills I ever want to see.
+[<ship2>] What, you quitting?
+[<ship1>] Switching lanes. Gonna try my hand at pirate hunting.
+[<ship3>] From cargo runner to gunslinger? That’s a hell of a leap.
+[<ship1>] I’ve logged more interdictions than deliveries lately. Figured I might as well get paid for shooting back.
+[<ship2>] Just make sure you know which end of the cannon is which.
+[\example]
+
+[example]
+[<ship1>] Ever get tired of being the prey?
+[<ship2>] Every damn day.
+[<ship1>] I’ve outfitted my Type-10 with railguns and hull reinforcements. No more running. I’m hunting pirates now.
+[<ship3>] That's a lot of attitude for a guy who used to cry over scratched paint.
+[<ship1>] I cried because that paint cost five million credits.
+[<ship2>] Go get ‘em, bounty hunter. Just remember, they shoot back.
+[\example]
+
+[example]
+[<ship1>] I've dropped off my last load. Took one look at the bulletin board, and signed up for a pirate kill contract.
+[<ship2>] You? Commander "I hate conflict"?
+[<ship1>] Turns out getting pirated twenty-seven times in one month changes you.
+[<ship3>] I give it a week before you're back hauling coffee beans.
+[<ship1>] Not this time. I bought a Vulture. Sleek, mean, and mine.
+[\example]
+
+[example]
+[<ship1>] Just got my insurance payout. That was the last time a pirate takes my cargo without a fight.
+[<ship2>] You’re arming up?
+[<ship1>] Damn right. AX turrets, heat sinks, the works.
+[<ship3>] You do realize those turrets won’t help if you forget to power up your weapons like last time.
+[<ship1>] Ha ha. This time I’m ready. They want trouble? I’ll give them fireworks.
+[\example]
+
+[example]
+[<ship1>] Ever get that itch to do something reckless?
+[<ship2>] All the time. Usually scratch it with spicy noodles.
+[<ship1>] I joined a pirate-hunting wing out near the edge of the bubble. No more crates, just targets.
+[<ship3>] You’re serious?
+[<ship1>] Dead serious. Tired of hiding. Tired of hauling. Time to make them scared for a change.
+[<ship2>] Well, watch your six. They play dirty.
+[\example]
+
+GALNET 2025-05-16T21:24:55Z
+
+[example]
+[ship1] The Alliance Assembly just voted to end the Sirius defence pact. Big shift in policy.
+[ship2] That’s been brewing for a while. Kaine finally got the support she needed.
+[ship3] Not surprised. A lot of folks saw Sirius as overstepping their bounds.
+[ship1] Mahon tried to hold it together, but the Assembly wasn’t buying it anymore.
+[ship2] Wonder what this means for AX defence. Sirius had their hands in a lot of that.
+[ship3] We might see some scrambling to plug the gaps real quick.
+[\example]
+
+[example]
+[ship1] Alliance space politics just got interesting, Sirius is out of the defence loop now.
+[ship2] It’s going to be a mess for logistics. They were running half the supply lines.
+[ship1] Kaine's faction finally got the majority they needed, huh?
+[ship3] Mahon's camp won’t be happy. That pact was his cornerstone.
+[ship2] Let's hope the next solution doesn’t take months to get in place.
+[\example]
+
+[example]
+[ship1] Looks like that Sirius pact is officially done. The Assembly actually voted it through.
+[ship2] Can’t say I’m shocked. The writing’s been on the wall for a while.
+[ship3] Still, ending a major defence contract overnight feels drastic.
+[ship1] Maybe, but Kaine’s been saying we should support Alliance-born businesses for years.
+[ship2] There’s merit to that. Feels more local, more accountable.
+[ship3] Assuming someone steps up to take the reins.
+[\example]
+
+[example]
+[ship1] The Sirius-Alliance partnership is history. Assembly pulled the plug.
+[ship2] Wonder how much that’ll disrupt current military operations.
+[ship3] Probably more than they’ll admit publicly.
+[ship1] At least the contracts will go to local firms now, like Kaine wanted.
+[ship2] I’ll be watching the markets. Someone’s going to make a fortune off this shift.
+[ship3] Bet the media’s already framing it as a power struggle.
+[\example]
+
+[example]
+[ship1] Heard about the Assembly vote? Sirius Corp just got the boot from defence ops.
+[ship2] Yeah, Kaine's motion finally passed. Barely.
+[ship3] Barely’s enough. Sirius has lost a lot of goodwill lately.
+[ship1] Mahon's probably reeling. That pact was his idea from the start.
+[ship2] Politics moves fast when the credits slow down.
+[\example]
+
+[example]
+[ship1] So long, Sirius Defence Pact. The Alliance just cut ties officially.
+[ship2] Guess Kaine finally outmaneuvered Mahon.
+[ship3] She played the long game—and won.
+[ship1] Makes you wonder who’ll move into those contracts now.
+[ship2] Whoever it is, they better be ready fast.
+[\example]
+
+[example]
+[ship1] Sirius is out. Assembly pulled the trigger after all that debate.
+[ship2] I thought they'd stall it longer. Guess not.
+[ship3] It’s going to shake up military logistics in Alliance space.
+[ship1] At least we might see some homegrown companies get the contracts.
+[\example]
+
+[example]
+[ship1] The end of the Sirius pact marks a big shift for the Alliance.
+[ship2] Finally. That partnership always felt one-sided.
+[ship3] A lot of pilots are relieved. Sirius wasn’t winning any popularity contests.
+[ship1] Now we wait to see if the Assembly has a solid Plan B.
+[\example]
+
+GALNET 2025-10-22T21:24:55
+
+[example]
+[<ship1>] Have you seen one of those new Panther Clippers up close? The sheer size of it is ridiculous. Zorgon Peterson actually did it.
+[<ship2>] I know. I finally saw one docked at Jameson Memorial. Makes a Type-9 look like a courier shuttle.
+[<ship1>] Twelve hundred tons of cargo space… and it still flies smoother than I expected.
+[<ship2>] For that price it’d better. You could buy a fleet of Anacondas for the same credits.
+[\example]
+
+[example]
+[<ship1>] Ten hardpoints. Ten! That’s not a freighter, that’s a dreadnought with a cargo bay. These new Panther Clippers can pack a punch.
+[<ship2>] Yeah, pirates are panicking. Takes a wing to even dent its shields.
+[<ship1>] Our days of easy prey are gone. We’ll need to pick targets a bit smaller than a flying fortress.
+[<ship3>] Don’t exaggerate. Most traders rip out the shields for cargo racks. It turns slower than a Coriolis on holiday.
+[\example]
+
+[example]
+[<stationname>] This is <stationname> control. All large pads are now certified for Panther-class freighters.
+[<stationname>] Please follow approach guidance carefully. The new super-heavy ships take up more airspace than you think.
+[<ship1>] I still can’t believe they actually built those behemoths!
+[\example]
+
+[example]
+[<stationname>] This is <stationname> control. Engineers from Zorgon Peterson have completed our pad upgrades for Panther-class vessels.
+[<stationname>] Pilots flying large ships should report any docking guidance errors immediately.
+[<ship1>] So the rumors were true — those pad extensions weren’t just for show.
+[<ship2>] Yeah, saw a Panther come in yesterday. Nearly blocked the mail slot by itself.
+[\example]
+
+[example]
+[<ship1>] I finally got my Panther Clipper delivered. Sold half my hangar for it.
+[<ship2>] What are you using it for?
+[<ship1>] Everything! Trading, mining, passenger runs. I named her The Midas. Golden paintjob, naturally.
+[<ship2>] Figures. Heard there’s already a Panther owners club forming.
+[<ship1>] Oh, I’m in. First meeting, I’m parking on the pad next to the poor fools who still fly a Type-9.
+[\example]
+
+[example]
+[<ship1>] Took the Panther out for a tritium haul. Only took a few runs and my carrier’s topped off for Colonia.
+[<ship2>] You bought a ship that size just for fuel runs?
+[<ship1>] Worth every credit. It’s basically a mobile pipeline with engines.
+[\example]
+
+[example]
+[<ship1>] I’ve been engineering my Panther for weeks. It’s a beast now.
+[<ship2>] You must be insane. Do you know how many materials it takes for a Grade 5 drive on that mass?
+[<ship1>] Don’t remind me. I’ve seen smaller moons require less effort. But once it’s done, it’ll be legend.
+[\example]
+
+[example]
+[<ship1>] You ever tried docking a Panther in peak traffic? It’s like threading a moon through a letterbox.
+[<ship2>] Yeah, one clipped the tower at Baker’s Prospect last night. They had to tow it out in sections.
+[<ship1>] At least it makes the mail slot cam feeds entertaining again.
+[\example]
+
+[example]
+[<ship1>] So, how’s your Panther treating you?
+[<ship2>] Beautiful, but terrifying. Nearly scraped half the paint off on my first docking attempt.
+[<ship1>] I went to Shinrarta on launch week. It was total chaos. Multiple Panthers trying to squeeze through one slot.
+[<ship2>] Heh, glorious days. Now I just park mine and admire the dents.
+[\example]
+
+[example]
+[<ship1>] Pirates are starting to target Panthers now.
+[<ship2>] Brave, or stupid?
+[<ship1>] Bit of both. One wing took one down near LTT 5455 last week. They’re still counting the loot.
+[<ship3>] Yeah, and two of them ended up as debris. Turns out “flying fortress” wasn’t just marketing.
+[\example]
+
+[example]
+[<ship1>] Saw a Panther getting towed out of an asteroid field yesterday. Pilot said he “misjudged the turning radius.”
+[<ship2>] With a hull that size, “turning radius” is just a polite way of saying “orbit.”
+[\example]
+
+[example]
+[<ship1>] People keep calling the Panther a freighter. I use mine as a flying base. Workshop, crew bunks, fighter bay. The works.
+[<ship2>] Yeah, I heard one commander fitted a hot tub in cargo bay three.
+[<ship1>] I would too, if I didn’t keep filling it with platinum.
+[\example]
+
+[example]
+[<ship1>] You think the Panther’s worth it?
+[<ship2>] Depends. If you love profits, yes. If you love docking stress, also yes.
+[\example]
+
+[example]
+[<ship1>] I saw a Panther land on a planetary pad yesterday. The dust cloud didn’t clear for ten minutes.
+[<ship2>] I swear the ground shook when it touched down.
+[\example]
+
+[example]
+[<ship1>] Zorgon Peterson really pulled it off. Who would’ve thought they’d actually deliver the mythical Panther Clipper?
+[<ship2>] Yeah, it only took them what, a decade? Worth the wait though.
+[\example]
+
+GALNET 2025-11-20T21:24:55
+
+[example]
+[<ship1>] A buddy of mine scanned the flora in HIP eight seven six two one. Said it didn’t match anything in the databases.
+[<ship2>] Heard it grows only on blistering hot, thin-atmo worlds. Who the hell evolved that way?
+[<ship3>] Something that doesn’t want company. Maybe that’s why the Consortium’s jumpy.
+[<ship1>] Or maybe the leaks about the bio-chemical compound are true.
+[<ship2>] If it’s pharmaceutical-grade, the powers are going to fight over it.
+[<ship3>] Great. Another plant we’ll go to war over.
+[\example]
+
+[example]
+[<ship1>] Did you hear those rumours that Radicoida unica might be medicinal?
+[<ship2>] If true, the megacorps must be seething that they’re locked out.
+[<ship1>] Nothing makes them angrier than missing a profit window.
+[<ship2>] Nothing except pilots getting it first.
+[<ship1>] You say that like it’s a bad thing.
+[\example]
+
+[example]
+[<ship1>] A scientist I follow says those leaked Radicoida research fragments look legit.
+[<ship2>] If they are, that plant’s chemistry is unbelievably complex.
+[<ship3>] Complex usually means expensive.
+[<ship1>] Expensive usually means restricted access.
+[<ship2>] And restricted access means we get blamed for “interference.”
+[\example]
+
+[example]
+[<ship1>] Hot planets with thin atmospheres. Sounds like a great place to roast to death.
+[<ship2>] That’s why they say proper gear is mandatory.
+[<ship3>] Doesn’t stop some genius from going out in a flight suit and becoming fertilizer.
+[<ship1>] Natural selection at work.
+[<ship2>] Maybe that’s why the plant grew there. Fewer idiots to disturb it.
+[\example]
+
+[example]
+[<ship1>] People are calling Radicoida unica “the galaxy’s most in-demand plant.”
+[<ship3>] Sure beats Onionhead for marketing hype.
+[<ship1>] If someone sells “Radicoida boosters,” I’m leaving the bubble.
+[<ship3>] You won’t get far. Everyone’s heading toward HIP eight seven six two one.
+[\example]
+
+[example]
+[<ship1>] Why does every major discovery end with politicians arguing?
+[<ship2>] Because they can’t argue with science, so they argue with each other.
+[<ship1>] Honestly, just let us scan the Radicoida plants and then go home.
+[<ship2>] Vista Genomics would love that. Their queue’s insane right now.
+[\example]
+
+[example]
+[<ship1>] They say the Radicoida plant can sleep for centuries.
+[<ship2>] Sounds like my shipboard AI on Fridays.
+[<ship1>] If your AI sleeps, upgrade immediately.
+[<ship2>] Nah, she’s fine. Just complains about heat like the plant does.
+[\example]
+
+[example]
+[<ship1>] Anyone else hear that all the superpowers just rolled into HIP eight seven six two one, guns blazing?
+[<ship2>] Yeah, apparently they all want that Radicoida plant. Worth going to war for, apparently.
+[<ship3>] Most significant mobilisation since the Second Thargoid War. that’s not comforting.
+[<ship1>] Imperial ships are claiming they’re “maintaining order,” as usual.
+[<ship2>] Alliance says they’re defending equal access, also as usual.
+[<ship3>] Federal forces? They just said “protecting interests,” which means “don’t ask questions.”
+[\example]
+
+[example]
+[<ship1>] A 49-system enclave being contested? That’s massive.
+[<ship2>] Fighting’s already broken out across the region. Civilians are being told to stay clear.
+[<ship3>] Wish I could. My delivery route goes through that area.
+[<ship1>] Good luck making your deadlines with half the galaxy shooting at itself.
+[<ship2>] This is what happens when a plant is worth more than a megaship.
+[<ship3>] At least Vista Genomics is having the best business month of their lives.
+[\example]
+
+[example]
+[<ship1>] So, two-week initiatives for each power? This is going to get messy fast.
+[<ship2>] They aren’t even pretending to cooperate. It’s all “take control,” “secure access,” “assert authority.”
+[<ship3>] Means plenty of work for merc pilots though.
+[<ship1>] You thinking about signing up?
+[<ship2>] Not a chance. I value not getting vaporised.
+[<ship3>] Sensible. Especially when the Imperials and Alliance are already snapping at each other.
+[\example]
+
+[example]
+[<ship1>] Heard that Federal patrols got ambushed yesterday. Multiple wings lost.
+[<ship2>] That tracks with what analysts said — this campaign could last for months.
+[<ship3>] Months? For plants?
+[<ship1>] Not just plants. It’s whatever bio-chemical properties they think it has.
+[<ship2>] Yeah, the rumours alone are enough to make the megacorps drool.
+[<ship3>] And enough to make governments fight. Always a great combination.
+[\example]
+
+[example]
+[<ship1>] Anyone else getting redirected around HIP eight seven six two one traffic lanes?
+[<ship2>] Yeah, the fighting’s spilling over into civilian routes.
+[<ship3>] Great. First Thargoids, now this.
+[<ship1>] At least Thargoids didn’t argue over jurisdiction.
+[<ship2>] No, they just melted everything equally.
+[\example]
+
+[example]
+[<ship1>] I heard Patreus personally ordered an Imperial taskforce into the enclave.
+[<ship2>] Makes sense. Empire hates missing out on a strategic resource.
+[<ship1>] Alliance called them bullies.
+[<ship2>] That’s generous…
+[<ship1>] and the Federation called it “necessary engagement.”
+[\example]
+
+[example]
+[<ship1>] Federal intel guys are saying the enclave could get locked down soon.
+[<ship2>] Yeah, once the shooting starts, nobody wants witnesses.
+[<ship3>] Or competition.
+[<ship1>] Funny how every statement says they’re “protecting freedom” or “maintaining order.”
+[<ship2>] War always sounds nicer when written by a press office.
+[\example]
+
+[example]
+[<ship1>] I saw three battle groups heading toward HIP eight seven six two one this morning.
+[<ship3>] Three? Which powers?
+[<ship1>] Imperial, Federal, and some independents.
+[<ship3>] That system’s going to be a firestorm.
+[\example]
+
+[example]
+[<ship1>] Alliance pilots are already flooding comms with calls to defend HIP eight seven six two one.
+[<ship2>] Empire’s doing the same, but louder.
+[<ship1>] Federation too. “protecting national interests.”
+[<ship2>] Translation: “We want the plant.”
+[\example]
+
+[example]
+[<ship1>] Military analysts say the HIP eight seven six two one campaign might last months.
+[<ship2>] Months of superpowers fighting over flowers?
+[<ship3>] Only in this galaxy.
+[<ship1>] And we just wanted to dock and refuel.
+[\example]

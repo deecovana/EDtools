@@ -1,0 +1,193 @@
+data.accidentlogs,Accident Logs,
+data.airqualityreports,Air Quality Reports,
+data.atmosphericdata,Atmospheric Data,WeaponModules
+data.audiologs,Audio Logs,WeaponModules
+data.axcombatlogs,AX Combat Logs,
+data.ballisticsdata,Ballistics Data,WeaponModules|SuitModules
+data.biologicalweapondata,Biological Weapon Data,
+data.biometricdata,Biometric Data,WeaponModules
+data.blacklistdata,Blacklist Data,
+data.bloodtestresults,Blood Test Results,WeaponModules
+data.campaignplans,Campaign Plans,
+data.catmedia,Cat Media,EngineerUnlock
+data.censusdata,Census Data,
+data.chemicalexperimentdata,Chemical Experiment Data,WeaponModules
+data.chemicalformulae,Chemical Formulae,WeaponModules
+data.chemicalinventory,Chemical Inventory,SuitModules
+data.chemicalpatents,Chemical Patents,WeaponModules
+data.chemicalweapondata,Chemical Weapon Data,
+data.classicentertainment,Classic Entertainment,EngineerUnlock
+data.cocktailrecipes,Cocktail Recipes,EngineerUnlock
+data.combatantperformance,Combatant Performance,WeaponModules|SuitModules
+data.combattrainingmaterial,Combat Training Material,WeaponModules|SuitModules
+data.criminalrecords,Criminal Records,
+data.cropyieldanalysis,Crop Yield Analysis,
+data.culinaryrecipes,Culinary Recipes,EngineerUnlock
+data.digitaldesigns,Digital Designs,EngineerUnlock|WeaponModules|SuitModules
+data.dutyrota,Duty Rota,
+data.employeedirectory,Employee Directory,
+data.employeeexpenses,Employee Expenses,
+data.employeegeneticdata,Employee Genetic Data,EngineerUnlock
+data.employmenthistory,Employment History,
+data.enhancedinterrogationrecordings,Enhanced Interrogation Recordings,
+data.espionagematerial,Espionage Material,
+data.evacuationprotocols,Evacuation Protocols,SuitModules
+data.extractionyielddata,Extraction Yield Data,WeaponModules
+data.factionassociates,Faction Associates,EngineerUnlock
+data.factiondonatorlist,Faction Donator List,
+data.factionnews,Faction News,
+data.financialprojections,Financial Projections,EngineerUnlock
+data.fleetregistry,Fleet Registry,
+data.genesequencingdata,Gene Sequencing Data,SuitModules
+data.geneticresearch,Genetic Research,EngineerUnlock|SuitModules
+data.geologicaldata,Geological Data,
+data.hydroponicdata,Hydroponic Data,
+data.incidentlogs,Incident Logs,
+data.influenceprojections,Influence Projections,
+data.internalcorrespondence,Internal Correspondence,
+data.interrogationrecordings,Interrogation Recordings,
+data.interviewrecordings,Interview Recordings,
+data.jobapplications,Job Applications,
+data.kompromat,Kompromat,
+data.literaryfiction,Literary Fiction,
+data.maintenancelogs,Maintenance Logs,SuitModules
+data.manufacturinginstructions,Manufacturing Instructions,EngineerUnlock|WeaponGrade|SuitGrade
+data.medicalrecords,Medical Records,WeaponModules
+data.medicaltrialrecords,Clinical Trial Records,SuitModules
+data.meetingminutes,Meeting Minutes,
+data.mineralsurvey,Mineral Survey,WeaponModules
+data.mininganalytics,Mining Analytics,WeaponModules
+data.multimediaentertainment,Multimedia Entertainment,EngineerUnlock
+data.networkaccesshistory,Network Access History,
+data.networksecurityprotocols,Network Security Protocols,
+data.nextofkinrecords,Next of Kin Records,
+data.nocdata,NOC Data,SuitModules
+data.operationalmanual,Operational Manual,WeaponModules
+data.opinionpolls,Opinion Polls,EngineerUnlock
+data.patienthistory,Patient History,
+data.patrolroutes,Patrol Routes,WeaponModules|SuitModules
+data.payrollinformation,Payroll Information,
+data.personallogs,Personal Logs,
+data.pharmaceuticalpatents,Pharmaceutical Patents,SuitModules
+data.photoalbums,Photo Albums,
+data.plantgrowthcharts,Plant Growth Charts,
+data.politicalaffiliations,Political Affiliations,
+data.prisonerlogs,Prisoner Logs,
+data.productionreports,Production Reports,WeaponModules|SuitModules
+data.productionschedule,Production Schedule,WeaponModules
+data.propaganda,Propaganda,
+data.purchaserecords,Purchase Records,
+data.purchaserequests,Purchase Requests,
+data.radioactivitydata,Radioactivity Data,WeaponModules|SuitModules
+data.reactoroutputreview,Reactor Output Review,SuitModules
+data.recyclinglogs,Recycling Logs,SuitModules
+data.residentialdirectory,Residential Directory,
+data.riskassessments,Risk Assessments,WeaponModules
+data.salesrecords,Sales Records,
+data.securityexpenses,Security Expenses,WeaponModules
+data.seedgeneaology,Seed Geneaology
+data.settlementassaultplans,Settlement Assault Plans,SuitModules
+data.settlementdefenceplans,Settlement Defence Plans,EngineerUnlock
+data.shareholderinformation,Shareholder Information,
+data.slushfundlogs,Slush Fund Logs,
+data.smearcampaignplans,Smear Campaign Plans,EngineerUnlock
+data.spectralanalysisdata,Spectral Analysis Data,WeaponModules|SuitModules
+data.spyware,Spyware,
+data.stellaractivitylogs,Stellar Activity Logs,WeaponModules|SuitModules
+data.surveilleancelogs,Surveillance Logs,SuitModules
+data.tacticalplans,Tactical Plans,SuitModules
+data.taxrecords,Tax Records,
+data.topographicalsurveys,Topographical Surveys,WeaponModules|SuitModules
+data.travelpermits,Travel Permits,
+data.troopdeploymentrecords,Troop Deployment Records,SuitModules
+data.unionmembership,Union Membership,
+data.unknown,UNKNOWN,UNKNOWN,
+data.vaccinationrecords,Vaccination Records,
+data.vaccineresearch,Vaccine Research,
+data.vipsecuritydetail,VIP Security Detail,
+data.virologydata,Virology Data,
+data.virus,Virus,
+data.visitorregister,Visitor Register,
+data.weaponinventory,Weapon Inventory,SuitModules
+data.weapontestdata,Weapon Test Data,WeaponModules|SuitModules
+data.xenodefenceprotocols,Xeno-Defence Protocols,
+asset.aerogel,Aerogel,SuitGrade
+asset.carbonfibreplating,Carbon Fibre Plating,SuitModules|SuitGrade
+asset.chemicalcatalyst,Chemical Catalyst,SuitModules|WeaponModules
+asset.chemicalsuperbase,Chemical Superbase,WeaponGrade
+asset.circuitboard,Circuit Board,WeaponModules|SuitModules
+asset.circuitswitch,Circuit Switch,SuitModules
+asset.electricalfuse,Electrical Fuse,WeaponModules|SuitModules
+asset.electricalwiring,Electrical Wiring,WeaponModules|SuitModules
+asset.electromagnet,Electromagnet,WeaponModules
+asset.encryptedmemorychip,Encrypted Memory Chip,WeaponModules
+asset.epinephrine,Epinephrine,SuitModules
+asset.epoxyadhesive,Epoxy Adhesive,SuitModules
+asset.graphene,Graphene,SuitGrade
+asset.ionbattery,Ion Battery,WeaponModules|SuitModules
+asset.memorychip,Memory Chip,SuitModules
+asset.metalcoil,Metal Coil,WeaponModules
+asset.microelectrode,Microelectrode,WeaponGrade
+asset.microhydraulics,Micro Hydraulics,WeaponModules|SuitModules
+asset.microsupercapacitor,Micro Supercapacitor,WeaponModules|SuitModules
+asset.microthrusters,Micro Thrusters,SuitModules
+asset.microtransformer,Micro Transformer,WeaponModules|SuitModules
+asset.motor,Motor,WeaponModules|SuitModules
+asset.opticalfibre,Optical Fibre,WeaponModules|WeaponGrade
+asset.opticallens,Optical Lens,WeaponModules
+asset.oxygenicbacteria,Oxygenic Bacteria,SuitModules
+asset.phneutraliser,pH Neutraliser,SuitModules
+asset.rdx,RDX,WeaponModules
+asset.scrambler,Scrambler,WeaponModules
+asset.titaniumplating,Titanium Plating,SuitModules|SuitGrade
+asset.transmitter,Transmitter,WeaponModules|SuitModules
+asset.tungstencarbide,Tungsten Carbide,WeaponGrade|WeaponModules
+asset.unknown,UNKNOWN,
+asset.viscoelasticpolymer,Viscoelastic Polymer,WeaponModules|SuitModules
+asset.weaponcomponent,Weapon Component,WeaponModules|SuitModules|WeaponGrade
+good.agriculturalprocesssample,Agricultural Process Sample,
+good.biochemicalagent,Biochemical Agent,
+good.buildingschematic,Building Schematic,
+good.californium,Californium,
+good.castfossil,Cast Fossil,
+good.chemicalprocesssample,Chemical Process Sample,
+good.chemicalsample,Chemical Sample,
+good.compactlibrary,Compact Library,
+good.compressionliquefiedgas,Compression-Liquefied Gas,WeaponGrade
+good.deepmantlesample,Deep Mantle Sample,
+good.degradedpowerregulator,Degraded Power Regulator,
+good.geneticrepairmeds,Genetic Repair Meds,EngineerUnlock
+good.geneticsample,Biological Sample,EngineerUnlock
+good.gmeds,G-Meds,SuitModules
+good.healthmonitor,Health Monitor,SuitGrade
+good.hush,Hush,
+good.inertiacanister,Inertia Canister,
+good.infinity,Infinity,
+good.inorganiccontaminant,Inorganic Contaminant,
+good.insight,Insight,Insight,
+good.insightdatabank,Insight Data Bank,
+good.insightentertainmentsuite,Insight Entertainment Suite,EngineerUnlock
+good.ionisedgas,Ionised Gas,WeaponGrade
+good.largecapacitypowerregulator,Power Regulator,SuitGrade
+good.lazarus,Lazarus,
+good.microbialinhibitor,Microbial Inhibitor,
+good.mutageniccatalyst,Mutagenic Catalyst,
+good.nutritionalconcentrate,Nutritional Concentrate,
+good.personalcomputer,Personal Computer,
+good.personaldocuments,Personal Documents,
+good.petrifiedfossil,Petrified Fossil,
+good.push,Push,EngineerUnlock
+good.pyrolyticcatalyst,Pyrolytic Catalyst,
+good.refinementprocesssample,Refinement Process Sample,
+good.shipschematic,Ship Schematic,
+good.suitschematic,Suit Schematic,WeaponGrade
+good.surveillanceequipment,Surveillance Equipment,SuitModules|EngineerUnlock
+good.syntheticgenome,Synthetic Genome,
+good.syntheticpathogen,Synthetic Pathogen,
+good.trueformfossil,True Form Fossil,
+good.universaltranslator,Universal Translator,
+good.unknown,UNKNOWN,
+good.vehicleschematic,Vehicle Schematic,
+good.weaponschematic,Weapon Schematic,WeaponGrade
+good.biomechanicalcomponent,Spire Refinery Compound,
+good.sabotagedcomponent,Contaminated Spire Refinery Compound,

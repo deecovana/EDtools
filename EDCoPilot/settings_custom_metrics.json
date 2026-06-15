@@ -1,0 +1,50 @@
+[
+  
+	{
+        "type": "title",
+        "title": "Metrics"
+    },
+    {
+        "type": "options",
+        "title": "Temperature",
+        "desc": "Which temperature scale to report with",
+        "section": "Metrics",
+        "key": "Temperature",
+		"options": ["Kelvin", "Celsius", "Fahrenheit"]
+    },
+	{
+        "type": "options",
+        "title": "Distance To Destination",
+        "desc": "Report remaining distance in light years, jumps, both or none",
+        "section": "Metrics",
+        "key": "DistanceAnnounce",
+		"options": ["LY", "Jumps", "LY+Jumps", "Off"]
+    },
+		{
+        "type": "numeric",
+        "title": "Distance metric randomiser probability",
+        "desc": "Probability (1-100%) of reporting distance in the above distance metric. Otherwise it will select a random alternate. Good for adding some variety if making lots of jumps",
+        "section": "Metrics",
+        "key": "DistanceAnnounceProbability"
+	},
+
+	{	"type": "title",
+		"title" : "Material Counts"
+	},
+	{
+        "type": "bool",
+        "title": "Include Traded Counts",
+        "desc": "Whether to include traded materials counts in your changed materials total",
+        "section": "Material Counts",
+        "key": "IncludeMaterialTradedInCount"
+    },
+	{
+        "type": "bool",
+        "title": "Include Used Counts",
+        "desc": "Whether to include used materials counts in your changed materials total",
+        "section": "Material Counts",
+        "key": "IncludeMaterialUsedInCount"
+    }
+
+	
+]

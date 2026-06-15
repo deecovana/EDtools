@@ -1,0 +1,11 @@
+[
+ { "type": "title", "title": "Amazon Polly Settings" },
+{ "type": "bool", "title": "Use Amazon Polly Speech", "desc": "Note: Requires an AWS account and IAM user set up.  IMPORTANT REMINDER: You are responsible for usage charges on your Cloud voice account. Aamzon has a free monthly usage quota for the first 12 months only. EDCoPilot will warn you when monthly free quota thresholds are met, and you can disable this feature if you are going to exceed your free quota, or continue usage and be billed accordingly.", "section": "Amazon Polly Settings", "key": "UseAmazon" },
+{ "type": "string", "title": "Amazon IAM username", "desc": "Enter the name of your IAM user configured in AWS", "section": "Amazon Polly Settings", "key": "AmazonUser"},
+{ "type": "options", "title": "Amazon Voice Quality", "desc": "Select between Neural or Standard voice feature (different free amounts and costs once free amounts exceeded), then re-select accent and voice below", "section": "Amazon Polly Settings", "key": "AmazonQuality", "options": ["Neural", "Standard"] },
+{ "type": "dynamic_options", "title": "Amazon Language Code", "desc": "Select accent, then reselect voice name option below from available list", "section": "Amazon Polly Settings", "key": "AmazonLanguageCode",  "function_string": "GetAmazonLangCodes" },
+{ "type": "dynamic_options", "title": "Amazon Voice Name", "desc": "Select the voice to be used.", "section": "Amazon Polly Settings", "key": "AmazonVoice", "function_string": "GetAmazonVoiceList" },
+{ "type": "numeric", "title": "Amazon Rate", "desc": "Change the speed of your copilot voice, as a percentage relative to its default rate (range: 50 to 200)", "section": "Amazon Polly Settings", "key": "AmazonRate" },
+{ "type": "numeric", "title": "Amazon Pitch", "desc": "(Does not apply to Neural voices) Change the pitch of your copilot voice (range: -50 to 150)", "section": "Amazon Polly Settings", "key": "AmazonPitch" },
+{ "type": "bool", "title": "Reset Amazon character counts (CAUTION)", "desc": "** WARNING ** Resets your counters of characters sent to Amazon Polly. ONLY click this if you wish to set counters to 0 to reset usage count for next billing cycle", "section": "Amazon Polly Settings", "key": "AmazonCounterReset" }
+]

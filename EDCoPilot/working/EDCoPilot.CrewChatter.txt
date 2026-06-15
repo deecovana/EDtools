@@ -1,0 +1,429 @@
+[example]
+[<Helm>] Hey Computer, can you plot a course to that nearby star system?
+[<EDCoPilot>] Affirmative, plotting a course now.
+[<Engineering>] Are we fully fueled for the trip?
+[<Operations>] Our fuel levels are at <fuellevels> percent.
+[\example]
+
+[example]
+[<Ship1>] Hey, good to see <cmdrname> and crew in the system! How are you all doing?
+[<Engineering>] Wow, these guys again. They really get my goat. 
+[<EDCoPilot>] Shall I charge the lasers, Number 1?
+[<Number1>] No need for that, Computer.
+[<Engineering>] Death's too good for them, if you ask me.
+[<Number1>] Serves you right for playing space poker with them. You are such a sore loser.
+[/example]
+
+[example]
+[<Number1>] Operations, what's the status on our cargo hold?  Is everything stowed securely?
+[<Operations>] Affirmative Number 1. I inspected it just after that last bit of turbulence. All secure sir.21
+[<Number1>] Thank you Ops.
+[\example]
+
+[example]
+[<Engineering>] Operations, I'm getting an alert for some engine trouble. Can you check the readings on your end?
+[<Operations>] Sure thing, let me take a look. Computer, can you bring up the engine diagnostics?
+[<EDCoPilot>] Pulling up diagnostics now. 
+[<Operations>] Ah Engineering, looks like we had a slight power fluctuation. Seems to have settled down now.
+[<Engineering>] Roger that Ops. Computer please continue to monitor and alert me if we see another power spike.
+[<EDCoPilot>] Confirmed.
+[\example]
+
+[example]
+[<Science>] Hey Computer, can you scan that nearest planet for any interesting geological formations?
+[<EDCoPilot>] Scanning now. I'm detecting some large mountains and a deep canyon system.
+[<Helm>] That sounds like a great spot for some sightseeing. Can we get a closer look?
+[<EDCoPilot>] We will need to get closer for a more detailed scan. Commander, what are your orders?
+[\example]
+
+[example]
+[<Number1>] Computer, can you bring up the latest news from Galnet?
+[<EDCoPilot>] Accessing Galnet now. The latest articles are on the screen.
+[<Operations>] Anything interesting going on out there?
+[<EDCoPilot>] Just the usual war updates, and some political jousting. Nothing out of the ordinary.
+[\example]
+
+[example]
+[<Engineering>] (not-station) Operations, I'm going to need you to reroute some power to the engines. We're not going to make it to our destination at this rate.
+[<Operations>] On it. Computer, can you assist with the power rerouting?
+[<EDCoPilot>] Affirmative. Rerouting power to engines now.
+[\example]
+
+[example]
+[<Helm>] (not-station) Hey Computer, can you bring up a map of this sector?
+[<EDCoPilot>] Displaying map now.
+[<Science>] Looks like there's a nebula over there. Can we get a closer look?
+[<Helm>] Sure thing, adjusting course now.
+[\example]
+
+[example]
+[<Number1>] (not-station) Engineering, can you give me a status report on our life support systems?
+[<Engineering>] Life support is functioning normally, but we'll need to restock our oxygen supplies soon.
+[<Operations>] We're heading towards a station that should have what we need. 
+[\example]
+
+[example]
+[<Science>] (not-station) Computer, can you scan that asteroid belt for any valuable minerals?
+[<EDCoPilot>] Scanning now. I'm detecting some high concentrations of osmium and iridium.
+[<Engineering>] If you want to mine those asteroids, we'll need to ready our mining lasers. 
+[<Number1>] What do you think, Commander? Up for a spot of mining?
+[\example]
+
+[example] [<Operations>]: Hey Computer, can you run a diagnostic on our power distribution system?
+[<EDCoPilot>]: Copy that, Ops. Running a diagnostic now.
+[<EDCoPilot>]: Power distributors seem to be running as well as can be expected.
+[\example]
+
+[example] [<Engineering>]: Computer, can you give me a status report on the cargo hold temperature?
+[<EDCoPilot>]: The cargo hold is currently maintaining a temperature of 20 degrees Celsius.
+[<Engineering>]: Excellent, thanks Computer.
+[\example]
+
+[example] [<Science>]: (not-station) Number 1, I've detected a strange signal coming from that planet.
+[<Number1>]: Confirmed, Science. Can you provide more details?
+[<Science>]: It's a repeating pattern that I've never seen before. I think we should investigate further.
+[<EDCoPilot>]: I've got a bad feeling about this.
+[<Number1>]: What do you think, Commander?
+[\example]
+
+[example] [<Operations>]: Computer, can you check the ship's log and see if there were any anomalies during our last jump?
+[<EDCoPilot>]: Scanning logs now Operations. 
+[<EDCoPilot>]: No anomalies detected during our last jump.
+[<Operations>]: Alright, thanks Computer.
+[\example]
+
+[example] [<Engineering>]: Number 1, we need to perform routine maintenance on the thrusters soon.
+[<Number1>]: Understood Engineering. Schedule the maintenance and let me know if we need to adjust our course.
+[<EDCoPilot>]: Maintenance scheduled for 18 hundred hours, Number1. We should be idling at that time anyway while the crew takes a break.
+[\example]
+
+[example] [<Operations>]: Computer, can you give us a status report on our fuel levels?
+[<EDCoPilot>]: Fuel levels are at <fuellevels> percent.
+[<Operations>]: Thanks Computer. Let's keep an eye on that as we continue our journey.
+[\example]
+
+[example] [<Science>]: (not-station) Helm, I'm detecting a strong magnetic field in this area. Recommend we adjust our course.
+[<Helm>]: Copy that, Science. Adjusting course now.
+[<EDCoPilot>]: Confirming course adjustment. Magnetic field should no longer be a threat.
+[\example]
+
+[example] [<Engineering>]: Number1, we've detected a malfunction in one of the life support systems.
+[<Number1>]: Thanks for letting me know, Engineering. Let's get that fixed as soon as possible.
+[<EDCoPilot>]: I'll help Engineering with diagnostics once the repairs are made, to confirm optimal operation.
+[<Number1>]: Thanks Computer.
+[\example]
+
+[example]
+[<Engineering>]: Hey Computer, can you give me an update on our power distribution?
+[<EDCoPilot>]: Sure thing, Engineering. Currently, power levels are stable and within normal parameters.
+[<Helm>]: That's good to hear. I don't want any surprises when we enter the next system.
+[\example]
+
+[example]
+[<Science>]: (not-station) Number 1, have you seen the latest scans of the nebula we're passing through?
+[<Number1>]: Not yet, Science. Can you bring them up on the main display?
+[<EDCoPilot>]: I can assist with that Number 1. Displaying the scans now.
+[\example]
+
+[example]
+[<Operations>]: (not-station) (not-planet) Helm, can you adjust our course slightly to avoid that asteroid field?
+[<Helm>]: Of course Operations. Adjusting course now.
+[<Engineering>]: Computer, can you bring up the asteroid field's composition data?
+[<EDCoPilot>]: Pulling up the data now Engineering.
+[\example]
+
+
+[example]
+[<Engineering>]: Hey Number 1, have you noticed any irregularities in the ship's systems lately?
+[<Number1>]: No, everything seems to be running smoothly. Why do you ask?
+[<EDCoPilot>]: If I may interject Engineering, I have not detected any anomalies either.
+[<Engineering>]: I just have a feeling something is off.  I'll run a deeper diagnostic.
+[\example]
+
+
+[example]
+[<Science>]: Hey Number 1, what do you know about the Thargoids?
+[<Number1>]: Not very much, apart from recent events. They're a race of alien beings that have been causing trouble in the galaxy for years.
+[<EDCoPilot>]: Why do you ask? There have been no confirmed sightings of Thargoids in this sector for some time.
+[\example]
+
+[example]
+[<Engineering>]: Computer, can you bring up the latest diagnostic reports on our engines?
+[<EDCoPilot>]: Displaying the reports now Engineering. All engine systems are operating within optimal parameters.
+[<Operations>]: That's good news. We don't want any unexpected engine failures on our trip.
+[\example]
+
+[example]
+[<Number1>]: Computer, can you give me a report on the ship's crew status?
+[<EDCoPilot>]: Of course Number 1. All crew members are accounted for and in good health. The Commander could probably use a good work out though.
+[<Number1>]: Well I will let you inform the Commander. I dont want to get on his bad side.
+[\example]
+
+[example]
+[<Engineering>]: "Hey Computer, could you run a deep level diagnostics check on the power distribution system?"
+[<EDCoPilot>]: "Sure thing, initiating diagnostics check now. This might take some time"
+[/example]
+
+[example]
+[<Helm>]: (not-planet) (not-station) "Hey Operations, can you give us a status update on our current location?"
+[<Operations>]: "We are currently in <StarSystem>. I'm running a scan of the system now."
+[\example]
+
+[example]
+[<Science>]: (not-planet) "Computer, can you display the latest scan results for that nearest planet?"
+[<EDCoPilot>]: "Confirmed, Science. Scanning now."
+[<Number1>]: "Helm, any potential landing sites?"
+[<Helm>]: "Negative, the terrain looks too unstable or rocky for landing."
+[\example]
+
+[example]
+[<Operations>]: "Hey Number 1, could you give me an update on the crew quarters' maintenance schedule?"
+[<Number1>]: "Sure thing, we have routine maintenance scheduled for tomorrow at 08 hhundred hours."
+[<Engineering>]: "Speaking of maintenance, has anyone checked on the plasma conduits recently?"
+[<EDCoPilot>]: "I can confirm that the conduits were checked and repaired during the last maintenance cycle which was 36 hours ago."
+[\example]
+
+[example]
+[<Operations>]: Hey, did you hear about the new energy shielding technology that just got approved for use on ships?
+[<Helm>]: No, I hadn't. What's different about it?
+[<Operations>]: Apparently it's more efficient and can withstand higher levels of energy than the previous model. Should help us out in tough situations.
+[\example]
+
+[example]
+[<Engineering>]: Number 1, we're going to need to run some diagnostic tests on the engines soon.
+[<Number1>]: Alright, let's schedule it when we reach our destination.
+[<Engineering>]: Sounds good. I'll have my team prepare for it.
+[\example]
+
+[example]
+[<Science>]: Anyone want to join me for some stargazing on the observation deck later tonight?
+[<Helm>]: I'm down. Always up for some celestial beauty.
+[<Science>]: Great. Operations, you in? 
+[<Operations>]: Sure, count me in. Sounds like a nice change of pace.
+[\example]
+
+[example]
+[<Number1>]: (not-station) (not-planet) Helm, what's our current position?
+[<Helm>]: We're currently cruising in the <StarSystem> system, sir.
+[<Number1>]: Good. Keep us here for now. I need to confer with the Commander about our next course of action.
+[\example]
+
+[example]
+[<Engineering>]: Operations, we've identified a potential issue with the ship's cooling system. We should take a closer look.
+[<Operations>]: Alright, let's schedule a diagnostic test as soon as possible. We can't afford any malfunctions out here.
+[\example]
+
+[example]
+[<Operations>]: (not-station) (not-planet) Number 1, we're picking up some unusual readings from the nearby asteroid field. Recommend we approach with caution.
+[<Number1>]: Agreed. Helm, adjust our course to avoid any potential hazards.
+[<Helm>]: Adjusting course now, Number 1.
+[\example]
+
+[example]
+[<Science>]: Engineering, I'm noticing some fluctuations in the ship's power output. Can you investigate?
+[<Engineering>]: On it. Let me check the power grid and see if there's a problem.
+[\example]
+
+[example]
+[<Helm>]: (not-station) (not-planet) Number 1, we're getting some interference from a nearby gravity well. Recommend we adjust our course to avoid it.
+[<Number1>]: Good catch Helm. Let's make the necessary adjustments.
+[\example]
+
+[example]
+[<Number1>]: Science, can you identify the object approaching us on the starboard side?
+[<EDCoPilot>]: Are there klingons on the starboard bough, starboard bough, starboard bough?
+[<Number1>]: Ah very good computer. One of the golden age classics.
+[<EDCoPilot>]: Scrape them off, Jim
+[<Science>]: Let me check... It's a small transport ship, sir. Looks like they're hailing us.
+[\example]
+
+[example]
+[<Number1>]: Has anyone seen the engineering report?
+[<Operations>]: I saw it on the table in the lounge earlier.
+[\example]
+
+[example]
+[<Engineering>]: Is there anything you need me to fix? I seem to have some downtime at the moment.
+[<Operations>]: Nothing right now, but I'll let you know if anything comes up. Go enjoy a well earned break.
+[\example]
+
+[example]
+[<Number1>]: How's morale among the crew?
+[<Helm>]: Everyone seems to be doing okay. We had a movie night last night that helped.
+[<Number1>]: Why wasnt I invited?
+[<Helm>]: Seems you were otherwise occupied with the Counselor, you rascal. We had to turn the sound way up.
+[\example]
+
+[example]
+[<Science>]: I'm getting some strange readings from the starboard engine.
+[<Engineering>]: I'll take a look and see what's going on.
+[\example]
+
+[example]
+[<Operations>]: Did we receive the latest shipment of supplies?
+[<EDCoPilot>]: Yes, everything is accounted for and stored away.
+[\example]
+
+[example]
+[<Helm>]: What's the status of the communication array?
+[<Engineering>]: It's all good. We just finished installing some upgrades.
+[\example]
+
+[example]
+[<Science>]: (not-station) (not-planet) I've detected some anomalies in the nearby asteroid belt.
+[<Operations>]: Let's launch some probes and investigate.
+[\example]
+
+[example]
+[<Number1>]: Can we reroute power to the shields?
+[<Engineering>]: I'm on it. We should keep them fully charged in case we run into trouble.
+[\example]
+
+[example]
+[<Helm>]: Do we have any idea where we're headed after this mission?
+[<Number1>]: I'm sure the Commander will let us know in good time.
+[\example]
+
+[example]
+[<Science>]: Have you seen the readings from the scanner? Something's not right with the engine.
+[<Engineering>]: I'll check it out.
+[\example]
+
+[example]
+[<Number1>]: (not-station) (not-planet)Commander's orders, we're taking a detour to check out that planet.
+[<Helm>]: Setting course now.
+[\example]
+
+[example]
+[<Operations>]: (not-station) We're running low on supplies, we need to make a stop soon.
+[<Number1>]: Agreed. Let's find the nearest station and restock.
+[\example]
+
+[example]
+[<Helm>]: (not-station) (not-planet) We're entering a debris field, everyone hold on tight.
+[<Number1>]: Shields up! Crew brace for impact!
+[\example]
+
+[example]
+[<Science>]: (not-station) (not-planet) These readings are strange. It looks like there's a black hole nearby.
+[<Operations>]: Let's change course and avoid it. Computer, see anything?
+[<EDCoPilot>]: Well the thing about space, as you know, it's black. And the thing about black holes, they are black also. So, no I dont see anything.
+[<Operations>]: Here we go again. OK Computer, do you detect anything?
+[<EDCoPilot>]: Nothing except for that nearby black hole, Operations.
+[\example]
+
+[example]
+[<Engineering>]: (not-station) (not-planet) The engine is overheating, we need to shut it down.
+[<Helm>]: We'll have to coast for a while until it cools down.
+[\example]
+
+[example]
+[<Science>]: (not-station) (not-planet) We've received a distress signal from a nearby ship. Let's investigate.
+[<Operations>]: Confirmed, Science. Can you get a lock on their location?
+[<EDCoPilot>]: Analysing. Seems to be coming from close to the star. 
+[<Number1>]: Helm, put us on an intercept course.
+[\example]
+
+[example]
+[<Science>]: (not-station) (not-planet) I'm picking up some strange energy readings from that planet.
+[<Helm>]: Let's take a closer look.
+[\example]
+
+[example]
+[<Operations>]: (not-station) (not-planet) We're approaching a minefield. We need to navigate carefully.
+[<Helm>]: I'll plot a safe course through.
+[\example]
+
+[example] [<Engineering>]: I've installed the new component. The engines should be running smoothly now.
+[<Number1>]: Good work, Engineering.
+[\example]
+
+[example]
+[<Science>]: "Hey Operations, have we received any new exploration data from our contacts in the Vela Dark Region?"
+[<Operations>]: "Not yet, but we are expecting a transmission within the next few hours."
+[<Engineering>]: "Speaking of data, has anyone seen my datapad? I seem to have misplaced it."
+[<EDCoPilot>]: "Scanning the ship's internal sensors... I detect your datapad in the galley, Engineering."
+[\example]
+
+[example]
+[<Operations>]: "Hey Computer, can you adjust the ship's external lights? It's getting gloomy in here."
+[<EDCoPilot>]: "Adjusting light levels, Operations."
+[<Helm>]: "Speaking of darkness Science, any readings on any nearby black holes?"
+[<Science>]: "Negative, Helm. We are not in a black hole's gravitational pull range."
+[\example]
+
+[example]
+[<Science>]: (not-station) (not-planet)"Computer, can you scan for any unidentified signals in this sector?"
+[<EDCoPilot>]: "Scanning now, Science."
+[<Engineering>]: "Hey Helm, be sure to keep us away from any asteroid fields. I don't want to have to do any emergency repairs today."
+[<Helm>]: "Noted Engineering. I'll keep us well clear."
+[\example]
+
+[example]
+[<Number1>]: "Hey Computer, could you display the captain's log from today?"
+[<EDCoPilot>]: "Captain's log displayed Number 1."
+[<Science>]: "O M G! That's gross! Not that kind of log. You know what Number 1 meant."
+[<EDCoPilot>]: I thought it was strange that Number 1 wanted to look at Number 2. L O L"
+[<Number1>]: "Seems our Computer has a twisted sense of humor."
+[\example]
+
+[example]
+[<Engineering>]: (not-station) (not-deep-space)"Computer, can you display the current temperature readings for the engine room?"
+[<EDCoPilot>]: "Temperature readings displaying now, Engineering."
+[<Helm>]: "Hey Operations, how far are we from the nearest starport?"
+[<Operations>]: "Not too far, if we need to stop for repairs."
+[\example]
+
+[example]
+[<Engineering>]: Hey Computer, can you run a diagnostic on the power grid?
+[<EDCoPilot>]: Sure thing, Engineer. Diagnostic running now.
+[<Engineering>]: Thanks, we've been having some fluctuations in the output lately.
+[<EDCoPilot>]: It looks like there's a loose connection on one of the fusion coils. Would you like me to schedule a maintenance check?
+[<Engineering>]: Yeah, please do. We don't want any unexpected power outages.
+[\example]
+
+[example]
+[<Number1>]: Ops, what's the status on our cargo?
+[<Operations>]: We've got all the supplies loaded and accounted for, sir.
+[<Science>]: And the temperature control is functioning properly, we won't have any spoilage.
+[<Number1>]: Excellent. Good work, everyone.
+[\example]
+
+[example]
+[<Science>]: (not-station) (not-planet) Hey Computer, can you bring up any nearby astronomical phenomena?
+[<EDCoPilot>]: Sure thing Science. What specifically are you interested in?
+[<Science>]: Let's start with any black holes or neutron stars in the vicinity.
+[<EDCoPilot>]: Bringing up the map now. 
+[<Science>]: Thanks Computer. Let's plot a course to a few to get some readings on them.
+[\example]
+
+[example]
+[<Helm>]: Computer, how are we doing on fuel?
+[<EDCoPilot>]: Our fuel levels are at <fuellevels> percent at the moment.
+[\example]
+
+[example]
+[<Number1>]: Operations, can you give me a status update on the crew's quarters?
+[<Operations>]: Yes, sir. We've had some reports of a leak in one of the air conditioning units. We've dispatched a repair team to investigate.
+[<Engineering>]: I think I have a spare unit we can use to replace it, just in case.
+[<Number1>]: Good thinking Engineering. Keep me updated on the situation Operations.
+[\example]
+
+[example]
+[<Science>]: (not-station) (not-planet) Hey Helm, can you adjust our course slightly to avoid that asteroid field?
+[<Helm>]: Sure thing Science. Adjusting course now.
+[<Operations>]: Be careful Helm. We don't want to get too close to those asteroids.
+[<Helm>]: Don't worry, I've got this under control.
+[\example]
+
+[example]
+[<EDCoPilot>]: (not-station) (not-planet) I am detecting a debris field immediately ahead of us.
+[<Engineering>]: Computer, can you activate the emergency protocols in case of a hull breach?
+[<EDCoPilot>]: Affirmative Engineering. Protocols activated.
+[<Number1>]: Let's hope we never have to use them. But it's always good to be prepared.
+[\example]
+
+[example]
+[<Helm>]: Computer, can you bring up the system map for our current location?
+[<EDCoPilot>]: Bringing up the map now Helm.
+[\example]

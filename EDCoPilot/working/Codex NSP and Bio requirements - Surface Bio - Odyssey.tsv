@@ -1,0 +1,105 @@
+Type	Payout [Cr]	Atmospheres found so far	Planet types found so far	Known star types / planet mats (from colours)	Surf. temperature [K]	Max. gravity	Colony range [m]		Codex: Atmosphere type	Codex: On planet	Codex: Volcanism		Notes	Atmospheres found so far	Planet types found so far	Known star types / planet mats (from colours)	Surf. temperature [K]	Max. gravity
+Aleoida Arcus	379,300	Carbon dioxide	HMC, Rocky	B, A, F, K, M, L, T, TTS, NS	175 - 180	0.27	150		-	-	-			Carbon dioxide	HMC, Rocky	B, A, F, K, M, L, T, TTS, NS	175 - 180	0.27
+Aleoida Coronamus	339,100	Carbon dioxide	HMC, Rocky	B, A, F, G, K, M, L, T, TTS, NS	180 - 190	0.27	150		-	-	-			Carbon dioxide	HMC, Rocky	B, A, F, G, K, M, L, T, TTS, NS	180 - 190	0.27
+Aleoida Gravis	596,500	Carbon dioxide	HMC, Rocky	B, A, F, K, M, L, T, TTS, NS	190 - 195	0.27	150		-	-	-			Carbon dioxide	HMC, Rocky	B, A, F, K, M, L, T, TTS, NS	190 - 195	0.27
+Aleoida Laminiae	208,900	Ammonia	HMC, Rocky	B, A, F, K, M, L, T, TTS, NS	-	0.27	150		-	-	-			Ammonia	HMC, Rocky	B, A, F, K, M, L, T, TTS, NS	-	0.27
+Aleoida Spica	208,900	Ammonia	HMC, Rocky	B, A, F, K, M, L, T, TTS, NS	-	0.27	150		-	-	-			Ammonia	HMC, Rocky	B, A, F, K, M, L, T, TTS, NS	-	0.27
+																		
+Bacterium Acies	50,000	Neon	Icy, Rocky Ice	Antimony, Polonium, Ruthenium, Technetium, Tellurium, Yttrium	-	-	500		Neon	-	-			Neon	Icy, Rocky Ice	Antimony, Polonium, Ruthenium, Technetium, Tellurium, Yttrium	-	-
+Bacterium Alcyoneum	119,500	Ammonia	HMC, Rocky	M, K, G, F, A, NS, L, T	-	-	500		Ammonia	-	-			Ammonia	HMC, Rocky	M, K, G, F, A, NS, L, T	-	-
+Bacterium Aurasus	78,500	Carbon dioxide	HMC, Rocky	M, K, G, F, A, B, NS, L, T	-	-	500		Carbon Dioxide	-	-			Carbon dioxide	HMC, Rocky	M, K, G, F, A, B, NS, L, T	-	-
+Bacterium Bullaris	89,900	Methane	Icy, HMC, Rocky	Antimony, Polonium, Ruthenium, Technetium, Tellurium, Yttrium	-	-	500		Methane	-	-			Methane	Icy, HMC, Rocky	Antimony, Polonium, Ruthenium, Technetium, Tellurium, Yttrium	-	-
+Bacterium Cerbrus	121,300	Sulphur dioxide, Water	HMC, Rocky, Rocky Ice	M, K, G, F, A, B, NS, WD, TTS, L, Y	-	-	500		Water and Sulphur Dioxide	-	-			Sulphur dioxide, Water	HMC, Rocky, Rocky Ice	M, K, G, F, A, B, NS, WD, TTS, L, Y	-	-
+Bacterium Informem	426,200	Nitrogen	Any	Antimony, Polonium, Ruthenium, Technetium, Tellurium, Yttrium	-	-	500		Nitrogen	-	-			Nitrogen	Any	Antimony, Polonium, Ruthenium, Technetium, Tellurium, Yttrium	-	-
+Bacterium Nebulus	296,300	Helium	Icy	Niobium, Ruthenium, Tellurium, Tin, Yttrium	-	-	500		Helium	-	-			Helium	Icy	Niobium, Ruthenium, Tellurium, Tin, Yttrium	-	-
+Bacterium Omentum	267,400	Argon, Methane, Neon	Icy	Cadmium, Mercury, Niobium, Tin	-	-	500		-	-	Nitrogen-based					Cadmium, Mercury, Niobium, Tin	-	-
+Bacterium Scopulum	280,600	Argon, Methane, Neon, Nitrogen	Icy	Cadmium, Mercury, Molybdenum, Niobium, Tungsten, Tin	-	-	500		-	-	Carbon-based					Cadmium, Mercury, Molybdenum, Niobium, Tungsten, Tin	-	-
+Bacterium Tela 	135,600	Any	Icy, HMC, Rocky	Cadmium, Mercury, Molybdenum, Niobium, Tungsten, Tin	-	-	500		-	-	Helium-based, iron-based, silicate-based		Bugged (?): Found on water atm. too, doesn't require volcanism there			Cadmium, Mercury, Molybdenum, Niobium, Tungsten, Tin	-	-
+Bacterium Verrata	233,300	Any	Icy, Rocky, Rocky Ice	Cadmium, Mercury, Molybdenum, Niobium, Tungsten, Tin	-	-	500		-	-	Water-based					Cadmium, Mercury, Molybdenum, Niobium, Tungsten, Tin	-	-
+Bacterium Vesicula	56,100	Argon	Icy, Rocky, Rocky Ice	Antimony, Polonium, Ruthenium, Technetium, Tellurium, Yttrium	-	-	500		Argon	-	-			Argon	Icy, Rocky Ice	Antimony, Polonium, Ruthenium, Technetium, Tellurium, Yttrium	-	-
+Bacterium Volu	400,500	Oxygen	HMC, Icy, Rocky Ice	Antimony, Polonium, Ruthenium, Technetium, Tellurium, Yttrium	-	-	500		Oxygen	-	-			Oxygen	HMC, Icy, Rocky Ice	Antimony, Polonium, Ruthenium, Technetium, Tellurium, Yttrium	-	-
+																		
+Cactoida Cortexum	222,500	Carbon dioxide	HMC, Rocky	A, F, G, M, L, T, TTS, NS	180 - 195	0.27	300		-	-	-			Carbon dioxide	HMC, Rocky	A, F, G, M, L, T, TTS, NS	180 - 195	0.27
+Cactoida Lapis	164,000	Ammonia	HMC, Rocky	A, F, G, M, L, T, TTS, NS	-	0.27	300		-	-	-			Ammonia	HMC, Rocky	A, F, G, M, L, T, TTS, NS	-	0.27
+Cactoida Peperatis	184,000	Ammonia	HMC, Rocky	A, F, G, M, L, T, TTS, NS	-	0.27	300		-	-	-			Ammonia	HMC, Rocky	A, F, G, M, L, T, TTS, NS	-	0.27
+Cactoida Pullulanta	222,500	Carbon dioxide	HMC, Rocky	A, F, G, M, L, T, TTS, NS	180 - 195	0.27	300		-	-	-			Carbon dioxide	HMC, Rocky	A, F, G, M, L, T, TTS, NS	180 - 195	0.27
+Cactoida Vermis	711,500	Water	HMC, Rocky	A, F, G, M, L, T, TTS, NS	-	0.27	300		-	-	-			Water	HMC, Rocky	A, F, G, M, L, T, TTS, NS	-	0.27
+																		
+Clypeus Lacrimam	426,200	Carbon dioxide, Water	Rocky	B, A, F, G, K, L, M, NS	190 -	0.27	150		-	-	-			Carbon dioxide, Water	Rocky	B, A, F, G, K, L, M, NS	190 -	0.27
+Clypeus Margaritus	557,800	Carbon dioxide, Water	HMC	A, F, G, K, L, M, NS	190 -	0.27	150		-	-	-			Carbon dioxide, Water	HMC	A, F, G, K, L, M, NS	190 -	0.27
+Clypeus Speculumi	711,500	Carbon dioxide, Water	Rocky	A, F, G, K, L, M, NS	190 - 	0.27	150		-	-	-		Codex: Distance to parent star > 5 AU	Carbon dioxide, Water	Rocky	A, F, G, K, L, M, NS	190 - 	0.27
+																		
+Concha Aureolas	400,500	Ammonia (bugged!)	Rocky	A, F, G, K, L, NS	-	0.27	150		Nitrogen	-	-		Bugged: found on ammonia atm. instead of nitrogen	Ammonia (bugged!)	Rocky	A, F, G, K, L, NS	-	0.27
+Concha Biconcavis	806,300	Nitrogen	Rocky	Antimony, Niobium	-	0.27	150		-	-	-			Nitrogen	Rocky	Antimony, Niobium	-	0.27
+Concha Labiata	157,100	Carbon dioxide	HMC, Rocky	A, F, G, K, L, NS	-	0.27	150		Carbon dioxide	-	-			Carbon dioxide	HMC, Rocky	A, F, G, K, L, NS	-	0.27
+Concha Renibus	264,300	Carbon dioxide, Water	HMC, Rocky	Cadmium, Mercury, Molybdenum, Niobium, Tin, Tungsten	-	0.27	150		-	-	-			Carbon dioxide, Water	HMC, Rocky	Cadmium, Mercury, Molybdenum, Niobium, Tin, Tungsten	-	0.27
+																		
+Electricae Pluma	339,100	Argon	Icy	Antimony, Polonium, Ruthenium, Technetium, Tellurium, Yttrium	-	0.27	1000		-	Icy	-		Codex: around bright white stars (luminosity V+)	Argon	Icy	Antimony, Polonium, Ruthenium, Technetium, Tellurium, Yttrium	-	0.27
+Electricae Radialem	339,100	Argon	Icy	Antimony, Polonium, Ruthenium, Technetium, Tellurium,Yttrium	-	0.27	1000		Noble gases	Icy	-		Codex: around nebulae (from testing: within 100 ly)	Argon	Icy	Antimony, Polonium, Ruthenium, Technetium, Tellurium,Yttrium	-	0.27
+																		
+Fonticulua Campestris	63,600	Argon	Icy, Rocky Ice	B, A, F, G, K, M, L, T, Y, NS, WD	-	0.27	500		Argon	Icy	-			Argon	Icy, Rocky Ice	B, A, F, G, K, M, L, T, Y, NS, WD	-	0.27
+Fonticulua Digitos	127,700	Methane	Icy	B, A, F, G, K, M, L, T, Y, NS, WD	-	0.27	500		Methane	Icy	-			Methane	Icy	B, A, F, G, K, M, L, T, Y, NS, WD	-	0.27
+Fonticulua Fluctus	900,000	Oxygen	Icy	B, A, F, G, K, M, L, T, Y, NS, WD	-	0.27	500		Oxygen	Icy	-			Oxygen	Icy	B, A, F, G, K, M, L, T, Y, NS, WD	-	0.27
+Fonticulua Lapida	195,600	Nitrogen	Icy, Rocky Ice	B, A, F, G, K, M, L, T, Y, NS, WD	-	0.27	500		Nitrogen	Icy	-			Nitrogen	Icy, Rocky Ice	B, A, F, G, K, M, L, T, Y, NS, WD	-	0.27
+Fonticulua Segmentatus	806,300	Neon	Icy	B, A, F, G, K, M, L, T, Y, NS, WD	-	0.27	500		Neon	Icy	-			Neon	Icy	B, A, F, G, K, M, L, T, Y, NS, WD	-	0.27
+Fonticulua Upupam	315,300	Argon-rich	Icy, Rocky Ice	B, A, F, G, K, M, L, T, Y, NS, WD	-	0.27	500		Argon-rich	Icy	-			Argon-rich	Icy, Rocky Ice	B, A, F, G, K, M, L, T, Y, NS, WD	-	0.27
+																		
+Frutexa Acus	400,500	Carbon dioxide	Rocky	B, F, G, M, L, TTS, NS, WD	1 - 190	0.27	150		-	-	-			Carbon dioxide	Rocky	B, F, G, M, L, TTS, NS, WD	1 - 190	0.27
+Frutexa Collum	118,500	Sulphur dioxide	Rocky	B, F, G, M, L, TTS, NS, WD	-	0.27	150		-	-	-			Sulphur dioxide	Rocky	B, F, G, M, L, TTS, NS, WD	-	0.27
+Frutexa Fera	118,100	Carbon dioxide	Rocky	B, F, G, M, L, TTS, NS, WD	1 - 190	0.27	150		-	-	-			Carbon dioxide	Rocky	B, F, G, M, L, TTS, NS, WD	1 - 190	0.27
+Frutexa Flabellum	127,900	Ammonia	Rocky	B, F, G, M, L, TTS, NS, WD	-	0.27	150		-	-	-			Ammonia	Rocky	B, F, G, M, L, TTS, NS, WD	-	0.27
+Frutexa Flammasis	500,100	Ammonia	Rocky	B, F, G, M, L, TTS, NS, WD	-	0.27	150		-	-	-			Ammonia	Rocky	B, F, G, M, L, TTS, NS, WD	-	0.27
+Frutexa Metallicum	118,100	Ammonia, Carbon dioxide	HMC	B, F, G, M, L, TTS, NS, WD	1 - 190	0.27	150		-	-	-			Ammonia, Carbon dioxide	HMC	B, F, G, M, L, TTS, NS, WD	1 - 190	0.27
+Frutexa Sponsae	326,500	Water	Rocky	B, F, G, M, L, TTS, NS, WD	-	0.27	150		-	-	-			Water	Rocky	B, F, G, M, L, TTS, NS, WD	-	0.27
+																		
+Fumerola Aquatis	339,100				-	0.27	100		-	-	Water-based						-	0.27
+Fumerola Carbosis	339,100				-	0.27	100		-	-	Carbon-based						-	0.27
+Fumerola Extremus	711,500				-	0.27	100		-	-	Various?		Codex says "an arbitrary preference of specific volcanism types"				-	0.27
+Fumerola Nitris	389,400				-	0.27	100		-	-	Nitrogen-based						-	0.27
+																		
+Fungoida Bullarum	224,100	Argon	Rocky Ice	Antimony, Polonium, Ruthenium, Technetium, Tellurium, Yttrium	-	0.27	300		-	-	-			Argon	Rocky Ice	Antimony, Polonium, Ruthenium, Technetium, Tellurium, Yttrium	-	0.27
+Fungoida Gelata	206,300	Carbon dioxide, Water	HMC, Rocky	Cadmium, Mercury, Molybdenum, Niobium, Tin, Tungsten	-	0.27	300		-	-	-			Carbon dioxide, Water	HMC, Rocky	Cadmium, Mercury, Molybdenum, Niobium, Tin, Tungsten	-	0.27
+Fungoida Setisis	120,200	Ammonia	HMC, Rocky	Antimony, Polonium, Ruthenium, Technetium, Tellurium, Yttrium	-	0.27	300		-	-	-			Ammonia	HMC, Rocky	Antimony, Polonium, Ruthenium, Technetium, Tellurium, Yttrium	-	0.27
+Fungoida Stabitis	174,000	Carbon dioxide, Water	HMC, Rocky	Cadmium, Mercury, Molybdenum, Niobium, Tin, Tungsten	-	0.27	300		-	-	-			Carbon dioxide, Water	HMC, Rocky	Cadmium, Mercury, Molybdenum, Niobium, Tin, Tungsten	-	0.27
+																		
+Osseus Cornibus	109,500	Carbon dioxide	HMC, Rocky	A, F, G, K, T, TTS	-	0.27	800		-	-	-		Codex: Found only in rocky biomes	Carbon dioxide	HMC, Rocky	A, F, G, K, T, TTS	-	0.27
+Osseus Discus	596,500	Water	HMC, Rocky	Cadmium, Mercury, Molybdenum, Niobium, Tungsten, Tin	-	0.27	800		-	-	-		Codex: Found only in rocky biomes	Water	HMC, Rocky	Cadmium, Mercury, Molybdenum, Niobium, Tungsten, Tin	-	0.27
+Osseus Fractus	239,400	Carbon dioxide	HMC, Rocky	A, F, G, K, T, TTS	-	0.27	800		-	-	-		Codex: Found only in rocky biomes	Carbon dioxide	HMC, Rocky	A, F, G, K, T, TTS	-	0.27
+Osseus Pellebantus	477,700	Carbon dioxide	HMC, Rocky	A, F, G, K, T, TTS	-	0.27	800		-	-	-		Codex: Found only in rocky biomes	Carbon dioxide	HMC, Rocky	A, F, G, K, T, TTS	-	0.27
+Osseus Pumice	197,800	Argon, Methane, Nitrogen	HMC, Rocky, Rocky Ice	Antimony, Polonium, Ruthenium, Technetium, Tellurium, Yttrium	-	0.27	800		-	-	-		Codex: Found only in rocky biomes	Argon, Methane, Nitrogen	HMC, Rocky, Rocky Ice	Antimony, Polonium, Ruthenium, Technetium, Tellurium, Yttrium	-	0.27
+Osseus Spiralis	159,900	Ammonia	HMC, Rocky	A, F, G, K, T, TTS	-	0.27	800		-	-	-		Codex: Found only in rocky biomes	Ammonia	HMC, Rocky	A, F, G, K, T, TTS	-	0.27
+																		
+Recepta Conditivus	645,700	Sulphur dioxide	Icy, Rocky Ice	Antimony, Polonium, Tellurium, Yttrium	-	0.27	150		Sulphur Dioxide	-	-			Sulphur dioxide	Icy, Rocky Ice	Antimony, Polonium, Tellurium, Yttrium	-	0.27
+Recepta Deltahedronix	711,500	Carbon dioxide (bugged?), Sulphur dioxide	HMC, Rocky, Icy	Cadmium, Molybdenum, Niobium, Tin, Tungsten	-	0.27	150		Sulphur Dioxide	-	-			Carbon dioxide (bugged?), Sulphur dioxide	HMC, Rocky, Icy	Cadmium, Molybdenum, Niobium, Tin, Tungsten	-	0.27
+Recepta Umbrux	596,500	Carbon dioxide (bugged?), Sulphur dioxide	Icy, Rocky, Rocky Ice	A, F, G, K, M, T	-	0.27	150		Sulphur Dioxide	-	-			Carbon dioxide (bugged?), Sulphur dioxide	Icy, Rocky, Rocky Ice	A, F, G, K, M, T	-	0.27
+																		
+Stratum Araneamus	162,200	Sulphur dioxide	Rocky	B, A, F, T, NS	165 - 	-	500		-	-	-			Sulphur dioxide	Rocky	B, A, F, T, NS	165 - 	-
+Stratum Cucumisis	711,500	Carbon dioxide, Sulphur dioxide	Rocky	F, K, M, T, TTS, WD	190 -	-	500		-	-	-			Carbon dioxide, Sulphur dioxide	Rocky	F, K, M, T, TTS, WD	190 -	-
+Stratum Excutitus	162,200	Carbon dioxide, Sulphur dioxide	Rocky	F, K, M, T, TTS, WD	165 - 190	-	500		-	-	-			Carbon dioxide, Sulphur dioxide	Rocky	F, K, M, T, TTS, WD	165 - 190	-
+Stratum Frigus	171,900	Carbon dioxide, Sulphur dioxide	Rocky	F, K, M, T, TTS, WD	190 -	-	500		-	-	-			Carbon dioxide, Sulphur dioxide	Rocky	F, K, M, T, TTS, WD	190 -	-
+Stratum Laminamus	179,500	Ammonia	Rocky	F, K, M, T, TTS, WD	165 -	-	500		-	-	-			Ammonia	Rocky	F, K, M, T, TTS, WD	165 -	-
+Stratum Limaxus	102,500	Carbon dioxide, Sulphur dioxide	Rocky	F, K, M, T, TTS, WD	165 - 190	-	500		-	-	-			Carbon dioxide, Sulphur dioxide	Rocky	F, K, M, T, TTS, WD	165 - 190	-
+Stratum Paleas	102,500	Ammonia, Carbon dioxide, Water	Rocky	F, K, M, T, TTS, WD	165 -	-	500		-	-	-			Ammonia, Carbon dioxide, Water	Rocky	F, K, M, T, TTS, WD	165 -	-
+Stratum Tectonicas	806,300	Ammonia, Carbon dioxide, Sulphur dioxide, Water	HMC	F, K, M, T, TTS, WD	165 -	-	500		-	-	-			Ammonia, Carbon dioxide, Sulphur dioxide	HMC	F, K, M, T, TTS, WD	165 -	-
+																		
+Tubus Cavas	171,900	Carbon dioxide	Rocky	B, A, F, G, K, M, L, T, TTS, NS	160 - 190	0.15	800		-	-	-		Codex: Cannot survive in high-gravity environments	Carbon dioxide	Rocky	B, A, F, G, K, M, L, T, TTS, NS	160 - 190	0.15
+Tubus Compagibus	102,700	Carbon dioxide	Rocky	B, A, F, G, K, M, L, T, TTS, NS	160 - 190	0.15	800		-	-	-		Codex: Cannot survive in high-gravity environments	Carbon dioxide	Rocky	B, A, F, G, K, M, L, T, TTS, NS	160 - 190	0.15
+Tubus Conifer	315,300	Carbon dioxide	Rocky	B, A, F, G, K, M, L, T, TTS, NS	160 - 190	0.15	800		-	-	-		Codex: Cannot survive in high-gravity environments	Carbon dioxide	Rocky	B, A, F, G, K, M, L, T, TTS, NS	160 - 190	0.15
+Tubus Rosarium	400,500	Ammonia	Rocky	B, A, F, G, K, M, L, T, TTS, NS	160 - 	0.15	800		-	-	-		Codex: Cannot survive in high-gravity environments	Ammonia	Rocky	B, A, F, G, K, M, L, T, TTS, NS	160 - 	0.15
+Tubus Sororibus	557,800	Ammonia, Carbon dioxide	HMC	B, A, F, G, K, M, L, T, TTS, NS	160 - 190	0.15	800		-	-	-		Codex: Cannot survive in high-gravity environments	Ammonia, Carbon dioxide	HMC	B, A, F, G, K, M, L, T, TTS, NS	160 - 190	0.15
+																		
+Tussock Albata	202,500	Carbon dioxide	HMC, Rocky	F, G, K, M, L, T, WD	175 - 180	0.27	200		-	-	-			Carbon dioxide	HMC, Rocky	F, G, K, M, L, T, WD	175 - 180	0.27
+Tussock Capillum	370,000	Argon, Methane	Rocky Ice	F, G, K, M, L, T, WD	-	0.27	200		-	-	-			Argon, Methane	Rocky Ice	F, G, K, M, L, T, WD	-	0.27
+Tussock Caputus	213,100	Carbon dioxide	HMC, Rocky	F, G, K, M, L, T, WD	180 - 190	0.27	200		-	-	-			Carbon dioxide	HMC, Rocky	F, G, K, M, L, T, WD	180 - 190	0.27
+Tussock Catena	125,600	Ammonia	HMC, Rocky	F, G, K, M, L, T, WD	-	0.27	200		-	-	-			Ammonia	HMC, Rocky	F, G, K, M, L, T, WD	-	0.27
+Tussock Cultro	125,600	Ammonia	HMC, Rocky	F, G, K, M, L, T, WD	-	0.27	200		-	-	-			Ammonia	HMC, Rocky	F, G, K, M, L, T, WD	-	0.27
+Tussock Divisa	125,600	Ammonia	HMC, Rocky	F, G, K, M, L, T, WD	-	0.27	200		-	-	-			Ammonia	HMC, Rocky	F, G, K, M, L, T, WD	-	0.27
+Tussock Ignis	130,100	Carbon dioxide	HMC, Rocky	F, G, K, M, L, T, WD	160 - 170	0.27	200		-	-	-			Carbon dioxide	HMC, Rocky	F, G, K, M, L, T, WD	160 - 170	0.27
+Tussock Pennata	320,700	Carbon dioxide	HMC, Rocky	F, G, K, M, L, T, WD	145 - 155	0.27	200		-	-	-			Carbon dioxide	HMC, Rocky	F, G, K, M, L, T, WD	145 - 155	0.27
+Tussock Pennatis	59,600	Carbon dioxide	HMC, Rocky	F, G, K, M, L, T, WD	-195	0.27	200		-	-	-			Carbon dioxide	HMC, Rocky	F, G, K, M, L, T, WD	-195	0.27
+Tussock Propagito	71,300	Carbon dioxide	HMC, Rocky	F, G, K, M, L, T, WD	-195	0.27	200		-	-	-			Carbon dioxide	HMC, Rocky	F, G, K, M, L, T, WD	-195	0.27
+Tussock Serrati	258,700	Carbon dioxide	HMC, Rocky	F, G, K, M, L, T, WD	170 - 175	0.27	200		-	-	-			Carbon dioxide	HMC, Rocky	F, G, K, M, L, T, WD	170 - 175	0.27
+Tussock Stigmasis	806,300	Sulphur dioxide	Rocky	F, G, K, M, L, T, WD	-	0.27	200		-	-	-			Sulphur dioxide	Rocky	F, G, K, M, L, T, WD	-	0.27
+Tussock Triticum	400,500	Carbon dioxide	HMC, Rocky	F, G, K, M, L, T, WD	190 - 195	0.27	200		-	-	-			Carbon dioxide	HMC, Rocky	F, G, K, M, L, T, WD	190 - 195	0.27
+Tussock Ventusa	201,300	Carbon dioxide	HMC, Rocky	F, G, K, M, L, T, WD	155 - 160	0.27	200		-	-	-			Carbon dioxide	HMC, Rocky	F, G, K, M, L, T, WD	155 - 160	0.27
+Tussock Virgam	645,700	Water	HMC, Rocky	F, G, K, M, L, T, WD	-	0.27	200		-	-	-			Water	HMC, Rocky	F, G, K, M, L, T, WD	-	0.27
