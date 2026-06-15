@@ -3,6 +3,7 @@
 ## Fixing
 - Fix key binds for ED CoPilot and Minimize graphics
   - !!!SORRY Restore UI WASD keys, lets change CoPilot keys
+  - Update controlls using AI learned https://share.google/aimode/SJWhc7rgWdoYpL7Ca
 - Minimize graphics
 
 
