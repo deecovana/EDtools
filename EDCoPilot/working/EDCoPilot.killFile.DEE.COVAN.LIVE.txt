@@ -603,3 +603,5 @@
 "JAY MINER"={ "lastSeen":"2026-06-14T13:58:50Z", "whereSeen":"Corngari", "ShipType":"Python", "numKills":0, "lastBounty":-1, "killedMe":0 ,"killerTime":"", "killerLocation":"", "killerShip":"", "prevSeen":"" }
 "FINN JOHANSEN"={ "lastSeen":"2026-06-14T14:01:39Z", "whereSeen":"Corngari", "ShipType":"Viper Mk III", "numKills":1, "lastBounty":127788, "killedMe":0,"killerTime":"", "killerLocation":"", "killerShip":"", "prevSeen":"" }
 "GAL BITTON"={ "lastSeen":"2026-06-14T15:01:25Z", "whereSeen":"Xihe", "ShipType":"Eagle Mark II", "numKills":0, "lastBounty":1, "killedMe":0 ,"killerTime":"", "killerLocation":"", "killerShip":"", "prevSeen":"" }
+"GARETH AIVO"={ "lastSeen":"2026-06-15T18:08:18Z", "whereSeen":"Bei Dou Sector AV-Y b0", "ShipType":"Anaconda", "numKills":0, "lastBounty":-1, "killedMe":0 ,"killerTime":"", "killerLocation":"", "killerShip":"", "prevSeen":"" }
+"MOSCHOPS"={ "lastSeen":"2026-06-15T18:08:24Z", "whereSeen":"Bei Dou Sector AV-Y b0", "ShipType":"Type-9 Heavy", "numKills":0, "lastBounty":-1, "killedMe":0 ,"killerTime":"", "killerLocation":"", "killerShip":"", "prevSeen":"" }

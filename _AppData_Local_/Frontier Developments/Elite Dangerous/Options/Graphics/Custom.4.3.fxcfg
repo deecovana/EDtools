@@ -10,7 +10,7 @@
 	<EnvironmentQuality>0</EnvironmentQuality>
 	<FXQuality>0</FXQuality>
 	<ParticleEffectsQuality>0</ParticleEffectsQuality>
-	<GalaxyMapQuality>0</GalaxyMapQuality>
+	<GalaxyMapQuality>1</GalaxyMapQuality>
 	<GUIColourQuality>0</GUIColourQuality>
 	<TerrainQuality>1</TerrainQuality>
 	<TerrainLodBlendingQuality>1</TerrainLodBlendingQuality>

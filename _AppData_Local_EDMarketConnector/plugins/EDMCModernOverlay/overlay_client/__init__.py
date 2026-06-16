@@ -1,1 +1,0 @@
-"""Overlay client package."""

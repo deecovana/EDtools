@@ -1,7 +1,0 @@
-[tool.windows_python_install]
-version = "3.14.4"
-arch = "amd64"
-url = "https://www.python.org/ftp/python/3.14.4/python-3.14.4-amd64.exe"
-sha256 = "b571567bd11ea98fd7a2cf85791d2c8557a63b1e04e9d1dae665a275cac87f1b"
-target_dir_template = "%LOCALAPPDATA%\\Programs\\Python\\Python{MAJOR}{MINOR}"
-python_exe_template = "%LOCALAPPDATA%\\Programs\\Python\\Python{MAJOR}{MINOR}\\python.exe"
