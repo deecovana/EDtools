@@ -81,6 +81,6 @@ edrredactmyinfo = "Auto"
 edrcrimesreporting = "True"
 edrfcjumppsa = "Public"
 edrtopplanetcountinsystemreport = "5"
-edrvisualaltfeedback = "True"
+edrvisualaltfeedback = "False"
 disable_autoappupdatecheckingame = 1
 core_updater_disable_in_game = 1

@@ -91,7 +91,7 @@
 			<SignalSource Value="0" />
 			<PointOfInterest Value="0" />
 			<Settlement Value="0" />
-			<PlanetOrMoon Value="1" />
+			<PlanetOrMoon Value="0" />
 			<FleetCarrier Value="0" />
 			<LandablePlanetOrMoon Value="1" />
 			<Star Value="0" />
@@ -215,7 +215,7 @@
 	<HelpPopupViewedSquadronManagement Value="1" />
 	<HelpPopupViewedSquadronBank Value="1" />
 	<HelpPopupViewedSquadronLeaderboard Value="0" />
-	<CurrentHUDMode Value="Analysis" />
+	<CurrentHUDMode Value="Normal" />
 	<MarketFilter_inCargo Value="1" />
 	<MarketFilter_requiredForMission Value="1" />
 	<MarketFilter_highDemand Value="1" />
