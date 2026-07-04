@@ -48,7 +48,7 @@
     "pluginIcon": "https://raw.githubusercontent.com/aussig/BGS-Tally/refs/heads/develop/assets/logo_bgstally_100x67.png",
     "pluginVT": "https://www.virustotal.com/gui/url/42efa419f93884d42f37ac3ede2628ac72d11861f3e5d5023706160f3ee47d6b",
     "pluginHash": "bb95a1d9e731da18d3478e9e5c6adf9f42a20bcb689fd90f932573c2bf9e9525",
-    "pluginStars": "55"
+    "pluginStars": "56"
   },
   {
     "pluginName": "EDMC-BioScan",
@@ -76,7 +76,7 @@
     "pluginIcon": "",
     "pluginVT": "",
     "pluginHash": "dfc8d8233ba9f3d4357757e6d3f4a3fd52d1169cdb25a168af0ffe2e45dfa1dd",
-    "pluginStars": "38"
+    "pluginStars": "39"
   },
   {
     "pluginName": "EDMC-LogEventMiner",
@@ -178,7 +178,7 @@
     "pluginIcon": "",
     "pluginVT": "https://www.virustotal.com/gui/file/f77c366ea4d4170d7c39939b2632e5cb94dbbf516c0eac8ef7041a86a88169ba",
     "pluginHash": "f77c366ea4d4170d7c39939b2632e5cb94dbbf516c0eac8ef7041a86a88169ba",
-    "pluginStars": "15"
+    "pluginStars": "16"
   },
   {
     "pluginName": "EDMC-Pioneer",
@@ -205,7 +205,7 @@
     "pluginIcon": "",
     "pluginVT": "",
     "pluginHash": "f6719ccb780247fc5a721eb56b251b81be93df4659d0215c81895574f24cff32",
-    "pluginStars": "23"
+    "pluginStars": "24"
   },
   {
     "pluginName": "EDMC-PowerPlayProgress",
@@ -307,7 +307,7 @@
     "pluginIcon": "https://raw.githubusercontent.com/SweetJonnySauce/EDMCModernOverlay/refs/heads/main/extras/EDMCModernOverlay.ico",
     "pluginVT": "https://github.com/SweetJonnySauce/EDMCModernOverlay/releases/download/0.9.0/vt-transparency.html",
     "pluginHash": "",
-    "pluginStars": "45"
+    "pluginStars": "46"
   },
   {
     "pluginName": "GalaxyGPS",

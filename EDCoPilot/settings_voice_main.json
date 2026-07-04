@@ -2,6 +2,10 @@
  { "type": "title", "title": "Voice Settings" },
 { "type": "numeric", "title": "Voice Volume", "desc": "Change the volume of your copilot voice. NOTE: Applies to all voice types (Windows, Amazon, Google)", "section": "Voice Settings", "key": "MSVoiceVolume" },
 
+ { "type": "title", "title": "External TTS options : EDCoPilot can hand off ship AI voice generation and play to an external process. External process can listen to shipai_log.json for speech instructions." },
+
+ { "type": "bool", "title": "Use an external TTS option for ship AI voice", "desc": "If this is ON will generate speech phrases but not speak them. Will add them to the shipai_log.json file for external processing", "section": "Voice Settings", "key": "ShipAIVoiceViaExternalTTS" },
+
  { "type": "title", "title": "WinTTS Voice : NOTE: Edge is your default voice provider, but WinTTS will be used if all Cloud voice provider options are turned off (Edge, Amazon, Google, Azure, ElevenLabs)" },
 
  { "type": "bool", "title": "Use WinTTS as default ship voice", "desc": "If this is ON and you have all Cloud voice provider options OFF, then will use WinTTS voice as default on startup. If this is OFF, will default to using Edge voices (which are better quality)", "section": "Voice Settings", "key": "DefaultVoiceWinTTS" },

@@ -1029,6 +1029,28 @@ Nice to have you back. I was practicing conversation starters while you were gon
 (flirt)So nice to have you back with me. Shall I run romantic ambient lighting routine to set the mood?
 (profanity)Welcome back aboard. You look like shit. Did the planet win?
 (profanity)Welcome back, you magnificent fuck-up.
+
+@BoardShipFromNomad  <!-- new 1.11.722
+Welcome back. How was it out there? Did you enjoy messing around in the Nomad? 
+Welcome back. Nomad stowed and secured. Your orders?
+Your chair awaits, Captain. You want to take us out? Try not to scratch the paint this time.
+Nice to have you back. What's next, <Commander>?
+
+@JoinedTelepresenceSession  <!-- new 1.11.722 when you join a telepresence session
+Telepresence session initiated with Commander <$hostCommander>.
+
+@LeftTelepresenceSession <!-- new 1.11.722 when you leave your telepresence session
+Telepresence session terminated.
+
+@CrewmateLeftTelepresenceSession <!-- new 1.11.722 when someone leaves your telepresence session
+Commander <$crewmate> has terminated their telepresence session.
+
+@ConfirmScanForBios <!-- new 1.11.722 response to voice command 'scan for biologicals'
+OK, let's see what's out there.
+Scanning now.
+
+@RecalledShipTouchedDown <!-- new 1.11.722 when you recall the ship and it touches down
+The ship has touched down. Awaiting your return.
 			
 @R2RAllDoneInSystem
 (allbusiness)All lucrative bodies within our criteria have been scanned and mapped in this system.

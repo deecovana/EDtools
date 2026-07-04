@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "gui_instances": {
+    "minibar": {
+      "panels": {
+        "minibar": {
+          "status": "active",
+          "panel_title": "MiniBar",
+          "attributes": {
+            "showing": false,
+            "mode": "guidance",
+            "orientation": "Horizontal",
+            "arcade_mode": false
+          }
+        }
+      }
+    },
+    "gui_1": {
+      "panels": {
+        "Bookmarks": []
+      }
+    }
+  }
+}

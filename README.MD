@@ -1,5 +1,8 @@
 # EDtools GitHub @deecovana repo (CC4 2026)
 
+## Updated 26.07.04
+- Reupload LFS (1.5g)
+
 ## Fixing
 - Fix key binds for ED CoPilot and Minimize graphics
   - !!!SORRY Restore UI WASD keys, lets change CoPilot keys

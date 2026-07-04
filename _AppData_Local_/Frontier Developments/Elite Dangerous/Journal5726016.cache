@@ -1,51 +1,51 @@
-{ "timestamp":"2026-06-16T18:28:29Z", "event":"ShipLocker" }
-{ "timestamp":"2026-06-16T18:28:29Z", "event":"MaterialCollected", "Category":"Raw", "Name":"arsenic", "Name_Localised":"Мышьяк", "Count":3 }
-{ "timestamp":"2026-06-16T18:28:31Z", "event":"ShipLocker" }
-{ "timestamp":"2026-06-16T18:28:31Z", "event":"MaterialCollected", "Category":"Raw", "Name":"vanadium", "Name_Localised":"Ванадий", "Count":3 }
-{ "timestamp":"2026-06-16T18:28:39Z", "event":"ShipLocker" }
-{ "timestamp":"2026-06-16T18:28:39Z", "event":"MaterialCollected", "Category":"Raw", "Name":"arsenic", "Name_Localised":"Мышьяк", "Count":3 }
-{ "timestamp":"2026-06-16T18:28:42Z", "event":"ShipLocker" }
-{ "timestamp":"2026-06-16T18:28:42Z", "event":"MaterialCollected", "Category":"Raw", "Name":"chromium", "Name_Localised":"Хром", "Count":3 }
-{ "timestamp":"2026-06-16T18:28:43Z", "event":"CommunityGoal", "CurrentGoals":[ { "CGID":849, "Title":"", "SystemName":"HIP 58412", "MarketName":"Pawelczyk Dock", "Expiry":"2026-06-18T09:00:00Z", "IsComplete":false, "CurrentTotal":179921602, "PlayerContribution":1204, "NumContributors":20775, "TopTier":{ "Name":"Tier 5", "Bonus":"" }, "TopRankSize":10, "PlayerInTopRank":false, "TierReached":"Tier 4", "PlayerPercentileBand":75, "Bonus":110000000 } ] }
-{ "timestamp":"2026-06-16T18:28:58Z", "event":"ShipLocker" }
-{ "timestamp":"2026-06-16T18:28:59Z", "event":"MaterialCollected", "Category":"Raw", "Name":"vanadium", "Name_Localised":"Ванадий", "Count":3 }
-{ "timestamp":"2026-06-16T18:29:01Z", "event":"ShipLocker" }
-{ "timestamp":"2026-06-16T18:29:01Z", "event":"MaterialCollected", "Category":"Raw", "Name":"vanadium", "Name_Localised":"Ванадий", "Count":3 }
-{ "timestamp":"2026-06-16T18:29:09Z", "event":"ShipLocker" }
-{ "timestamp":"2026-06-16T18:29:09Z", "event":"MaterialCollected", "Category":"Raw", "Name":"arsenic", "Name_Localised":"Мышьяк", "Count":3 }
-{ "timestamp":"2026-06-16T18:29:12Z", "event":"ShipLocker" }
-{ "timestamp":"2026-06-16T18:29:12Z", "event":"MaterialCollected", "Category":"Raw", "Name":"arsenic", "Name_Localised":"Мышьяк", "Count":3 }
-{ "timestamp":"2026-06-16T18:29:28Z", "event":"ShipLocker" }
-{ "timestamp":"2026-06-16T18:29:28Z", "event":"MaterialCollected", "Category":"Raw", "Name":"arsenic", "Name_Localised":"Мышьяк", "Count":3 }
-{ "timestamp":"2026-06-16T18:29:31Z", "event":"ShipLocker" }
-{ "timestamp":"2026-06-16T18:29:31Z", "event":"MaterialCollected", "Category":"Raw", "Name":"vanadium", "Name_Localised":"Ванадий", "Count":3 }
-{ "timestamp":"2026-06-16T18:29:39Z", "event":"ShipLocker" }
-{ "timestamp":"2026-06-16T18:29:39Z", "event":"MaterialCollected", "Category":"Raw", "Name":"vanadium", "Name_Localised":"Ванадий", "Count":3 }
-{ "timestamp":"2026-06-16T18:29:42Z", "event":"ShipLocker" }
-{ "timestamp":"2026-06-16T18:29:42Z", "event":"MaterialCollected", "Category":"Raw", "Name":"arsenic", "Name_Localised":"Мышьяк", "Count":3 }
-{ "timestamp":"2026-06-16T18:29:58Z", "event":"ShipLocker" }
-{ "timestamp":"2026-06-16T18:29:59Z", "event":"MaterialCollected", "Category":"Raw", "Name":"vanadium", "Name_Localised":"Ванадий", "Count":3 }
-{ "timestamp":"2026-06-16T18:30:01Z", "event":"ShipLocker" }
-{ "timestamp":"2026-06-16T18:30:01Z", "event":"MaterialCollected", "Category":"Raw", "Name":"vanadium", "Name_Localised":"Ванадий", "Count":3 }
-{ "timestamp":"2026-06-16T18:30:08Z", "event":"ShipLocker" }
-{ "timestamp":"2026-06-16T18:30:09Z", "event":"MaterialCollected", "Category":"Raw", "Name":"arsenic", "Name_Localised":"Мышьяк", "Count":3 }
-{ "timestamp":"2026-06-16T18:30:12Z", "event":"ShipLocker" }
-{ "timestamp":"2026-06-16T18:30:12Z", "event":"MaterialCollected", "Category":"Raw", "Name":"vanadium", "Name_Localised":"Ванадий", "Count":3 }
-{ "timestamp":"2026-06-16T18:30:30Z", "event":"ShipLocker" }
-{ "timestamp":"2026-06-16T18:30:30Z", "event":"MaterialCollected", "Category":"Raw", "Name":"arsenic", "Name_Localised":"Мышьяк", "Count":3 }
-{ "timestamp":"2026-06-16T18:30:31Z", "event":"ShipLocker" }
-{ "timestamp":"2026-06-16T18:30:31Z", "event":"MaterialCollected", "Category":"Raw", "Name":"vanadium", "Name_Localised":"Ванадий", "Count":3 }
-{ "timestamp":"2026-06-16T18:30:39Z", "event":"ShipLocker" }
-{ "timestamp":"2026-06-16T18:30:40Z", "event":"MaterialCollected", "Category":"Raw", "Name":"chromium", "Name_Localised":"Хром", "Count":3 }
-{ "timestamp":"2026-06-16T18:30:42Z", "event":"ShipLocker" }
-{ "timestamp":"2026-06-16T18:30:42Z", "event":"MaterialCollected", "Category":"Raw", "Name":"arsenic", "Name_Localised":"Мышьяк", "Count":3 }
-{ "timestamp":"2026-06-16T18:30:56Z", "event":"ReservoirReplenished", "FuelMain":15.473473, "FuelReservoir":0.500000 }
-{ "timestamp":"2026-06-16T18:31:01Z", "event":"ShipLocker" }
-{ "timestamp":"2026-06-16T18:31:01Z", "event":"MaterialCollected", "Category":"Raw", "Name":"vanadium", "Name_Localised":"Ванадий", "Count":3 }
-{ "timestamp":"2026-06-16T18:31:08Z", "event":"ShipLocker" }
-{ "timestamp":"2026-06-16T18:31:09Z", "event":"MaterialCollected", "Category":"Raw", "Name":"arsenic", "Name_Localised":"Мышьяк", "Count":3 }
-{ "timestamp":"2026-06-16T18:31:11Z", "event":"ShipLocker" }
-{ "timestamp":"2026-06-16T18:31:12Z", "event":"MaterialCollected", "Category":"Raw", "Name":"arsenic", "Name_Localised":"Мышьяк", "Count":3 }
-{ "timestamp":"2026-06-16T18:31:31Z", "event":"ShipLocker" }
-{ "timestamp":"2026-06-16T18:31:31Z", "event":"MaterialCollected", "Category":"Raw", "Name":"arsenic", "Name_Localised":"Мышьяк", "Count":3 }
-{ "timestamp":"2026-06-16T18:31:37Z", "event":"Shutdown" }
+{ "timestamp":"2026-07-04T15:18:05Z", "event":"MaterialCollected", "Category":"Raw", "Name":"germanium", "Name_Localised":"Германий", "Count":3 }
+{ "timestamp":"2026-07-04T15:18:06Z", "event":"ShipLocker" }
+{ "timestamp":"2026-07-04T15:18:07Z", "event":"MaterialCollected", "Category":"Raw", "Name":"zinc", "Name_Localised":"Цинк", "Count":3 }
+{ "timestamp":"2026-07-04T15:18:09Z", "event":"ShipLocker" }
+{ "timestamp":"2026-07-04T15:18:09Z", "event":"MaterialCollected", "Category":"Raw", "Name":"tin", "Name_Localised":"Олово", "Count":3 }
+{ "timestamp":"2026-07-04T15:18:33Z", "event":"ShipLocker" }
+{ "timestamp":"2026-07-04T15:18:33Z", "event":"MaterialCollected", "Category":"Raw", "Name":"phosphorus", "Name_Localised":"Фосфор", "Count":3 }
+{ "timestamp":"2026-07-04T15:18:35Z", "event":"ShipLocker" }
+{ "timestamp":"2026-07-04T15:18:35Z", "event":"MaterialCollected", "Category":"Raw", "Name":"germanium", "Name_Localised":"Германий", "Count":3 }
+{ "timestamp":"2026-07-04T15:18:37Z", "event":"ShipLocker" }
+{ "timestamp":"2026-07-04T15:18:38Z", "event":"MaterialCollected", "Category":"Raw", "Name":"zinc", "Name_Localised":"Цинк", "Count":3 }
+{ "timestamp":"2026-07-04T15:18:39Z", "event":"ShipLocker" }
+{ "timestamp":"2026-07-04T15:18:39Z", "event":"MaterialCollected", "Category":"Raw", "Name":"sulphur", "Name_Localised":"Сера", "Count":3 }
+{ "timestamp":"2026-07-04T15:19:04Z", "event":"ShipLocker" }
+{ "timestamp":"2026-07-04T15:19:04Z", "event":"MaterialCollected", "Category":"Raw", "Name":"germanium", "Name_Localised":"Германий", "Count":3 }
+{ "timestamp":"2026-07-04T15:19:05Z", "event":"ShipLocker" }
+{ "timestamp":"2026-07-04T15:19:06Z", "event":"MaterialCollected", "Category":"Raw", "Name":"tin", "Name_Localised":"Олово", "Count":3 }
+{ "timestamp":"2026-07-04T15:19:08Z", "event":"ShipLocker" }
+{ "timestamp":"2026-07-04T15:19:08Z", "event":"MaterialCollected", "Category":"Raw", "Name":"germanium", "Name_Localised":"Германий", "Count":3 }
+{ "timestamp":"2026-07-04T15:19:10Z", "event":"ShipLocker" }
+{ "timestamp":"2026-07-04T15:19:10Z", "event":"MaterialCollected", "Category":"Raw", "Name":"germanium", "Name_Localised":"Германий", "Count":3 }
+{ "timestamp":"2026-07-04T15:19:33Z", "event":"ShipLocker" }
+{ "timestamp":"2026-07-04T15:19:34Z", "event":"MaterialCollected", "Category":"Raw", "Name":"mercury", "Name_Localised":"Ртуть", "Count":3 }
+{ "timestamp":"2026-07-04T15:19:36Z", "event":"ShipLocker" }
+{ "timestamp":"2026-07-04T15:19:36Z", "event":"MaterialCollected", "Category":"Raw", "Name":"iron", "Name_Localised":"Железо", "Count":3 }
+{ "timestamp":"2026-07-04T15:19:39Z", "event":"ShipLocker" }
+{ "timestamp":"2026-07-04T15:19:39Z", "event":"MaterialCollected", "Category":"Raw", "Name":"iron", "Name_Localised":"Железо", "Count":3 }
+{ "timestamp":"2026-07-04T15:19:40Z", "event":"ShipLocker" }
+{ "timestamp":"2026-07-04T15:19:40Z", "event":"MaterialCollected", "Category":"Raw", "Name":"phosphorus", "Name_Localised":"Фосфор", "Count":3 }
+{ "timestamp":"2026-07-04T15:19:57Z", "event":"LaunchDrone", "Type":"Collection" }
+{ "timestamp":"2026-07-04T15:20:04Z", "event":"ShipLocker" }
+{ "timestamp":"2026-07-04T15:20:04Z", "event":"Cargo", "Vessel":"Ship", "Count":61 }
+{ "timestamp":"2026-07-04T15:20:05Z", "event":"MaterialCollected", "Category":"Raw", "Name":"ruthenium", "Name_Localised":"Рутений", "Count":3 }
+{ "timestamp":"2026-07-04T15:20:07Z", "event":"ShipLocker" }
+{ "timestamp":"2026-07-04T15:20:07Z", "event":"MaterialCollected", "Category":"Raw", "Name":"tin", "Name_Localised":"Олово", "Count":3 }
+{ "timestamp":"2026-07-04T15:20:17Z", "event":"LaunchDrone", "Type":"Collection" }
+{ "timestamp":"2026-07-04T15:20:24Z", "event":"Cargo", "Vessel":"Ship", "Count":60 }
+{ "timestamp":"2026-07-04T15:20:33Z", "event":"ReservoirReplenished", "FuelMain":26.229710, "FuelReservoir":0.500000 }
+{ "timestamp":"2026-07-04T15:20:37Z", "event":"LaunchDrone", "Type":"Collection" }
+{ "timestamp":"2026-07-04T15:20:39Z", "event":"ShipLocker" }
+{ "timestamp":"2026-07-04T15:20:40Z", "event":"MaterialCollected", "Category":"Raw", "Name":"sulphur", "Name_Localised":"Сера", "Count":3 }
+{ "timestamp":"2026-07-04T15:20:45Z", "event":"Cargo", "Vessel":"Ship", "Count":59 }
+{ "timestamp":"2026-07-04T15:20:52Z", "event":"LaunchDrone", "Type":"Collection" }
+{ "timestamp":"2026-07-04T15:20:58Z", "event":"LaunchDrone", "Type":"Collection" }
+{ "timestamp":"2026-07-04T15:21:00Z", "event":"Cargo", "Vessel":"Ship", "Count":57 }
+{ "timestamp":"2026-07-04T15:21:00Z", "event":"LaunchDrone", "Type":"Collection" }
+{ "timestamp":"2026-07-04T15:21:02Z", "event":"Cargo", "Vessel":"Ship", "Count":56 }
+{ "timestamp":"2026-07-04T15:21:02Z", "event":"LaunchDrone", "Type":"Collection" }
+{ "timestamp":"2026-07-04T15:21:04Z", "event":"Cargo", "Vessel":"Ship", "Count":55 }
+{ "timestamp":"2026-07-04T15:21:06Z", "event":"Cargo", "Vessel":"Ship", "Count":55 }
+{ "timestamp":"2026-07-04T15:21:38Z", "event":"Shutdown" }

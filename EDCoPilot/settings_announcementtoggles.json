@@ -216,6 +216,13 @@
     },
 	{
         "type": "bool",
+        "title": "Give landing pad directions even when a Docking Computer is installed",
+        "desc": "Will give starport pad directions even though you have a Docking Computer.",
+        "section": "Toggles",
+        "key": "AlwaysGiveStarportPadDirections"
+    },
+	{
+        "type": "bool",
         "title": "Autodocking announcements",
         "desc": "Will comment when you request docking if you have a docking computer installed",
         "section": "Toggles",

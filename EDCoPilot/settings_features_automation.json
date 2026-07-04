@@ -103,7 +103,7 @@
     },
 	{
         "type": "title",
-        "title": "Discovery Mode ('AutoHonk')"
+        "title": "Discovery Mode ('AutoHonk') - NOTE: this uses the Primary or Secondary fire of the active firegroup, NOT the DSS scan keybind (which is only active when in FSS mode)"
     },
 	{
         "type": "bool",
@@ -140,25 +140,18 @@
     },
 	{
         "type": "options",
-        "title": "Auto Neutron - plot or target to next neutron",
-        "desc": "When setting course for the next neutron, whether to plot to the system or directly target the system",
+        "title": "Auto Neutorn - Plot vs Target",
+        "desc": "Whether to Plot to the next system or just Target the next system, when Auto Neutron sets course for next Neutron waypoint",
         "section": "UI Appearance",
         "key": "ActiveRouteNextNeutronMethod",
 		"options": ["Plot", "Target" ]
     },
 	{
         "type": "numeric",
-        "title": "FSD repair reminder after x supercharges (mk1 FSD)",
-        "desc": "Set the number of supercharges you wish to execute before EDCoPilot reminds you to repair your mk1 FSD. Set to 0 if you do not want a reminder.",
+        "title": "FSD repair reminder after x supercharges",
+        "desc": "Set the number of supercharges you wish to execute before EDCoPilot reminds you to repair your FSD. Set to 0 if you do not want a reminder.",
         "section": "UI Appearance",
         "key": "SuperchargeReminder"
-    },
-		{
-        "type": "numeric",
-        "title": "FSD repair reminder after x supercharges (mk2 FSD)",
-        "desc": "Set the number of supercharges you wish to execute before EDCoPilot reminds you to repair your mk2 FSD. Set to 0 if you do not want a reminder.",
-        "section": "UI Appearance",
-        "key": "SuperchargeReminderMk2"
     },
 	{
         "type": "title",
