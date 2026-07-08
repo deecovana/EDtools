@@ -6,6 +6,7 @@
   1. git lfs prune --dry-run -c -v 
   2. git lfs prune -c -v 
   3. git lfs prune --force
+- Move ZIPs to the root
 
 ## Fixing
 - Fix key binds for ED CoPilot and Minimize graphics
