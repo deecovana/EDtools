@@ -2,10 +2,13 @@
 
 ## Updated 26.07.04
 - Delete EDCoPilot zip
-- Use git lfs prune options:
+- Use git lfs prune options: Test first:
   1. git lfs prune --dry-run -c -v 
   2. git lfs prune -c -v 
   3. git lfs prune --force
+- Also use git clean: Test first, Force second:
+  1. git clean -n
+  2. git clean -f
 - Move ZIPs to the root
 
 ## Fixing
