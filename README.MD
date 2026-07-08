@@ -4,6 +4,7 @@
 - Delete EDCoPilot zip
 - Use git lfs prune options:
   git lfs prune --dry-run -c -v 
+  git lfs prune -c -v 
   git lfs prune --force
 
 ## Fixing
