@@ -3,9 +3,9 @@
 ## Updated 26.07.04
 - Delete EDCoPilot zip
 - Use git lfs prune options:
-  git lfs prune --dry-run -c -v 
-  git lfs prune -c -v 
-  git lfs prune --force
+  1. git lfs prune --dry-run -c -v 
+  2. git lfs prune -c -v 
+  3. git lfs prune --force
 
 ## Fixing
 - Fix key binds for ED CoPilot and Minimize graphics
