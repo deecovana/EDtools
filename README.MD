@@ -1,7 +1,11 @@
 # EDtools GitHub @deecovana repo (CC4 2026)
 
 ## Updated 26.07.04
-- Reupload LFS (1.5g)
+- Delete EDCoPilot zip
+- Use git lfs prune options:
+  git lfs prune --dry-run 
+  git lfs prune --force 
+  git lfs prune -v
 
 ## Fixing
 - Fix key binds for ED CoPilot and Minimize graphics
