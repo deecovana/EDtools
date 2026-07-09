@@ -605,3 +605,4 @@
 "GAL BITTON"={ "lastSeen":"2026-06-14T15:01:25Z", "whereSeen":"Xihe", "ShipType":"Eagle Mark II", "numKills":0, "lastBounty":1, "killedMe":0 ,"killerTime":"", "killerLocation":"", "killerShip":"", "prevSeen":"" }
 "GARETH AIVO"={ "lastSeen":"2026-06-15T18:08:18Z", "whereSeen":"Bei Dou Sector AV-Y b0", "ShipType":"Anaconda", "numKills":0, "lastBounty":-1, "killedMe":0 ,"killerTime":"", "killerLocation":"", "killerShip":"", "prevSeen":"" }
 "MOSCHOPS"={ "lastSeen":"2026-06-15T18:08:24Z", "whereSeen":"Bei Dou Sector AV-Y b0", "ShipType":"Type-9 Heavy", "numKills":0, "lastBounty":-1, "killedMe":0 ,"killerTime":"", "killerLocation":"", "killerShip":"", "prevSeen":"" }
+"FRANCISCO ALBERTO SERRANO ACOSTA"={ "lastSeen":"2026-07-04T13:55:18Z", "whereSeen":"HIP 34209", "ShipType":"Mandalay", "numKills":0, "lastBounty":-1, "killedMe":0 ,"killerTime":"", "killerLocation":"", "killerShip":"", "prevSeen":"" }

@@ -1,11 +1,6 @@
 {
   "schema_version": 1,
   "gui_instances": {
-    "gui_1": {
-      "panels": {
-        "Voice Log": []
-      }
-    },
     "minibar": {
       "panels": {
         "minibar": {
@@ -18,6 +13,11 @@
             "arcade_mode": false
           }
         }
+      }
+    },
+    "gui_1": {
+      "panels": {
+        "AboutEDCoPilot": []
       }
     }
   }

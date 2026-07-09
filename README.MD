@@ -2,6 +2,11 @@
 
 ## Updated 26.07.04
 - Delete EDCoPilot zip
+- Update EDCoPilot.ini: shutdown on ED closed 9999 seconds
+	EDCoPilot.ini version 09 july 2026
+	1. CloseOnCleanEDClose="0"
+	2. EliteNotFoundCloseInterval="9999"
+
 ## Git LFS todos:
 - Use git lfs prune options: Test first:
   1. git lfs prune --dry-run -c -v 
