@@ -1,1 +1,1 @@
-The virtual co-pilot service is terminating.
+Startup sequence is complete.  Where will you be taking me today, Commander?

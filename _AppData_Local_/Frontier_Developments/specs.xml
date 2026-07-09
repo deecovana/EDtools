@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-16"?>
 <DxDiag>
 	<SystemInformation>
-		<Time>7/4/2026, 16:08:23</Time>
+		<Time>7/9/2026, 16:02:57</Time>
 		<MachineName>SLIM</MachineName>
 		<MachineId>{C7BD0E76-C9BA-4E23-B2E4-74F72C4BADDF}</MachineId>
 		<OperatingSystem>Windows 11 Home 64-bit (10.0, Build 26200) (26100.ge_release.240331-1435)</OperatingSystem>
@@ -13,7 +13,7 @@
 		<Processor>AMD Ryzen 7 7735HS with Radeon Graphics         (16 CPUs), ~3.2GHz</Processor>
 		<Memory>16384MB RAM</Memory>
 		<AvaliableOSMem>14020MB RAM</AvaliableOSMem>
-		<PageFile>10795MB used, 6152MB available</PageFile>
+		<PageFile>11708MB used, 4960MB available</PageFile>
 		<WindowsDir>C:\WINDOWS</WindowsDir>
 		<DirectXVersion>DirectX 12</DirectXVersion>
 		<DXSetupParameters>Not found</DXSetupParameters>
@@ -33,6 +33,7 @@
 	</SystemInformation>
 	<DxDiagNotes>
 		<DisplayTab>No problems found.</DisplayTab>
+		<SoundTab>No problems found.</SoundTab>
 		<SoundTab>No problems found.</SoundTab>
 		<InputTab>No problems found.</InputTab>
 	</DxDiagNotes>
@@ -277,7 +278,7 @@
 	<DirectSound>
 		<SoundDevices>
 			<SoundDevice>
-				<Description>Speakers (Realtek(R) Audio)</Description>
+				<Description>Headphones (Realtek(R) Audio)</Description>
 				<HardwareID>HDAUDIO\FUNC_01&amp;VEN_10EC&amp;DEV_0257&amp;SUBSYS_17AA3F87&amp;REV_1000</HardwareID>
 				<ManufacturerID>N/A</ManufacturerID>
 				<ProductID>N/A</ProductID>
@@ -323,8 +324,69 @@
 				<UnlockTransferRateHwBuffers>0</UnlockTransferRateHwBuffers>
 				<PlayCPUOverheadSwBuffers>0</PlayCPUOverheadSwBuffers>
 			</SoundDevice>
+			<SoundDevice>
+				<Description>Speakers (Realtek(R) Audio)</Description>
+				<HardwareID>HDAUDIO\FUNC_01&amp;VEN_10EC&amp;DEV_0257&amp;SUBSYS_17AA3F87&amp;REV_1000</HardwareID>
+				<ManufacturerID>N/A</ManufacturerID>
+				<ProductID>N/A</ProductID>
+				<Type>N/A</Type>
+				<DriverName>RTKVHD64.sys</DriverName>
+				<DriverVersion>6.0.9870.1</DriverVersion>
+				<DriverLanguage>English</DriverLanguage>
+				<DriverBeta>0</DriverBeta>
+				<DriverDebug>0</DriverDebug>
+				<DriverWHQLLogo>n/a</DriverWHQLLogo>
+				<DriverDate>05.08.2025 3:00:00</DriverDate>
+				<DriverSize>6778904</DriverSize>
+				<OtherFiles></OtherFiles>
+				<DriverProvider>Realtek Semiconductor Corp.</DriverProvider>
+				<HwAccelLevel>Emulation Only</HwAccelLevel>
+				<DefaultSoundPlayback>0</DefaultSoundPlayback>
+				<DefaultVoicePlayback>0</DefaultVoicePlayback>
+				<VoiceManager>0</VoiceManager>
+				<EAX20Listener>0</EAX20Listener>
+				<EAX20Source>0</EAX20Source>
+				<I3DL2Listener>0</I3DL2Listener>
+				<I3DL2Source>0</I3DL2Source>
+				<ZoomFX>0</ZoomFX>
+				<Flags>0</Flags>
+				<MinSecondarySampleRate>0</MinSecondarySampleRate>
+				<MaxSecondarySampleRate>0</MaxSecondarySampleRate>
+				<PrimaryBuffers>0</PrimaryBuffers>
+				<MaxHwMixingAllBuffers>0</MaxHwMixingAllBuffers>
+				<MaxHwMixingStaticBuffers>0</MaxHwMixingStaticBuffers>
+				<MaxHwMixingStreamingBuffers>0</MaxHwMixingStreamingBuffers>
+				<FreeHwMixingAllBuffers>0</FreeHwMixingAllBuffers>
+				<FreeHwMixingStaticBuffers>0</FreeHwMixingStaticBuffers>
+				<FreeHwMixingStreamingBuffers>0</FreeHwMixingStreamingBuffers>
+				<MaxHw3DAllBuffers>0</MaxHw3DAllBuffers>
+				<MaxHw3DStaticBuffers>0</MaxHw3DStaticBuffers>
+				<MaxHw3DStreamingBuffers>0</MaxHw3DStreamingBuffers>
+				<FreeHw3DAllBuffers>0</FreeHw3DAllBuffers>
+				<FreeHw3DStaticBuffers>0</FreeHw3DStaticBuffers>
+				<FreeHw3DStreamingBuffers>0</FreeHw3DStreamingBuffers>
+				<TotalHwMemBytes>0</TotalHwMemBytes>
+				<FreeHwMemBytes>0</FreeHwMemBytes>
+				<MaxContigFreeHwMemBytes>0</MaxContigFreeHwMemBytes>
+				<UnlockTransferRateHwBuffers>0</UnlockTransferRateHwBuffers>
+				<PlayCPUOverheadSwBuffers>0</PlayCPUOverheadSwBuffers>
+			</SoundDevice>
 		</SoundDevices>
 		<SoundCaptureDevices>
+			<SoundCaptureDevice>
+				<Description>Microphone (Realtek(R) Audio)</Description>
+				<DriverName>RTKVHD64.sys</DriverName>
+				<DriverVersion>6.0.9870.1</DriverVersion>
+				<DriverLanguage>English</DriverLanguage>
+				<DriverBeta>0</DriverBeta>
+				<DriverDebug>0</DriverDebug>
+				<DriverDate>05.08.2025 3:00:00</DriverDate>
+				<DriverSize>6778904</DriverSize>
+				<DefaultSoundRecording>1</DefaultSoundRecording>
+				<DefaultVoiceRecording>1</DefaultVoiceRecording>
+				<Flags>0</Flags>
+				<Formats>0</Formats>
+			</SoundCaptureDevice>
 			<SoundCaptureDevice>
 				<Description>Onboard Mic (Realtek(R) Audio)</Description>
 				<DriverName>RTKVHD64.sys</DriverName>
@@ -335,7 +397,7 @@
 				<DriverDate>05.08.2025 3:00:00</DriverDate>
 				<DriverSize>6778904</DriverSize>
 				<DefaultSoundRecording>0</DefaultSoundRecording>
-				<DefaultVoiceRecording>1</DefaultVoiceRecording>
+				<DefaultVoiceRecording>0</DefaultVoiceRecording>
 				<Flags>0</Flags>
 				<Formats>0</Formats>
 			</SoundCaptureDevice>
@@ -348,7 +410,7 @@
 				<DriverDebug>0</DriverDebug>
 				<DriverDate>05.08.2025 3:00:00</DriverDate>
 				<DriverSize>6778904</DriverSize>
-				<DefaultSoundRecording>1</DefaultSoundRecording>
+				<DefaultSoundRecording>0</DefaultSoundRecording>
 				<DefaultVoiceRecording>0</DefaultVoiceRecording>
 				<Flags>0</Flags>
 				<Formats>0</Formats>
@@ -639,7 +701,7 @@
 	<LogicalDisks>
 		<LogicalDisk>
 			<DriveLetter>C:</DriveLetter>
-			<FreeSpace>131899703296</FreeSpace>
+			<FreeSpace>155187392512</FreeSpace>
 			<MaxSpace>511094812672</MaxSpace>
 			<FileSystem>NTFS</FileSystem>
 			<Model>WD PC SN5000S SDEPMSJ-512G-1101</Model>
@@ -3467,7 +3529,7 @@
 			<FileVersion>10.00.26100.8521</FileVersion>
 		</Filter>
 		<Filter>
-			<Name>Stereo Mix (Realtek(R) Audio)</Name>
+			<Name>Microphone (Realtek(R) Audio)</Name>
 			<FilterCatagory>Audio Capture Sources</FilterCatagory>
 			<Merit>2097152</Merit>
 			<Inputs>0</Inputs>
@@ -3477,6 +3539,15 @@
 		</Filter>
 		<Filter>
 			<Name>Onboard Mic (Realtek(R) Audio)</Name>
+			<FilterCatagory>Audio Capture Sources</FilterCatagory>
+			<Merit>2097152</Merit>
+			<Inputs>0</Inputs>
+			<Outputs>0</Outputs>
+			<File>qcap.dll</File>
+			<FileVersion>10.00.26100.5074</FileVersion>
+		</Filter>
+		<Filter>
+			<Name>Stereo Mix (Realtek(R) Audio)</Name>
 			<FilterCatagory>Audio Capture Sources</FilterCatagory>
 			<Merit>2097152</Merit>
 			<Inputs>0</Inputs>
