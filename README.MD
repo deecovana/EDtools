@@ -6,6 +6,7 @@
 	EDCoPilot.ini version 09 july 2026
 	1. CloseOnCleanEDClose="0"
 	2. EliteNotFoundCloseInterval="9999"
+- Current farm location: Tellurium
 
 ## Git LFS todos:
 - Use git lfs prune options: Test first:

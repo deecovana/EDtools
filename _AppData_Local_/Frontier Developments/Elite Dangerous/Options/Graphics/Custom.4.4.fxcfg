@@ -29,6 +29,6 @@
 	<LODDistanceScale>0.674369</LODDistanceScale>
 	<HMDRenderTargetMultiplier>1.000000</HMDRenderTargetMultiplier>
 	<SSAAMultiplier>1.000000</SSAAMultiplier>
-	<GpuSchedulerMultiplier>0.270375</GpuSchedulerMultiplier>
+	<GpuSchedulerMultiplier>1.000000</GpuSchedulerMultiplier>
 	<FFXCASIntensity>0.500000</FFXCASIntensity>
 </Root>

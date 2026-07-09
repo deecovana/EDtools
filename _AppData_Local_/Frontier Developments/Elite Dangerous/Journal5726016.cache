@@ -1,51 +1,51 @@
-{ "timestamp":"2026-07-09T13:23:34Z", "event":"ShipLocker" }
-{ "timestamp":"2026-07-09T13:23:35Z", "event":"MaterialCollected", "Category":"Raw", "Name":"iron", "Name_Localised":"Железо", "Count":3 }
-{ "timestamp":"2026-07-09T13:23:38Z", "event":"ShipLocker" }
-{ "timestamp":"2026-07-09T13:23:38Z", "event":"MaterialCollected", "Category":"Raw", "Name":"germanium", "Name_Localised":"Германий", "Count":3 }
-{ "timestamp":"2026-07-09T13:23:40Z", "event":"ShipLocker" }
-{ "timestamp":"2026-07-09T13:23:40Z", "event":"MaterialCollected", "Category":"Raw", "Name":"germanium", "Name_Localised":"Германий", "Count":3 }
-{ "timestamp":"2026-07-09T13:23:42Z", "event":"Music", "MusicTrack":"Exploration" }
-{ "timestamp":"2026-07-09T13:23:43Z", "event":"ShipLocker" }
-{ "timestamp":"2026-07-09T13:23:43Z", "event":"MaterialCollected", "Category":"Raw", "Name":"phosphorus", "Name_Localised":"Фосфор", "Count":3 }
-{ "timestamp":"2026-07-09T13:24:05Z", "event":"ShipLocker" }
-{ "timestamp":"2026-07-09T13:24:05Z", "event":"MaterialCollected", "Category":"Raw", "Name":"sulphur", "Name_Localised":"Сера", "Count":3 }
-{ "timestamp":"2026-07-09T13:24:08Z", "event":"ShipLocker" }
-{ "timestamp":"2026-07-09T13:24:08Z", "event":"MaterialCollected", "Category":"Raw", "Name":"iron", "Name_Localised":"Железо", "Count":3 }
-{ "timestamp":"2026-07-09T13:24:10Z", "event":"ShipLocker" }
-{ "timestamp":"2026-07-09T13:24:11Z", "event":"MaterialCollected", "Category":"Raw", "Name":"zinc", "Name_Localised":"Цинк", "Count":3 }
-{ "timestamp":"2026-07-09T13:24:13Z", "event":"ShipLocker" }
-{ "timestamp":"2026-07-09T13:24:13Z", "event":"MaterialCollected", "Category":"Raw", "Name":"tin", "Name_Localised":"Олово", "Count":3 }
-{ "timestamp":"2026-07-09T13:24:35Z", "event":"ShipLocker" }
-{ "timestamp":"2026-07-09T13:24:35Z", "event":"MaterialCollected", "Category":"Raw", "Name":"phosphorus", "Name_Localised":"Фосфор", "Count":3 }
-{ "timestamp":"2026-07-09T13:24:38Z", "event":"ShipLocker" }
-{ "timestamp":"2026-07-09T13:24:38Z", "event":"MaterialCollected", "Category":"Raw", "Name":"ruthenium", "Name_Localised":"Рутений", "Count":3 }
-{ "timestamp":"2026-07-09T13:24:40Z", "event":"ShipLocker" }
-{ "timestamp":"2026-07-09T13:24:40Z", "event":"MaterialCollected", "Category":"Raw", "Name":"germanium", "Name_Localised":"Германий", "Count":3 }
-{ "timestamp":"2026-07-09T13:24:43Z", "event":"ShipLocker" }
-{ "timestamp":"2026-07-09T13:24:43Z", "event":"MaterialCollected", "Category":"Raw", "Name":"zinc", "Name_Localised":"Цинк", "Count":3 }
-{ "timestamp":"2026-07-09T13:25:05Z", "event":"ShipLocker" }
-{ "timestamp":"2026-07-09T13:25:06Z", "event":"MaterialCollected", "Category":"Raw", "Name":"zinc", "Name_Localised":"Цинк", "Count":3 }
-{ "timestamp":"2026-07-09T13:25:08Z", "event":"ShipLocker" }
-{ "timestamp":"2026-07-09T13:25:08Z", "event":"MaterialCollected", "Category":"Raw", "Name":"germanium", "Name_Localised":"Германий", "Count":3 }
-{ "timestamp":"2026-07-09T13:25:11Z", "event":"ShipLocker" }
-{ "timestamp":"2026-07-09T13:25:11Z", "event":"MaterialCollected", "Category":"Raw", "Name":"ruthenium", "Name_Localised":"Рутений", "Count":3 }
-{ "timestamp":"2026-07-09T13:25:14Z", "event":"ShipLocker" }
-{ "timestamp":"2026-07-09T13:25:14Z", "event":"MaterialCollected", "Category":"Raw", "Name":"germanium", "Name_Localised":"Германий", "Count":3 }
-{ "timestamp":"2026-07-09T13:25:35Z", "event":"ShipLocker" }
-{ "timestamp":"2026-07-09T13:25:36Z", "event":"MaterialCollected", "Category":"Raw", "Name":"mercury", "Name_Localised":"Ртуть", "Count":3 }
-{ "timestamp":"2026-07-09T13:25:39Z", "event":"ShipLocker" }
-{ "timestamp":"2026-07-09T13:25:39Z", "event":"MaterialCollected", "Category":"Raw", "Name":"tin", "Name_Localised":"Олово", "Count":3 }
-{ "timestamp":"2026-07-09T13:25:41Z", "event":"ShipLocker" }
-{ "timestamp":"2026-07-09T13:25:42Z", "event":"MaterialCollected", "Category":"Raw", "Name":"germanium", "Name_Localised":"Германий", "Count":3 }
-{ "timestamp":"2026-07-09T13:25:44Z", "event":"ShipLocker" }
-{ "timestamp":"2026-07-09T13:25:45Z", "event":"MaterialCollected", "Category":"Raw", "Name":"tin", "Name_Localised":"Олово", "Count":3 }
-{ "timestamp":"2026-07-09T13:25:48Z", "event":"ModuleInfo" }
-{ "timestamp":"2026-07-09T13:26:06Z", "event":"ShipLocker" }
-{ "timestamp":"2026-07-09T13:26:06Z", "event":"MaterialCollected", "Category":"Raw", "Name":"zinc", "Name_Localised":"Цинк", "Count":3 }
-{ "timestamp":"2026-07-09T13:26:09Z", "event":"ShipLocker" }
-{ "timestamp":"2026-07-09T13:26:09Z", "event":"MaterialCollected", "Category":"Raw", "Name":"germanium", "Name_Localised":"Германий", "Count":3 }
-{ "timestamp":"2026-07-09T13:26:11Z", "event":"ShipLocker" }
-{ "timestamp":"2026-07-09T13:26:11Z", "event":"MaterialCollected", "Category":"Raw", "Name":"zinc", "Name_Localised":"Цинк", "Count":3 }
-{ "timestamp":"2026-07-09T13:26:14Z", "event":"ShipLocker" }
-{ "timestamp":"2026-07-09T13:26:14Z", "event":"MaterialCollected", "Category":"Raw", "Name":"germanium", "Name_Localised":"Германий", "Count":3 }
-{ "timestamp":"2026-07-09T13:26:35Z", "event":"Shutdown" }
+{ "timestamp":"2026-07-09T14:58:55Z", "event":"ReservoirReplenished", "FuelMain":30.500000, "FuelReservoir":0.500000 }
+{ "timestamp":"2026-07-09T14:59:11Z", "event":"ShipLocker" }
+{ "timestamp":"2026-07-09T14:59:11Z", "event":"MaterialCollected", "Category":"Raw", "Name":"phosphorus", "Name_Localised":"Фосфор", "Count":3 }
+{ "timestamp":"2026-07-09T14:59:14Z", "event":"ShipLocker" }
+{ "timestamp":"2026-07-09T14:59:14Z", "event":"MaterialCollected", "Category":"Raw", "Name":"cadmium", "Name_Localised":"Кадмий", "Count":3 }
+{ "timestamp":"2026-07-09T14:59:17Z", "event":"ShipLocker" }
+{ "timestamp":"2026-07-09T14:59:17Z", "event":"MaterialCollected", "Category":"Raw", "Name":"cadmium", "Name_Localised":"Кадмий", "Count":3 }
+{ "timestamp":"2026-07-09T14:59:18Z", "event":"ShipLocker" }
+{ "timestamp":"2026-07-09T14:59:18Z", "event":"MaterialCollected", "Category":"Raw", "Name":"sulphur", "Name_Localised":"Сера", "Count":3 }
+{ "timestamp":"2026-07-09T14:59:41Z", "event":"ShipLocker" }
+{ "timestamp":"2026-07-09T14:59:41Z", "event":"MaterialCollected", "Category":"Raw", "Name":"zirconium", "Name_Localised":"Цирконий", "Count":3 }
+{ "timestamp":"2026-07-09T14:59:44Z", "event":"ShipLocker" }
+{ "timestamp":"2026-07-09T14:59:44Z", "event":"MaterialCollected", "Category":"Raw", "Name":"tellurium", "Name_Localised":"Теллур", "Count":3 }
+{ "timestamp":"2026-07-09T14:59:46Z", "event":"ShipLocker" }
+{ "timestamp":"2026-07-09T14:59:46Z", "event":"MaterialCollected", "Category":"Raw", "Name":"tellurium", "Name_Localised":"Теллур", "Count":3 }
+{ "timestamp":"2026-07-09T14:59:48Z", "event":"ShipLocker" }
+{ "timestamp":"2026-07-09T14:59:48Z", "event":"MaterialCollected", "Category":"Raw", "Name":"sulphur", "Name_Localised":"Сера", "Count":3 }
+{ "timestamp":"2026-07-09T15:00:10Z", "event":"ShipLocker" }
+{ "timestamp":"2026-07-09T15:00:10Z", "event":"MaterialCollected", "Category":"Raw", "Name":"tellurium", "Name_Localised":"Теллур", "Count":3 }
+{ "timestamp":"2026-07-09T15:00:14Z", "event":"ShipLocker" }
+{ "timestamp":"2026-07-09T15:00:14Z", "event":"MaterialCollected", "Category":"Raw", "Name":"phosphorus", "Name_Localised":"Фосфор", "Count":3 }
+{ "timestamp":"2026-07-09T15:00:16Z", "event":"ShipLocker" }
+{ "timestamp":"2026-07-09T15:00:16Z", "event":"MaterialCollected", "Category":"Raw", "Name":"cadmium", "Name_Localised":"Кадмий", "Count":3 }
+{ "timestamp":"2026-07-09T15:00:18Z", "event":"ShipLocker" }
+{ "timestamp":"2026-07-09T15:00:18Z", "event":"MaterialCollected", "Category":"Raw", "Name":"cadmium", "Name_Localised":"Кадмий", "Count":3 }
+{ "timestamp":"2026-07-09T15:00:40Z", "event":"ShipLocker" }
+{ "timestamp":"2026-07-09T15:00:40Z", "event":"MaterialCollected", "Category":"Raw", "Name":"tellurium", "Name_Localised":"Теллур", "Count":3 }
+{ "timestamp":"2026-07-09T15:00:43Z", "event":"ShipLocker" }
+{ "timestamp":"2026-07-09T15:00:44Z", "event":"MaterialCollected", "Category":"Raw", "Name":"sulphur", "Name_Localised":"Сера", "Count":3 }
+{ "timestamp":"2026-07-09T15:00:46Z", "event":"ShipLocker" }
+{ "timestamp":"2026-07-09T15:00:46Z", "event":"MaterialCollected", "Category":"Raw", "Name":"zirconium", "Name_Localised":"Цирконий", "Count":3 }
+{ "timestamp":"2026-07-09T15:00:48Z", "event":"ShipLocker" }
+{ "timestamp":"2026-07-09T15:00:48Z", "event":"MaterialCollected", "Category":"Raw", "Name":"sulphur", "Name_Localised":"Сера", "Count":3 }
+{ "timestamp":"2026-07-09T15:01:10Z", "event":"ShipLocker" }
+{ "timestamp":"2026-07-09T15:01:10Z", "event":"MaterialCollected", "Category":"Raw", "Name":"phosphorus", "Name_Localised":"Фосфор", "Count":3 }
+{ "timestamp":"2026-07-09T15:01:14Z", "event":"ShipLocker" }
+{ "timestamp":"2026-07-09T15:01:14Z", "event":"MaterialCollected", "Category":"Raw", "Name":"nickel", "Name_Localised":"Никель", "Count":3 }
+{ "timestamp":"2026-07-09T15:01:16Z", "event":"ShipLocker" }
+{ "timestamp":"2026-07-09T15:01:16Z", "event":"MaterialCollected", "Category":"Raw", "Name":"sulphur", "Name_Localised":"Сера", "Count":3 }
+{ "timestamp":"2026-07-09T15:01:18Z", "event":"ShipLocker" }
+{ "timestamp":"2026-07-09T15:01:18Z", "event":"MaterialCollected", "Category":"Raw", "Name":"phosphorus", "Name_Localised":"Фосфор", "Count":3 }
+{ "timestamp":"2026-07-09T15:01:40Z", "event":"ShipLocker" }
+{ "timestamp":"2026-07-09T15:01:40Z", "event":"MaterialCollected", "Category":"Raw", "Name":"cadmium", "Name_Localised":"Кадмий", "Count":3 }
+{ "timestamp":"2026-07-09T15:01:44Z", "event":"ShipLocker" }
+{ "timestamp":"2026-07-09T15:01:44Z", "event":"MaterialCollected", "Category":"Raw", "Name":"cadmium", "Name_Localised":"Кадмий", "Count":3 }
+{ "timestamp":"2026-07-09T15:01:46Z", "event":"ShipLocker" }
+{ "timestamp":"2026-07-09T15:01:46Z", "event":"MaterialCollected", "Category":"Raw", "Name":"sulphur", "Name_Localised":"Сера", "Count":3 }
+{ "timestamp":"2026-07-09T15:01:48Z", "event":"ShipLocker" }
+{ "timestamp":"2026-07-09T15:01:48Z", "event":"MaterialCollected", "Category":"Raw", "Name":"carbon", "Name_Localised":"Углерод", "Count":3 }
+{ "timestamp":"2026-07-09T15:01:57Z", "event":"Music", "MusicTrack":"Exploration" }
+{ "timestamp":"2026-07-09T15:02:00Z", "event":"Shutdown" }
