@@ -91,6 +91,28 @@
 			<grade_5 Value="1" />
 			<grade_4 Value="1" />
 		</MicroResourcePanelFilters>
+		<LocationPanelFilters>
+			<PlanetOrMoon Value="0" />
+			<LandablePlanetOrMoon Value="0" />
+			<SignalSource Value="1" />
+			<FleetCarrier Value="0" />
+			<AsteroidCluster Value="0" />
+			<PointOfInterest Value="1" />
+			<Star Value="0" />
+			<station Value="1" />
+			<System Value="0" />
+			<Settlement Value="0" />
+		</LocationPanelFilters>
+		<EncodedPanelFilters>
+			<grade_1 Value="0" />
+			<grade_2 Value="0" />
+			<grade_3 Value="0" />
+			<grade_5 Value="1" />
+			<grade_4 Value="0" />
+		</EncodedPanelFilters>
+		<VisibleChannels>
+			<profanity Value="0" />
+		</VisibleChannels>
 		<government>
 			<Prison Value="0" />
 			<Communism Value="0" />
@@ -112,39 +134,17 @@
 			<Colony Value="0" />
 			<Patronage Value="0" />
 		</government>
-		<LocationPanelFilters>
-			<PlanetOrMoon Value="0" />
-			<LandablePlanetOrMoon Value="0" />
-			<SignalSource Value="1" />
-			<FleetCarrier Value="0" />
-			<AsteroidCluster Value="0" />
-			<PointOfInterest Value="1" />
-			<Star Value="0" />
-			<System Value="0" />
-			<station Value="1" />
-			<Settlement Value="0" />
-		</LocationPanelFilters>
-		<EncodedPanelFilters>
-			<grade_1 Value="0" />
-			<grade_2 Value="0" />
-			<grade_3 Value="0" />
-			<grade_5 Value="1" />
-			<grade_4 Value="0" />
-		</EncodedPanelFilters>
-		<VisibleChannels>
-			<profanity Value="0" />
-		</VisibleChannels>
 		<minorFactionStatus>
 			<CivilLiberty Value="0" />
-			<Expansion Value="0" />
 			<Blight Value="0" />
 			<Boom Value="0" />
+			<Expansion Value="0" />
 			<PublicHoliday Value="0" />
 			<InfrastructureFailure Value="0" />
 			<Retreat Value="0" />
 			<CivilWar Value="1" />
-			<Thargoid_Recovery Value="0" />
 			<Terrorism Value="0" />
+			<Thargoid_Recovery Value="0" />
 			<Bust Value="0" />
 			<Outbreak Value="0" />
 			<Famine Value="0" />
@@ -153,23 +153,23 @@
 			<Drought Value="0" />
 			<Frontline Value="0" />
 			<affectsRoutePlotting Value="0" />
-			<War Value="1" />
-			<None Value="0" />
 			<Incursion Value="0" />
 			<Thargoid_Controlled Value="0" />
 			<Election Value="0" />
+			<None Value="0" />
+			<War Value="1" />
 			<NaturalDisaster Value="0" />
 			<Investment Value="0" />
 			<Lockdown Value="0" />
-			<CivilUnrest Value="0" />
 			<Thargoid_Harvest Value="0" />
+			<CivilUnrest Value="0" />
 		</minorFactionStatus>
 		<faction>
 			<affectsRoutePlotting Value="0" />
 			<Alliance Value="1" />
 			<Empire Value="1" />
-			<Federation Value="1" />
 			<None Value="0" />
+			<Federation Value="1" />
 			<Independent Value="1" />
 		</faction>
 	</VisibilityFlags>
@@ -184,9 +184,9 @@
 			<CHAT_system Value="2" />
 			<CHAT_group_wing_and_multicrew Value="2" />
 			<CHAT_group_squad Value="2" />
-			<CHAT_notifications Value="2" />
 			<COMMS_direct_messages Value="2" />
 			<COMMS_voice_messages Value="2" />
+			<CHAT_notifications Value="2" />
 			<CHAT_group_local Value="2" />
 			<CHAT_group_squad_ldr Value="2" />
 		</VisibleChannels>

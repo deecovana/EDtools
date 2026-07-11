@@ -22,7 +22,7 @@ edsm_apikeys = [
     "",
 ]
 fdev_apikeys = [
-    "57411003-251f-432c-b278-290b3fc1fbbc",
+    "3a19f479-a39a-4c88-a0d7-fd69a94fa660",
 ]
 prefsversion = 4
 output = 6161
@@ -51,7 +51,7 @@ edastro_send = 1
 edsm_out = 1
 inara_out = 1
 geometry = "+-3+1"
-querytime = 1783605184
+querytime = 1783174418
 inara_cmdrs = [
     "DEE.COVAN",
 ]
@@ -70,7 +70,7 @@ pioneer_overlay = true
 pioneer_overlay_color = "#cdd9e2"
 pioneer_overlay_anchor_x = 40
 pioneer_overlay_anchor_y = 320
-fleetcarrierquerytime = 1783608944
+fleetcarrierquerytime = 1783173773
 edraudiofeedbackvolume = "soft"
 hitsoverlayduration = "4"
 edremail = "dmitry.cheva@gmail.com"

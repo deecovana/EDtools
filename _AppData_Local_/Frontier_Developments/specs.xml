@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-16"?>
 <DxDiag>
 	<SystemInformation>
-		<Time>7/9/2026, 17:43:21</Time>
+		<Time>7/10/2026, 14:34:21</Time>
 		<MachineName>SLIM</MachineName>
 		<MachineId>{C7BD0E76-C9BA-4E23-B2E4-74F72C4BADDF}</MachineId>
 		<OperatingSystem>Windows 11 Home 64-bit (10.0, Build 26200) (26100.ge_release.240331-1435)</OperatingSystem>
@@ -13,7 +13,7 @@
 		<Processor>AMD Ryzen 7 7735HS with Radeon Graphics         (16 CPUs), ~3.2GHz</Processor>
 		<Memory>16384MB RAM</Memory>
 		<AvaliableOSMem>14020MB RAM</AvaliableOSMem>
-		<PageFile>14699MB used, 4907MB available</PageFile>
+		<PageFile>12567MB used, 8264MB available</PageFile>
 		<WindowsDir>C:\WINDOWS</WindowsDir>
 		<DirectXVersion>DirectX 12</DirectXVersion>
 		<DXSetupParameters>Not found</DXSetupParameters>
@@ -113,9 +113,9 @@
 			<WcgUserEnabled>0</WcgUserEnabled>
 			<ActiveColorMode>DISPLAYCONFIG_ADVANCED_COLOR_MODE_SDR</ActiveColorMode>
 			<MonitorMaxRes>Unknown</MonitorMaxRes>
-			<DriverName>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\atidx9loader64.dll,C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\amdxx64.dll,C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\amdxx64.dll,C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\amdxc64.dll</DriverName>
-			<DriverFileVersion>32.00.21043.10005</DriverFileVersion>
-			<DriverVersion>32.0.21043.10005</DriverVersion>
+			<DriverName>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\atidx9loader64.dll,C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\amdxx64.dll,C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\amdxx64.dll,C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\amdxc64.dll</DriverName>
+			<DriverFileVersion>32.00.21043.19003</DriverFileVersion>
+			<DriverVersion>32.0.21043.19003</DriverVersion>
 			<DriverLanguage>English</DriverLanguage>
 			<DDIVersion>12</DDIVersion>
 			<AdapterAttributes>HARDWARE_TYPE_GPU,D3D11_GRAPHICS,D3D12_GRAPHICS,D3D12_CORE_COMPUTE,D3D12_GENERIC_ML,D3D12_GENERIC_MEDIA</AdapterAttributes>
@@ -123,7 +123,7 @@
 			<DriverModel>WDDM 3.2</DriverModel>
 			<DriverBeta>0</DriverBeta>
 			<DriverDebug>0</DriverDebug>
-			<DriverDate>12.05.2026 3:00:00</DriverDate>
+			<DriverDate>26.06.2026 3:00:00</DriverDate>
 			<DriverSize>141840</DriverSize>
 			<DriverWHQLLogo>n/a</DriverWHQLLogo>
 			<WHQLDateStamp>n/a</WHQLDateStamp>
@@ -131,12 +131,12 @@
 			<MiniVDD>unknown</MiniVDD>
 			<MiniVDDDate>Unknown</MiniVDDDate>
 			<MiniVDDSize>0</MiniVDDSize>
-			<DeviceIdentifier>{D7B71EE2-55C1-11CF-0F53-964FA5C2ED35}</DeviceIdentifier>
+			<DeviceIdentifier>{D7B71EE2-55C1-11CF-213E-964FA5C2ED35}</DeviceIdentifier>
 			<VendorID>0x1002</VendorID>
 			<DeviceID>0x1681</DeviceID>
 			<SubSysID>0x3DA517AA</SubSysID>
 			<RevisionID>0x000A</RevisionID>
-			<DriverNodeStrongName>oem3.inf:cb0ae4146a0b3305:ati2mtag_Rembrandt:32.0.21043.10005:PCI\VEN_1002&amp;DEV_1681&amp;SUBSYS_3DA517AA&amp;REV_0A</DriverNodeStrongName>
+			<DriverNodeStrongName>oem10.inf:cb0ae4146a0b3305:ati2mtag_Rembrandt:32.0.21043.19003:PCI\VEN_1002&amp;DEV_1681&amp;SUBSYS_3DA517AA&amp;REV_0A</DriverNodeStrongName>
 			<RankOfInstalledDriver>00CF0000</RankOfInstalledDriver>
 			<AdapterFamily>Unknown</AdapterFamily>
 			<DXVAModes>Unknown</DXVAModes>
@@ -701,7 +701,7 @@
 	<LogicalDisks>
 		<LogicalDisk>
 			<DriveLetter>C:</DriveLetter>
-			<FreeSpace>151485743104</FreeSpace>
+			<FreeSpace>124744929280</FreeSpace>
 			<MaxSpace>511094812672</MaxSpace>
 			<FileSystem>NTFS</FileSystem>
 			<Model>WD PC SN5000S SDEPMSJ-512G-1101</Model>
@@ -1089,882 +1089,882 @@
 			<Drivers>
 				<Driver>
 					<Name>ativvaxy_vcn3.dat</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\ativvaxy_vcn3.dat</Path>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\ativvaxy_vcn3.dat</Path>
 					<Version></Version>
 					<Language></Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:05:28</Date>
-					<Size>580080</Size>
+					<Date>6/26/2026 18:57:36</Date>
+					<Size>580976</Size>
 				</Driver>
 				<Driver>
 					<Name>ativvaxy_vcn3_1.dat</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\ativvaxy_vcn3_1.dat</Path>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\ativvaxy_vcn3_1.dat</Path>
 					<Version></Version>
 					<Language></Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:05:28</Date>
-					<Size>572240</Size>
+					<Date>6/26/2026 18:57:36</Date>
+					<Size>573264</Size>
 				</Driver>
 				<Driver>
 					<Name>ativvaxy_vcn4.dat</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\ativvaxy_vcn4.dat</Path>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\ativvaxy_vcn4.dat</Path>
 					<Version></Version>
 					<Language></Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:05:28</Date>
+					<Date>6/26/2026 18:57:36</Date>
 					<Size>395408</Size>
 				</Driver>
 				<Driver>
 					<Name>featuresync.dll</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\featuresync.dll</Path>
-					<Version>32.00.21043.10005</Version>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\featuresync.dll</Path>
+					<Version>32.00.21043.19003</Version>
 					<Language>English</Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:58</Date>
-					<Size>1022992</Size>
+					<Date>6/26/2026 19:25:26</Date>
+					<Size>1022984</Size>
 				</Driver>
 				<Driver>
 					<Name>amdept.dat</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\amdept.dat</Path>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\amdept.dat</Path>
 					<Version></Version>
 					<Language></Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:05:16</Date>
+					<Date>6/26/2026 18:57:28</Date>
 					<Size>36575</Size>
 				</Driver>
 				<Driver>
 					<Name>ativvaxy_vcn4_0_a.dat</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\ativvaxy_vcn4_0_a.dat</Path>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\ativvaxy_vcn4_0_a.dat</Path>
 					<Version></Version>
 					<Language></Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:05:28</Date>
+					<Date>6/26/2026 18:57:36</Date>
 					<Size>395408</Size>
 				</Driver>
 				<Driver>
 					<Name>ativvaxy_vcn4_0_a_1.dat</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\ativvaxy_vcn4_0_a_1.dat</Path>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\ativvaxy_vcn4_0_a_1.dat</Path>
 					<Version></Version>
 					<Language></Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:05:28</Date>
+					<Date>6/26/2026 18:57:36</Date>
 					<Size>395408</Size>
 				</Driver>
 				<Driver>
 					<Name>ativvaxy_vcn5.dat</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\ativvaxy_vcn5.dat</Path>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\ativvaxy_vcn5.dat</Path>
 					<Version></Version>
 					<Language></Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:05:28</Date>
+					<Date>6/26/2026 18:57:36</Date>
 					<Size>441296</Size>
 				</Driver>
 				<Driver>
 					<Name>amdgcf.dat</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\amdgcf.dat</Path>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\amdgcf.dat</Path>
 					<Version></Version>
 					<Language></Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:05:16</Date>
+					<Date>6/26/2026 18:57:28</Date>
 					<Size>522</Size>
 				</Driver>
 				<Driver>
 					<Name>ativvaxy_vg.dat</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\ativvaxy_vg.dat</Path>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\ativvaxy_vg.dat</Path>
 					<Version></Version>
 					<Language></Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:05:28</Date>
-					<Size>572240</Size>
+					<Date>6/26/2026 18:57:36</Date>
+					<Size>573264</Size>
 				</Driver>
 				<Driver>
 					<Name>amdxcffx64.dll</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\amdxcffx64.dll</Path>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\amdxcffx64.dll</Path>
 					<Version>1.00.0000.40394</Version>
 					<Language>English</Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:28</Date>
+					<Date>6/26/2026 19:24:28</Date>
 					<Size>14509352</Size>
 				</Driver>
 				<Driver>
 					<Name>ativvaxy_cik.dat</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\ativvaxy_cik.dat</Path>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\ativvaxy_cik.dat</Path>
 					<Version></Version>
 					<Language></Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:05:28</Date>
+					<Date>6/26/2026 18:57:36</Date>
 					<Size>234676</Size>
 				</Driver>
 				<Driver>
 					<Name>ativvaxy_cik_nd.dat</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\ativvaxy_cik_nd.dat</Path>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\ativvaxy_cik_nd.dat</Path>
 					<Version></Version>
 					<Language></Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:05:28</Date>
+					<Date>6/26/2026 18:57:36</Date>
 					<Size>234416</Size>
 				</Driver>
 				<Driver>
 					<Name>amdihk64.dll</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\amdihk64.dll</Path>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\amdihk64.dll</Path>
 					<Version>2.00.0000.1788</Version>
 					<Language>English</Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:12</Date>
-					<Size>256800</Size>
+					<Date>6/26/2026 19:24:14</Date>
+					<Size>256808</Size>
 				</Driver>
 				<Driver>
 					<Name>amdihk32.dll</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\amdihk32.dll</Path>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\amdihk32.dll</Path>
 					<Version>2.00.0000.1788</Version>
 					<Language>English</Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:26</Date>
+					<Date>6/26/2026 19:24:48</Date>
 					<Size>199184</Size>
 				</Driver>
 				<Driver>
 					<Name>ativvaxy_nv.dat</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\ativvaxy_nv.dat</Path>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\ativvaxy_nv.dat</Path>
 					<Version></Version>
 					<Language></Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:05:28</Date>
-					<Size>404160</Size>
+					<Date>6/26/2026 18:57:36</Date>
+					<Size>404928</Size>
 				</Driver>
 				<Driver>
 					<Name>amdefctb.dat</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\amdefctb.dat</Path>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\amdefctb.dat</Path>
 					<Version></Version>
 					<Language></Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:05:16</Date>
+					<Date>6/26/2026 18:57:28</Date>
 					<Size>515238</Size>
 				</Driver>
 				<Driver>
 					<Name>amdxn32.dll</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\amdxn32.dll</Path>
-					<Version>32.00.21043.10005</Version>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\amdxn32.dll</Path>
+					<Version>32.00.21043.19003</Version>
 					<Language>English</Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:34</Date>
+					<Date>6/26/2026 19:24:58</Date>
 					<Size>36131344</Size>
 				</Driver>
 				<Driver>
 					<Name>amdxn64.dll</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\amdxn64.dll</Path>
-					<Version>32.00.21043.10005</Version>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\amdxn64.dll</Path>
+					<Version>32.00.21043.19003</Version>
 					<Language>English</Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:36</Date>
-					<Size>40729104</Size>
+					<Date>6/26/2026 19:25:00</Date>
+					<Size>40729608</Size>
 				</Driver>
 				<Driver>
 					<Name>atidx9loader32.dll</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\atidx9loader32.dll</Path>
-					<Version>32.00.21043.10005</Version>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\atidx9loader32.dll</Path>
+					<Version>32.00.21043.19003</Version>
 					<Language>English</Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:44</Date>
+					<Date>6/26/2026 19:25:12</Date>
 					<Size>118288</Size>
 				</Driver>
 				<Driver>
 					<Name>atidx9loader64.dll</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\atidx9loader64.dll</Path>
-					<Version>32.00.21043.10005</Version>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\atidx9loader64.dll</Path>
+					<Version>32.00.21043.19003</Version>
 					<Language>English</Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:44</Date>
+					<Date>6/26/2026 19:25:12</Date>
 					<Size>141840</Size>
 				</Driver>
 				<Driver>
 					<Name>ativvaxy_vg20.dat</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\ativvaxy_vg20.dat</Path>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\ativvaxy_vg20.dat</Path>
 					<Version></Version>
 					<Language></Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:05:28</Date>
+					<Date>6/26/2026 18:57:36</Date>
 					<Size>379200</Size>
 				</Driver>
 				<Driver>
 					<Name>ativvaxy_vg20_nd.dat</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\ativvaxy_vg20_nd.dat</Path>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\ativvaxy_vg20_nd.dat</Path>
 					<Version></Version>
 					<Language></Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:05:28</Date>
+					<Date>6/26/2026 18:57:36</Date>
 					<Size>382880</Size>
 				</Driver>
 				<Driver>
 					<Name>AMDADLXServ.exe</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\AMDADLXServ.exe</Path>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\AMDADLXServ.exe</Path>
 					<Version>1.00.0000.0000</Version>
 					<Language>English</Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:18</Date>
+					<Date>6/26/2026 19:24:40</Date>
 					<Size>183824</Size>
 				</Driver>
 				<Driver>
 					<Name>AMDADLXServPS.dll</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\AMDADLXServPS.dll</Path>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\AMDADLXServPS.dll</Path>
 					<Version>1.00.0000.0000</Version>
 					<Language>English</Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:20</Date>
-					<Size>114192</Size>
+					<Date>6/26/2026 19:24:40</Date>
+					<Size>114184</Size>
 				</Driver>
 				<Driver>
 					<Name>AMDADLXServPS32.dll</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\AMDADLXServPS32.dll</Path>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\AMDADLXServPS32.dll</Path>
 					<Version>1.00.0000.0000</Version>
 					<Language>English</Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:20</Date>
-					<Size>70664</Size>
+					<Date>6/26/2026 19:24:42</Date>
+					<Size>70672</Size>
 				</Driver>
 				<Driver>
 					<Name>amdave32.dll</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\amdave32.dll</Path>
-					<Version>32.00.21043.10005</Version>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\amdave32.dll</Path>
+					<Version>32.00.21043.19003</Version>
 					<Language>English</Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:06</Date>
+					<Date>6/26/2026 19:24:08</Date>
 					<Size>144704</Size>
 				</Driver>
 				<Driver>
 					<Name>amdave64.dll</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\amdave64.dll</Path>
-					<Version>32.00.21043.10005</Version>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\amdave64.dll</Path>
+					<Version>32.00.21043.19003</Version>
 					<Language>English</Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:06</Date>
+					<Date>6/26/2026 19:24:08</Date>
 					<Size>169344</Size>
 				</Driver>
 				<Driver>
 					<Name>ativvaxy_rv.dat</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\ativvaxy_rv.dat</Path>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\ativvaxy_rv.dat</Path>
 					<Version></Version>
 					<Language></Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:05:28</Date>
+					<Date>6/26/2026 18:57:36</Date>
 					<Size>366304</Size>
 				</Driver>
 				<Driver>
 					<Name>ativvaxy_gl_nd.dat</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\ativvaxy_gl_nd.dat</Path>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\ativvaxy_gl_nd.dat</Path>
 					<Version></Version>
 					<Language></Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:05:28</Date>
+					<Date>6/26/2026 18:57:36</Date>
 					<Size>380192</Size>
 				</Driver>
 				<Driver>
 					<Name>amduve64.dll</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\amduve64.dll</Path>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\amduve64.dll</Path>
 					<Version>18.04.0006.0000</Version>
 					<Language>English</Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:20</Date>
+					<Date>6/26/2026 19:24:20</Date>
 					<Size>201664</Size>
 				</Driver>
 				<Driver>
 					<Name>amduve32.dll</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\amduve32.dll</Path>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\amduve32.dll</Path>
 					<Version>18.04.0006.0000</Version>
 					<Language>English</Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:20</Date>
+					<Date>6/26/2026 19:24:20</Date>
 					<Size>168184</Size>
 				</Driver>
 				<Driver>
 					<Name>amfrtdrv32.dll</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\amfrtdrv32.dll</Path>
-					<Version>32.00.21043.10005</Version>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\amfrtdrv32.dll</Path>
+					<Version>32.00.21043.19003</Version>
 					<Language>English</Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:40</Date>
+					<Date>6/26/2026 19:25:06</Date>
 					<Size>30793744</Size>
 				</Driver>
 				<Driver>
 					<Name>amfrtdrv64.dll</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\amfrtdrv64.dll</Path>
-					<Version>32.00.21043.10005</Version>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\amfrtdrv64.dll</Path>
+					<Version>32.00.21043.19003</Version>
 					<Language>English</Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:42</Date>
+					<Date>6/26/2026 19:25:08</Date>
 					<Size>31930896</Size>
 				</Driver>
 				<Driver>
 					<Name>AMDh265Enc32.dll</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\AMDh265Enc32.dll</Path>
-					<Version>32.00.21043.10005</Version>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\AMDh265Enc32.dll</Path>
+					<Version>32.00.21043.19003</Version>
 					<Language>English</Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:10</Date>
-					<Size>2024624</Size>
+					<Date>6/26/2026 19:24:12</Date>
+					<Size>2024616</Size>
 				</Driver>
 				<Driver>
 					<Name>AMDh265Enc64.dll</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\AMDh265Enc64.dll</Path>
-					<Version>32.00.21043.10005</Version>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\AMDh265Enc64.dll</Path>
+					<Version>32.00.21043.19003</Version>
 					<Language>English</Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:10</Date>
+					<Date>6/26/2026 19:24:12</Date>
 					<Size>2143448</Size>
 				</Driver>
 				<Driver>
 					<Name>ativvaxy_stn_nd.dat</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\ativvaxy_stn_nd.dat</Path>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\ativvaxy_stn_nd.dat</Path>
 					<Version></Version>
 					<Language></Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:05:28</Date>
+					<Date>6/26/2026 18:57:36</Date>
 					<Size>278432</Size>
 				</Driver>
 				<Driver>
 					<Name>amdvlk32.dll</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\amdvlk32.dll</Path>
-					<Version>32.00.21043.10005</Version>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\amdvlk32.dll</Path>
+					<Version>32.00.21043.19003</Version>
 					<Language>English</Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:32</Date>
-					<Size>88544784</Size>
+					<Date>6/26/2026 19:24:56</Date>
+					<Size>88535056</Size>
 				</Driver>
 				<Driver>
 					<Name>amdvlk64.dll</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\amdvlk64.dll</Path>
-					<Version>32.00.21043.10005</Version>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\amdvlk64.dll</Path>
+					<Version>32.00.21043.19003</Version>
 					<Language>English</Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:34</Date>
-					<Size>102731280</Size>
+					<Date>6/26/2026 19:24:58</Date>
+					<Size>102722056</Size>
 				</Driver>
 				<Driver>
 					<Name>amd-vulkan32.json</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\amd-vulkan32.json</Path>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\amd-vulkan32.json</Path>
 					<Version></Version>
 					<Language></Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:05:16</Date>
+					<Date>6/26/2026 18:57:26</Date>
 					<Size>703</Size>
 				</Driver>
 				<Driver>
 					<Name>amd-vulkan64.json</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\amd-vulkan64.json</Path>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\amd-vulkan64.json</Path>
 					<Version></Version>
 					<Language></Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:05:16</Date>
+					<Date>6/26/2026 18:57:26</Date>
 					<Size>703</Size>
 				</Driver>
 				<Driver>
 					<Name>amdvlk_nexus.cab</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\amdvlk_nexus.cab</Path>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\amdvlk_nexus.cab</Path>
 					<Version></Version>
 					<Language></Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:05:24</Date>
-					<Size>71504775</Size>
+					<Date>6/26/2026 18:57:34</Date>
+					<Size>71502098</Size>
 				</Driver>
 				<Driver>
 					<Name>ativvaxy_el_nd.dat</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\ativvaxy_el_nd.dat</Path>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\ativvaxy_el_nd.dat</Path>
 					<Version></Version>
 					<Language></Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:05:28</Date>
+					<Date>6/26/2026 18:57:36</Date>
 					<Size>376224</Size>
 				</Driver>
 				<Driver>
 					<Name>amdicdxx.dat</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\amdicdxx.dat</Path>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\amdicdxx.dat</Path>
 					<Version></Version>
 					<Language></Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:05:16</Date>
+					<Date>6/26/2026 18:57:28</Date>
 					<Size>1657118</Size>
 				</Driver>
 				<Driver>
 					<Name>atiicdxx.dat</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\atiicdxx.dat</Path>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\atiicdxx.dat</Path>
 					<Version></Version>
 					<Language></Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:05:26</Date>
+					<Date>6/26/2026 18:57:36</Date>
 					<Size>737410</Size>
 				</Driver>
 				<Driver>
 					<Name>ativvaxy_FJ.dat</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\ativvaxy_FJ.dat</Path>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\ativvaxy_FJ.dat</Path>
 					<Version></Version>
 					<Language></Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:05:28</Date>
+					<Date>6/26/2026 18:57:36</Date>
 					<Size>268244</Size>
 				</Driver>
 				<Driver>
 					<Name>ativvaxy_FJ_nd.dat</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\ativvaxy_FJ_nd.dat</Path>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\ativvaxy_FJ_nd.dat</Path>
 					<Version></Version>
 					<Language></Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:05:28</Date>
+					<Date>6/26/2026 18:57:36</Date>
 					<Size>267984</Size>
 				</Driver>
 				<Driver>
 					<Name>amdxc32.dll</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\amdxc32.dll</Path>
-					<Version>32.00.21043.10005</Version>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\amdxc32.dll</Path>
+					<Version>32.00.21043.19003</Version>
 					<Language>English</Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:22</Date>
+					<Date>6/26/2026 19:24:24</Date>
 					<Size>73948760</Size>
 				</Driver>
 				<Driver>
 					<Name>amdxc64.dll</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\amdxc64.dll</Path>
-					<Version>32.00.21043.10005</Version>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\amdxc64.dll</Path>
+					<Version>32.00.21043.19003</Version>
 					<Language>English</Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:26</Date>
-					<Size>82420848</Size>
+					<Date>6/26/2026 19:24:26</Date>
+					<Size>82421352</Size>
 				</Driver>
 				<Driver>
 					<Name>ativvaxy_cz_nd.dat</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\ativvaxy_cz_nd.dat</Path>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\ativvaxy_cz_nd.dat</Path>
 					<Version></Version>
 					<Language></Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:05:28</Date>
+					<Date>6/26/2026 18:57:36</Date>
 					<Size>272928</Size>
 				</Driver>
 				<Driver>
 					<Name>AMDhwDecoder_32.dll</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\AMDhwDecoder_32.dll</Path>
-					<Version>32.00.21043.10005</Version>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\AMDhwDecoder_32.dll</Path>
+					<Version>32.00.21043.19003</Version>
 					<Language>English</Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:24</Date>
+					<Date>6/26/2026 19:24:46</Date>
 					<Size>251920</Size>
 				</Driver>
 				<Driver>
 					<Name>AMDhwDecoder_64.dll</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\AMDhwDecoder_64.dll</Path>
-					<Version>32.00.21043.10005</Version>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\AMDhwDecoder_64.dll</Path>
+					<Version>32.00.21043.19003</Version>
 					<Language>English</Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:24</Date>
+					<Date>6/26/2026 19:24:46</Date>
 					<Size>306192</Size>
 				</Driver>
 				<Driver>
 					<Name>AMDh264Enc32.dll</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\AMDh264Enc32.dll</Path>
-					<Version>32.00.21043.10005</Version>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\AMDh264Enc32.dll</Path>
+					<Version>32.00.21043.19003</Version>
 					<Language>English</Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:08</Date>
+					<Date>6/26/2026 19:24:10</Date>
 					<Size>2050584</Size>
 				</Driver>
 				<Driver>
 					<Name>AMDh264Enc64.dll</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\AMDh264Enc64.dll</Path>
-					<Version>32.00.21043.10005</Version>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\AMDh264Enc64.dll</Path>
+					<Version>32.00.21043.19003</Version>
 					<Language>English</Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:08</Date>
-					<Size>2167360</Size>
+					<Date>6/26/2026 19:24:10</Date>
+					<Size>2167352</Size>
 				</Driver>
 				<Driver>
 					<Name>ativvaxy_vi.dat</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\ativvaxy_vi.dat</Path>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\ativvaxy_vi.dat</Path>
 					<Version></Version>
 					<Language></Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:05:28</Date>
+					<Date>6/26/2026 18:57:36</Date>
 					<Size>325188</Size>
 				</Driver>
 				<Driver>
 					<Name>ativvaxy_vi_nd.dat</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\ativvaxy_vi_nd.dat</Path>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\ativvaxy_vi_nd.dat</Path>
 					<Version></Version>
 					<Language></Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:05:28</Date>
+					<Date>6/26/2026 18:57:36</Date>
 					<Size>324928</Size>
 				</Driver>
 				<Driver>
 					<Name>amdhdl32.dll</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\amdhdl32.dll</Path>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\amdhdl32.dll</Path>
 					<Version></Version>
 					<Language></Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:12</Date>
+					<Date>6/26/2026 19:24:12</Date>
 					<Size>122328</Size>
 				</Driver>
 				<Driver>
 					<Name>amdhdl64.dll</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\amdhdl64.dll</Path>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\amdhdl64.dll</Path>
 					<Version></Version>
 					<Language></Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:12</Date>
+					<Date>6/26/2026 19:24:14</Date>
 					<Size>147408</Size>
 				</Driver>
 				<Driver>
 					<Name>atiesrxx.exe</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\atiesrxx.exe</Path>
-					<Version>32.00.21043.10005</Version>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\atiesrxx.exe</Path>
+					<Version>32.00.21043.19003</Version>
 					<Language>English</Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:48</Date>
+					<Date>6/26/2026 19:25:16</Date>
 					<Size>672784</Size>
 				</Driver>
 				<Driver>
 					<Name>atiglpxx.dll</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\atiglpxx.dll</Path>
-					<Version>32.00.21043.10005</Version>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\atiglpxx.dll</Path>
+					<Version>32.00.21043.19003</Version>
 					<Language>English</Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:48</Date>
+					<Date>6/26/2026 19:25:16</Date>
 					<Size>166920</Size>
 				</Driver>
 				<Driver>
 					<Name>atig6pxx.dll</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\atig6pxx.dll</Path>
-					<Version>32.00.21043.10005</Version>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\atig6pxx.dll</Path>
+					<Version>32.00.21043.19003</Version>
 					<Language>English</Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:48</Date>
+					<Date>6/26/2026 19:25:16</Date>
 					<Size>201232</Size>
 				</Driver>
 				<Driver>
 					<Name>atioglxx.dll</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\atioglxx.dll</Path>
-					<Version>32.00.21043.10005</Version>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\atioglxx.dll</Path>
+					<Version>32.00.21043.19003</Version>
 					<Language>English</Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:52</Date>
-					<Size>54843408</Size>
+					<Date>6/26/2026 19:25:20</Date>
+					<Size>54843920</Size>
 				</Driver>
 				<Driver>
 					<Name>atio6axx.dll</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\atio6axx.dll</Path>
-					<Version>32.00.21043.10005</Version>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\atio6axx.dll</Path>
+					<Version>32.00.21043.19003</Version>
 					<Language>English</Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:50</Date>
-					<Size>64289296</Size>
+					<Date>6/26/2026 19:25:18</Date>
+					<Size>64289808</Size>
 				</Driver>
 				<Driver>
 					<Name>amdxx64.dll</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\amdxx64.dll</Path>
-					<Version>32.00.21043.10005</Version>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\amdxx64.dll</Path>
+					<Version>32.00.21043.19003</Version>
 					<Language>English</Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:32</Date>
-					<Size>50423688</Size>
+					<Date>6/26/2026 19:24:34</Date>
+					<Size>50424200</Size>
 				</Driver>
 				<Driver>
 					<Name>amdxx32.dll</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\amdxx32.dll</Path>
-					<Version>32.00.21043.10005</Version>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\amdxx32.dll</Path>
+					<Version>32.00.21043.19003</Version>
 					<Language>English</Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:30</Date>
+					<Date>6/26/2026 19:24:32</Date>
 					<Size>44805080</Size>
 				</Driver>
 				<Driver>
 					<Name>amdenc64.dll</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\amdenc64.dll</Path>
-					<Version>32.00.21043.10005</Version>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\amdenc64.dll</Path>
+					<Version>32.00.21043.19003</Version>
 					<Language>English</Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:08</Date>
+					<Date>6/26/2026 19:24:10</Date>
 					<Size>1462520</Size>
 				</Driver>
 				<Driver>
 					<Name>amdenc32.dll</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\amdenc32.dll</Path>
-					<Version>32.00.21043.10005</Version>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\amdenc32.dll</Path>
+					<Version>32.00.21043.19003</Version>
 					<Language>English</Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:22</Date>
-					<Size>1244176</Size>
+					<Date>6/26/2026 19:24:44</Date>
+					<Size>1244168</Size>
 				</Driver>
 				<Driver>
 					<Name>libamdenc64.so</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\libamdenc64.so</Path>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\libamdenc64.so</Path>
 					<Version></Version>
 					<Language></Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:05:30</Date>
+					<Date>6/26/2026 18:57:38</Date>
 					<Size>1653616</Size>
 				</Driver>
 				<Driver>
 					<Name>amf-pa-ml32.dll</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\amf-pa-ml32.dll</Path>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\amf-pa-ml32.dll</Path>
 					<Version>1.04.0037.0000</Version>
 					<Language>English</Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:38</Date>
+					<Date>6/26/2026 19:25:04</Date>
 					<Size>332304</Size>
 				</Driver>
 				<Driver>
 					<Name>amf-pa-ml64.dll</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\amf-pa-ml64.dll</Path>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\amf-pa-ml64.dll</Path>
 					<Version>1.04.0037.0000</Version>
 					<Language>English</Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:38</Date>
+					<Date>6/26/2026 19:25:04</Date>
 					<Size>370192</Size>
 				</Driver>
 				<Driver>
 					<Name>H9_EASU_sx1_10_sy1_10.bin</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\H9_EASU_sx1_10_sy1_10.bin</Path>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\H9_EASU_sx1_10_sy1_10.bin</Path>
 					<Version></Version>
 					<Language></Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:05:30</Date>
+					<Date>6/26/2026 18:57:38</Date>
 					<Size>373296</Size>
 				</Driver>
 				<Driver>
 					<Name>H9_EASU_sx1_20_sy1_20.bin</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\H9_EASU_sx1_20_sy1_20.bin</Path>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\H9_EASU_sx1_20_sy1_20.bin</Path>
 					<Version></Version>
 					<Language></Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:05:30</Date>
+					<Date>6/26/2026 18:57:38</Date>
 					<Size>373296</Size>
 				</Driver>
 				<Driver>
 					<Name>H9_EASU_sx1_30_sy1_30.bin</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\H9_EASU_sx1_30_sy1_30.bin</Path>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\H9_EASU_sx1_30_sy1_30.bin</Path>
 					<Version></Version>
 					<Language></Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:05:30</Date>
+					<Date>6/26/2026 18:57:38</Date>
 					<Size>373296</Size>
 				</Driver>
 				<Driver>
 					<Name>H9_EASU_sx1_40_sy1_40.bin</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\H9_EASU_sx1_40_sy1_40.bin</Path>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\H9_EASU_sx1_40_sy1_40.bin</Path>
 					<Version></Version>
 					<Language></Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:05:30</Date>
+					<Date>6/26/2026 18:57:38</Date>
 					<Size>373296</Size>
 				</Driver>
 				<Driver>
 					<Name>H9_EASU_sx1_50_sy1_50.bin</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\H9_EASU_sx1_50_sy1_50.bin</Path>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\H9_EASU_sx1_50_sy1_50.bin</Path>
 					<Version></Version>
 					<Language></Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:05:30</Date>
+					<Date>6/26/2026 18:57:38</Date>
 					<Size>373296</Size>
 				</Driver>
 				<Driver>
 					<Name>H9_EASU_sx1_60_sy1_60.bin</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\H9_EASU_sx1_60_sy1_60.bin</Path>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\H9_EASU_sx1_60_sy1_60.bin</Path>
 					<Version></Version>
 					<Language></Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:05:30</Date>
+					<Date>6/26/2026 18:57:38</Date>
 					<Size>373296</Size>
 				</Driver>
 				<Driver>
 					<Name>H9_EASU_sx1_70_sy1_70.bin</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\H9_EASU_sx1_70_sy1_70.bin</Path>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\H9_EASU_sx1_70_sy1_70.bin</Path>
 					<Version></Version>
 					<Language></Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:05:30</Date>
+					<Date>6/26/2026 18:57:38</Date>
 					<Size>373296</Size>
 				</Driver>
 				<Driver>
 					<Name>H9_EASU_sx1_80_sy1_80.bin</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\H9_EASU_sx1_80_sy1_80.bin</Path>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\H9_EASU_sx1_80_sy1_80.bin</Path>
 					<Version></Version>
 					<Language></Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:05:30</Date>
+					<Date>6/26/2026 18:57:38</Date>
 					<Size>373296</Size>
 				</Driver>
 				<Driver>
 					<Name>H9_EASU_sx1_90_sy1_90.bin</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\H9_EASU_sx1_90_sy1_90.bin</Path>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\H9_EASU_sx1_90_sy1_90.bin</Path>
 					<Version></Version>
 					<Language></Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:05:30</Date>
+					<Date>6/26/2026 18:57:38</Date>
 					<Size>373296</Size>
 				</Driver>
 				<Driver>
 					<Name>H9_EASU_sx2_00_sy2_00.bin</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\H9_EASU_sx2_00_sy2_00.bin</Path>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\H9_EASU_sx2_00_sy2_00.bin</Path>
 					<Version></Version>
 					<Language></Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:05:30</Date>
+					<Date>6/26/2026 18:57:38</Date>
 					<Size>373296</Size>
 				</Driver>
 				<Driver>
 					<Name>amd_opencl32.dll</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\amd_opencl32.dll</Path>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\amd_opencl32.dll</Path>
 					<Version>3.00.0006.0000</Version>
 					<Language>English</Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:36</Date>
+					<Date>6/26/2026 19:25:02</Date>
 					<Size>212496</Size>
 				</Driver>
 				<Driver>
 					<Name>amd_opencl64.dll</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\amd_opencl64.dll</Path>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\amd_opencl64.dll</Path>
 					<Version>3.00.0006.0000</Version>
 					<Language>English</Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:36</Date>
-					<Size>247312</Size>
+					<Date>6/26/2026 19:25:02</Date>
+					<Size>247304</Size>
 				</Driver>
 				<Driver>
 					<Name>amdn1b64.dll</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\amdn1b64.dll</Path>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\amdn1b64.dll</Path>
 					<Version>8.17.0010.1097</Version>
 					<Language>English</Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:16</Date>
-					<Size>20250376</Size>
+					<Date>6/26/2026 19:24:18</Date>
+					<Size>20250368</Size>
 				</Driver>
 				<Driver>
 					<Name>amdn1b32.dll</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\amdn1b32.dll</Path>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\amdn1b32.dll</Path>
 					<Version>8.17.0010.1097</Version>
 					<Language>English</Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:14</Date>
+					<Date>6/26/2026 19:24:16</Date>
 					<Size>17082472</Size>
 				</Driver>
 				<Driver>
 					<Name>AMDInstallManager.msi</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\AMDInstallManager.msi</Path>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\AMDInstallManager.msi</Path>
 					<Version></Version>
 					<Language></Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:05:16</Date>
-					<Size>27844608</Size>
+					<Date>6/26/2026 18:57:28</Date>
+					<Size>27820032</Size>
 				</Driver>
 				<Driver>
 					<Name>regamdcomp.exe</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\regamdcomp.exe</Path>
-					<Version>32.00.21043.10005</Version>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\regamdcomp.exe</Path>
+					<Version>32.00.21043.19003</Version>
 					<Language>English</Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:32:00</Date>
+					<Date>6/26/2026 19:25:30</Date>
 					<Size>301584</Size>
 				</Driver>
 				<Driver>
 					<Name>amdkmdag.sys</Name>
-					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0200690.inf_amd64_68df361886f7d87c\B026020\amdkmdag.sys</Path>
-					<Version>32.00.21043.10005</Version>
+					<Path>C:\WINDOWS\System32\DriverStore\FileRepository\u0202073.inf_amd64_3c7f18bc022bf004\B026184\amdkmdag.sys</Path>
+					<Version>32.00.21043.19003</Version>
 					<Language>English</Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:26</Date>
-					<Size>102213136</Size>
+					<Date>6/26/2026 19:24:50</Date>
+					<Size>102516240</Size>
 				</Driver>
 				<Driver>
 					<Name>atisamu64.dll</Name>
 					<Path>C:\WINDOWS\system32\atisamu64.dll</Path>
-					<Version>32.00.21043.10005</Version>
+					<Version>32.00.21043.19003</Version>
 					<Language>English</Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:52</Date>
+					<Date>6/26/2026 19:25:22</Date>
 					<Size>190992</Size>
 				</Driver>
 				<Driver>
@@ -1990,21 +1990,21 @@
 				<Driver>
 					<Name>atimpc64.dll</Name>
 					<Path>C:\WINDOWS\system32\atimpc64.dll</Path>
-					<Version>32.00.21043.10005</Version>
+					<Version>32.00.21043.19003</Version>
 					<Language>English</Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:38</Date>
+					<Date>6/26/2026 19:24:38</Date>
 					<Size>158960</Size>
 				</Driver>
 				<Driver>
 					<Name>atimuixx.dll</Name>
 					<Path>C:\WINDOWS\system32\atimuixx.dll</Path>
-					<Version>32.00.21043.10005</Version>
+					<Version>32.00.21043.19003</Version>
 					<Language>English</Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:50</Date>
+					<Date>6/26/2026 19:25:18</Date>
 					<Size>200720</Size>
 				</Driver>
 				<Driver>
@@ -2014,58 +2014,58 @@
 					<Language></Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:56</Date>
-					<Size>526352</Size>
+					<Date>6/26/2026 19:25:26</Date>
+					<Size>526344</Size>
 				</Driver>
 				<Driver>
 					<Name>atiadlxx.dll</Name>
 					<Path>C:\WINDOWS\system32\atiadlxx.dll</Path>
-					<Version>32.00.21043.10005</Version>
+					<Version>32.00.21043.19003</Version>
 					<Language>English</Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:42</Date>
+					<Date>6/26/2026 19:25:08</Date>
 					<Size>2194960</Size>
 				</Driver>
 				<Driver>
 					<Name>amdadlx64.dll</Name>
 					<Path>C:\WINDOWS\system32\amdadlx64.dll</Path>
-					<Version>32.00.21043.10005</Version>
+					<Version>32.00.21043.19003</Version>
 					<Language>English</Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:18</Date>
+					<Date>6/26/2026 19:24:38</Date>
 					<Size>5222416</Size>
 				</Driver>
 				<Driver>
 					<Name>amdave64.dll</Name>
 					<Path>C:\WINDOWS\system32\amdave64.dll</Path>
-					<Version>32.00.21043.10005</Version>
+					<Version>32.00.21043.19003</Version>
 					<Language>English</Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:06</Date>
+					<Date>6/26/2026 19:24:08</Date>
 					<Size>169344</Size>
 				</Driver>
 				<Driver>
 					<Name>amdpcom64.dll</Name>
 					<Path>C:\WINDOWS\system32\amdpcom64.dll</Path>
-					<Version>32.00.21043.10005</Version>
+					<Version>32.00.21043.19003</Version>
 					<Language>English</Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:18</Date>
+					<Date>6/26/2026 19:24:18</Date>
 					<Size>158960</Size>
 				</Driver>
 				<Driver>
 					<Name>amfrt64.dll</Name>
 					<Path>C:\WINDOWS\system32\amfrt64.dll</Path>
-					<Version>32.00.21043.10005</Version>
+					<Version>32.00.21043.19003</Version>
 					<Language>English</Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:40</Date>
-					<Size>147472</Size>
+					<Date>6/26/2026 19:25:06</Date>
+					<Size>147464</Size>
 				</Driver>
 				<Driver>
 					<Name>AMDKernelEvents.man</Name>
@@ -2084,7 +2084,7 @@
 					<Language>English</Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:32:02</Date>
+					<Date>6/26/2026 19:25:32</Date>
 					<Size>1571440</Size>
 				</Driver>
 				<Driver>
@@ -2094,7 +2094,7 @@
 					<Language>English</Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:32:02</Date>
+					<Date>6/26/2026 19:25:32</Date>
 					<Size>1571440</Size>
 				</Driver>
 				<Driver>
@@ -2104,8 +2104,8 @@
 					<Language>English</Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:32:04</Date>
-					<Size>2413584</Size>
+					<Date>6/26/2026 19:25:34</Date>
+					<Size>2413576</Size>
 				</Driver>
 				<Driver>
 					<Name>vulkaninfo-1-999-0-0-0.exe</Name>
@@ -2114,8 +2114,8 @@
 					<Language>English</Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:32:04</Date>
-					<Size>2413584</Size>
+					<Date>6/26/2026 19:25:34</Date>
+					<Size>2413576</Size>
 				</Driver>
 				<Driver>
 					<Name>GameManager64.dll</Name>
@@ -2124,8 +2124,8 @@
 					<Language></Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:58</Date>
-					<Size>631304</Size>
+					<Date>6/26/2026 19:25:28</Date>
+					<Size>631312</Size>
 				</Driver>
 				<Driver>
 					<Name>amdmiracast.dll</Name>
@@ -2134,8 +2134,8 @@
 					<Language></Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:14</Date>
-					<Size>541256</Size>
+					<Date>6/26/2026 19:24:16</Date>
+					<Size>541248</Size>
 				</Driver>
 				<Driver>
 					<Name>amdlvr64.dll</Name>
@@ -2144,7 +2144,7 @@
 					<Language>English</Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:28</Date>
+					<Date>6/26/2026 19:24:52</Date>
 					<Size>1184272</Size>
 				</Driver>
 				<Driver>
@@ -2154,27 +2154,27 @@
 					<Language></Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:28</Date>
-					<Size>142728</Size>
+					<Date>6/26/2026 19:24:30</Date>
+					<Size>142736</Size>
 				</Driver>
 				<Driver>
 					<Name>amf-mft-mjpeg-decoder64.dll</Name>
 					<Path>C:\WINDOWS\system32\amf-mft-mjpeg-decoder64.dll</Path>
-					<Version>32.00.21043.10005</Version>
+					<Version>32.00.21043.19003</Version>
 					<Language>English</Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:34</Date>
-					<Size>1724600</Size>
+					<Date>6/26/2026 19:24:34</Date>
+					<Size>1724592</Size>
 				</Driver>
 				<Driver>
 					<Name>detoured.dll</Name>
 					<Path>C:\WINDOWS\system32\detoured.dll</Path>
-					<Version>32.00.21043.10005</Version>
+					<Version>32.00.21043.19003</Version>
 					<Language>English</Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:40</Date>
+					<Date>6/26/2026 19:24:38</Date>
 					<Size>14208</Size>
 				</Driver>
 				<Driver>
@@ -2184,8 +2184,8 @@
 					<Language></Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:24</Date>
-					<Size>592392</Size>
+					<Date>6/26/2026 19:24:46</Date>
+					<Size>592400</Size>
 				</Driver>
 				<Driver>
 					<Name>atieah64.exe</Name>
@@ -2194,18 +2194,18 @@
 					<Language></Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:46</Date>
+					<Date>6/26/2026 19:25:14</Date>
 					<Size>559632</Size>
 				</Driver>
 				<Driver>
 					<Name>atieclxx.exe</Name>
 					<Path>C:\WINDOWS\system32\atieclxx.exe</Path>
-					<Version>32.00.21043.10005</Version>
+					<Version>32.00.21043.19003</Version>
 					<Language>English</Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:46</Date>
-					<Size>1069584</Size>
+					<Date>6/26/2026 19:25:14</Date>
+					<Size>1069576</Size>
 				</Driver>
 				<Driver>
 					<Name>atiapfxx.blb</Name>
@@ -2214,7 +2214,7 @@
 					<Language></Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:05:26</Date>
+					<Date>6/26/2026 18:57:36</Date>
 					<Size>548672</Size>
 				</Driver>
 				<Driver>
@@ -2224,17 +2224,17 @@
 					<Language>English</Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:36</Date>
+					<Date>6/26/2026 19:24:36</Date>
 					<Size>129432</Size>
 				</Driver>
 				<Driver>
 					<Name>atidemgy.dll</Name>
 					<Path>C:\WINDOWS\system32\atidemgy.dll</Path>
-					<Version>4.05.9622.40548</Version>
+					<Version>4.05.9663.27409</Version>
 					<Language>Russian</Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:44</Date>
+					<Date>6/26/2026 19:25:10</Date>
 					<Size>473616</Size>
 				</Driver>
 				<Driver>
@@ -2244,8 +2244,8 @@
 					<Language></Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:05:26</Date>
-					<Size>126258112</Size>
+					<Date>6/26/2026 18:57:36</Date>
+					<Size>125655976</Size>
 				</Driver>
 				<Driver>
 					<Name>amdsasrv64.dll</Name>
@@ -2254,7 +2254,7 @@
 					<Language>English</Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:30</Date>
+					<Date>6/26/2026 19:24:52</Date>
 					<Size>1329168</Size>
 				</Driver>
 				<Driver>
@@ -2264,18 +2264,18 @@
 					<Language>English</Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:18</Date>
+					<Date>6/26/2026 19:24:20</Date>
 					<Size>606472</Size>
 				</Driver>
 				<Driver>
 					<Name>atisamu32.dll</Name>
 					<Path>C:\WINDOWS\SysWOW64\atisamu32.dll</Path>
-					<Version>32.00.21043.10005</Version>
+					<Version>32.00.21043.19003</Version>
 					<Language>English</Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:52</Date>
-					<Size>150544</Size>
+					<Date>6/26/2026 19:25:20</Date>
+					<Size>150536</Size>
 				</Driver>
 				<Driver>
 					<Name>ativvsva.dat</Name>
@@ -2300,71 +2300,71 @@
 				<Driver>
 					<Name>atimpc32.dll</Name>
 					<Path>C:\WINDOWS\SysWOW64\atimpc32.dll</Path>
-					<Version>32.00.21043.10005</Version>
+					<Version>32.00.21043.19003</Version>
 					<Language>English</Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:36</Date>
-					<Size>131256</Size>
+					<Date>6/26/2026 19:24:36</Date>
+					<Size>131248</Size>
 				</Driver>
 				<Driver>
 					<Name>atiadlxx.dll</Name>
 					<Path>C:\WINDOWS\SysWOW64\atiadlxx.dll</Path>
-					<Version>32.00.21043.10005</Version>
+					<Version>32.00.21043.19003</Version>
 					<Language>English</Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:42</Date>
+					<Date>6/26/2026 19:25:10</Date>
 					<Size>1832464</Size>
 				</Driver>
 				<Driver>
 					<Name>atiadlxy.dll</Name>
 					<Path>C:\WINDOWS\SysWOW64\atiadlxy.dll</Path>
-					<Version>32.00.21043.10005</Version>
+					<Version>32.00.21043.19003</Version>
 					<Language>English</Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:42</Date>
+					<Date>6/26/2026 19:25:10</Date>
 					<Size>1832464</Size>
 				</Driver>
 				<Driver>
 					<Name>amdadlx32.dll</Name>
 					<Path>C:\WINDOWS\SysWOW64\amdadlx32.dll</Path>
-					<Version>32.00.21043.10005</Version>
+					<Version>32.00.21043.19003</Version>
 					<Language>English</Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:18</Date>
+					<Date>6/26/2026 19:24:38</Date>
 					<Size>5009424</Size>
 				</Driver>
 				<Driver>
 					<Name>amdave32.dll</Name>
 					<Path>C:\WINDOWS\SysWOW64\amdave32.dll</Path>
-					<Version>32.00.21043.10005</Version>
+					<Version>32.00.21043.19003</Version>
 					<Language>English</Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:06</Date>
+					<Date>6/26/2026 19:24:08</Date>
 					<Size>144704</Size>
 				</Driver>
 				<Driver>
 					<Name>amdpcom32.dll</Name>
 					<Path>C:\WINDOWS\SysWOW64\amdpcom32.dll</Path>
-					<Version>32.00.21043.10005</Version>
+					<Version>32.00.21043.19003</Version>
 					<Language>English</Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:16</Date>
-					<Size>131256</Size>
+					<Date>6/26/2026 19:24:18</Date>
+					<Size>131248</Size>
 				</Driver>
 				<Driver>
 					<Name>amfrt32.dll</Name>
 					<Path>C:\WINDOWS\SysWOW64\amfrt32.dll</Path>
-					<Version>32.00.21043.10005</Version>
+					<Version>32.00.21043.19003</Version>
 					<Language>English</Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:38</Date>
+					<Date>6/26/2026 19:25:04</Date>
 					<Size>122384</Size>
 				</Driver>
 				<Driver>
@@ -2374,7 +2374,7 @@
 					<Language>English</Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:32:02</Date>
+					<Date>6/26/2026 19:25:32</Date>
 					<Size>1385072</Size>
 				</Driver>
 				<Driver>
@@ -2384,7 +2384,7 @@
 					<Language>English</Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:32:02</Date>
+					<Date>6/26/2026 19:25:32</Date>
 					<Size>1385072</Size>
 				</Driver>
 				<Driver>
@@ -2394,8 +2394,8 @@
 					<Language>English</Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:32:02</Date>
-					<Size>1918984</Size>
+					<Date>6/26/2026 19:25:34</Date>
+					<Size>1918992</Size>
 				</Driver>
 				<Driver>
 					<Name>vulkaninfo-1-999-0-0-0.exe</Name>
@@ -2404,8 +2404,8 @@
 					<Language>English</Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:32:02</Date>
-					<Size>1918984</Size>
+					<Date>6/26/2026 19:25:34</Date>
+					<Size>1918992</Size>
 				</Driver>
 				<Driver>
 					<Name>GameManager32.dll</Name>
@@ -2414,8 +2414,8 @@
 					<Language></Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:58</Date>
-					<Size>479248</Size>
+					<Date>6/26/2026 19:25:28</Date>
+					<Size>479240</Size>
 				</Driver>
 				<Driver>
 					<Name>amdlvr32.dll</Name>
@@ -2424,7 +2424,7 @@
 					<Language>English</Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:28</Date>
+					<Date>6/26/2026 19:24:50</Date>
 					<Size>998416</Size>
 				</Driver>
 				<Driver>
@@ -2434,27 +2434,27 @@
 					<Language></Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:28</Date>
-					<Size>118752</Size>
+					<Date>6/26/2026 19:24:28</Date>
+					<Size>118744</Size>
 				</Driver>
 				<Driver>
 					<Name>amf-mft-mjpeg-decoder32.dll</Name>
 					<Path>C:\WINDOWS\SysWOW64\amf-mft-mjpeg-decoder32.dll</Path>
-					<Version>32.00.21043.10005</Version>
+					<Version>32.00.21043.19003</Version>
 					<Language>English</Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:34</Date>
+					<Date>6/26/2026 19:24:34</Date>
 					<Size>1402048</Size>
 				</Driver>
 				<Driver>
 					<Name>detoured.dll</Name>
 					<Path>C:\WINDOWS\SysWOW64\detoured.dll</Path>
-					<Version>32.00.21043.10005</Version>
+					<Version>32.00.21043.19003</Version>
 					<Language>English</Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:38</Date>
+					<Date>6/26/2026 19:24:38</Date>
 					<Size>14208</Size>
 				</Driver>
 				<Driver>
@@ -2464,7 +2464,7 @@
 					<Language></Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:22</Date>
+					<Date>6/26/2026 19:24:44</Date>
 					<Size>450064</Size>
 				</Driver>
 				<Driver>
@@ -2474,7 +2474,7 @@
 					<Language></Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:46</Date>
+					<Date>6/26/2026 19:25:12</Date>
 					<Size>422416</Size>
 				</Driver>
 				<Driver>
@@ -2484,7 +2484,7 @@
 					<Language></Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:05:26</Date>
+					<Date>6/26/2026 18:57:36</Date>
 					<Size>548672</Size>
 				</Driver>
 				<Driver>
@@ -2494,7 +2494,7 @@
 					<Language>English</Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:36</Date>
+					<Date>6/26/2026 19:24:36</Date>
 					<Size>102520</Size>
 				</Driver>
 				<Driver>
@@ -2504,7 +2504,7 @@
 					<Language>English</Language>
 					<Beta>0</Beta>
 					<Debug>0</Debug>
-					<Date>5/12/2026 21:31:28</Date>
+					<Date>6/26/2026 19:24:52</Date>
 					<Size>543248</Size>
 				</Driver>
 			</Drivers>
@@ -3828,7 +3828,7 @@
 	</DirectShow>
 	<MediaFoundation>
 		<szMFFileVersions>  mfcore.dll, 10.00.26100.8655  mfreadwrite.dll, 10.00.26100.8521  mfcaptureengine.dll, 10.00.26100.8521  mfsensorgroup.dll, 10.00.26100.8521  windows.media.dll, 10.00.26100.8521  frameserver.dll, 10.00.26100.8521  frameserverclient.dll, 10.00.26100.8521  frameservercore.dll, 10.00.26100.8521  frameservermonitorclient.dll, 10.00.26100.8521  frameservermonitor.dll, 10.00.26100.8521</szMFFileVersions>
-		<szMFTs>Video Decoders:  AMD D3D11 Hardware MFT Playback Decoder, {17796AEB-0F66-4663-B8FB-99CBEE0224CE}, 0x4, 8, amdhwdecoder_64.dll, 32.00.21043.10005  AMD MFT MJPEG Decoder, {687CBC51-25DA-4FFC-A678-1E64943285A7}, 0x4, 8, amf-mft-mjpeg-decoder64.dll, 32.00.21043.10005  AMD D3D11 Hardware MFT Playback Decoder, {17796AEB-0F66-4663-B8FB-99CBEE0224CE}, 0x4, 8, amdhwdecoder_64.dll, 32.00.21043.10005  AMD MFT MJPEG Decoder, {687CBC51-25DA-4FFC-A678-1E64943285A7}, 0x4, 8, amf-mft-mjpeg-decoder64.dll, 32.00.21043.10005  Microsoft MPEG Video Decoder MFT, {2D709E52-123F-49B5-9CBC-9AF5CDE28FB9}, 0x1, msmpeg2vdec.dll, 10.00.26100.8655  DV Decoder MFT, {404A6DE5-D4D6-4260-9BC7-5A6CBD882432}, 0x1, mfdvdec.dll, 10.00.26100.5074  Mpeg4s Decoder MFT, CLSID_CMpeg4sDecMFT, 0x1, mp4sdecd.dll, 10.00.26100.7019  Microsoft H264 Video Decoder MFT, CLSID_CMSH264DecoderMFT, 0x1, msmpeg2vdec.dll, 10.00.26100.8655  WMV Screen decoder MFT, CLSID_CMSSCDecMediaObject, 0x1, wmvsdecd.dll, 10.00.26100.7019  WMVideo Decoder MFT, CLSID_CWMVDecMediaObject, 0x1, wmvdecod.dll, 10.00.26100.8521  MJPEG Decoder MFT, {CB17E772-E1CC-4633-8450-5617AF577905}, 0x1, mfmjpegdec.dll, 10.00.26100.8521  Mpeg43 Decoder MFT, CLSID_CMpeg43DecMediaObject, 0x1, mp43decd.dll, 10.00.26100.1150  Mpeg4 Decoder MFT, CLSID_CMpeg4DecMediaObject, 0x1, mpg4decd.dll, 10.00.26100.2894  MPEG2VideoExtension  AV1VideoExtension  WebpImageExtension  RawImageExtension  VP9VideoExtensionDecoder  HEIFImageExtension  HEVCVideoExtension  FFmpegVideoDecoderVideo Encoders:  AMDh265Encoder, {5FD65104-A924-4835-AB71-09A223E3E37B}, 0x4, 8, amdh265enc64.dll, 32.00.21043.10005  AMDh264Encoder, {ADC9BC80-0F41-46C6-AB75-D693D793597D}, 0x4, 8, amdh264enc64.dll, 32.00.21043.10005  AMDh265Encoder, {5FD65104-A924-4835-AB71-09A223E3E37B}, 0x4, 8, amdh265enc64.dll, 32.00.21043.10005  AMDh264Encoder, {ADC9BC80-0F41-46C6-AB75-D693D793597D}, 0x4, 8, amdh264enc64.dll, 32.00.21043.10005  Microsoft AVC DX12 Encoder  Microsoft HEVC DX12 Encoder  H264 Encoder MFT, {6CA50344-051A-4DED-9779-A43305165E35}, 0x1, mfh264enc.dll, 10.00.26100.8521  WMVideo8 Encoder MFT, CLSID_CWMVXEncMediaObject, 0x1, wmvxencd.dll, 10.00.26100.8115  H263 Encoder MFT, {BC47FCFE-98A0-4F27-BB07-698AF24F2B38}, 0x1, mfh263enc.dll, 10.00.26100.3912  WMVideo9 Encoder MFT, CLSID_CWMV9EncMediaObject, 0x1, wmvencod.dll, 10.00.26100.7309  Microsoft MPEG-2 Video Encoder MFT, {E6335F02-80B7-4DC4-ADFA-DFE7210D20D5}, 0x2, msmpeg2enc.dll, 10.00.26100.7705  VP9VideoExtensionEncoder  HEIFImageExtension  HEVCVideoExtensionEncoderVideo Effects:  Frame Rate Converter, CLSID_CFrameRateConvertDmo, 0x1, mfvdsp.dll, 10.00.26100.5074  Resizer MFT, CLSID_CResizerDMO, 0x1, vidreszr.dll, 10.00.26100.7019  VideoStabilization MFT, {51571744-7FE4-4FF2-A498-2DC34FF74F1B}, 0x1, MSVideoDSP.dll, 10.00.26100.8328  Color Control, CLSID_CColorControlDmo, 0x1, mfvdsp.dll, 10.00.26100.5074  Color Converter MFT, CLSID_CColorConvertDMO, 0x1, colorcnv.dll, 10.00.26100.8115Video Processor:  Microsoft Video Processor MFT, {88753B26-5B24-49BD-B2E7-0C445C78C982}, 0x1, msvproc.dll, 10.00.26100.8521Audio Decoders:  Microsoft Dolby Digital Plus Decoder MFT, {0C0EA61D-74FB-449B-8CA4-1DDF1BA9AA47}, 0x1, DolbyDecMFT.dll, 10.00.26100.8521  Microsoft MpegH Decoder MFT, {134DEA6F-C2EB-4FA8-8281-356600A9814E}, 0x1, mfaudiocnv.dll, 10.00.26100.8521  MS AMRNB Decoder MFT, {265011AE-5481-4F77-A295-ABB6FFE8D63E}, 0x1, MSAMRNBDecoder.dll, 10.00.26100.1150  WMAudio Decoder MFT, CLSID_CWMADecMediaObject, 0x1, WMADMOD.DLL, 10.00.26100.7019  Microsoft AAC Audio Decoder MFT, CLSID_CMSAACDecMFT, 0x1, MSAudDecMFT.dll, 10.00.26100.8521  A-law Wrapper MFT, {36CB6E0C-78C1-42B2-9943-846262F31786}, 0x1, mfcore.dll, 10.00.26100.8655  GSM ACM Wrapper MFT, {4A76B469-7B66-4DD4-BA2D-DDF244C766DC}, 0x1, mfcore.dll, 10.00.26100.8655  WMAPro over S/PDIF MFT, CLSID_CWMAudioSpdTxDMO, 0x1, WMADMOD.DLL, 10.00.26100.7019  Microsoft Opus Audio Decoder MFT, {63E17C10-2D43-4C42-8FE3-8D8B63E46A6A}, 0x1, MSOpusDecoder.dll, 10.00.26100.1150  Microsoft FLAC Audio Decoder MFT, {6B0B3E6B-A2C5-4514-8055-AFE8A95242D9}, 0x1, MSFlacDecoder.dll, 10.00.26100.8328  Microsoft MPEG Audio Decoder MFT, {70707B39-B2CA-4015-ABEA-F8447D22D88B}, 0x1, MSAudDecMFT.dll, 10.00.26100.8521  WMSpeech Decoder DMO, CLSID_CWMSPDecMediaObject, 0x1, WMSPDMOD.DLL, 10.00.26100.7019  G711 Wrapper MFT, {92B66080-5E2D-449E-90C4-C41F268E5514}, 0x1, mfcore.dll, 10.00.26100.8655  IMA ADPCM ACM Wrapper MFT, {A16E1BFF-A80D-48AD-AECD-A35C005685FE}, 0x1, mfcore.dll, 10.00.26100.8655  Dolby AC-3 and E-AC-3 IEC-61937 converter MFT, {A7E6022F-F78F-4AA9-A49A-567A60332635}, 0x1, mfaudiocnv.dll, 10.00.26100.8521  MP3 Decoder MFT, CLSID_CMP3DecMediaObject, 0x1, mp3dmod.dll, 10.00.26100.4202  Microsoft ALAC Audio Decoder MFT, {C0CD7D12-31FC-4BBC-B363-7322EE3E1879}, 0x1, MSAlacDecoder.dll, 10.00.26100.1150  ADPCM ACM Wrapper MFT, {CA34FE0A-5722-43AD-AF23-05F7650257DD}, 0x1, mfcore.dll, 10.00.26100.8655  Dolby TrueHD IEC-61937 converter MFT, {CF5EEEDF-0E92-4B3B-A161-BD0FFE545E4B}, 0x1, mfaudiocnv.dll, 10.00.26100.8521  DTS IEC-61937 converter MFT, {D035E24C-C877-42D7-A795-2A8A339B472F}, 0x1, mfaudiocnv.dll, 10.00.26100.8521  FFmpegAudioDecoder  Dolby Digital Plus Decoder MFTAudio Encoders:  LPCM DVD-Audio MFT, {068A8476-9229-4CC0-9D49-2FC699DCD30A}, 0x1, mfaudiocnv.dll, 10.00.26100.8521  MP3 Encoder ACM Wrapper MFT, {11103421-354C-4CCA-A7A3-1AFF9A5B6701}, 0x1, mfcore.dll, 10.00.26100.8655  Microsoft FLAC Audio Encoder MFT, {128509E9-C44E-45DC-95E9-C255B8F466A6}, 0x1, MSFlacEncoder.dll, 10.00.26100.8115  WM Speech Encoder DMO, CLSID_CWMSPEncMediaObject2, 0x1, WMSPDMOE.DLL, 10.00.26100.7019  MS AMRNB Encoder MFT, {2FAE8AFE-04A3-423A-A814-85DB454712B0}, 0x1, MSAMRNBEncoder.dll, 10.00.26100.1150  Microsoft MPEG-2 Audio Encoder MFT, {46A4DD5C-73F8-4304-94DF-308F760974F4}, 0x1, msmpeg2enc.dll, 10.00.26100.7705  WMAudio Encoder MFT, CLSID_CWMAEncMediaObject, 0x1, WMADMOE.DLL, 10.00.26100.7019  Microsoft AAC Audio Encoder MFT, {93AF0C51-2275-45D2-A35B-F2BA21CAED00}, 0x1, mfAACEnc.dll, 10.00.26100.8115  Microsoft ALAC Audio Encoder MFT, {9AB6A28C-748E-4B6A-BFFF-CC443B8E8FB4}, 0x1, MSAlacEncoder.dll, 10.00.26100.1150  Microsoft Dolby Digital Encoder MFT, {AC3315C9-F481-45D7-826C-0B406C1F64B8}, 0x1, msac3enc.dll, 10.00.26100.4202Audio Effects:  AEC, CLSID_CWMAudioAEC, 0x1, mfwmaaec.dll, 10.00.26100.1882  Resampler MFT, CLSID_CResamplerMediaObject, 0x1, resampledmo.dll, 10.00.26100.7019Multiplexers:  Microsoft MPEG2 Multiplexer MFT, {AB300F71-01AB-46D2-AB6C-64906CB03258}, 0x2, mfmpeg2srcsnk.dll, 10.00.26100.8521Others:  Microsoft H264 Video Remux (MPEG2TSToMP4) MFT, {05A47EBB-8BF0-4CBF-AD2F-3B71D75866F5}, 0x1, msmpeg2vdec.dll, 10.00.26100.8655</szMFTs>
+		<szMFTs>Video Decoders:  AMD D3D11 Hardware MFT Playback Decoder, {17796AEB-0F66-4663-B8FB-99CBEE0224CE}, 0x4, 8, amdhwdecoder_64.dll, 32.00.21043.19003  AMD MFT MJPEG Decoder, {687CBC51-25DA-4FFC-A678-1E64943285A7}, 0x4, 8, amf-mft-mjpeg-decoder64.dll, 32.00.21043.19003  AMD D3D11 Hardware MFT Playback Decoder, {17796AEB-0F66-4663-B8FB-99CBEE0224CE}, 0x4, 8, amdhwdecoder_64.dll, 32.00.21043.19003  AMD MFT MJPEG Decoder, {687CBC51-25DA-4FFC-A678-1E64943285A7}, 0x4, 8, amf-mft-mjpeg-decoder64.dll, 32.00.21043.19003  Microsoft MPEG Video Decoder MFT, {2D709E52-123F-49B5-9CBC-9AF5CDE28FB9}, 0x1, msmpeg2vdec.dll, 10.00.26100.8655  DV Decoder MFT, {404A6DE5-D4D6-4260-9BC7-5A6CBD882432}, 0x1, mfdvdec.dll, 10.00.26100.5074  Mpeg4s Decoder MFT, CLSID_CMpeg4sDecMFT, 0x1, mp4sdecd.dll, 10.00.26100.7019  Microsoft H264 Video Decoder MFT, CLSID_CMSH264DecoderMFT, 0x1, msmpeg2vdec.dll, 10.00.26100.8655  WMV Screen decoder MFT, CLSID_CMSSCDecMediaObject, 0x1, wmvsdecd.dll, 10.00.26100.7019  WMVideo Decoder MFT, CLSID_CWMVDecMediaObject, 0x1, wmvdecod.dll, 10.00.26100.8521  MJPEG Decoder MFT, {CB17E772-E1CC-4633-8450-5617AF577905}, 0x1, mfmjpegdec.dll, 10.00.26100.8521  Mpeg43 Decoder MFT, CLSID_CMpeg43DecMediaObject, 0x1, mp43decd.dll, 10.00.26100.1150  Mpeg4 Decoder MFT, CLSID_CMpeg4DecMediaObject, 0x1, mpg4decd.dll, 10.00.26100.2894  MPEG2VideoExtension  AV1VideoExtension  FFmpegVideoDecoder  WebpImageExtension  RawImageExtension  VP9VideoExtensionDecoder  HEIFImageExtension  HEVCVideoExtensionVideo Encoders:  AMDh265Encoder, {5FD65104-A924-4835-AB71-09A223E3E37B}, 0x4, 8, amdh265enc64.dll, 32.00.21043.19003  AMDh264Encoder, {ADC9BC80-0F41-46C6-AB75-D693D793597D}, 0x4, 8, amdh264enc64.dll, 32.00.21043.19003  AMDh265Encoder, {5FD65104-A924-4835-AB71-09A223E3E37B}, 0x4, 8, amdh265enc64.dll, 32.00.21043.19003  AMDh264Encoder, {ADC9BC80-0F41-46C6-AB75-D693D793597D}, 0x4, 8, amdh264enc64.dll, 32.00.21043.19003  Microsoft AVC DX12 Encoder  Microsoft HEVC DX12 Encoder  H264 Encoder MFT, {6CA50344-051A-4DED-9779-A43305165E35}, 0x1, mfh264enc.dll, 10.00.26100.8521  WMVideo8 Encoder MFT, CLSID_CWMVXEncMediaObject, 0x1, wmvxencd.dll, 10.00.26100.8115  H263 Encoder MFT, {BC47FCFE-98A0-4F27-BB07-698AF24F2B38}, 0x1, mfh263enc.dll, 10.00.26100.3912  WMVideo9 Encoder MFT, CLSID_CWMV9EncMediaObject, 0x1, wmvencod.dll, 10.00.26100.7309  Microsoft MPEG-2 Video Encoder MFT, {E6335F02-80B7-4DC4-ADFA-DFE7210D20D5}, 0x2, msmpeg2enc.dll, 10.00.26100.7705  VP9VideoExtensionEncoder  HEIFImageExtension  HEVCVideoExtensionEncoderVideo Effects:  Frame Rate Converter, CLSID_CFrameRateConvertDmo, 0x1, mfvdsp.dll, 10.00.26100.5074  Resizer MFT, CLSID_CResizerDMO, 0x1, vidreszr.dll, 10.00.26100.7019  VideoStabilization MFT, {51571744-7FE4-4FF2-A498-2DC34FF74F1B}, 0x1, MSVideoDSP.dll, 10.00.26100.8328  Color Control, CLSID_CColorControlDmo, 0x1, mfvdsp.dll, 10.00.26100.5074  Color Converter MFT, CLSID_CColorConvertDMO, 0x1, colorcnv.dll, 10.00.26100.8115Video Processor:  Microsoft Video Processor MFT, {88753B26-5B24-49BD-B2E7-0C445C78C982}, 0x1, msvproc.dll, 10.00.26100.8521Audio Decoders:  Microsoft Dolby Digital Plus Decoder MFT, {0C0EA61D-74FB-449B-8CA4-1DDF1BA9AA47}, 0x1, DolbyDecMFT.dll, 10.00.26100.8521  Microsoft MpegH Decoder MFT, {134DEA6F-C2EB-4FA8-8281-356600A9814E}, 0x1, mfaudiocnv.dll, 10.00.26100.8521  MS AMRNB Decoder MFT, {265011AE-5481-4F77-A295-ABB6FFE8D63E}, 0x1, MSAMRNBDecoder.dll, 10.00.26100.1150  WMAudio Decoder MFT, CLSID_CWMADecMediaObject, 0x1, WMADMOD.DLL, 10.00.26100.7019  Microsoft AAC Audio Decoder MFT, CLSID_CMSAACDecMFT, 0x1, MSAudDecMFT.dll, 10.00.26100.8521  A-law Wrapper MFT, {36CB6E0C-78C1-42B2-9943-846262F31786}, 0x1, mfcore.dll, 10.00.26100.8655  GSM ACM Wrapper MFT, {4A76B469-7B66-4DD4-BA2D-DDF244C766DC}, 0x1, mfcore.dll, 10.00.26100.8655  WMAPro over S/PDIF MFT, CLSID_CWMAudioSpdTxDMO, 0x1, WMADMOD.DLL, 10.00.26100.7019  Microsoft Opus Audio Decoder MFT, {63E17C10-2D43-4C42-8FE3-8D8B63E46A6A}, 0x1, MSOpusDecoder.dll, 10.00.26100.1150  Microsoft FLAC Audio Decoder MFT, {6B0B3E6B-A2C5-4514-8055-AFE8A95242D9}, 0x1, MSFlacDecoder.dll, 10.00.26100.8328  Microsoft MPEG Audio Decoder MFT, {70707B39-B2CA-4015-ABEA-F8447D22D88B}, 0x1, MSAudDecMFT.dll, 10.00.26100.8521  WMSpeech Decoder DMO, CLSID_CWMSPDecMediaObject, 0x1, WMSPDMOD.DLL, 10.00.26100.7019  G711 Wrapper MFT, {92B66080-5E2D-449E-90C4-C41F268E5514}, 0x1, mfcore.dll, 10.00.26100.8655  IMA ADPCM ACM Wrapper MFT, {A16E1BFF-A80D-48AD-AECD-A35C005685FE}, 0x1, mfcore.dll, 10.00.26100.8655  Dolby AC-3 and E-AC-3 IEC-61937 converter MFT, {A7E6022F-F78F-4AA9-A49A-567A60332635}, 0x1, mfaudiocnv.dll, 10.00.26100.8521  MP3 Decoder MFT, CLSID_CMP3DecMediaObject, 0x1, mp3dmod.dll, 10.00.26100.4202  Microsoft ALAC Audio Decoder MFT, {C0CD7D12-31FC-4BBC-B363-7322EE3E1879}, 0x1, MSAlacDecoder.dll, 10.00.26100.1150  ADPCM ACM Wrapper MFT, {CA34FE0A-5722-43AD-AF23-05F7650257DD}, 0x1, mfcore.dll, 10.00.26100.8655  Dolby TrueHD IEC-61937 converter MFT, {CF5EEEDF-0E92-4B3B-A161-BD0FFE545E4B}, 0x1, mfaudiocnv.dll, 10.00.26100.8521  DTS IEC-61937 converter MFT, {D035E24C-C877-42D7-A795-2A8A339B472F}, 0x1, mfaudiocnv.dll, 10.00.26100.8521  FFmpegAudioDecoder  Dolby Digital Plus Decoder MFTAudio Encoders:  LPCM DVD-Audio MFT, {068A8476-9229-4CC0-9D49-2FC699DCD30A}, 0x1, mfaudiocnv.dll, 10.00.26100.8521  MP3 Encoder ACM Wrapper MFT, {11103421-354C-4CCA-A7A3-1AFF9A5B6701}, 0x1, mfcore.dll, 10.00.26100.8655  Microsoft FLAC Audio Encoder MFT, {128509E9-C44E-45DC-95E9-C255B8F466A6}, 0x1, MSFlacEncoder.dll, 10.00.26100.8115  WM Speech Encoder DMO, CLSID_CWMSPEncMediaObject2, 0x1, WMSPDMOE.DLL, 10.00.26100.7019  MS AMRNB Encoder MFT, {2FAE8AFE-04A3-423A-A814-85DB454712B0}, 0x1, MSAMRNBEncoder.dll, 10.00.26100.1150  Microsoft MPEG-2 Audio Encoder MFT, {46A4DD5C-73F8-4304-94DF-308F760974F4}, 0x1, msmpeg2enc.dll, 10.00.26100.7705  WMAudio Encoder MFT, CLSID_CWMAEncMediaObject, 0x1, WMADMOE.DLL, 10.00.26100.7019  Microsoft AAC Audio Encoder MFT, {93AF0C51-2275-45D2-A35B-F2BA21CAED00}, 0x1, mfAACEnc.dll, 10.00.26100.8115  Microsoft ALAC Audio Encoder MFT, {9AB6A28C-748E-4B6A-BFFF-CC443B8E8FB4}, 0x1, MSAlacEncoder.dll, 10.00.26100.1150  Microsoft Dolby Digital Encoder MFT, {AC3315C9-F481-45D7-826C-0B406C1F64B8}, 0x1, msac3enc.dll, 10.00.26100.4202Audio Effects:  AEC, CLSID_CWMAudioAEC, 0x1, mfwmaaec.dll, 10.00.26100.1882  Resampler MFT, CLSID_CResamplerMediaObject, 0x1, resampledmo.dll, 10.00.26100.7019Multiplexers:  Microsoft MPEG2 Multiplexer MFT, {AB300F71-01AB-46D2-AB6C-64906CB03258}, 0x2, mfmpeg2srcsnk.dll, 10.00.26100.8521Others:  Microsoft H264 Video Remux (MPEG2TSToMP4) MFT, {05A47EBB-8BF0-4CBF-AD2F-3B71D75866F5}, 0x1, msmpeg2vdec.dll, 10.00.26100.8655</szMFTs>
 		<szEnabledHardwareMFTs>EnableDecoders = 1</szEnabledHardwareMFTs>
 		<szByteStreamHandlers>.3g2, {271C3902-6095-4C45-A22F-20091816EE9E}, MPEG4 Byte Stream Handler, Preferred.3gp, {271C3902-6095-4C45-A22F-20091816EE9E}, MPEG4 Byte Stream Handler, Preferred.3gp2, {271C3902-6095-4C45-A22F-20091816EE9E}, MPEG4 Byte Stream Handler, Preferred.3gpp, {271C3902-6095-4C45-A22F-20091816EE9E}, MPEG4 Byte Stream Handler, Preferred.aac, {926F41F7-003E-4382-9E84-9E953BE10562}, ADTS Byte Stream Handler, Preferred.ac3, {46031BA1-083F-47D9-8369-23C92BDAB2FF}, AC-3 Byte Stream Handler, Preferred.adt, {926F41F7-003E-4382-9E84-9E953BE10562}, ADTS Byte Stream Handler, Preferred.adts, {926F41F7-003E-4382-9E84-9E953BE10562}, ADTS Byte Stream Handler, Preferred.am?, {EFE6208A-0A2C-49FA-8A01-3768B559B6DA}, MF AMRNB Media Source ByteStreamHandler.amr, {EFE6208A-0A2C-49FA-8A01-3768B559B6DA}, MF AMRNB Media Source ByteStreamHandler, Preferred.asf, {41457294-644C-4298-A28A-BD69F2C0CF3B}, ASF Byte Stream Handler, Preferred.avi, {7AFA253E-F823-42F6-A5D9-714BDE467412}, AVI Byte Stream Handler, Preferred.dvr-ms, {A8721937-E2FB-4D7A-A9EE-4EB08C890B6E}, MF SBE Source ByteStreamHandler.dvr-ms, {65964407-A5D8-4060-85B0-1CCD63F768E2}, dvr-ms Byte Stream Handler, Preferred.ec3, {46031BA1-083F-47D9-8369-23C92BDAB2FF}, AC-3 Byte Stream Handler, Preferred.flac, {0E41CFB8-0506-40F4-A516-77CC23642D91}, MF FLAC Media Source ByteStreamHandler, Preferred.m2t, {40871C59-AB40-471F-8DC3-1F259D862479}, MPEG2 Byte Stream Handler, Preferred.m2ts, {40871C59-AB40-471F-8DC3-1F259D862479}, MPEG2 Byte Stream Handler, Preferred.m4a, {271C3902-6095-4C45-A22F-20091816EE9E}, MPEG4 Byte Stream Handler, Preferred.m4v, {271C3902-6095-4C45-A22F-20091816EE9E}, MPEG4 Byte Stream Handler, Preferred.mk3d, {1F9A2C18-D89E-463E-B4F4-BB90152ACC64}, MKV Byte Stream Handler, Preferred.mka, {1F9A2C18-D89E-463E-B4F4-BB90152ACC64}, MKV Byte Stream Handler, Preferred.mks, {1F9A2C18-D89E-463E-B4F4-BB90152ACC64}, MKV Byte Stream Handler, Preferred.mkv, {1F9A2C18-D89E-463E-B4F4-BB90152ACC64}, MKV Byte Stream Handler, Preferred.mod, {40871C59-AB40-471F-8DC3-1F259D862479}, MPEG2 Byte Stream Handler, Preferred.mov, {271C3902-6095-4C45-A22F-20091816EE9E}, MPEG4 Byte Stream Handler, Preferred.mp2v, {40871C59-AB40-471F-8DC3-1F259D862479}, MPEG2 Byte Stream Handler, Preferred.mp3, {A82E50BA-8E92-41EB-9DF2-433F50EC2993}, MP3 Byte Stream Handler, Preferred.mp4, {271C3902-6095-4C45-A22F-20091816EE9E}, MPEG4 Byte Stream Handler, Preferred.mp4v, {271C3902-6095-4C45-A22F-20091816EE9E}, MPEG4 Byte Stream Handler, Preferred.mpa, {A82E50BA-8E92-41EB-9DF2-433F50EC2993}, MP3 Byte Stream Handler, Preferred.mpeg, {40871C59-AB40-471F-8DC3-1F259D862479}, MPEG2 Byte Stream Handler, Preferred.mpg, {40871C59-AB40-471F-8DC3-1F259D862479}, MPEG2 Byte Stream Handler, Preferred.mts, {40871C59-AB40-471F-8DC3-1F259D862479}, MPEG2 Byte Stream Handler, Preferred.nsc, {B084785C-DDE0-4D30-8CA8-05A373E185BE}, NSC Byte Stream Handler, Preferred.sami, {7A56C4CB-D678-4188-85A8-BA2EF68FA10D}, SAMI Byte Stream Handler, Preferred.smi, {7A56C4CB-D678-4188-85A8-BA2EF68FA10D}, SAMI Byte Stream Handler, Preferred.tod, {40871C59-AB40-471F-8DC3-1F259D862479}, MPEG2 Byte Stream Handler, Preferred.ts, {40871C59-AB40-471F-8DC3-1F259D862479}, MPEG2 Byte Stream Handler, Preferred.tts, {40871C59-AB40-471F-8DC3-1F259D862479}, MPEG2 Byte Stream Handler, Preferred.uvu, {271C3902-6095-4C45-A22F-20091816EE9E}, MPEG4 Byte Stream Handler, Preferred.vob, {40871C59-AB40-471F-8DC3-1F259D862479}, MPEG2 Byte Stream Handler, Preferred.wav, {42C9B9F5-16FC-47EF-AF22-DA05F7C842E3}, WAV Byte Stream Handler, Preferred.weba, {1F9A2C18-D89E-463E-B4F4-BB90152ACC64}, WEBM Byte Stream Handler, Preferred.webm, {1F9A2C18-D89E-463E-B4F4-BB90152ACC64}, WEBM Byte Stream Handler, Preferred.wm, {41457294-644C-4298-A28A-BD69F2C0CF3B}, ASF Byte Stream Handler, Preferred.wma, {41457294-644C-4298-A28A-BD69F2C0CF3B}, ASF Byte Stream Handler, Preferred.wmv, {41457294-644C-4298-A28A-BD69F2C0CF3B}, ASF Byte Stream Handler, Preferred.wtv, {65964407-A5D8-4060-85B0-1CCD63F768E2}, WTV Byte Stream Handler, Preferredaudio/3gpp, {271C3902-6095-4C45-A22F-20091816EE9E}, MPEG4 Byte Stream Handler, Preferredaudio/3gpp2, {271C3902-6095-4C45-A22F-20091816EE9E}, MPEG4 Byte Stream Handler, Preferredaudio/aac, {926F41F7-003E-4382-9E84-9E953BE10562}, ADTS Byte Stream Handler, Preferredaudio/aacp, {926F41F7-003E-4382-9E84-9E953BE10562}, ADTS Byte Stream Handler, Preferredaudio/eac3, {46031BA1-083F-47D9-8369-23C92BDAB2FF}, AC-3 Byte Stream Handler, Preferredaudio/flac, {0E41CFB8-0506-40F4-A516-77CC23642D91}, MF FLAC Media Source ByteStreamHandler, Preferredaudio/L16, {3FFB3B8C-EB99-472B-8902-E1C1B05F07CF}, LPCM Byte Stream Handler, Preferredaudio/mp3, {A82E50BA-8E92-41EB-9DF2-433F50EC2993}, MP3 Byte Stream Handler, Preferredaudio/mp4, {271C3902-6095-4C45-A22F-20091816EE9E}, MPEG4 Byte Stream Handler, Preferredaudio/MP4A-LATM, {271C3902-6095-4C45-A22F-20091816EE9E}, MPEG4 Byte Stream Handler, Preferredaudio/mpa, {A82E50BA-8E92-41EB-9DF2-433F50EC2993}, MP3 Byte Stream Handler, Preferredaudio/mpeg, {A82E50BA-8E92-41EB-9DF2-433F50EC2993}, MP3 Byte Stream Handler, Preferredaudio/mpeg3, {A82E50BA-8E92-41EB-9DF2-433F50EC2993}, MP3 Byte Stream Handler, Preferredaudio/vnd.dlna.adts, {926F41F7-003E-4382-9E84-9E953BE10562}, ADTS Byte Stream Handler, Preferredaudio/vnd.dolby.dd-raw, {46031BA1-083F-47D9-8369-23C92BDAB2FF}, AC-3 Byte Stream Handler, Preferredaudio/wav, {42C9B9F5-16FC-47EF-AF22-DA05F7C842E3}, WAV Byte Stream Handler, Preferredaudio/webm, {1F9A2C18-D89E-463E-B4F4-BB90152ACC64}, WEBM Byte Stream Handler, Preferredaudio/x-aac, {926F41F7-003E-4382-9E84-9E953BE10562}, ADTS Byte Stream Handler, Preferredaudio/x-flac, {0E41CFB8-0506-40F4-A516-77CC23642D91}, MF FLAC Media Source ByteStreamHandler, Preferredaudio/x-m4a, {271C3902-6095-4C45-A22F-20091816EE9E}, MPEG4 Byte Stream Handler, Preferredaudio/x-matroska, {1F9A2C18-D89E-463E-B4F4-BB90152ACC64}, MKV Byte Stream Handler, Preferredaudio/x-mp3, {A82E50BA-8E92-41EB-9DF2-433F50EC2993}, MP3 Byte Stream Handler, Preferredaudio/x-mpeg, {A82E50BA-8E92-41EB-9DF2-433F50EC2993}, MP3 Byte Stream Handler, Preferredaudio/x-ms-wma, {41457294-644C-4298-A28A-BD69F2C0CF3B}, ASF Byte Stream Handler, Preferredaudio/x-wav, {42C9B9F5-16FC-47EF-AF22-DA05F7C842E3}, WAV Byte Stream Handler, Preferredvideo/3gpp, {271C3902-6095-4C45-A22F-20091816EE9E}, MPEG4 Byte Stream Handler, Preferredvideo/3gpp2, {271C3902-6095-4C45-A22F-20091816EE9E}, MPEG4 Byte Stream Handler, Preferredvideo/avi, {7AFA253E-F823-42F6-A5D9-714BDE467412}, AVI Byte Stream Handler, Preferredvideo/mp4, {271C3902-6095-4C45-A22F-20091816EE9E}, MPEG4 Byte Stream Handler, Preferredvideo/mpeg, {40871C59-AB40-471F-8DC3-1F259D862479}, MPEG2 Byte Stream Handler, Preferredvideo/msvideo, {7AFA253E-F823-42F6-A5D9-714BDE467412}, AVI Byte Stream Handler, Preferredvideo/vnd.dece.mp4, {271C3902-6095-4C45-A22F-20091816EE9E}, MPEG4 Byte Stream Handler, Preferredvideo/vnd.dlna.mpeg-tts, {40871C59-AB40-471F-8DC3-1F259D862479}, MPEG2 Byte Stream Handler, Preferredvideo/webm, {1F9A2C18-D89E-463E-B4F4-BB90152ACC64}, WEBM Byte Stream Handler, Preferredvideo/x-m4v, {271C3902-6095-4C45-A22F-20091816EE9E}, MPEG4 Byte Stream Handler, Preferredvideo/x-matroska, {1F9A2C18-D89E-463E-B4F4-BB90152ACC64}, MKV Byte Stream Handler, Preferredvideo/x-ms-asf, {41457294-644C-4298-A28A-BD69F2C0CF3B}, ASF Byte Stream Handler, Preferredvideo/x-ms-wm, {41457294-644C-4298-A28A-BD69F2C0CF3B}, ASF Byte Stream Handler, Preferredvideo/x-ms-wmv, {41457294-644C-4298-A28A-BD69F2C0CF3B}, ASF Byte Stream Handler, Preferredvideo/x-msvideo, {7AFA253E-F823-42F6-A5D9-714BDE467412}, AVI Byte Stream Handler, Preferred</szByteStreamHandlers>
 		<szSchemeHandlers>file:, {477EC299-1421-4BDD-971F-7CCB933F21AD}, File Scheme Handler, Preferredhttp:, {44CB442B-9DA9-49DF-B3FD-023777B16E50}, Http Scheme Handlerhttp:, {9EC4B4F9-3029-45AD-947B-344DE2A249E2}, Urlmon Scheme Handlerhttp:, {E9F4EBAB-D97B-463E-A2B1-C54EE3F9414D}, Net Scheme Handler, Preferredhttpd:, {44CB442B-9DA9-49DF-B3FD-023777B16E50}, Http Scheme Handler, Preferredhttps:, {37A61C8B-7F8E-4D08-B12B-248D73E9AB4F}, Secure Http Scheme Handler, Preferredhttpsd:, {37A61C8B-7F8E-4D08-B12B-248D73E9AB4F}, Secure Http Scheme Handler, Preferredhttpt:, {E9F4EBAB-D97B-463E-A2B1-C54EE3F9414D}, Net Scheme Handler, Preferredhttpu:, {E9F4EBAB-D97B-463E-A2B1-C54EE3F9414D}, Net Scheme Handler, Preferredmcast:, {E9F4EBAB-D97B-463E-A2B1-C54EE3F9414D}, Net Scheme Handler, Preferredmcrecv:, {FA6D33D4-9405-4BA5-9983-12604AC8E77A}, Miracast Sink Scheme Handler, Preferredmms:, {E9F4EBAB-D97B-463E-A2B1-C54EE3F9414D}, Net Scheme Handler, Preferredms-appdata:, {CFC81939-3886-4ACF-9692-DA58037AE716}, MsAppData Scheme Handler, Preferredms-appx-web:, {8DB0224B-3D65-4F6F-8E12-BEB4B78B8974}, MsAppxWeb Scheme Handler, Preferredms-appx:, {8DB0224B-3D65-4F6F-8E12-BEB4B78B8974}, MsAppx Scheme Handler, Preferredms-winsoundevent:, {F79A6BF9-7415-4CF3-AE10-4559509ABC3C}, Sound Event Scheme Handler, Preferredrtsp:, {E9F4EBAB-D97B-463E-A2B1-C54EE3F9414D}, Net Scheme Handler, Preferredrtsps:, {E9F4EBAB-D97B-463E-A2B1-C54EE3F9414D}, Net Scheme Handler, Preferredrtspt:, {E9F4EBAB-D97B-463E-A2B1-C54EE3F9414D}, Net Scheme Handler, Preferredrtspu:, {E9F4EBAB-D97B-463E-A2B1-C54EE3F9414D}, Net Scheme Handler, Preferredsdp:, {E9F4EBAB-D97B-463E-A2B1-C54EE3F9414D}, Net Scheme Handler, Preferred</szSchemeHandlers>

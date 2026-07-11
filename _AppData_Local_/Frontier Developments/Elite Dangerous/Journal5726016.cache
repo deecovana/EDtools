@@ -1,51 +1,51 @@
-{ "timestamp":"2026-07-09T14:58:55Z", "event":"ReservoirReplenished", "FuelMain":30.500000, "FuelReservoir":0.500000 }
-{ "timestamp":"2026-07-09T14:59:11Z", "event":"ShipLocker" }
-{ "timestamp":"2026-07-09T14:59:11Z", "event":"MaterialCollected", "Category":"Raw", "Name":"phosphorus", "Name_Localised":"Фосфор", "Count":3 }
-{ "timestamp":"2026-07-09T14:59:14Z", "event":"ShipLocker" }
-{ "timestamp":"2026-07-09T14:59:14Z", "event":"MaterialCollected", "Category":"Raw", "Name":"cadmium", "Name_Localised":"Кадмий", "Count":3 }
-{ "timestamp":"2026-07-09T14:59:17Z", "event":"ShipLocker" }
-{ "timestamp":"2026-07-09T14:59:17Z", "event":"MaterialCollected", "Category":"Raw", "Name":"cadmium", "Name_Localised":"Кадмий", "Count":3 }
-{ "timestamp":"2026-07-09T14:59:18Z", "event":"ShipLocker" }
-{ "timestamp":"2026-07-09T14:59:18Z", "event":"MaterialCollected", "Category":"Raw", "Name":"sulphur", "Name_Localised":"Сера", "Count":3 }
-{ "timestamp":"2026-07-09T14:59:41Z", "event":"ShipLocker" }
-{ "timestamp":"2026-07-09T14:59:41Z", "event":"MaterialCollected", "Category":"Raw", "Name":"zirconium", "Name_Localised":"Цирконий", "Count":3 }
-{ "timestamp":"2026-07-09T14:59:44Z", "event":"ShipLocker" }
-{ "timestamp":"2026-07-09T14:59:44Z", "event":"MaterialCollected", "Category":"Raw", "Name":"tellurium", "Name_Localised":"Теллур", "Count":3 }
-{ "timestamp":"2026-07-09T14:59:46Z", "event":"ShipLocker" }
-{ "timestamp":"2026-07-09T14:59:46Z", "event":"MaterialCollected", "Category":"Raw", "Name":"tellurium", "Name_Localised":"Теллур", "Count":3 }
-{ "timestamp":"2026-07-09T14:59:48Z", "event":"ShipLocker" }
-{ "timestamp":"2026-07-09T14:59:48Z", "event":"MaterialCollected", "Category":"Raw", "Name":"sulphur", "Name_Localised":"Сера", "Count":3 }
-{ "timestamp":"2026-07-09T15:00:10Z", "event":"ShipLocker" }
-{ "timestamp":"2026-07-09T15:00:10Z", "event":"MaterialCollected", "Category":"Raw", "Name":"tellurium", "Name_Localised":"Теллур", "Count":3 }
-{ "timestamp":"2026-07-09T15:00:14Z", "event":"ShipLocker" }
-{ "timestamp":"2026-07-09T15:00:14Z", "event":"MaterialCollected", "Category":"Raw", "Name":"phosphorus", "Name_Localised":"Фосфор", "Count":3 }
-{ "timestamp":"2026-07-09T15:00:16Z", "event":"ShipLocker" }
-{ "timestamp":"2026-07-09T15:00:16Z", "event":"MaterialCollected", "Category":"Raw", "Name":"cadmium", "Name_Localised":"Кадмий", "Count":3 }
-{ "timestamp":"2026-07-09T15:00:18Z", "event":"ShipLocker" }
-{ "timestamp":"2026-07-09T15:00:18Z", "event":"MaterialCollected", "Category":"Raw", "Name":"cadmium", "Name_Localised":"Кадмий", "Count":3 }
-{ "timestamp":"2026-07-09T15:00:40Z", "event":"ShipLocker" }
-{ "timestamp":"2026-07-09T15:00:40Z", "event":"MaterialCollected", "Category":"Raw", "Name":"tellurium", "Name_Localised":"Теллур", "Count":3 }
-{ "timestamp":"2026-07-09T15:00:43Z", "event":"ShipLocker" }
-{ "timestamp":"2026-07-09T15:00:44Z", "event":"MaterialCollected", "Category":"Raw", "Name":"sulphur", "Name_Localised":"Сера", "Count":3 }
-{ "timestamp":"2026-07-09T15:00:46Z", "event":"ShipLocker" }
-{ "timestamp":"2026-07-09T15:00:46Z", "event":"MaterialCollected", "Category":"Raw", "Name":"zirconium", "Name_Localised":"Цирконий", "Count":3 }
-{ "timestamp":"2026-07-09T15:00:48Z", "event":"ShipLocker" }
-{ "timestamp":"2026-07-09T15:00:48Z", "event":"MaterialCollected", "Category":"Raw", "Name":"sulphur", "Name_Localised":"Сера", "Count":3 }
-{ "timestamp":"2026-07-09T15:01:10Z", "event":"ShipLocker" }
-{ "timestamp":"2026-07-09T15:01:10Z", "event":"MaterialCollected", "Category":"Raw", "Name":"phosphorus", "Name_Localised":"Фосфор", "Count":3 }
-{ "timestamp":"2026-07-09T15:01:14Z", "event":"ShipLocker" }
-{ "timestamp":"2026-07-09T15:01:14Z", "event":"MaterialCollected", "Category":"Raw", "Name":"nickel", "Name_Localised":"Никель", "Count":3 }
-{ "timestamp":"2026-07-09T15:01:16Z", "event":"ShipLocker" }
-{ "timestamp":"2026-07-09T15:01:16Z", "event":"MaterialCollected", "Category":"Raw", "Name":"sulphur", "Name_Localised":"Сера", "Count":3 }
-{ "timestamp":"2026-07-09T15:01:18Z", "event":"ShipLocker" }
-{ "timestamp":"2026-07-09T15:01:18Z", "event":"MaterialCollected", "Category":"Raw", "Name":"phosphorus", "Name_Localised":"Фосфор", "Count":3 }
-{ "timestamp":"2026-07-09T15:01:40Z", "event":"ShipLocker" }
-{ "timestamp":"2026-07-09T15:01:40Z", "event":"MaterialCollected", "Category":"Raw", "Name":"cadmium", "Name_Localised":"Кадмий", "Count":3 }
-{ "timestamp":"2026-07-09T15:01:44Z", "event":"ShipLocker" }
-{ "timestamp":"2026-07-09T15:01:44Z", "event":"MaterialCollected", "Category":"Raw", "Name":"cadmium", "Name_Localised":"Кадмий", "Count":3 }
-{ "timestamp":"2026-07-09T15:01:46Z", "event":"ShipLocker" }
-{ "timestamp":"2026-07-09T15:01:46Z", "event":"MaterialCollected", "Category":"Raw", "Name":"sulphur", "Name_Localised":"Сера", "Count":3 }
-{ "timestamp":"2026-07-09T15:01:48Z", "event":"ShipLocker" }
-{ "timestamp":"2026-07-09T15:01:48Z", "event":"MaterialCollected", "Category":"Raw", "Name":"carbon", "Name_Localised":"Углерод", "Count":3 }
-{ "timestamp":"2026-07-09T15:01:57Z", "event":"Music", "MusicTrack":"Exploration" }
-{ "timestamp":"2026-07-09T15:02:00Z", "event":"Shutdown" }
+{ "timestamp":"2026-07-10T08:17:07Z", "event":"Cargo", "Vessel":"Ship", "Count":48 }
+{ "timestamp":"2026-07-10T08:17:25Z", "event":"ShipLocker" }
+{ "timestamp":"2026-07-10T08:17:25Z", "event":"MaterialCollected", "Category":"Raw", "Name":"zirconium", "Name_Localised":"Цирконий", "Count":3 }
+{ "timestamp":"2026-07-10T08:17:28Z", "event":"ShipLocker" }
+{ "timestamp":"2026-07-10T08:17:28Z", "event":"MaterialCollected", "Category":"Raw", "Name":"sulphur", "Name_Localised":"Сера", "Count":3 }
+{ "timestamp":"2026-07-10T08:17:29Z", "event":"LaunchDrone", "Type":"Collection" }
+{ "timestamp":"2026-07-10T08:17:35Z", "event":"ShipLocker" }
+{ "timestamp":"2026-07-10T08:17:35Z", "event":"MaterialCollected", "Category":"Raw", "Name":"cadmium", "Name_Localised":"Кадмий", "Count":3 }
+{ "timestamp":"2026-07-10T08:17:36Z", "event":"Cargo", "Vessel":"Ship", "Count":47 }
+{ "timestamp":"2026-07-10T08:17:57Z", "event":"ShipLocker" }
+{ "timestamp":"2026-07-10T08:17:57Z", "event":"MaterialCollected", "Category":"Raw", "Name":"phosphorus", "Name_Localised":"Фосфор", "Count":3 }
+{ "timestamp":"2026-07-10T08:17:59Z", "event":"ShipLocker" }
+{ "timestamp":"2026-07-10T08:18:00Z", "event":"MaterialCollected", "Category":"Raw", "Name":"cadmium", "Name_Localised":"Кадмий", "Count":3 }
+{ "timestamp":"2026-07-10T08:18:04Z", "event":"ShipLocker" }
+{ "timestamp":"2026-07-10T08:18:04Z", "event":"MaterialCollected", "Category":"Raw", "Name":"tellurium", "Name_Localised":"Теллур", "Count":3 }
+{ "timestamp":"2026-07-10T08:18:07Z", "event":"ShipLocker" }
+{ "timestamp":"2026-07-10T08:18:07Z", "event":"MaterialCollected", "Category":"Raw", "Name":"cadmium", "Name_Localised":"Кадмий", "Count":3 }
+{ "timestamp":"2026-07-10T08:18:29Z", "event":"ShipLocker" }
+{ "timestamp":"2026-07-10T08:18:30Z", "event":"MaterialCollected", "Category":"Raw", "Name":"phosphorus", "Name_Localised":"Фосфор", "Count":3 }
+{ "timestamp":"2026-07-10T08:18:31Z", "event":"ShipLocker" }
+{ "timestamp":"2026-07-10T08:18:31Z", "event":"MaterialCollected", "Category":"Raw", "Name":"cadmium", "Name_Localised":"Кадмий", "Count":3 }
+{ "timestamp":"2026-07-10T08:18:35Z", "event":"ReceiveText", "From":"$ShipName_Police_Federation;", "From_Localised":"Служба безопасности Федерации", "Message":"$Police_EndPatrol01;", "Message_Localised":"Парни, смена окончена, возвращаюсь на базу.", "Channel":"npc" }
+{ "timestamp":"2026-07-10T08:18:36Z", "event":"ShipLocker" }
+{ "timestamp":"2026-07-10T08:18:36Z", "event":"MaterialCollected", "Category":"Raw", "Name":"zirconium", "Name_Localised":"Цирконий", "Count":3 }
+{ "timestamp":"2026-07-10T08:18:39Z", "event":"ShipLocker" }
+{ "timestamp":"2026-07-10T08:18:41Z", "event":"MaterialCollected", "Category":"Raw", "Name":"tellurium", "Name_Localised":"Теллур", "Count":3 }
+{ "timestamp":"2026-07-10T08:19:01Z", "event":"ShipLocker" }
+{ "timestamp":"2026-07-10T08:19:01Z", "event":"MaterialCollected", "Category":"Raw", "Name":"cadmium", "Name_Localised":"Кадмий", "Count":3 }
+{ "timestamp":"2026-07-10T08:19:03Z", "event":"ShipLocker" }
+{ "timestamp":"2026-07-10T08:19:03Z", "event":"MaterialCollected", "Category":"Raw", "Name":"tellurium", "Name_Localised":"Теллур", "Count":3 }
+{ "timestamp":"2026-07-10T08:19:08Z", "event":"ShipLocker" }
+{ "timestamp":"2026-07-10T08:19:09Z", "event":"MaterialCollected", "Category":"Raw", "Name":"cadmium", "Name_Localised":"Кадмий", "Count":3 }
+{ "timestamp":"2026-07-10T08:19:10Z", "event":"ShipLocker" }
+{ "timestamp":"2026-07-10T08:19:10Z", "event":"MaterialCollected", "Category":"Raw", "Name":"cadmium", "Name_Localised":"Кадмий", "Count":3 }
+{ "timestamp":"2026-07-10T08:19:29Z", "event":"ReceiveText", "From":"Gomes Reach", "Message":"$STATION_NoFireZone_entered;", "Message_Localised":"Вы вошли в зону запрета огня", "Channel":"npc" }
+{ "timestamp":"2026-07-10T08:19:30Z", "event":"DockingRequested", "MarketID":4255925507, "StationName":"Gomes Reach", "StationType":"CraterOutpost", "LandingPads":{ "Small":4, "Medium":4, "Large":4 } }
+{ "timestamp":"2026-07-10T08:19:30Z", "event":"ReceiveText", "From":"Gomes Reach", "Message":"$DockingChatter_Neutral;", "Message_Localised":"Строго соблюдайте правила поведения в порту, пилот.", "Channel":"npc" }
+{ "timestamp":"2026-07-10T08:19:30Z", "event":"ReceiveText", "From":"Gomes Reach", "Message":"$STATION_docking_granted;", "Message_Localised":"Стыковка разрешена", "Channel":"npc" }
+{ "timestamp":"2026-07-10T08:19:30Z", "event":"DockingGranted", "LandingPad":9, "MarketID":4255925507, "StationName":"Gomes Reach", "StationType":"CraterOutpost" }
+{ "timestamp":"2026-07-10T08:19:32Z", "event":"Music", "MusicTrack":"DockingComputer" }
+{ "timestamp":"2026-07-10T08:20:06Z", "event":"ReceiveText", "From":"$ShipName_Police_Federation;", "From_Localised":"Служба безопасности Федерации", "Message":"$Police_ThankYouPassedStopAndSearch10;", "Message_Localised":"Все в полном порядке, командир. Приятного вам дня.", "Channel":"npc" }
+{ "timestamp":"2026-07-10T08:20:09Z", "event":"Docked", "StationName":"Gomes Reach", "StationType":"CraterOutpost", "Taxi":false, "Multicrew":false, "StarSystem":"Synuefe FS-X b48-1", "SystemAddress":2874809263521, "MarketID":4255925507, "StationFaction":{ "Name":"Exphiay for Equality", "FactionState":"Expansion" }, "StationGovernment":"$government_Democracy;", "StationGovernment_Localised":"Демократия", "StationAllegiance":"Federation", "StationServices":[ "dock", "autodock", "blackmarket", "commodities", "contacts", "missions", "crewlounge", "rearm", "refuel", "repair", "engineer", "missionsgenerated", "facilitator", "flightcontroller", "stationoperations", "powerplay", "searchrescue", "stationMenu", "socialspace", "registeringcolonisation" ], "StationEconomy":"$economy_Extraction;", "StationEconomy_Localised":"Добыча ископаемых", "StationEconomies":[ { "Name":"$economy_Extraction;", "Name_Localised":"Добыча ископаемых", "Proportion":1.900000 }, { "Name":"$economy_Agri;", "Name_Localised":"Сельское хозяйство", "Proportion":1.400000 }, { "Name":"$economy_Industrial;", "Name_Localised":"Промышленность", "Proportion":1.400000 }, { "Name":"$economy_Refinery;", "Name_Localised":"Переработка", "Proportion":1.400000 }, { "Name":"$economy_Terraforming;", "Name_Localised":"Терраформирование", "Proportion":1.000000 } ], "DistFromStarLS":41.251178, "LandingPads":{ "Small":4, "Medium":4, "Large":4 } }
+{ "timestamp":"2026-07-10T08:20:09Z", "event":"Music", "MusicTrack":"NoTrack" }
+{ "timestamp":"2026-07-10T08:20:17Z", "event":"BuyAmmo", "Cost":6250 }
+{ "timestamp":"2026-07-10T08:20:18Z", "event":"RefuelAll", "Cost":109, "Amount":2.170400 }
+{ "timestamp":"2026-07-10T08:21:56Z", "event":"ReceiveText", "From":"$ShipName_Police_Federation;", "From_Localised":"Служба безопасности Федерации", "Message":"$Police_StartPatrol03;", "Message_Localised":"Слышу вас отлично, я в воздухе, начинаю патрулирование.", "Channel":"npc" }
+{ "timestamp":"2026-07-10T08:21:57Z", "event":"Undocked", "StationName":"Gomes Reach", "StationType":"CraterOutpost", "MarketID":4255925507, "Taxi":false, "Multicrew":false }
+{ "timestamp":"2026-07-10T08:21:57Z", "event":"Music", "MusicTrack":"DockingComputer" }
+{ "timestamp":"2026-07-10T08:22:08Z", "event":"Music", "MusicTrack":"NoTrack" }
+{ "timestamp":"2026-07-10T08:30:28Z", "event":"Music", "MusicTrack":"Exploration" }
+{ "timestamp":"2026-07-10T08:30:32Z", "event":"Shutdown" }
